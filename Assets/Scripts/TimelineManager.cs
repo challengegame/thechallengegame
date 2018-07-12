@@ -147,6 +147,9 @@ public class TimelineManager : MonoBehaviour
 
     bool WaitingOnChoice = false;
 
+    //Value to speed up the game, for debug purposes only. All delays will be divided by this value
+    float DebugTimeFactor = 1.0f;
+
     // Use this for initialization
     void Start ()
     {
@@ -168,9 +171,14 @@ public class TimelineManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        CurrentGameRealTime += Time.deltaTime;
+        CurrentGameRealTime += (Time.deltaTime * DebugTimeFactor);
         ProcessQueues();
-	}
+        if (Input.GetKeyUp("escape"))
+        {
+            //Handle Android back button functionality here
+            DisplayManager.instance.ShowMainMenu();
+        }
+    }
 
     //Called on Awake() after singleton setup
     void Initialize()
@@ -232,6 +240,11 @@ public class TimelineManager : MonoBehaviour
     {
         WaitingOnChoice = false;
         CurrentGameEventTime = CurrentGameRealTime;
+    }
+
+    public void DebugTimeFactorChanged(float newValue)
+    {
+        DebugTimeFactor = newValue;
     }
 
     /**

@@ -28,6 +28,8 @@ public class DisplayManager : MonoBehaviour
     public GameObject ChoicePrefab;
     public GameObject ChoiceButtonPrefab;
 
+    string CurrentlyActiveChannel = "";
+
     
 	void Start ()
     {
@@ -67,6 +69,7 @@ public class DisplayManager : MonoBehaviour
         CreditsPanel.SetActive(false);
         HideAllMessagePanels();
         MenuPanel.SetActive(true);
+        CurrentlyActiveChannel = "";
     }
 
     public void ShowMessagePanel(string channelName)
@@ -83,6 +86,7 @@ public class DisplayManager : MonoBehaviour
             MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
 
             Canvas.ForceUpdateCanvases();
+            CurrentlyActiveChannel = channelName;
         }
     }
 
@@ -116,7 +120,10 @@ public class DisplayManager : MonoBehaviour
             }
             else
             {
-                MessageChannel.chatMenuButton.AddUnreadNotification();
+                if (CurrentlyActiveChannel != e.Channel)
+                {
+                    MessageChannel.chatMenuButton.AddUnreadNotification();
+                }
                 string PreviewText = "";
                 if (e.Content.Length > 20)
                 {
@@ -134,7 +141,6 @@ public class DisplayManager : MonoBehaviour
                 {
                     message = GameObject.Instantiate(MessageChannel.IncomingMessagePrefab, MessageChannel.ContentPanel.transform);
                     //If we're in a group chat, the message has a portrait and a name that needs to be set up.
-                    //TODO: pull character portrait from channel data??
 
                     MessageUI M = message.GetComponent<MessageUI>();
                     Channel CharChannel = Channels.Find(x => x.ChannelName == e.CharacterName);
