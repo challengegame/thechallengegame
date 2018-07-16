@@ -26,6 +26,17 @@ public class InkManager : MonoBehaviour
         {
             Story s = new Story(C.ChatText.text);
             CurrentStories.Add(C.ChatChannelName, s);
+            s.BindExternalFunction("RelationshipChange", (string character, int change) =>
+            {
+                DisplayManager.instance.AddRelationshipValue(character, change);
+                Debug.Log("RelationshipChange called with channel " + character + " and value " + change);
+            });
+
+            s.BindExternalFunction("GetRelationshipValue", (string character) =>
+            {
+                return DisplayManager.instance.GetRelationshipValue(character);
+               
+            });
         }
 	}
 

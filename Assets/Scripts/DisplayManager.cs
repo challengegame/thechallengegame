@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.iOS;
 
 [System.Serializable]
 public class Channel
@@ -14,6 +15,7 @@ public class Channel
     public GameObject OutgoingMessagePrefab;
     public GameObject ContentPanel;
     public ChatMenuButton chatMenuButton;
+    public int RelationshipValue;
 }
 
 public class DisplayManager : MonoBehaviour
@@ -33,9 +35,10 @@ public class DisplayManager : MonoBehaviour
     
 	void Start ()
     {
+        UnityEngine.iOS.NotificationServices.RegisterForNotifications(NotificationType.Alert | NotificationType.Badge | NotificationType.Sound);
         //TODO: Go through all channels and set them up with the correct character portrait and name
         //Actually why, since we have separate panels we don't need to do this dynamically
-        
+
         foreach (Channel c in Channels)
         {
             //MessagePanel panel = c.MessagePanel.GetComponent<MessagePanel>();
@@ -47,16 +50,10 @@ public class DisplayManager : MonoBehaviour
         }
         
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 
     void Initialize()
     {
-
+        
     }
 
     public void ShowCredits()
@@ -123,6 +120,10 @@ public class DisplayManager : MonoBehaviour
                 if (CurrentlyActiveChannel != e.Channel)
                 {
                     MessageChannel.chatMenuButton.AddUnreadNotification();
+                    //TODO: Only launch these if the app is not "in focus" or whatever
+                    //TODO: Move this to the point where the message is queued and schedule based on the delay value
+                    UnityEngine.iOS.LocalNotification localNotification = new UnityEngine.iOS.LocalNotification();
+                    localNotification.fireDate = System.DateTime.Now;
                 }
                 string PreviewText = "";
                 if (e.Content.Length > 20)
@@ -203,6 +204,25 @@ public class DisplayManager : MonoBehaviour
         //TODO: Replace ChoiceUI with text display showing choice made (or alternate choice text...?)
         GameObject.Destroy(ChoiceUI);
         TimelineManager.instance.ChoiceMade();
+    }
+
+    public void AddRelationshipValue(string channel, int RelationshipChange)
+    {
+        Channel MessageChannel = Channels.Find(x => x.ChannelName == channel);
+        if (MessageChannel != null)
+        {
+            MessageChannel.RelationshipValue += RelationshipChange;
+        }
+    }
+
+    public int GetRelationshipValue(string character)
+    {
+        Channel MessageChannel = Channels.Find(x => x.ChannelName == character);
+        if (MessageChannel != null)
+        {
+            return MessageChannel.RelationshipValue;
+        }
+        return 0;
     }
 
     /**

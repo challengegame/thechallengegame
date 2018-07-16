@@ -1,6 +1,6 @@
 #Kalil
 
-Kalil@140pm July 6, 2018:Testing individual chats #delay=25
+Kalil@140pm July 6, 2018:Testing individual chats #delay=250
 Player@145pm July 6, 2018:Player test #delay=3
 * [Choice test]
 Player@147pm July 6, 2018: Choice 1
