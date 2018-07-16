@@ -117,14 +117,7 @@ public class DisplayManager : MonoBehaviour
             }
             else
             {
-                if (CurrentlyActiveChannel != e.Channel)
-                {
-                    MessageChannel.chatMenuButton.AddUnreadNotification();
-                    //TODO: Only launch these if the app is not "in focus" or whatever
-                    //TODO: Move this to the point where the message is queued and schedule based on the delay value
-                    UnityEngine.iOS.LocalNotification localNotification = new UnityEngine.iOS.LocalNotification();
-                    localNotification.fireDate = System.DateTime.Now;
-                }
+
                 string PreviewText = "";
                 if (e.Content.Length > 20)
                 {
@@ -136,6 +129,16 @@ public class DisplayManager : MonoBehaviour
                     PreviewText = e.Content;
                 }
                 MessageChannel.chatMenuButton.SetPreviewText(PreviewText);
+
+                if (CurrentlyActiveChannel != e.Channel)
+                {
+                    MessageChannel.chatMenuButton.AddUnreadNotification();
+                    //TODO: Only launch these if the app is not "in focus" or whatever
+                    //TODO: Move this to the point where the message is queued and schedule based on the delay value
+                    UnityEngine.iOS.LocalNotification localNotification = new UnityEngine.iOS.LocalNotification();
+                    localNotification.fireDate = System.DateTime.Now;
+                    localNotification.alertBody = e.Channel + ": "+PreviewText;
+                }
 
 
                 if (e.Channel == "Group")
