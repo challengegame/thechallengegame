@@ -777,6 +777,7 @@ MonoBehaviour:
       type: 2}
     ContentPanel: {fileID: 286678806}
     chatMenuButton: {fileID: 267568676}
+    RelationshipValue: 0
   - ChannelName: Anetta
     MessagePanel: {fileID: 1533556724}
     Portrait: {fileID: 21300000, guid: b0f873221191e644eaa4b517273904b7, type: 3}
@@ -786,6 +787,7 @@ MonoBehaviour:
       type: 2}
     ContentPanel: {fileID: 972782637}
     chatMenuButton: {fileID: 1605774457}
+    RelationshipValue: 0
   - ChannelName: Tanya
     MessagePanel: {fileID: 1146251008}
     Portrait: {fileID: 21300000, guid: 85d576620f2278042904aaa8eeb59d3d, type: 3}
@@ -795,6 +797,7 @@ MonoBehaviour:
       type: 2}
     ContentPanel: {fileID: 1362741601}
     chatMenuButton: {fileID: 1997213563}
+    RelationshipValue: 0
   - ChannelName: Kalil
     MessagePanel: {fileID: 492824027}
     Portrait: {fileID: 21300000, guid: c17c421233aca24449fd3dc4ba7972ef, type: 3}
@@ -804,6 +807,7 @@ MonoBehaviour:
       type: 2}
     ContentPanel: {fileID: 602658800}
     chatMenuButton: {fileID: 402172287}
+    RelationshipValue: 0
   - ChannelName: Hema
     MessagePanel: {fileID: 1554487526}
     Portrait: {fileID: 21300000, guid: 853222e6f321c78488dad6511a1eba5d, type: 3}
@@ -813,6 +817,7 @@ MonoBehaviour:
       type: 2}
     ContentPanel: {fileID: 1613675036}
     chatMenuButton: {fileID: 1340766765}
+    RelationshipValue: 0
   - ChannelName: Jessie
     MessagePanel: {fileID: 1493345556}
     Portrait: {fileID: 21300000, guid: 4262a68dc11668f4d92a13b6508b358a, type: 3}
@@ -822,6 +827,7 @@ MonoBehaviour:
       type: 2}
     ContentPanel: {fileID: 1911159930}
     chatMenuButton: {fileID: 1364870127}
+    RelationshipValue: 0
   ChatPanel: {fileID: 2137690763}
   MenuPanel: {fileID: 819534135}
   CreditsPanel: {fileID: 1449184090}
@@ -9417,9 +9423,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllChats:
   - ChatChannelName: Group
-    ChatText: {fileID: 4900000, guid: 96c3929930581c744b8503ba6ac4b666, type: 3}
+    ChatText: {fileID: 4900000, guid: 06fb0401402f0964bb350ceb624b3b94, type: 3}
   - ChatChannelName: Kalil
-    ChatText: {fileID: 4900000, guid: e6561dc953fd9f443924411d2e4b8649, type: 3}
+    ChatText: {fileID: 4900000, guid: ccbb0e35f506e78488d9a99246d650a1, type: 3}
+  - ChatChannelName: Hema
+    ChatText: {fileID: 4900000, guid: 04655b30a61ec854e90d3464cd2d481c, type: 3}
+  - ChatChannelName: Jessie
+    ChatText: {fileID: 4900000, guid: 4232e4c294647304396289967ed27912, type: 3}
+  - ChatChannelName: Anetta
+    ChatText: {fileID: 4900000, guid: 77463a28b1be39045b3ad8ac135fe528, type: 3}
+  - ChatChannelName: Tanya
+    ChatText: {fileID: 4900000, guid: ee8d7f38a10920b4ba90715bf86432a2, type: 3}
 --- !u!1 &1993951455
 GameObject:
   m_ObjectHideFlags: 0
