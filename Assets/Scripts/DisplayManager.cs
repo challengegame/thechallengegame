@@ -135,6 +135,7 @@ public class DisplayManager : MonoBehaviour
                     MessageChannel.chatMenuButton.AddUnreadNotification();
                     //TODO: Only launch these if the app is not "in focus" or whatever
                     //TODO: Move this to the point where the message is queued and schedule based on the delay value
+                    //TODO: Combine all received messages into one notification
                     UnityEngine.iOS.LocalNotification localNotification = new UnityEngine.iOS.LocalNotification();
                     localNotification.fireDate = System.DateTime.Now;
                     localNotification.alertBody = e.Channel + ": "+PreviewText;

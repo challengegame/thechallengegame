@@ -126,7 +126,7 @@ public class InkManager : MonoBehaviour
         }
         //Separate out the character/time info from the text content
         //TODO: pick another character for this, or parse correctly to avoid the : in time strings
-        string[] subStrings = line.Split(':');
+        string[] subStrings = line.Split(';');
         //If there was a section at the beginning that means we have meta display info (this might not exist for character chats, we'll see)
         if (subStrings.Length > 1)
         {
