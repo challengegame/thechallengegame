@@ -108,6 +108,10 @@ public class GameEvent : IComparable<GameEvent>
     //The channel this chat belongs to - either "group" or the character name
     public string Channel;
 
+    public string AbsoluteTimeString;
+
+    public bool ShouldWaitAfter;
+
     public int CompareTo(GameEvent other)
     {
         if (this.GameTimeToBeActivated < other.GameTimeToBeActivated)
@@ -141,11 +145,15 @@ public class TimelineManager : MonoBehaviour
 
     float CurrentGameEventTime = 0.0f;
 
+    public float StartingGameEventTime = 23280.0f;
+
     GameEvent CurrentGameEvent;
 
     Dictionary<string, PriorityQueue<GameEvent>> Queues;
 
     bool WaitingOnChoice = false;
+    bool WaitingOnView = false;
+    string ChannelToBeViewed = "";
 
     //Value to speed up the game, for debug purposes only. All delays will be divided by this value
     float DebugTimeFactor = 1.0f;
@@ -166,18 +174,37 @@ public class TimelineManager : MonoBehaviour
         Queues.Add("Jessie", JessieQueue);
         PriorityQueue<GameEvent> TanyaQueue = new PriorityQueue<GameEvent>();
         Queues.Add("Tanya", TanyaQueue);
+
+        //TODO: Eventually read this from the saved value, and set starting time only if no saved value exists
+        CurrentGameRealTime = StartingGameEventTime;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        CurrentGameRealTime += (Time.deltaTime * DebugTimeFactor);
         ProcessQueues();
         if (Input.GetKeyUp("escape"))
         {
             //Handle Android back button functionality here
             DisplayManager.instance.ShowMainMenu();
         }
+        string TimeString = ParseTimeToString(CurrentGameRealTime);
+        DisplayManager.instance.SetDebugTimeText(TimeString);
+    }
+
+    string ParseTimeToString(float time)
+    {
+        int days = (int)(time / 86400);
+        days += 1;
+        time %= 86400;
+        int hours = (int)(time / 3600);
+        time %= 3600;
+        int minutes = (int)(time / 60);
+        time %= 60;
+        int seconds = (int)time;
+        string retString = days.ToString() + ":" + hours.ToString() + ":" + minutes.ToString() + ":" + seconds.ToString();
+        return retString;
+
     }
 
     //Called on Awake() after singleton setup
@@ -199,8 +226,9 @@ public class TimelineManager : MonoBehaviour
 
     void ProcessQueues()
     {
-        if(!WaitingOnChoice)
+        if(!WaitingOnChoice && !WaitingOnView)
         {
+            CurrentGameRealTime += (Time.deltaTime * DebugTimeFactor);
             foreach (KeyValuePair<string, PriorityQueue<GameEvent>> kvp in Queues)
             {
                 if (kvp.Value.Count() > 0 && kvp.Value.Peek().GameTimeToBeActivated <= CurrentGameRealTime)
@@ -216,8 +244,13 @@ public class TimelineManager : MonoBehaviour
                     else
                     {
                         Debug.Log("Dequeueing event with content: " + currentEvent.Content + " DisplayTime: " + currentEvent.DisplayTime + " Character: " + currentEvent.CharacterName);
-                        CurrentGameEventTime = currentEvent.GameTimeToBeActivated;
+                        CurrentGameEventTime = (currentEvent.GameTimeToBeActivated == 0 ? CurrentGameEventTime : currentEvent.GameTimeToBeActivated);
                         DisplayManager.instance.DisplayEvent(currentEvent);
+                        if (currentEvent.ShouldWaitAfter && DisplayManager.instance.GetCurrentlyActiveChannel() != currentEvent.Channel)
+                        {
+                            WaitingOnView = true;
+                            ChannelToBeViewed = currentEvent.Channel;
+                        }
                     }
                 }
                 if (kvp.Value.Count() == 0 && !WaitingOnChoice)
@@ -240,6 +273,14 @@ public class TimelineManager : MonoBehaviour
     {
         WaitingOnChoice = false;
         CurrentGameEventTime = CurrentGameRealTime;
+    }
+
+    public void ChannelViewed(string ChannelName)
+    {
+        if (WaitingOnView && ChannelName == ChannelToBeViewed)
+        {
+            WaitingOnView = false;
+        }
     }
 
     public void DebugTimeFactorChanged(float newValue)

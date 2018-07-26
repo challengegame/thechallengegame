@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.iOS;
+using UnityEngine.Analytics;
 
 [System.Serializable]
 public class Channel
@@ -29,6 +30,8 @@ public class DisplayManager : MonoBehaviour
 
     public GameObject ChoicePrefab;
     public GameObject ChoiceButtonPrefab;
+
+    public TMPro.TextMeshProUGUI debugTimeText;
 
     string CurrentlyActiveChannel = "";
 
@@ -78,6 +81,7 @@ public class DisplayManager : MonoBehaviour
             HideAllMessagePanels();
             MessageChannel.MessagePanel.SetActive(true);
             MessageChannel.chatMenuButton.SetNotificationsRead();
+            TimelineManager.instance.ChannelViewed(channelName);
             Canvas.ForceUpdateCanvases();
 
             MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
@@ -195,19 +199,29 @@ public class DisplayManager : MonoBehaviour
                 GameObject ChoiceButton = GameObject.Instantiate(ChoiceButtonPrefab, message.transform);
                 ChoiceButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = e.Choices[i];
                 int choiceIndex = i;
-                ChoiceButton.GetComponentInChildren<Button>().onClick.AddListener(delegate { HandleChoice(e.Channel, choiceIndex, message); });
+                ChoiceButton.GetComponentInChildren<Button>().onClick.AddListener(delegate { HandleChoice(e.Channel, choiceIndex, message, e.Choices); });
             }
 
         }
     }
 
-    public void HandleChoice(string Channel, int ChoiceIndex, GameObject ChoiceUI)
+    public void HandleChoice(string Channel, int ChoiceIndex, GameObject ChoiceUI, List<string> choices)
     {
         Debug.Log("Handle choice called with channel " + Channel + " and index " + ChoiceIndex);
         InkManager.instance.HandleChoice(Channel, ChoiceIndex);
-        //TODO: Replace ChoiceUI with text display showing choice made (or alternate choice text...?)
+        string ChoicesString = "";
+        foreach (string choice in choices)
+        {
+            ChoicesString += choice + " ---- ";
+        }
+        Debug.Log(AnalyticsEvent.Custom("choice_made", new Dictionary<string, object>
+        {
+            { "choice_text", ChoicesString },
+            { "choice_chosen", ChoiceIndex }
+        }));
         GameObject.Destroy(ChoiceUI);
         TimelineManager.instance.ChoiceMade();
+
     }
 
     public void AddRelationshipValue(string channel, int RelationshipChange)
@@ -227,6 +241,16 @@ public class DisplayManager : MonoBehaviour
             return MessageChannel.RelationshipValue;
         }
         return 0;
+    }
+
+    public string GetCurrentlyActiveChannel()
+    {
+        return CurrentlyActiveChannel;
+    }
+
+    public void SetDebugTimeText(string Timestring)
+    {
+        debugTimeText.text = Timestring;
     }
 
     /**

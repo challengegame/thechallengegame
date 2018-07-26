@@ -41,9 +41,12 @@ Player@147pm July 6, 2018; Actually I prefer soda.
 	Jessie@141pm July 6, 2018;Right on, me too! {RelationshipChange("Jessie", 1)} #delay=1
 }
 { GetRelationshipValue("Jessie") > 0 :
-	Jessie@141pm July 6, 2018;You're so cool! <sprite="Smile"> #delay=1
+	Jessie@141pm July 6, 2018;You're so cool! <sprite name="Smile"> #delay=1
 - else:
-	Jessie@141pm July 6, 2018;I don't like you very much. <sprite="Frown"> #delay=1
+	Jessie@141pm July 6, 2018;I don't like you very much. <sprite name="Frown"> #delay=1
 }
+
+Hema@2:15pm July 6, 2018;The simulation will wait on the player to see this line before we continue #delay=5 #wait
+Kalil@2:16pm July 6, 2018;We shouldn't see this line until the player has visited the channel to read the previous line #delay=5
 
 -> END

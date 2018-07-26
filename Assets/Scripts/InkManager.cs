@@ -114,6 +114,8 @@ public class InkManager : MonoBehaviour
         string contentString = "";
         string channel = "";
         float delayTimeInSeconds = 0.0f;
+        string absoluteTimeStamp= "";
+        bool shouldWait = false;
 
         //The global tags determine the channel we're part of
         if (globalTags.Count > 0)
@@ -141,6 +143,7 @@ public class InkManager : MonoBehaviour
             else
             {
                 //Maybe here we have the ability to only include a timestamp, for character-specific chats?
+                characterName = subStrings[0];
             }
             contentString = subStrings[1];
 
@@ -164,7 +167,20 @@ public class InkManager : MonoBehaviour
                                 Debug.LogError("Found a 'delay' value in the tag " + Tag + " but it had an invalid timing value "+tagpieces[1]+"!");
                             }
                             break;
+                        case "time":
 
+                            absoluteTimeStamp = tagpieces[1];
+                            break;
+
+                    }
+                }
+                else if (tagpieces.Length == 1)
+                {
+                    switch (tagpieces[0])
+                    {
+                        case "wait":
+                            shouldWait = true;
+                            break;
                     }
                 }
             }
@@ -173,10 +189,14 @@ public class InkManager : MonoBehaviour
             gameEvent.Content = contentString;
             gameEvent.DisplayTime = timeString;
             gameEvent.CharacterName = characterName;
-            //TODO: parse this from the tags
-            gameEvent.GameTimeToBeActivated = TimelineManager.instance.GetCurrentTime() + delayTimeInSeconds;
-            Debug.Log("Calculated game time active to be " + gameEvent.GameTimeToBeActivated);
+
+
             gameEvent.Channel = channel;
+            gameEvent.ShouldWaitAfter = shouldWait;
+            gameEvent.AbsoluteTimeString = absoluteTimeStamp;
+            gameEvent.GameTimeToBeActivated = ParseAbsoluteTimestamp(absoluteTimeStamp);
+
+            Debug.Log("Calculated game time active to be " + gameEvent.GameTimeToBeActivated);
             TimelineManager.instance.AddEventToQueue(gameEvent);
 
 
@@ -186,6 +206,40 @@ public class InkManager : MonoBehaviour
             //This line wasn't constructed appropriately, let's log an error
             Debug.LogError("String " + line + " has no meta information (character name and in-game timestamp).");
         }
+    }
+
+    public float ParseAbsoluteTimestamp(string timestamp)
+    {
+        //Here we take a human-readable timestamp string in the format d:hh:mm:ss and convert it to a float value from game time zero (1:00:00:00)
+        string[] values = timestamp.Split(':');
+        int days, hours, minutes, seconds;
+        float final = 0.0f;
+        if (values.Length == 4)
+        {
+            //TODO: add some error catching here
+            if (int.TryParse(values[0], out days))
+            {
+                //Got our days value!
+                final += ((days -1) * 86400.0f);
+            }
+            if (int.TryParse(values[1], out hours))
+            {
+                final += (hours * 3600.0f);
+            }
+            if (int.TryParse(values[2], out minutes))
+            {
+                final += (minutes * 60.0f);
+            }
+            if (int.TryParse(values[3], out seconds))
+            {
+                final += seconds;
+            }
+        }
+        else
+        {
+            //Something was't right with the string's format, yell about it and move on
+        }
+        return final;
     }
 
     public void HandleChoice(string channel, int choiceIndex)
