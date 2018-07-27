@@ -37,6 +37,31 @@ public class InkManager : MonoBehaviour
                 return DisplayManager.instance.GetRelationshipValue(character);
                
             });
+
+            s.BindExternalFunction("PlayerName", () =>
+            {
+                return DisplayManager.instance.GetPlayerName();
+
+            });
+
+            s.BindExternalFunction("PlayerPersonalPronoun", () =>
+            {
+                return DisplayManager.instance.GetPersonalPronoun();
+
+            });
+
+            s.BindExternalFunction("PlayerPossessivePronoun", () =>
+            {
+                return DisplayManager.instance.GetPossessivePronoun();
+
+            });
+
+            s.BindExternalFunction("PlayerObjectivePronoun", () =>
+            {
+                return DisplayManager.instance.GetObjectivePronoun();
+
+            });
+
         }
 	}
 

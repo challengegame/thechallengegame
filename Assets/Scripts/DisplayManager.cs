@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.iOS;
 using UnityEngine.Analytics;
+using System;
 
 [System.Serializable]
 public class Channel
@@ -19,6 +20,13 @@ public class Channel
     public int RelationshipValue;
 }
 
+public enum Pronoun
+{
+    THEY,
+    SHE,
+    HE
+};
+
 public class DisplayManager : MonoBehaviour
 {
     public List<Channel> Channels;
@@ -27,6 +35,7 @@ public class DisplayManager : MonoBehaviour
     public GameObject ChatPanel;
     public GameObject MenuPanel;
     public GameObject CreditsPanel;
+    public GameObject NameEntryPanel;
 
     public GameObject ChoicePrefab;
     public GameObject ChoiceButtonPrefab;
@@ -34,6 +43,9 @@ public class DisplayManager : MonoBehaviour
     public TMPro.TextMeshProUGUI debugTimeText;
 
     string CurrentlyActiveChannel = "";
+
+    string PlayerName = "Quinn";
+    Pronoun PlayerPronoun = Pronoun.THEY;
 
     
 	void Start ()
@@ -251,6 +263,79 @@ public class DisplayManager : MonoBehaviour
     public void SetDebugTimeText(string Timestring)
     {
         debugTimeText.text = Timestring;
+    }
+
+    public void OnPlayerNameEntered(string name)
+    {
+        PlayerName = name;
+
+        Debug.Log("Set name " + name);
+    }
+
+    public void OnPronounChosen(int pronoun)
+    {
+        
+        PlayerPronoun = (Pronoun)pronoun;
+
+        Debug.Log("Chose pronoun " + PlayerPronoun);
+    }
+
+    public string GetPlayerName()
+    {
+        return PlayerName;
+    }
+
+    //He/they/she
+    public string GetPersonalPronoun()
+    {
+        switch (PlayerPronoun)
+        {
+            case Pronoun.HE:
+                return "he";
+            case Pronoun.SHE:
+                return "she";
+            case Pronoun.THEY:
+                return "they";
+            default:
+                return "they";
+        }
+    }
+
+    //Their/hers/his
+    public string GetPossessivePronoun()
+    {
+        switch (PlayerPronoun)
+        {
+            case Pronoun.HE:
+                return "his";
+            case Pronoun.SHE:
+                return "hers";
+            case Pronoun.THEY:
+                return "theirs";
+            default:
+                return "theirs";
+        }
+    }
+
+    //Her/them/him
+    public string GetObjectivePronoun()
+    {
+        switch (PlayerPronoun)
+        {
+            case Pronoun.HE:
+                return "him";
+            case Pronoun.SHE:
+                return "her";
+            case Pronoun.THEY:
+                return "them";
+            default:
+                return "them";
+        }
+    }
+
+    public void CloseNameEntryPanel()
+    {
+        NameEntryPanel.SetActive(false);
     }
 
     /**
