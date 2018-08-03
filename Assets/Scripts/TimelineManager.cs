@@ -151,9 +151,9 @@ public class TimelineManager : MonoBehaviour
 
     Dictionary<string, PriorityQueue<GameEvent>> Queues;
 
-    bool WaitingOnChoice = false;
-    bool WaitingOnView = false;
-    string ChannelToBeViewed = "";
+    int WaitingOnChoiceCount = 0;
+    Dictionary<string, int> ChannelWaitCounts;
+    int TotalWaitCount = 0;
 
     //Value to speed up the game, for debug purposes only. All delays will be divided by this value
     float DebugTimeFactor = 1.0f;
@@ -161,6 +161,8 @@ public class TimelineManager : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        ChannelWaitCounts = new Dictionary<string, int>();
+
         Queues = new Dictionary<string, PriorityQueue<GameEvent>>();
         PriorityQueue<GameEvent> GroupQueue = new PriorityQueue<GameEvent>();
         Queues.Add("Group", GroupQueue);
@@ -226,7 +228,7 @@ public class TimelineManager : MonoBehaviour
 
     void ProcessQueues()
     {
-        if(!WaitingOnChoice && !WaitingOnView)
+        if(WaitingOnChoiceCount <=0 && TotalWaitCount <= 0)
         {
             CurrentGameRealTime += (Time.deltaTime * DebugTimeFactor);
             foreach (KeyValuePair<string, PriorityQueue<GameEvent>> kvp in Queues)
@@ -239,7 +241,7 @@ public class TimelineManager : MonoBehaviour
                     {
                         Debug.Log("Dequeuing choice event with " + choiceEvent.Choices.Count + " choices.");
                         DisplayManager.instance.DisplayChoiceEvent(choiceEvent);
-                        WaitingOnChoice = true;
+                        WaitingOnChoiceCount++;
                     }
                     else
                     {
@@ -248,12 +250,19 @@ public class TimelineManager : MonoBehaviour
                         DisplayManager.instance.DisplayEvent(currentEvent);
                         if (currentEvent.ShouldWaitAfter && DisplayManager.instance.GetCurrentlyActiveChannel() != currentEvent.Channel)
                         {
-                            WaitingOnView = true;
-                            ChannelToBeViewed = currentEvent.Channel;
+                            TotalWaitCount++;
+                            if (ChannelWaitCounts.ContainsKey(currentEvent.Channel))
+                            {
+                                ChannelWaitCounts[currentEvent.Channel]++;
+                            }
+                            else
+                            {
+                                ChannelWaitCounts.Add(currentEvent.Channel, 1);
+                            }
                         }
                     }
                 }
-                if (kvp.Value.Count() == 0 && !WaitingOnChoice)
+                if (kvp.Value.Count() == 0 && WaitingOnChoiceCount <= 0)
                 {
                     //Our queue is empty, let's see if the ink manager has more stuff for us
                     InkManager.instance.AdvanceStory(kvp.Key);
@@ -271,15 +280,16 @@ public class TimelineManager : MonoBehaviour
 
     public void ChoiceMade()
     {
-        WaitingOnChoice = false;
+        WaitingOnChoiceCount--;
         CurrentGameEventTime = CurrentGameRealTime;
     }
 
     public void ChannelViewed(string ChannelName)
     {
-        if (WaitingOnView && ChannelName == ChannelToBeViewed)
+        if (ChannelWaitCounts.ContainsKey(ChannelName))
         {
-            WaitingOnView = false;
+            ChannelWaitCounts[ChannelName]--;
+            TotalWaitCount--;
         }
     }
 

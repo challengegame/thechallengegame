@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+#if UNITY_IOS
 using UnityEngine.iOS;
+#endif
 using UnityEngine.Analytics;
 using System;
 
@@ -50,7 +52,9 @@ public class DisplayManager : MonoBehaviour
     
 	void Start ()
     {
+#if UNITY_IOS
         UnityEngine.iOS.NotificationServices.RegisterForNotifications(NotificationType.Alert | NotificationType.Badge | NotificationType.Sound);
+#endif
         //TODO: Go through all channels and set them up with the correct character portrait and name
         //Actually why, since we have separate panels we don't need to do this dynamically
 
@@ -152,9 +156,12 @@ public class DisplayManager : MonoBehaviour
                     //TODO: Only launch these if the app is not "in focus" or whatever
                     //TODO: Move this to the point where the message is queued and schedule based on the delay value
                     //TODO: Combine all received messages into one notification
+#if UNITY_IOS
                     UnityEngine.iOS.LocalNotification localNotification = new UnityEngine.iOS.LocalNotification();
+
                     localNotification.fireDate = System.DateTime.Now;
                     localNotification.alertBody = e.Channel + ": "+PreviewText;
+#endif
                 }
 
 

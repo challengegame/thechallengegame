@@ -1,5 +1,9 @@
 EXTERNAL RelationshipChange(character, change)
 EXTERNAL GetRelationshipValue(character)
+EXTERNAL PlayerName()
+EXTERNAL PlayerPersonalPronoun()
+EXTERNAL PlayerPossessivePronoun()
+EXTERNAL PlayerObjectivePronoun()
 
 //This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
 #Hema
@@ -27,11 +31,11 @@ Player;Nah #time=1:06:28:30
 Player;Everything's gone #time=1:06:28:32
 Player;I did manage to move my contacts over #time=1:06:28:33
 -
-#time=1:06:28:35
-Player;...It's pretty nice having a clean slate for once -> day1_morning_hema_sequence2
+Player;...It's pretty nice having a clean slate for once #time=1:06:28:35
+#time=1:06:28:37
+Hema;SPEAKING of clean slates...  -> day1_morning_hema_sequence2
 
 === day1_morning_hema_sequence2 ===
-Hema;SPEAKING of clean slates... #time=1:06:28:37
 
 * [...Rinsed tablets?]
 Player;Let me guess...Rinsed tablets? #time=1:06:28:38
@@ -58,8 +62,8 @@ Hema;seriously I might have some interesting news for the group chat in a couple
 	Player;It's not even 7 and you've already got *news* #time=1:06:28:49
 	Player;You never fail to impress, Hema #time=1:06:28:50
 	Hema;What can I say #time=1:06:28:52
-	Hema;i'm 'gregarious' #time=1:06:28:53
-	Hema;(that word is going to be on the vocabulary exam btw. you heard it here first) #time=1:06:28:54
+	Hema;i'm 'sportive' #time=1:06:28:53
+	Hema;(that word is going to be on the literature exam btw. you heard it here first) #time=1:06:28:54
 	Hema;oh wow #time=1:06:28:55
 	Hema;I've been such a cock #time=1:06:28:58
 	Hema;How are you? #time=1:06:28:59
@@ -72,7 +76,7 @@ Hema;seriously I might have some interesting news for the group chat in a couple
 	Hema;hahaha #time=1:06:28:53
 	Hema;What can I say #time=1:06:28:55
 	Hema;i'm 'gregarious' #time=1:06:28:56
-	Hema;(that word is going to be on the vocabulary test soon btw. you heard it here first) #time=1:06:28:57
+	Hema;(that word is going to be on the literature exam btw. you heard it here first) #time=1:06:28:57
 	Hema;oh wow #time=1:06:28:59
 	Hema;I've been such a cock #time=1:06:29:02
 	Hema;How are you? #time=1:06:29:03
@@ -85,14 +89,14 @@ Hema;seriously I might have some interesting news for the group chat in a couple
 		Player;Seriously #time=1:06:29:09
 		Player;You're one of the most thoughtful people i know #time=1:06:29:10
 		Player;I'm doing more than okay. #time=1:06:29:12
-		Player;Thanks for asking :smile_emoji: #time=1:06:29:14
+		Player;Thanks for asking <sprite="Smile"> #time=1:06:29:14
 		Player;How are you? #time=1:06:29:15
 		
 		
 		* * * [Fine-ish?]
 		Player;It's sixth form. #time=1:06:29:07
 		Player;I think we're all fine-ish? #time=1:06:29:09
-		Player;:P #time=1:06:29:10
+		Player;<sprite="Tongue_sticking_out"> #time=1:06:29:10
 		Player;thx for asking #time=1:06:29:12
 		Player;How are you? #time=1:06:29:14
 		- - -
@@ -100,7 +104,7 @@ Hema;seriously I might have some interesting news for the group chat in a couple
 		Hema;between you and me #time=1:06:29:19
 		Hema;I'll probably be doing a LOT better #time=1:06:29:21
 		Hema;...in the next couple hours #time=1:06:29:23
-		Hema;:wink_emoji: #time=1:06:29:24
+		Hema;<sprite="Wink"> #time=1:06:29:24
 			* * * * [URGH]
 			Player;URGH #time=1:06:29:25
 			
@@ -111,11 +115,7 @@ Hema;seriously I might have some interesting news for the group chat in a couple
 			Hema;haha #time=1:06:29:26
 			Hema;I have to start getting ready for early morning practice #time=1:06:29:28
 			Hema;which of course is different than early mid-morning practice #time=1:06:29:30
-			#time=1:06:29:31
-			Hema;talk more soon!!! -> day1_afternoon_hema_sequence1
+			Hema;talk more soon!!! #time=1:06:29:31
 
-=== day1_afternoon_hema_sequence1 ===
-
--
 
 ->END
