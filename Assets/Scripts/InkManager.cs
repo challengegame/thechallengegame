@@ -18,10 +18,17 @@ public class InkManager : MonoBehaviour
 
     public List<Chat> AllChats;
 
+    public float ChoiceDelaySeconds = 3.0f;
+
 
 	void Start ()
     {
-        CurrentStories = new Dictionary<string, Story>();
+        
+	}
+
+    public void ReloadStories()
+    {
+        CurrentStories.Clear();
         foreach (Chat C in AllChats)
         {
             Story s = new Story(C.ChatText.text);
@@ -35,7 +42,7 @@ public class InkManager : MonoBehaviour
             s.BindExternalFunction("GetRelationshipValue", (string character) =>
             {
                 return DisplayManager.instance.GetRelationshipValue(character);
-               
+
             });
 
             s.BindExternalFunction("PlayerName", () =>
@@ -63,11 +70,52 @@ public class InkManager : MonoBehaviour
             });
 
         }
-	}
+    }
 
     private void Initialize()
     {
+        CurrentStories = new Dictionary<string, Story>();
+        foreach (Chat C in AllChats)
+        {
+            Story s = new Story(C.ChatText.text);
+            CurrentStories.Add(C.ChatChannelName, s);
+            s.BindExternalFunction("RelationshipChange", (string character, int change) =>
+            {
+                DisplayManager.instance.AddRelationshipValue(character, change);
+                Debug.Log("RelationshipChange called with channel " + character + " and value " + change);
+            });
 
+            s.BindExternalFunction("GetRelationshipValue", (string character) =>
+            {
+                return DisplayManager.instance.GetRelationshipValue(character);
+
+            });
+
+            s.BindExternalFunction("PlayerName", () =>
+            {
+                return DisplayManager.instance.GetPlayerName();
+
+            });
+
+            s.BindExternalFunction("PlayerPersonalPronoun", () =>
+            {
+                return DisplayManager.instance.GetPersonalPronoun();
+
+            });
+
+            s.BindExternalFunction("PlayerPossessivePronoun", () =>
+            {
+                return DisplayManager.instance.GetPossessivePronoun();
+
+            });
+
+            s.BindExternalFunction("PlayerObjectivePronoun", () =>
+            {
+                return DisplayManager.instance.GetObjectivePronoun();
+
+            });
+
+        }
     }
     /*
     public void AdvanceStories()
@@ -117,6 +165,9 @@ public class InkManager : MonoBehaviour
             choiceEvent.Channel = Channel;
             //No data besides the channel applies to choices
             choiceEvent.Choices = new List<string>();
+            //Put in a delay before displaying choices, so that they aren't instantaneous. This gives the player time to read the last message,
+            //plus for us to play the correct animations.
+            choiceEvent.GameTimeToBeActivated = TimelineManager.instance.GetCurrentTime() + ChoiceDelaySeconds;
             for (int i = 0; i < CurrentStories[Channel].currentChoices.Count; i++)
             {
                 choiceEvent.Choices.Add(CurrentStories[Channel].currentChoices[i].text);
@@ -143,7 +194,7 @@ public class InkManager : MonoBehaviour
         bool shouldWait = false;
 
         //The global tags determine the channel we're part of
-        if (globalTags.Count > 0)
+        if (globalTags != null && globalTags.Count > 0)
         {
             channel = globalTags[0];
         }
@@ -277,6 +328,25 @@ public class InkManager : MonoBehaviour
 
         CurrentStories[channel].ChooseChoiceIndex(choiceIndex);
         AdvanceStory(channel);
+    }
+
+    public string GetJSON(string ChannelName)
+    {
+        if (CurrentStories.ContainsKey(ChannelName))
+        {
+            return CurrentStories[ChannelName].state.ToJson();
+        }
+        Debug.LogError("Error saving Ink state: no channel found named " + ChannelName);
+        return "";
+    }
+
+    public void RestoreJSON(string ChannelName, string JSON)
+    {
+        if (CurrentStories != null && CurrentStories.ContainsKey(ChannelName))
+        {
+            CurrentStories[ChannelName].state.LoadJson(JSON);
+        }
+        Debug.LogError("Error restoring Ink state: no channel found named " + ChannelName);
     }
 
 

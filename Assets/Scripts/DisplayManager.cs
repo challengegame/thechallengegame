@@ -41,6 +41,7 @@ public class DisplayManager : MonoBehaviour
 
     public GameObject ChoicePrefab;
     public GameObject ChoiceButtonPrefab;
+    public GameObject TypingPrefab;
 
     public TMPro.TextMeshProUGUI debugTimeText;
 
@@ -49,6 +50,9 @@ public class DisplayManager : MonoBehaviour
     string PlayerName = "Quinn";
     Pronoun PlayerPronoun = Pronoun.THEY;
 
+    Queue<GameEvent> DisplayQueue;
+
+    bool Waiting = false;
     
 	void Start ()
     {
@@ -63,7 +67,6 @@ public class DisplayManager : MonoBehaviour
             //MessagePanel panel = c.MessagePanel.GetComponent<MessagePanel>();
             //panel.CharacterNameText.text = c.ChannelName;
             //panel.PortraitImage.sprite = c.Portrait;
-            //TODO: Restore this info from saved state of some kind
             c.chatMenuButton.SetNotificationsRead();
             c.chatMenuButton.SetPreviewText("");
         }
@@ -72,12 +75,33 @@ public class DisplayManager : MonoBehaviour
 
     void Initialize()
     {
-        
+        DisplayQueue = new Queue<GameEvent>();
+    }
+
+    public void ClearAllChannels()
+    {
+        foreach (Channel c in Channels)
+        {
+            for (int i = c.ContentPanel.transform.childCount; i >= 0 ; i--)
+            {
+                Destroy(c.ContentPanel.transform.GetChild(i).gameObject);
+            }
+        }
+    }
+
+    public void SetAllNotificationsRead()
+    {
+        foreach (Channel c in Channels)
+        {
+            c.chatMenuButton.SetNotificationsRead();
+        }
     }
 
     public void ShowCredits()
     {
         CreditsPanel.SetActive(true);
+        //Temp for testing
+        TimelineManager.instance.SaveGame();
     }
 
     public void ShowMainMenu()
@@ -115,17 +139,87 @@ public class DisplayManager : MonoBehaviour
         }
     }
 
-    public void DisplayEvent(GameEvent e)
+
+    public void DisplayEvent(GameEvent e, bool immediate=true)
     {
-        //TODO: Set message preview text
-        //TODO: Set unread message indicator
+        Debug.Log("DisplayEvent");
         Channel MessageChannel = Channels.Find(x => x.ChannelName == e.Channel);
         if (MessageChannel != null)
         {
+            if (immediate)
+            {
+                //TODO: Figure out the length of the message and change the prefab based on that
+                GameObject message;
+                if (e.CharacterName.ToLower() == "player")
+                {
+                    //TODO: Eventually this should wait to display the player message until the player has initiated action or something similar
+                    message = GameObject.Instantiate(MessageChannel.OutgoingMessagePrefab, MessageChannel.ContentPanel.transform);
+                    MessageUI M = message.GetComponent<MessageUI>();
+                    //Player messages don't have a name or portrait to worry about
+                    M.MessageText.text = e.Content;
+                    Canvas.ForceUpdateCanvases();
+                    if (MessageChannel.ContentPanel.activeInHierarchy)
+                    {
+                        MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
+                    }
 
+                    Canvas.ForceUpdateCanvases();
+                }
+                else
+                {
+
+                    string PreviewText = "";
+                    if (e.Content.Length > 20)
+                    {
+                        PreviewText = e.Content.Substring(0, 17);
+                        PreviewText += "...";
+                    }
+                    else
+                    {
+                        PreviewText = e.Content;
+                    }
+                    MessageChannel.chatMenuButton.SetPreviewText(PreviewText);
+
+                    if (CurrentlyActiveChannel != e.Channel)
+                    {
+                        MessageChannel.chatMenuButton.AddUnreadNotification();
+                        //TODO: Only launch these if the app is not "in focus" or whatever
+                        //TODO: Move this to the point where the message is queued and schedule based on the delay value
+                        //TODO: Combine all received messages into one notification
+#if UNITY_IOS
+                    UnityEngine.iOS.LocalNotification localNotification = new UnityEngine.iOS.LocalNotification();
+
+                    localNotification.fireDate = System.DateTime.Now;
+                    localNotification.alertBody = e.Channel + ": "+PreviewText;
+#endif
+                        ShowMessage(e, MessageChannel);
+                    }
+                    else
+                    {
+                        ShowMessage(e, MessageChannel);
+                    }
+
+                }
+            }
+            else
+            {
+                //Add message to display queue
+                DisplayQueue.Enqueue(e);
+                
+            }
+
+        }
+
+
+    }
+
+    public void DisplayEventFromQueue(GameEvent e)
+    {
+        Debug.Log("DisplayEventFromQueue "+e.Content);
+        Channel MessageChannel = Channels.Find(x => x.ChannelName == e.Channel);
+        if (MessageChannel != null)
+        {
             //TODO: Figure out the length of the message and change the prefab based on that
-            //TODO: Look up the character involved and attach their portrait
-
             GameObject message;
             if (e.CharacterName.ToLower() == "player")
             {
@@ -133,7 +227,14 @@ public class DisplayManager : MonoBehaviour
                 message = GameObject.Instantiate(MessageChannel.OutgoingMessagePrefab, MessageChannel.ContentPanel.transform);
                 MessageUI M = message.GetComponent<MessageUI>();
                 //Player messages don't have a name or portrait to worry about
-                M.MessageText.text =  e.Content;
+                M.MessageText.text = e.Content;
+                Canvas.ForceUpdateCanvases();
+                if (MessageChannel.ContentPanel.activeInHierarchy)
+                {
+                    MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
+                }
+
+                Canvas.ForceUpdateCanvases();
             }
             else
             {
@@ -157,47 +258,85 @@ public class DisplayManager : MonoBehaviour
                     //TODO: Move this to the point where the message is queued and schedule based on the delay value
                     //TODO: Combine all received messages into one notification
 #if UNITY_IOS
-                    UnityEngine.iOS.LocalNotification localNotification = new UnityEngine.iOS.LocalNotification();
+                UnityEngine.iOS.LocalNotification localNotification = new UnityEngine.iOS.LocalNotification();
 
-                    localNotification.fireDate = System.DateTime.Now;
-                    localNotification.alertBody = e.Channel + ": "+PreviewText;
+                localNotification.fireDate = System.DateTime.Now;
+                localNotification.alertBody = e.Channel + ": "+PreviewText;
 #endif
-                }
-
-
-                if (e.Channel == "Group")
-                {
-                    message = GameObject.Instantiate(MessageChannel.IncomingMessagePrefab, MessageChannel.ContentPanel.transform);
-                    //If we're in a group chat, the message has a portrait and a name that needs to be set up.
-
-                    MessageUI M = message.GetComponent<MessageUI>();
-                    Channel CharChannel = Channels.Find(x => x.ChannelName == e.CharacterName);
-                    if (CharChannel != null)
-                    {
-                        M.CharacterImage.sprite = CharChannel.Portrait;
-                    }
-                    M.MessageText.text = e.Content;
-                    M.CharacterNameText.text = e.CharacterName;
+                    ShowMessage(e, MessageChannel);
                 }
                 else
                 {
-                    message = GameObject.Instantiate(MessageChannel.IncomingMessagePrefab, MessageChannel.ContentPanel.transform);
-                    MessageUI M = message.GetComponent<MessageUI>();
-                    //Single messages don't have to worry about the name or portrait either, just the text content
-                    M.MessageText.text = e.Content;
+                    StartCoroutine(ShowMessageDelayed(e, MessageChannel));
                 }
-                    
-            }
-            Canvas.ForceUpdateCanvases();
-            if (MessageChannel.ContentPanel.activeInHierarchy)
-            {
-                MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
-            }
 
-            Canvas.ForceUpdateCanvases();
+            }
         }
 
+    }
 
+    private void Update()
+    {
+        //Process display queue
+        if (DisplayQueue.Count > 0 && !Waiting)
+        {
+            GameEvent ge = DisplayQueue.Dequeue();
+            DisplayEventFromQueue(ge);
+        }
+    }
+
+    IEnumerator ShowMessageDelayed(GameEvent e, Channel MessageChannel)
+    {
+        Waiting = true;
+        float seconds = 0;
+        seconds = e.Content.Length * 0.1f;
+        Debug.Log("Show Message Delayed, seconds: "+seconds);
+        GameObject TypingObject = GameObject.Instantiate(TypingPrefab, MessageChannel.ContentPanel.transform);
+        TypingObject.GetComponent<Talking>().NameText.text = (e.CharacterName + " is typing...");
+        Canvas.ForceUpdateCanvases();
+        if (MessageChannel.ContentPanel.activeInHierarchy)
+        {
+            MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
+        }
+
+        Canvas.ForceUpdateCanvases();
+        yield return new WaitForSeconds(0.1f/*seconds*/);
+        Destroy(TypingObject);
+        ShowMessage(e, MessageChannel);
+        Waiting = false;
+    }
+
+    void ShowMessage(GameEvent e, Channel MessageChannel)
+    {
+        GameObject message;
+        if (e.Channel == "Group")
+        {
+            message = GameObject.Instantiate(MessageChannel.IncomingMessagePrefab, MessageChannel.ContentPanel.transform);
+            //If we're in a group chat, the message has a portrait and a name that needs to be set up.
+
+            MessageUI M = message.GetComponent<MessageUI>();
+            Channel CharChannel = Channels.Find(x => x.ChannelName == e.CharacterName);
+            if (CharChannel != null)
+            {
+                M.CharacterImage.sprite = CharChannel.Portrait;
+            }
+            M.MessageText.text = e.Content;
+            M.CharacterNameText.text = e.CharacterName;
+        }
+        else
+        {
+            message = GameObject.Instantiate(MessageChannel.IncomingMessagePrefab, MessageChannel.ContentPanel.transform);
+            MessageUI M = message.GetComponent<MessageUI>();
+            //Single messages don't have to worry about the name or portrait either, just the text content
+            M.MessageText.text = e.Content;
+        }
+        Canvas.ForceUpdateCanvases();
+        if (MessageChannel.ContentPanel.activeInHierarchy)
+        {
+            MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
+        }
+
+        Canvas.ForceUpdateCanvases();
     }
 
     public void DisplayChoiceEvent(ChoiceEvent e)
@@ -220,6 +359,14 @@ public class DisplayManager : MonoBehaviour
                 int choiceIndex = i;
                 ChoiceButton.GetComponentInChildren<Button>().onClick.AddListener(delegate { HandleChoice(e.Channel, choiceIndex, message, e.Choices); });
             }
+
+            Canvas.ForceUpdateCanvases();
+            if (MessageChannel.ContentPanel.activeInHierarchy)
+            {
+                MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
+            }
+
+            Canvas.ForceUpdateCanvases();
 
         }
     }
@@ -292,6 +439,21 @@ public class DisplayManager : MonoBehaviour
         return PlayerName;
     }
 
+    public Pronoun GetPlayerPronoun()
+    {
+        return PlayerPronoun;
+    }
+
+    public void SetPlayerName(string name)
+    {
+        PlayerName = name;
+    }
+
+    public void SetPlayerPronoun(Pronoun pronoun)
+    {
+        PlayerPronoun = pronoun;
+    }
+
     //He/they/she
     public string GetPersonalPronoun()
     {
@@ -343,6 +505,7 @@ public class DisplayManager : MonoBehaviour
     public void CloseNameEntryPanel()
     {
         NameEntryPanel.SetActive(false);
+        TimelineManager.instance.WaitingForNameInput = false;
     }
 
     /**

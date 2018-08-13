@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 //Priority Queue taken from VS Magazine
@@ -94,7 +96,7 @@ public class PriorityQueue<T> where T : IComparable<T>
     } // IsConsistent
 } // PriorityQueue
 
-
+[System.Serializable]
 public class GameEvent : IComparable<GameEvent>
 {
     //This is the time in the running of the game that the event should be displayed
@@ -134,12 +136,30 @@ public class ChoiceEvent : GameEvent
     public List<string> Choices;
 }
 
+[System.Serializable]
+public class SaveData
+{
+    public float CurrentGameEventTime = 0.0f;
+    public string PlayerName = "";
+    public Pronoun PlayerPronoun;
+    public string GroupInkJSON;
+    public string HemaInkJSON;
+    public string KalilInkJSON;
+    public string AnettaInkJSON;
+    public string JessieInkJSON;
+    public string TanyaInkJSON;
+
+    public List<GameEvent> PastGameEvents;
+}
+
 
 //This class handles timing for the game. 
 //It handles displaying the next message or event that comes in, and keeps track of where we are in the game currently
 //It keeps a queue of messages to display, fed by the InkManager, and when it is time to display them it sends them to the DisplayManager
 public class TimelineManager : MonoBehaviour
 {
+
+    public bool LoadSaves = false;
     //TODO: I think this will need to look at system time, because this will not increment when we're in pause mode
     float CurrentGameRealTime = 0.0f;
 
@@ -155,13 +175,20 @@ public class TimelineManager : MonoBehaviour
     Dictionary<string, int> ChannelWaitCounts;
     int TotalWaitCount = 0;
 
-    //Value to speed up the game, for debug purposes only. All delays will be divided by this value
+    [HideInInspector]
+    public bool WaitingForNameInput = true;
+
+    //Value to speed up the game, for debug purposes only.
     float DebugTimeFactor = 1.0f;
+
+    List<GameEvent> PastEvents;
 
     // Use this for initialization
     void Start ()
     {
         ChannelWaitCounts = new Dictionary<string, int>();
+
+        PastEvents = new List<GameEvent>();
 
         Queues = new Dictionary<string, PriorityQueue<GameEvent>>();
         PriorityQueue<GameEvent> GroupQueue = new PriorityQueue<GameEvent>();
@@ -177,21 +204,76 @@ public class TimelineManager : MonoBehaviour
         PriorityQueue<GameEvent> TanyaQueue = new PriorityQueue<GameEvent>();
         Queues.Add("Tanya", TanyaQueue);
 
-        //TODO: Eventually read this from the saved value, and set starting time only if no saved value exists
-        CurrentGameRealTime = StartingGameEventTime;
-    }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        ProcessQueues();
-        if (Input.GetKeyUp("escape"))
+        string SavePath = Path.Combine(Application.persistentDataPath, "TheChallengeSave");
+
+        if (LoadSaves && File.Exists(SavePath))
         {
-            //Handle Android back button functionality here
+            Debug.Log("Saved game exists, loading it...");
+            //Here we have a save already, so load that and continue from there
+            DisplayManager.instance.CloseNameEntryPanel();
             DisplayManager.instance.ShowMainMenu();
+            LoadGame();
         }
-        string TimeString = ParseTimeToString(CurrentGameRealTime);
-        DisplayManager.instance.SetDebugTimeText(TimeString);
+        else
+        {
+            Debug.Log("No save game found, starting from scratch");
+            //Otherwise, do our startup tasks
+            CurrentGameRealTime = StartingGameEventTime;
+        }
+    }
+
+    public void RestartGame()
+    {
+        CurrentGameRealTime = StartingGameEventTime;
+        PastEvents.Clear();
+        DisplayManager.instance.ClearAllChannels();
+        string SavePath = Path.Combine(Application.persistentDataPath, "TheChallengeSave");
+        try
+        {
+            File.Delete(SavePath);
+        }
+        catch (Exception e)
+        {
+            Debug.LogException(e, this);
+        }
+        InkManager.instance.ReloadStories();
+    }
+
+    private void OnApplicationPause(bool pause)
+    {
+        Debug.Log("OnAppPause " + pause);
+        if (pause)
+        {
+            //Here we are being paused by the phone OS, and need to save our state so that we can resume from where we left off
+            SaveGame();
+        }
+        else if(LoadSaves)
+        {
+            //Focus is back on us, we should restore our saved state
+            LoadGame();
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        Debug.Log("OnAppQuit");
+        SaveGame();
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
+        if (!WaitingForNameInput)
+        {
+            ProcessQueues();
+            if (Input.GetKeyUp("escape"))
+            {
+                //Handle Android back button functionality here
+                DisplayManager.instance.ShowMainMenu();
+            }
+            string TimeString = ParseTimeToString(CurrentGameRealTime);
+            DisplayManager.instance.SetDebugTimeText(TimeString);
+        }
     }
 
     string ParseTimeToString(float time)
@@ -248,6 +330,7 @@ public class TimelineManager : MonoBehaviour
                         Debug.Log("Dequeueing event with content: " + currentEvent.Content + " DisplayTime: " + currentEvent.DisplayTime + " Character: " + currentEvent.CharacterName);
                         CurrentGameEventTime = (currentEvent.GameTimeToBeActivated == 0 ? CurrentGameEventTime : currentEvent.GameTimeToBeActivated);
                         DisplayManager.instance.DisplayEvent(currentEvent);
+                        PastEvents.Add(currentEvent);
                         if (currentEvent.ShouldWaitAfter && DisplayManager.instance.GetCurrentlyActiveChannel() != currentEvent.Channel)
                         {
                             TotalWaitCount++;
@@ -297,6 +380,105 @@ public class TimelineManager : MonoBehaviour
     {
         DebugTimeFactor = newValue;
     }
+
+    public void SaveGame()
+    {
+
+        SaveData sd = new SaveData();
+        sd.CurrentGameEventTime = CurrentGameEventTime;
+        sd.PlayerName = DisplayManager.instance.GetPlayerName();
+        sd.PlayerPronoun = DisplayManager.instance.GetPlayerPronoun();
+        sd.PastGameEvents = PastEvents;
+
+        sd.GroupInkJSON = InkManager.instance.GetJSON("Group");
+        sd.HemaInkJSON = InkManager.instance.GetJSON("Hema");
+        sd.JessieInkJSON = InkManager.instance.GetJSON("Jessie");
+        sd.AnettaInkJSON = InkManager.instance.GetJSON("Anetta");
+        sd.TanyaInkJSON = InkManager.instance.GetJSON("Tanya");
+        sd.KalilInkJSON = InkManager.instance.GetJSON("Kalil");
+
+        string SavePath = Path.Combine(Application.persistentDataPath, "TheChallengeSave");
+
+        using (Stream SaveWriteStream = new FileStream(SavePath, FileMode.Create, FileAccess.Write, FileShare.Write))
+        {
+            try
+            {
+                BinaryFormatter BF = new BinaryFormatter();
+                BF.Serialize(SaveWriteStream, sd);
+
+
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e, this);
+            }
+            //Because the Serialize() call could fail with the stream open 
+            finally
+            {
+                SaveWriteStream.Close();
+            }
+        }
+    }
+
+    public void LoadGame()
+    {
+        string SavePath = Path.Combine(Application.persistentDataPath, "TheChallengeSave");
+        SaveData sd = new SaveData();
+        
+        if (File.Exists(SavePath))
+        {
+            using (Stream SaveReadStream = new FileStream(SavePath, FileMode.Open, FileAccess.Read, FileShare.Read))
+            {
+                try
+                {
+                    BinaryFormatter BF = new BinaryFormatter();
+                    sd = BF.Deserialize(SaveReadStream) as SaveData;
+
+                }
+                catch (Exception e)
+                {
+                    Debug.LogException(e, this);
+                }
+                //Because the Deserialize() call could fail with the stream open 
+                finally
+                {
+                    SaveReadStream.Close();
+                }
+            }
+            RestoreData(sd);
+        }
+        else
+        {
+            Debug.LogWarning("No save file " + SavePath + " found!");
+        }
+    }
+
+    void RestoreData(SaveData sd)
+    {
+        CurrentGameEventTime = sd.CurrentGameEventTime;
+        DisplayManager.instance.SetPlayerName(sd.PlayerName);
+        DisplayManager.instance.SetPlayerPronoun(sd.PlayerPronoun);
+        PastEvents = sd.PastGameEvents;
+        PopulateLoadedEvents();
+
+        InkManager.instance.RestoreJSON("Group", sd.GroupInkJSON);
+        InkManager.instance.RestoreJSON("Hema", sd.HemaInkJSON);
+        InkManager.instance.RestoreJSON("Jessie", sd.JessieInkJSON);
+        InkManager.instance.RestoreJSON("Anetta", sd.AnettaInkJSON);
+        InkManager.instance.RestoreJSON("Tanya", sd.TanyaInkJSON);
+        InkManager.instance.RestoreJSON("Kalil", sd.KalilInkJSON);
+    }
+
+    void PopulateLoadedEvents()
+    {
+        foreach (GameEvent ge in PastEvents)
+        {
+            DisplayManager.instance.DisplayEvent(ge, true);
+        }
+        //TODO: Instead of this, we should save the notification information for each channel and restore that
+        DisplayManager.instance.SetAllNotificationsRead();
+    }
+
 
     /**
 * This is boilerplate Singleton code for ensuring one and only one instance is active,
