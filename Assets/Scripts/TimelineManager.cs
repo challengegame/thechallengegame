@@ -140,6 +140,7 @@ public class ChoiceEvent : GameEvent
 public class SaveData
 {
     public float CurrentGameEventTime = 0.0f;
+    public float CurrentGameRealTime = 0.0f;
     public string PlayerName = "";
     public Pronoun PlayerPronoun;
     public string GroupInkJSON;
@@ -211,6 +212,7 @@ public class TimelineManager : MonoBehaviour
             Debug.Log("Saved game exists, loading it...");
             //Here we have a save already, so load that and continue from there
             DisplayManager.instance.CloseNameEntryPanel();
+            DisplayManager.instance.CloseNarrativeIntroPanel();
             DisplayManager.instance.ShowMainMenu();
             LoadGame();
         }
@@ -386,6 +388,7 @@ public class TimelineManager : MonoBehaviour
 
         SaveData sd = new SaveData();
         sd.CurrentGameEventTime = CurrentGameEventTime;
+        sd.CurrentGameRealTime = CurrentGameRealTime;
         sd.PlayerName = DisplayManager.instance.GetPlayerName();
         sd.PlayerPronoun = DisplayManager.instance.GetPlayerPronoun();
         sd.PastGameEvents = PastEvents;
@@ -455,6 +458,7 @@ public class TimelineManager : MonoBehaviour
 
     void RestoreData(SaveData sd)
     {
+        CurrentGameRealTime = sd.CurrentGameRealTime;
         CurrentGameEventTime = sd.CurrentGameEventTime;
         DisplayManager.instance.SetPlayerName(sd.PlayerName);
         DisplayManager.instance.SetPlayerPronoun(sd.PlayerPronoun);

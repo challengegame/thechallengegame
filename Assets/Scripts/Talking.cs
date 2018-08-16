@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class Talking : MonoBehaviour
 {
-    public Animator animator;
     public TMPro.TextMeshProUGUI NameText;
 }

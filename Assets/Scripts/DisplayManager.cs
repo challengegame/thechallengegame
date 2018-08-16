@@ -8,6 +8,7 @@ using UnityEngine.iOS;
 #endif
 using UnityEngine.Analytics;
 using System;
+using DG.Tweening;
 
 [System.Serializable]
 public class Channel
@@ -38,6 +39,7 @@ public class DisplayManager : MonoBehaviour
     public GameObject MenuPanel;
     public GameObject CreditsPanel;
     public GameObject NameEntryPanel;
+    public GameObject NarrativeIntroPanel;
 
     public GameObject ChoicePrefab;
     public GameObject ChoiceButtonPrefab;
@@ -157,6 +159,12 @@ public class DisplayManager : MonoBehaviour
                     MessageUI M = message.GetComponent<MessageUI>();
                     //Player messages don't have a name or portrait to worry about
                     M.MessageText.text = e.Content;
+                    M.MessageText.ForceMeshUpdate();
+                    float TextHeight = M.MessageText.preferredHeight;
+                    int linecount = M.MessageText.textInfo.lineCount;
+                    Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
+                    RectTransform rt = M.MessagePrefabRect;
+                    rt.sizeDelta = new Vector2(rt.rect.width, TextHeight + 10);
                     Canvas.ForceUpdateCanvases();
                     if (MessageChannel.ContentPanel.activeInHierarchy)
                     {
@@ -212,7 +220,7 @@ public class DisplayManager : MonoBehaviour
 
 
     }
-
+    /*
     public void DisplayEventFromQueue(GameEvent e)
     {
         Debug.Log("DisplayEventFromQueue "+e.Content);
@@ -228,6 +236,12 @@ public class DisplayManager : MonoBehaviour
                 MessageUI M = message.GetComponent<MessageUI>();
                 //Player messages don't have a name or portrait to worry about
                 M.MessageText.text = e.Content;
+                M.MessageText.ForceMeshUpdate();
+                float TextHeight = M.MessageText.preferredHeight;
+                int linecount = M.MessageText.textInfo.lineCount;
+                Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
+                RectTransform rt = M.MessagePrefabRect;
+                rt.sizeDelta = new Vector2(0, TextHeight);
                 Canvas.ForceUpdateCanvases();
                 if (MessageChannel.ContentPanel.activeInHierarchy)
                 {
@@ -274,14 +288,15 @@ public class DisplayManager : MonoBehaviour
         }
 
     }
+    */
 
     private void Update()
     {
         //Process display queue
         if (DisplayQueue.Count > 0 && !Waiting)
         {
-            GameEvent ge = DisplayQueue.Dequeue();
-            DisplayEventFromQueue(ge);
+            //GameEvent ge = DisplayQueue.Dequeue();
+            //DisplayEventFromQueue(ge);
         }
     }
 
@@ -314,6 +329,9 @@ public class DisplayManager : MonoBehaviour
             message = GameObject.Instantiate(MessageChannel.IncomingMessagePrefab, MessageChannel.ContentPanel.transform);
             //If we're in a group chat, the message has a portrait and a name that needs to be set up.
 
+            Talking T = message.GetComponent<Talking>();
+            T.NameText.text = (e.CharacterName + " is typing...");
+
             MessageUI M = message.GetComponent<MessageUI>();
             Channel CharChannel = Channels.Find(x => x.ChannelName == e.CharacterName);
             if (CharChannel != null)
@@ -321,14 +339,18 @@ public class DisplayManager : MonoBehaviour
                 M.CharacterImage.sprite = CharChannel.Portrait;
             }
             M.MessageText.text = e.Content;
-            M.CharacterNameText.text = e.CharacterName;
+
         }
         else
         {
             message = GameObject.Instantiate(MessageChannel.IncomingMessagePrefab, MessageChannel.ContentPanel.transform);
+            Talking T = message.GetComponent<Talking>();
+            T.NameText.text = (e.CharacterName + " is typing...");
+
             MessageUI M = message.GetComponent<MessageUI>();
             //Single messages don't have to worry about the name or portrait either, just the text content
             M.MessageText.text = e.Content;
+            
         }
         Canvas.ForceUpdateCanvases();
         if (MessageChannel.ContentPanel.activeInHierarchy)
@@ -339,14 +361,22 @@ public class DisplayManager : MonoBehaviour
         Canvas.ForceUpdateCanvases();
     }
 
+    public void PostAnimationCleanup()
+    {
+
+    }
+
     public void DisplayChoiceEvent(ChoiceEvent e)
     {
         Channel MessageChannel = Channels.Find(x => x.ChannelName == e.Channel);
         if (MessageChannel != null)
         {
             //TODO: Instead of instantly displaying the panel, think about the actual flow we want here - some sort of notification system?
-            HideAllMessagePanels();
-            MessageChannel.MessagePanel.SetActive(true);
+            if (CurrentlyActiveChannel != e.Channel)
+            {
+                HideAllMessagePanels();
+                MessageChannel.MessagePanel.SetActive(true);
+            }
             //TODO: Figure out the length of the message and change the prefab based on that
 
             GameObject message;
@@ -505,15 +535,24 @@ public class DisplayManager : MonoBehaviour
     public void CloseNameEntryPanel()
     {
         NameEntryPanel.SetActive(false);
-        TimelineManager.instance.WaitingForNameInput = false;
+        NarrativeIntroPanel.GetComponent<Image>().DOFade(0.0f, 5.0f).OnComplete(CloseNarrativeIntroPanel);
+        NarrativeIntroPanel.GetComponentInChildren<TextMeshProUGUI>().DOFade(0.0f, 3.0f);
     }
 
-    /**
-* This is boilerplate Singleton code for ensuring one and only one instance is active,
-* and that the instance is created on first access if it does not exist.
-**/
 
-    static DisplayManager mInstance;
+    public void CloseNarrativeIntroPanel()
+    {
+        NarrativeIntroPanel.SetActive(false);
+        TimelineManager.instance.WaitingForNameInput = false;
+
+    }
+
+        /**
+    * This is boilerplate Singleton code for ensuring one and only one instance is active,
+    * and that the instance is created on first access if it does not exist.
+    **/
+
+        static DisplayManager mInstance;
 
     static public bool isActive
     {

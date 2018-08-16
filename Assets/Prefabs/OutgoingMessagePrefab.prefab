@@ -123,6 +123,8 @@ MonoBehaviour:
   MessageText: {fileID: 114709470109605794}
   CharacterNameText: {fileID: 0}
   CharacterImage: {fileID: 0}
+  MessagePrefabRect: {fileID: 224208441788569292}
+  animator: {fileID: 0}
 --- !u!114 &114709470109605794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -176,7 +178,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 260
+  m_textAlignment: 516
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -218,7 +220,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
