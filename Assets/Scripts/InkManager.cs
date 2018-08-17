@@ -223,6 +223,7 @@ public class InkManager : MonoBehaviour
             }
             contentString = subStrings[1];
 
+
             Debug.Log("ParseString found - Name: " + characterName + " Time: " + timeString + " Content: " + contentString+" Channel: "+channel);
 
             foreach (string Tag in tags)
@@ -260,20 +261,49 @@ public class InkManager : MonoBehaviour
                     }
                 }
             }
-            
-            GameEvent gameEvent = new GameEvent();
-            gameEvent.Content = contentString;
-            gameEvent.DisplayTime = timeString;
-            gameEvent.CharacterName = characterName;
+
+            if (contentString.StartsWith("<"))
+            {
+                //This is an image message, not a normal message
 
 
-            gameEvent.Channel = channel;
-            gameEvent.ShouldWaitAfter = shouldWait;
-            gameEvent.AbsoluteTimeString = absoluteTimeStamp;
-            gameEvent.GameTimeToBeActivated = ParseAbsoluteTimestamp(absoluteTimeStamp);
+                ImageEvent imageEvent = new ImageEvent();
+                imageEvent.Content = contentString;
+                imageEvent.DisplayTime = timeString;
+                imageEvent.CharacterName = characterName;
 
-            Debug.Log("Calculated game time active to be " + gameEvent.GameTimeToBeActivated);
-            TimelineManager.instance.AddEventToQueue(gameEvent);
+
+                imageEvent.Channel = channel;
+                imageEvent.ShouldWaitAfter = shouldWait;
+                imageEvent.AbsoluteTimeString = absoluteTimeStamp;
+                imageEvent.GameTimeToBeActivated = ParseAbsoluteTimestamp(absoluteTimeStamp);
+
+                int StartIndex = 0;
+                StartIndex = contentString.IndexOf("<", StartIndex);
+                string ImageName = contentString.Substring(StartIndex +1, contentString.Length - 2);
+
+                imageEvent.ImageName = ImageName;
+
+                Debug.Log("Calculated game time active to be " + imageEvent.GameTimeToBeActivated);
+                TimelineManager.instance.AddEventToQueue(imageEvent);
+            }
+            else
+            {
+
+                GameEvent gameEvent = new GameEvent();
+                gameEvent.Content = contentString;
+                gameEvent.DisplayTime = timeString;
+                gameEvent.CharacterName = characterName;
+
+
+                gameEvent.Channel = channel;
+                gameEvent.ShouldWaitAfter = shouldWait;
+                gameEvent.AbsoluteTimeString = absoluteTimeStamp;
+                gameEvent.GameTimeToBeActivated = ParseAbsoluteTimestamp(absoluteTimeStamp);
+
+                Debug.Log("Calculated game time active to be " + gameEvent.GameTimeToBeActivated);
+                TimelineManager.instance.AddEventToQueue(gameEvent);
+            }
 
 
         }

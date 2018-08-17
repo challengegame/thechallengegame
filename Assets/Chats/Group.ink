@@ -812,7 +812,6 @@ Jessie;I really feel appreciated right now #time=2:17:46:11
 Hema;*fingerguns* #time=2:17:46:14
 
 
-
 * [I'll try!]
 Player;I'll try! #time=2:17:45:34
 Player;Mum has a lecture tonight about her medieval history course, but if there's a way I can make it out before the evening is over, I will #time=2:17:45:37
@@ -830,6 +829,66 @@ Jessie;and thanks for using y'all #time=2:17:46:07
 Jessie;I really feel appreciated right now #time=2:17:46:11
 Hema;*fingerguns* #time=2:17:46:14
 -
+Hema;can we outlaw sports #time=3:06:25:08
+Hema;just until we come to terms with the fact that just because someone is good at them doesn't mean they wouldn't rather be asleep #time=3:06:25:12
+Hema;or doing literally anything else #time=3:06:25:14
+Hema;say #time=3:06:25:18
+Hema;watching the new episode of an extremely trashy anime they've been looking forward to all week #time=3:06:25:20
+Anetta;do you want to outlaw sprts in stories or jst in gneral? #time=3:06:25:26
+Hema;in general if it isnt too much trouble #time=3:06:25:30
+Anetta;got u fam #time=3:06:25:35
+Hema;hahaha #time=3:06:25:38
+Anetta;done #time=3:06:25:45
+Anetta;as of three seconds ago, the world of Asssassins of Mars no longer has sports #time=3:06:25:49
+Hema;Next: the world #time=3:06:25:52
+Anetta;Damn Right. #time=3:06:25:55
+Hema;how is that universe coming by the by? #time=3:06:25:59
+Hema;you uploaded some fantastic sketches not long ago #time=3:06:26:01
+Anetta;good! #time=3:06:26:06
+Anetta;mum found a rlly cool old architecture book at a chrity shop #time=3:06:26:10
+Anetta;the print is small so a lot of the words jumble and im not reading as fast as id like but im learning SO MUCH #time=3:06:26:13
+Anetta;the Chamber of the Assassin Empress is going to blow your fcking minds #time=3:06:26:16
+Hema;DAMN #time=3:06:26:19
+Hema;RIGHT #time=3:06:26:21
+Anetta;oh #time=3:06:29:37
+Anetta;my Challenge stuff is going to take up a lot of time during and after class today #time=3:06:29:40
+Anetta;i know we usually like to text during the day #time=3:06:29:44
+Anetta;can you let me knw if i missed anythng imprtant when i come back? #time=3:06:29:46
+Hema;are you alleging #time=3:06:29:49
+Hema;we would text #time=3:06:29:52
+Hema;during class #time=3:06:29:55
+Anetta;... #time=3:06:29:59
+Hema;you can count on me anetta #time=3:06:30:08
+Hema;<sprite="Wink"> #time=3:06:30:10
+Anetta;<sprite="Smile"> #time=3:06:30:14
+Kalil;WHAT UP PARTY PLAYAS #time=3:08:34:14
+Jessie;well those are certainly words you just said #time=3:08:34:17
+Hema;WHAT UP KALIL #time=3:08:34:19
+Kalil;I'm making lists #time=3:08:34:23
+Kalil;I'm checking them twice #time=3:08:34:26
+Kalil;Every plan is both naughty AND nice #time=3:08:34:28
+Kalil;until otherwise observed #time=3:08:34:31
+Jessie;i know this science thing! #time=3:08:34:34
+Jessie;science is good! #time=3:08:34:36
+Jessie;(TM) #time=3:08:34:38
+Hema;i hate to sound skeptical but...what's really going on with you today? #time=3:08:34:40
+Hema;you're...chipper #time=3:08:34:44
+Kalil;There's a party on the horizon #time=3:08:34:47
+Kalil;The sun isnt shining #time=3:08:34:49
+Kalil;because it's london #time=3:08:34:52
+Kalil;and we're all FREE #time=3:08:34:56
+Kalil;Free to make choices. #time=3:08:35:00
+Kalil;to reach our full potential #time=3:08:35:02
+Kalil;to really, truly live #time=3:08:35:04
+Kalil;no regrets #time=3:08:35:07
+#time=3:08:35:11
+Kalil;...{PlayerName()} knows what I'm talking about. -> day3_morning_group_sequence1
+
+=== day3_morning_group_sequence1 ===
+
+
+
+
 
 		
 -> END

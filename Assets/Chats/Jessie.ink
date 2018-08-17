@@ -275,5 +275,147 @@ Jessie;I thought I was going crazy #time=1:14:15:03
 		Jessie;Makes sense #time=1:14:15:40
 		- - -
 		Jessie;Thanks for at least hearing me out. #time=1:14:15:44
+		Jessie;Are you awake #time=3:04:21:09
+		Jessie;Wait #time=3:04:21:14
+		Jessie;If I ask you if you're awake then it sends you a notification #time=3:04:21:16
+		Jessie;And THAT wakes you up #time=3:04:21:19
+		Jessie;Shit #time=3:04:21:21
+		Jessie;I really didn't think this through #time=3:04:21:25
+		Jessie;Wait #time=3:04:21:30
+		Jessie;These are sending you notifications too #time=3:04:21:38
+		#time=3:04:21:48
+		Jessie;shiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiit -> day3_morning_jessie_sequence1
+
+=== day3_morning_jessie_sequence1 ===
+
+* [WHY]
+Player;WHY #time=3:04:21:51
+Player;WHY ARE YOU DOING THIS TO ME #time=3:04:21:54
+Jessie;It wasn't intentional! #time=3:04:21:58
+Player;I REFUSE TO BELIEVE THAT #time=3:04:22:00
+Jessie;I'M SORRY #time=3:04:22:03
+Player;AGAIN #time=3:04:22:05
+Player;I DOUBT THIS GREATLY #time=3:04:22:08
+Player;I can't even go back to sleep now #time=3:04:22:12
+
+
+* [I'm going back to sleep now.]
+Player;i'm going back to sleep now #time=3:04:21:51
+Player;and when i wake up #time=3:04:21:54
+Player;i'm going to pretend you didn't wake me up at 4am #time=3:04:21:58
+Jessie;Oh no #time=3:04:22:00
+Jessie;There's no way you're going back to sleep now #time=3:04:22:03
+Jessie;You've already looked at your phone #time=3:04:22:05
+Jessie;Your circadian rhythm is fucked #time=3:04:22:08
+Player;... #time=3:04:22:11
+-
+Player;so #time=3:04:22:16
+Player;SINCE I'M UP NOW I GUESS #time=3:04:22:18
+Player;What do you want? #time=3:04:22:21
+Jessie;I have made a revolutionary discovery #time=3:04:22:26
+Jessie;it changes everything #time=3:04:22:29
+Jessie;have you heard #time=3:04:22:33
+Jessie;of The Smiths #time=3:04:22:36
+	* * [not really?]
+	Player;not really? #time=3:04:22:40
+	Player;it sounds familiar #time=3:04:22:43
+	Jessie;It's a British indie rock/pop band #time=3:04:22:46
+	Jessie;and their songs are like, Britain encapsulated #time=3:04:22:48
+	Jessie;Everything's all upbeat and catchy on the surface #time=3:04:22:52
+	Jessie;But inside #time=3:04:22:54
+	Jessie;Everyones depressed, furious, and horny #time=3:04:22:56
+	Jessie;Or all three! #time=3:04:23:01
+	Player;... #time=3:04:23:04
+	Player;proceed #time=3:04:23:10
+	
+	
+	* * [YOU WOKE ME UP FOR THIS?!]
+	Player;YOU WOKE ME UP FOR THE SMITHS?! #time=3:04:22:40
+	Player;seriously #time=3:04:22:43
+	Jessie;BLAME SPOTIFY #time=3:04:22:45
+	Jessie;I'm serious {PlayerName()} #time=3:04:22:48
+	Jessie;It's like Britain encapsulated #time=3:04:22:51
+	Jessie;Everything's all upbeat and catchy on the surface #time=3:04:22:55
+	Jessie;But inside #time=3:04:22:57
+	Jessie;Everyones depressed, furious, and horny #time=3:04:23:00
+	Jessie;Or all three! #time=3:04:23:06
+	Player;... #time=3:04:23:08
+	Player;proceed #time=3:04:23:11
+	- -
+	Jessie;Ask #time=3:04:23:13
+	Jessie;Girlfriend in a Coma #time=3:04:23:15
+	Jessie;Panic #time=3:04:23:17
+	Jessie;Heavens Knows I'm Miserable now #time=3:04:23:19
+	Jessie;this Charming Man #time=3:04:23:21
+	Jessie;Every song sounds the same and I can't stop listening to *any of them* #time=3:04:23:24
+	Player;what youre describing sounds like an addiction #time=3:04:23:29
+	Jessie;no #time=3:04:23:32
+	Jessie;...but yes #time=3:04:23:35
+	Jessie;yeah #time=3:04:23:37
+	Jessie;I can see that #time=3:04:23:39
+	Player;Isn't the lead singer also a bit of an ass or something? #time=3:04:23:43
+	Jessie;... #time=3:04:23:46
+	Jessie;let me have this #time=3:04:23:50
+	Jessie;(Tanya also gave me the scoop already so that isn't really a surprise) #time=3:04:23:55
+		* * * [You spoke to Tanya?]
+		Player;You spoke to Tanya? #time=3:04:23:58
+		Player;That sounds unusual... #time=3:04:24:01
+		Player;Especially considering what you told me earlier this week. #time=3:04:24:06
+		Jessie;Yeah #time=3:04:24:09
+		Jessie;I wasnt expecting it #time=3:04:24:11
+		Jessie;She must have seen I was online #time=3:04:24:14
+		Jessie;She messaged me, we talked about the Smiths, commiserated about Morrisey, and kept...not sleeping #time=3:04:24:19
+		Jessie;She might still be up actually #time=3:04:24:22
 		
+		
+		* * * [You told Tanya before me?]
+		Player;You told Tanya before me? #time=3:04:23:58
+		Jessie;well nothing personal... #time=3:04:24:00
+		Jessie;She must have seen I was online #time=3:04:24:03
+		Jessie;She messaged me, we talked about the Smiths, commiserated about Morrisey, and kept...not sleeping #time=3:04:24:07
+		Player;yes #time=3:04:24:10
+		Player;but #time=3:04:24:12
+		Player;you told Tanya *before me* #time=3:04:24:14
+		Jessie;Did you want me to text you about this? #time=3:04:24:17
+		Player;Absolutely not #time=3:04:24:20
+		Player;but it would still be nice to be *first* #time=3:04:24:22
+		Jessie;That is extremely petty but fair #time=3:04:24:26
+		- - -
+		Player;Seriously... #time=3:04:24:28
+		Player;Do you think the stuff you told me earlier this week is still true? #time=3:04:24:30
+		Player;About her drifting away? #time=3:04:24:34
+		Jessie;... #time=3:04:24:36
+		Jessie;I don't know. #time=3:04:24:40
+		Jessie;It seems she's reaching out more. Making an effort #time=3:04:24:43
+		Jessie;But I don't know if that's the genuine truth, or just me seeing her actions through the expectations I was putting on her #time=3:04:24:47
+		Jessie;Maybe that's the problem #time=3:04:24:50
+		Jessie;you know? #time=3:04:24:52
+		Jessie;Everyone seeing Tanya as the person they want her to be rather than the person she is #time=3:04:24:58
+		Jessie;Talk more soon--next time about something that isn't a melodramatic 80s band <sprite="Tongue_Out"> #time=3:04:25:09
+			* * * * [For sure.]
+			Player;For sure. #time=3:04:25:13
+			Jessie;<sprite="Wink"> #time=3:04:24:15
+			
+			
+			* * * * [No. Only 80s bands now.]
+			Player;Nope #time=3:04:25:11
+			Player;Sorry #time=3:04:25:13
+			Player;Only melodramatic 80s bands now #time=3:04:25:16
+			Jessie;oh youre playing around, but I can DO that #time=3:04:25:20
+			- - - -
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 ->END

@@ -131,9 +131,22 @@ public class GameEvent : IComparable<GameEvent>
     }
 }
 
+[System.Serializable]
 public class ChoiceEvent : GameEvent
 {
     public List<string> Choices;
+}
+
+public enum ImageOrientation
+{
+    LANDSCAPE,
+    PORTRAIT,
+}
+
+[System.Serializable]
+public class ImageEvent : GameEvent
+{
+    public string ImageName;
 }
 
 [System.Serializable]
@@ -329,6 +342,7 @@ public class TimelineManager : MonoBehaviour
                     }
                     else
                     {
+
                         Debug.Log("Dequeueing event with content: " + currentEvent.Content + " DisplayTime: " + currentEvent.DisplayTime + " Character: " + currentEvent.CharacterName);
                         CurrentGameEventTime = (currentEvent.GameTimeToBeActivated == 0 ? CurrentGameEventTime : currentEvent.GameTimeToBeActivated);
                         DisplayManager.instance.DisplayEvent(currentEvent);
@@ -345,6 +359,7 @@ public class TimelineManager : MonoBehaviour
                                 ChannelWaitCounts.Add(currentEvent.Channel, 1);
                             }
                         }
+                        
                     }
                 }
                 if (kvp.Value.Count() == 0 && WaitingOnChoiceCount <= 0)

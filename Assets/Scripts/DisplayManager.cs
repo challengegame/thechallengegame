@@ -41,9 +41,16 @@ public class DisplayManager : MonoBehaviour
     public GameObject NameEntryPanel;
     public GameObject NarrativeIntroPanel;
 
+    public GameObject PortraitImagePanel;
+    public Image PortraitImage;
+    public GameObject LandscapeImagePanel;
+    public Image LandscapeImage;
+
     public GameObject ChoicePrefab;
     public GameObject ChoiceButtonPrefab;
     public GameObject TypingPrefab;
+    public GameObject LandscapeImagePrefab;
+    public GameObject PortraitImagePrefab;
 
     public TMPro.TextMeshProUGUI debugTimeText;
 
@@ -112,6 +119,24 @@ public class DisplayManager : MonoBehaviour
         HideAllMessagePanels();
         MenuPanel.SetActive(true);
         CurrentlyActiveChannel = "";
+    }
+
+    public void ShowLandscapeImage(Sprite image)
+    {
+        LandscapeImagePanel.SetActive(true);
+        LandscapeImage.sprite = image;
+    }
+
+    public void ShowPortraitImage(Sprite image)
+    {
+        PortraitImagePanel.SetActive(true);
+        PortraitImage.sprite = image;
+    }
+
+    public void CloseImagePanel()
+    {
+        PortraitImagePanel.SetActive(false);
+        LandscapeImagePanel.SetActive(false);
     }
 
     public void ShowMessagePanel(string channelName)
@@ -324,7 +349,29 @@ public class DisplayManager : MonoBehaviour
     void ShowMessage(GameEvent e, Channel MessageChannel)
     {
         GameObject message;
-        if (e.Channel == "Group")
+        ImageEvent imageEvent = e as ImageEvent;
+        if (imageEvent != null)
+        {
+            //Handle image messages
+            //Get the image from the image manager, and figure out whether it's landscape or portrait
+            ImageMapping im = ImageManager.instance.GetImage(imageEvent.ImageName);
+            if (im == null)
+            {
+                Debug.LogError("Image " + imageEvent.ImageName + " not found in the ImageManager");
+                return;
+            }
+            if (im.orientation == ImageOrientation.LANDSCAPE)
+            {
+                message = GameObject.Instantiate(LandscapeImagePrefab, MessageChannel.ContentPanel.transform);
+            }
+            else
+            {
+                message = GameObject.Instantiate(PortraitImagePrefab, MessageChannel.ContentPanel.transform);
+            }
+            message.GetComponent<ImageMessageUI>().image.sprite = im.sprite;
+            
+        }
+        else if (e.Channel == "Group")
         {
             message = GameObject.Instantiate(MessageChannel.IncomingMessagePrefab, MessageChannel.ContentPanel.transform);
             //If we're in a group chat, the message has a portrait and a name that needs to be set up.

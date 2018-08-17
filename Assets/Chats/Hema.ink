@@ -94,7 +94,7 @@ Hema;seriously I might have some interesting news for the group chat in a couple
 		* * * [Fine-ish?]
 		Player;It's sixth form. #time=1:06:25:43
 		Player;I think we're all fine-ish? #time=1:06:25:45
-		Player;<sprite="Tongue_sticking_out"> #time=1:06:25:47 
+		Player;<sprite="Tongue_Out"> #time=1:06:25:47 
 		Player;thx for asking #time=1:06:25:51
 		Player;How are you? #time=1:06:25:53
 		- - -
