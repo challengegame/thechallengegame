@@ -5,6 +5,7 @@ EXTERNAL PlayerPersonalPronoun()
 EXTERNAL PlayerPossessivePronoun()
 EXTERNAL PlayerObjectivePronoun()
 
+VAR believedJ = false
 //This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
 #Jessie
 
@@ -249,6 +250,7 @@ Jessie;I thought I was going crazy #time=1:14:15:03
 	Jessie;I'm new #time=1:14:15:16
 	Jessie;I don't know them like you do #time=1:14:15:20
 	Jessie;and I'm sorry for presuming anything #time=1:14:15:22
+	~ believedJ = false
 			
 			
 	* * [Don't tell anyone else.]
@@ -258,11 +260,12 @@ Jessie;I thought I was going crazy #time=1:14:15:03
 	Jessie;... #time=1:14:15:13
 	Jessie;Okay. #time=1:14:15:17
 	Jessie;You'd know best. #time=1:14:15:21
+	~ believedJ = true
 	- -
 	Jessie;Are we still cool? #time=1:14:15:26
 		* * * [Yeah. We're cool.]
 		Player;Yeah. #time=1:14:15:28
-		Player;We're cool. #time=1:15:13:30
+		Player;We're cool. #time=1:14:15:30
 		Jessie;Phew #time=1:14:15:34
 		Jessie;cool. #time=1:14:15:36
 		Jessie;Cool #time=1:14:15:39
@@ -345,7 +348,6 @@ Jessie;of The Smiths #time=3:04:22:36
 	Jessie;Ask #time=3:04:23:13
 	Jessie;Girlfriend in a Coma #time=3:04:23:15
 	Jessie;Panic #time=3:04:23:17
-	Jessie;Heavens Knows I'm Miserable now #time=3:04:23:19
 	Jessie;this Charming Man #time=3:04:23:21
 	Jessie;Every song sounds the same and I can't stop listening to *any of them* #time=3:04:23:24
 	Player;what youre describing sounds like an addiction #time=3:04:23:29
@@ -403,19 +405,209 @@ Jessie;of The Smiths #time=3:04:22:36
 			Player;Only melodramatic 80s bands now #time=3:04:25:16
 			Jessie;oh youre playing around, but I can DO that #time=3:04:25:20
 			- - - -
+			Jessie;{PlayerName()} #time=3:22:45:02
+			Jessie;you there? #time=3:22:45:04
+			Jessie;I need you #time=3:22:45:08
+			Jessie;Like, really need you #time=3:22:45:11
+			Jessie;Anetta won't answer my texts #time=3:22:45:14
+			Jessie;facebook messages #time=3:22:45:16
+			Jessie;I even tried CALLING #time=3:22:45:19
+			Jessie;I don't know whats happening #time=3:22:45:21
+			Jessie;kalil #time=3:22:45:24
+			Jessie;FUCKING Kalil #time=3:22:45:27
+			Jessie;DAMNIT #time=3:22:45:30
+			Jessie;I don't know what to do #time=3:22:45:34
+			#time=3:22:45:39
+			Jessie;what do I do? -> day3_evening_jessie_sequence1
+
+=== day3_evening_jessie_sequence1 ===	
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+* [Leave her alone.]
+Player;You need to leave her the fuck alone Jessie. #time=3:22:45:42
+Player;I mean that as kindly as possible. #time=3:22:45:46
+Player;Texting won't help. #time=3:22:45:49
+Player;'supportive' messages won't help. #time=3:22:45:52
+Player;You'll become yet another *thing* pounding on the doors of her mind, stressing her out, making her life harder while she's already dealing with the fallout of everything that happened today #time=3:22:45:55
+Player;Is that what you want to be? #time=3:22:45:59
+Jessie;Of course not! #time=3:22:46:02
+Jessie;no #time=3:22:46:05
+Jessie;never #time=3:22:46:10
+
+
+* [This isn't your fault.]			
+Player;This isn't your fault Jessie. #time=3:22:45:42
+Player;what happened today was beyond you #time=3:22:45:45
+Player;but if you keep trying to contact her youll push her away #time=3:22:45:48
+Player;it WILL become your fault. #time=3:22:45:50
+Player;You'll become yet another burden in her life, stressing her out, making her life harder while she's already trying to navigate the shitstorm that kicked up today #time=3:22:45:53
+Player;do you want that? #time=3:22:46:00
+Jessie;Of course not! #time=3:22:46:03
+Jessie;no #time=3:22:46:06
+Jessie;never #time=3:22:46:11
+-
+Jessie;...I want her to be happy. #time=3:22:46:14
+Jessie;I want her to be okay #time=3:22:46:17
+Jessie;I want us to be okay #time=3:22:46:21
+Player;That only happens if you get out of the way #time=3:22:46:24
+Player;Go to sleep for once. #time=3:22:46:26
+Player;when things are okay again...they'll stay that way #time=3:22:46:29
+Player;i hope #time=3:22:46:32
+Jessie;okay #time=3:22:46:35
+Jessie;Okay #time=3:22:46:39
+Jessie;That makes sense. #time=3:22:46:43
+Jessie;Do you uh #time=3:22:46:59
+Jessie;Have a Smiths song you'd recommend for this situation? #time=3:22:47:01
+Player;... #time=3:22:47:03
+Player;are you being serious right now #time=3:22:47:08
+Jessie;heh #time=3:22:47:11
+Jessie;...a little? #time=3:22:47:15
+		* * [Heaven Knows I'm Miserable Now or How Soon is Now]
+		Player;ugh #time=3:22:47:18
+		Player;fine #time=3:22:47:20
+		Player;Heaven Knows I'm Miserable Now or How Soon is Now #time=3:22:47:24
+		Player;two Nows #time=3:22:47:27
+		Player;now take your melodramatic arsehole music and go #time=3:22:47:31
+		Jessie;haha #time=3:22:47:33
+		Jessie;gladly #time=3:22:47:37
+		->JessieDay4
+		
+		* * [Fuck The Smiths.]
+		Player;Fuck The Smiths. #time=3:22:47:17
+		Jessie;... #time=3:22:47:20
+		Jessie;fuck the smiths? #time=3:22:47:24
+		Player;yup. #time=3:22:47:26
+		Jessie;...anything else to add to that? #time=3:22:47:30
+		Player;nope #time=3:22:47:33
+		Jessie;haha #time=3:22:47:36
+		Jessie;well okay then #time=3:22:47:40
+		- -
+		Jessie;night {PlayerName()} #time=3:22:47:44
+		Jessie;have a good one #time=3:22:47:47
+		Jessie;i'll certainly try #time=3:22:47:51
+		Jessie;<sprite="Soft_Smile"> #time=3:22:47:56
+		->JessieDay4
+		
+==JessieDay4==
+Jessie;So {PlayerName()}... #time=4:09:38:41
+Jessie;Things are a bit of a mess after yesterday #time=4:09:38:44
+Jessie;and not in the fun HAHA LET'S JUST SHAKE THINGS UP AND SEE WHAT HAPPENS kind of way, where everyone was secretly looking forward to it because they were bored of the routine #time=4:09:38:48
+Jessie;(a la breaking bad) #time=4:09:38:53
+Jessie;You've all been friends for years and you're the one that brought them all together #time=4:09:38:56
+Jessie;Plus you listen to me when I need reality checks or just getting random thoughts out of my head #time=4:09:39:01
+Jessie;so I wanted to see how you were feeling about this whole thing. #time=4:09:39:06
+Jessie;How ARE you feeling {PlayerName()}? #time=4:09:39:10
+*[Still shocked]
+Player;I'm still shocked #time=4:09:39:16
+    { believedJ:
+    Player;It's not like I didn't believe you before but seeing it is different #time=4:09:39:20
+    - else: 
+    Player;I just didn't want to believe you I guess #time=4:09:39:20
+    }
+*[I'm not surprised]
+Player;Well I wasn't really surprised #time=4:09:39:16
+    { believedJ:
+    Player;You did warn me about it #time=4:09:39:20
+    - else: 
+    Player;Maybe a part of me did believe you when you first told me. #time=4:09:39:20
+    }
+-
+Jessie;It's still hard to see things unfold like that. #time=4:09:39:25
+Jessie;It sucks #time=4:09:39:30
+Jessie;big time #time=4:09:39:33
+*[It makes me sad]
+Player;It just makes me sad... #time=4:09:39:37
+Player;We really felt like family, but now? #time=4:09:39:41
+Player;I'm having trouble imagining all of us milling around my house. #time=4:09:39:43
+Player;Just drinking Fanta and chatting about random stuff #time=4:09:39:48
+
+    **[I'm also tired]
+    Player;I'm also tired you know? #time=4:09:39:53
+    Player;Tired of the same arguments #time=4:09:39:57
+    Player;And new arguments I didn't know were a thing until now #time=4:09:40:02
+    Jessie;I'm sorry #time=4:09:40:09
+    Jessie;I really am #time=4:09:40:16
+    ->JessieOpinion
+    
+    **[But I'm annoyed too]
+    Player;But I'm kind of annoyed too #time=4:09:39:53
+    Player;just #time=4:09:39:56
+    Player;AAAARGHH #time=4:09:39:59
+    Player;If we hadnt said these stupid things would it all be okay? #time=4:09:40:02
+    Player;Or was this inevitable and being frustrated just makes everything worse #time=4:09:40:06
+    Jessie;I'm sorry #time=4:09:40:10
+    Jessie;I really am #time=4:09:40:16
+    ->JessieOpinion
+    --
+*[It makes me angry]
+Player;It just makes me angry#time=4:09:39:37
+Player;like ACTUALLY ANGRY not a wishy washy sort of angry #time=4:09:39:40
+Player;Weren't we basically family? #time=4:09:39:44
+Player;we were there for each other and had each others backs even tho we are all kind of weird and focused on different things #time=4:09:39:47
+Player;That's like the definition of family #time=4:09:40:02
+Player;And now what, do we just just shrug and give up? #time=4:09:40:05
+
+    **[I want to change things]
+    Player;I want to change things I just dont know how! #time=4:09:40:10
+    Player;How do I channel the rage into something productive? #time=4:09:40:13
+    Player;How do I make things better? #time=4:09:40:17
+    Jessie;I'm really sorry #time=4:09:40:20
+    ->JessieOpinion
+    
+    **[A part of me says yes]
+    Player;But then a different part of me says yes #time=4:09:40:10
+    Player;There's no point in being angry #time=4:09:40:13
+    Player;It's not like it's helped so far #time=4:09:40:17
+    Jessie;I'm really sorry #time=4:09:40:20
+    ->JessieOpinion
+    --
+-
+->JessieOpinion
+
+== JessieOpinion ==
+Jessie;And... thanks for telling me #time=4:09:40:23
+Jessie;I hope it helps you to talk about it #time=4:09:40:23
+*[It does]
+Player;It does, actually #time=4:09:40:28
+Player;Typing the words in helps me figure out what I'm thinking #time=4:09:40:31
+Jessie;I'm glad <sprite="Soft_Smile"> #time=4:09:40:35
+*[Not really]
+Player;Not really #time=4:09:40:28
+Player;But I mean, I don't know what would #time=4:09:40:31
+Jessie;Yeah that's fair #time=4:09:40:35
+-
+Jessie;Sometimes when I feel like that I picture myself floating in space #time=4:09:40:40
+Jessie;Lazily adrift, with no pressures #time=4:09:40:44
+Jessie;Just watching planets orbit and the stars shine #time=4:09:40:48
+*[Is this space whales?]
+Player;Are you a space whale now? #time=4:09:40:53
+Jessie;No i'm done with whales #time=4:09:40:56
+Jessie;for now #time=4:09:40:59
+Jessie;I just think about different kinds of deep darkness...es #time=4:09:41:02
+Jessie;This one is meant to be a relaxing experience #time=4:09:41:06
+*[That sounds nice]
+Player;That sounds nice, actually #time=4:09:40:53
+Jessie;Yeah #time=4:09:40:58
+Jessie;I like thinking about deep darkness...es #time=4:09:41:03
+Player;You don't say <sprite="Tongue_Out"> #time=4:09:41:07
+-
+Jessie;I guess I feel like we're interacting all the time #time=4:09:41:11
+Jessie;And when we're not, we're *thinking* about interacting with other people #time=4:09:41:15
+Jessie;So sometimes it's nice to imagine being in an isolation chamber with zero simuli #time=4:09:41:20
+Jessie;Nothing needing your attention and no one waiting for you to do something #time=4:09:41:25
+Jessie;Things happening in the span of millenia #time=4:09:41:29
+Jessie;Just you and silence and the dancing cosmos #time=4:09:41:33
+Jessie;Not that I'm advising you to do that during class #time=4:09:41:39
+Jessie;You aren't, are you? #time=4:09:41:44
+*[Nah it's too loud]
+Player;Nah it's too loud for that #time=4:09:41:50
+Jessie;Okay good #time=4:09:41:54
+*[...]
+Player;... #time=4:09:41:50
+Jessie;Oh no what have I done #time=4:09:41:54
+Jessie;Return to Earth, lost soul! #time=4:09:41:57
+Player;... #time=4:09:42:01
+Player;I have returned to my home #time=4:09:42:06
+Jessie;PRAISE THE LORD! #time=4:09:42:09
+-
+
 ->END

@@ -163,6 +163,8 @@ public class SaveData
     public string JessieInkJSON;
     public string TanyaInkJSON;
 
+    public bool PartyAnetta;
+
     public List<GameEvent> PastGameEvents;
 }
 
@@ -301,7 +303,7 @@ public class TimelineManager : MonoBehaviour
         int minutes = (int)(time / 60);
         time %= 60;
         int seconds = (int)time;
-        string retString = days.ToString() + ":" + hours.ToString() + ":" + minutes.ToString() + ":" + seconds.ToString();
+        string retString = /*days.ToString() + ":" +*/ hours.ToString() + ":" + minutes.ToString() /*+ ":" + seconds.ToString()*/;
         return retString;
 
     }
@@ -415,6 +417,8 @@ public class TimelineManager : MonoBehaviour
         sd.TanyaInkJSON = InkManager.instance.GetJSON("Tanya");
         sd.KalilInkJSON = InkManager.instance.GetJSON("Kalil");
 
+        sd.PartyAnetta = DisplayManager.instance.GetPartyAnetta();
+
         string SavePath = Path.Combine(Application.persistentDataPath, "TheChallengeSave");
 
         using (Stream SaveWriteStream = new FileStream(SavePath, FileMode.Create, FileAccess.Write, FileShare.Write))
@@ -486,6 +490,8 @@ public class TimelineManager : MonoBehaviour
         InkManager.instance.RestoreJSON("Anetta", sd.AnettaInkJSON);
         InkManager.instance.RestoreJSON("Tanya", sd.TanyaInkJSON);
         InkManager.instance.RestoreJSON("Kalil", sd.KalilInkJSON);
+
+        DisplayManager.instance.SetPartyAnetta(sd.PartyAnetta);
     }
 
     void PopulateLoadedEvents()

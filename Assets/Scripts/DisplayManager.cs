@@ -62,6 +62,9 @@ public class DisplayManager : MonoBehaviour
     Queue<GameEvent> DisplayQueue;
 
     bool Waiting = false;
+
+    //Ink variables
+    bool PartyAnetta = false;
     
 	void Start ()
     {
@@ -484,6 +487,16 @@ public class DisplayManager : MonoBehaviour
             return MessageChannel.RelationshipValue;
         }
         return 0;
+    }
+
+    public bool GetPartyAnetta()
+    {
+        return PartyAnetta;
+    }
+
+    public void SetPartyAnetta(bool party)
+    {
+        PartyAnetta = party;
     }
 
     public string GetCurrentlyActiveChannel()

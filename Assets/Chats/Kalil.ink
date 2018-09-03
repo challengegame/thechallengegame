@@ -4,12 +4,20 @@ EXTERNAL PlayerName()
 EXTERNAL PlayerPersonalPronoun()
 EXTERNAL PlayerPossessivePronoun()
 EXTERNAL PlayerObjectivePronoun()
-
-VAR kalil_forgive_day3 = false
-VAR kalil_week1confession = false
+EXTERNAL PartyAnetta()
 
 //This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
 #Kalil
+
+VAR kalil_forgive_day3 = false
+VAR kalil_week1confession = false
+VAR bringAnetta = true
+
+{ PartyAnetta():
+    ~ bringAnetta = true
+- else: 
+    ~ bringAnetta = false
+}
 
 Kalil;I was a dick yesterday. #time=3:06:41:26
 Kalil;I know that, you know it, the entire group knows it. #time=3:06:41:29
@@ -236,11 +244,39 @@ Kalil;...does any of that make sense? #time=3:06:48:18
 	Kalil;Not like Tanya will. #time=3:06:48:45
 -
 Kalil;take care #time=3:06:48:49
+Kalil;shit #time=3:08:41:03
+Kalil;SHIT #time=3:08:41:07
 
+{ bringAnetta:
+->KalilMopeParty
+- else: 
+->KalilOther
+}
+==KalilMopeParty==
+Kalil;Fuckin party #time=6:10:08:10
+*[Sorry, I wish we could all go]
+    Player;I'm sorry you're in this position, Kalil. #time=6:10:08:15
+    Player;I really wish we could all go #time=6:10:08:18
+    Player;The party will be significantly less fun without you #time=6:10:08:21
+    Kalil;...sure #time=6:10:08:25
+    { kalil_forgive_day3:
+        Kalil;Out of all of them you're the only one that sometimes gets me #time=6:10:08:29
+        Kalil;So I guess thanks and have fun. #time=6:10:08:34
+    -else:
+        Kalil;I know you don't really get me #time=6:10:08:28
+        Kalil;But at least you realise what a shitty situation we're in #time=6:10:08:31
+        Kalil;Have fun i guess. #time=6:10:08:34
+    }
+    Kalil;I'm gonna do something more interesting with my time #time=6:10:08:38
+*[Sorry, but you brought it upon yourself]
+    Player;I'm sorry you're in this position, Kalil. #time=6:10:08:15
+    Player;But you kind of brought it upon yourself #time=6:10:08:19
+    Kalil;You know what, screw you {PlayerName()} #time=6:10:08:26
+    Kalil;I've got better things to do than talk to you. #time=6:10:08:30
+-
+->KalilOther
+==KalilOther==
 
-
-
-
-
-	
 -> END
+=== function PartyAnetta() ===
+~ return true

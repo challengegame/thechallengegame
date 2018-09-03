@@ -115,6 +115,18 @@ public class InkManager : MonoBehaviour
 
             });
 
+            s.BindExternalFunction("PartyAnetta", () =>
+            {
+                return DisplayManager.instance.GetPartyAnetta();
+
+            });
+
+            s.BindExternalFunction("SetPartyAnetta", (bool party) =>
+            {
+                DisplayManager.instance.SetPartyAnetta(party);
+
+            });
+
         }
     }
     /*
@@ -262,7 +274,7 @@ public class InkManager : MonoBehaviour
                 }
             }
 
-            if (contentString.StartsWith("<"))
+            if (contentString.StartsWith("<") && !contentString.Contains("sprite"))
             {
                 //This is an image message, not a normal message
 
