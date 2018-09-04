@@ -9,6 +9,11 @@ using UnityEngine.iOS;
 using UnityEngine.Analytics;
 using System;
 using DG.Tweening;
+#if UNITY_ANDROID
+using Assets.SimpleAndroidNotifications.Data;
+using Assets.SimpleAndroidNotifications.Enums;
+using Assets.SimpleAndroidNotifications.Helpers;
+#endif
 
 [System.Serializable]
 public class Channel
@@ -219,14 +224,17 @@ public class DisplayManager : MonoBehaviour
                     if (CurrentlyActiveChannel != e.Channel)
                     {
                         MessageChannel.chatMenuButton.AddUnreadNotification();
+                        MessageChannel.chatMenuButton.transform.SetAsFirstSibling();
                         //TODO: Only launch these if the app is not "in focus" or whatever
                         //TODO: Move this to the point where the message is queued and schedule based on the delay value
                         //TODO: Combine all received messages into one notification
 #if UNITY_IOS
-                    UnityEngine.iOS.LocalNotification localNotification = new UnityEngine.iOS.LocalNotification();
+                        UnityEngine.iOS.LocalNotification localNotification = new UnityEngine.iOS.LocalNotification();
 
-                    localNotification.fireDate = System.DateTime.Now;
-                    localNotification.alertBody = e.Channel + ": "+PreviewText;
+                        localNotification.fireDate = System.DateTime.Now;
+                        localNotification.alertBody = e.Channel + ": "+PreviewText;
+#elif UNITY_ANDROID
+                        NotificationManager.Send(TimeSpan.FromSeconds(5), "The Challenge", e.Channel + ": "+PreviewText, new Color(1f, 0.3f, 0.15f));
 #endif
                         ShowMessage(e, MessageChannel);
                     }

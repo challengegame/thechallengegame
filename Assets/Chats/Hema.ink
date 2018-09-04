@@ -87,14 +87,14 @@ Hema;seriously I might have some interesting news for the group chat in a couple
 		Player;Seriously #time=1:06:25:46
 		Player;You're one of the most thoughtful people i know #time=1:06:25:49
 		Player;I'm doing more than okay. #time=1:06:25:51
-		Player;Thanks for asking <sprite="Smile"> #time=1:06:25:54
+		Player;Thanks for asking <sprite name="Smile"> #time=1:06:25:54
 		Player;How are you? #time=1:06:25:56
 		
 		
 		* * * [Fine-ish?]
 		Player;It's sixth form. #time=1:06:25:43
 		Player;I think we're all fine-ish? #time=1:06:25:45
-		Player;<sprite="Tongue_Out"> #time=1:06:25:47 
+		Player;<sprite name="Tongue_Out"> #time=1:06:25:47 
 		Player;thx for asking #time=1:06:25:51
 		Player;How are you? #time=1:06:25:53
 		- - -

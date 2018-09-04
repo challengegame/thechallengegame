@@ -18,8 +18,9 @@ public class MessageUI : MonoBehaviour
         MessageText.ForceMeshUpdate();
         float TextHeight = MessageText.preferredHeight;
         int linecount = MessageText.textInfo.lineCount;
-        Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
-        RectTransform rt = MessagePrefabRect;
+
+        RectTransform rt = this.gameObject.transform as RectTransform;
+        Debug.Log("Message height: " + TextHeight + " line count: " + linecount + " rect width: " +rt.rect.width);
         rt.sizeDelta = new Vector2(rt.rect.width, TextHeight + 10);
 
 

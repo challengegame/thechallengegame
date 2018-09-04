@@ -5,10 +5,12 @@ EXTERNAL PlayerPersonalPronoun()
 EXTERNAL PlayerPossessivePronoun()
 EXTERNAL PlayerObjectivePronoun()
 
-VAR sayHemaDrunk = true
-
 //This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
 #Morgan
+
+VAR sayHemaDrunk = true
+
+
 Morgan;Hello {PlayerName()}! #time=6:22:03:50
 Morgan;Sorry, I just missed your call. #time=6:22:03:53
 *[It's fine!]
