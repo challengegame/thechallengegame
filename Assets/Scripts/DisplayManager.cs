@@ -5,15 +5,14 @@ using UnityEngine;
 using UnityEngine.UI;
 #if UNITY_IOS
 using UnityEngine.iOS;
+#elif UNITY_ANDROID
+using Assets.SimpleAndroidNotifications;
+
 #endif
 using UnityEngine.Analytics;
 using System;
 using DG.Tweening;
-#if UNITY_ANDROID
-using Assets.SimpleAndroidNotifications.Data;
-using Assets.SimpleAndroidNotifications.Enums;
-using Assets.SimpleAndroidNotifications.Helpers;
-#endif
+
 
 [System.Serializable]
 public class Channel
