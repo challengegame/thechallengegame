@@ -77,6 +77,8 @@ MonoBehaviour:
   MessageText: {fileID: 114766918340248716}
   CharacterNameText: {fileID: 0}
   CharacterImage: {fileID: 0}
+  MessagePrefabRect: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &114766918340248716
 MonoBehaviour:
   m_ObjectHideFlags: 1

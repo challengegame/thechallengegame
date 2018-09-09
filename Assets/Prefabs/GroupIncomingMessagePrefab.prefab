@@ -270,6 +270,8 @@ MonoBehaviour:
   MessageText: {fileID: 114962557594523512}
   CharacterNameText: {fileID: 114386623908216358}
   CharacterImage: {fileID: 114953042513954222}
+  MessagePrefabRect: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &114953042513954222
 MonoBehaviour:
   m_ObjectHideFlags: 1
