@@ -219,6 +219,12 @@ public class TimelineManager : MonoBehaviour
         Queues.Add("Jessie", JessieQueue);
         PriorityQueue<GameEvent> TanyaQueue = new PriorityQueue<GameEvent>();
         Queues.Add("Tanya", TanyaQueue);
+        PriorityQueue<GameEvent> KyleQueue = new PriorityQueue<GameEvent>();
+        Queues.Add("Kyle", KyleQueue);
+        PriorityQueue<GameEvent> MsMorganQueue = new PriorityQueue<GameEvent>();
+        Queues.Add("MsMorgan", MsMorganQueue);
+        PriorityQueue<GameEvent> JimmyQueue = new PriorityQueue<GameEvent>();
+        Queues.Add("Jimmy", JimmyQueue);
 
         string SavePath = Path.Combine(Application.persistentDataPath, "TheChallengeSave");
 

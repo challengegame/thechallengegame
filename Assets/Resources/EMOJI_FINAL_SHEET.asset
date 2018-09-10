@@ -22,7 +22,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Smile
@@ -36,7 +36,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Soft_Smile
@@ -50,7 +50,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Frown
@@ -64,7 +64,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Grimace
@@ -78,7 +78,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Wink
@@ -92,7 +92,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Poop
@@ -106,7 +106,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Thumbs_Up
@@ -120,7 +120,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Explode
@@ -134,7 +134,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Roll_Eyes
@@ -148,7 +148,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Cocktail
@@ -162,7 +162,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Party
@@ -176,7 +176,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Skull
@@ -190,7 +190,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Heart
@@ -204,7 +204,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Eggplant
@@ -218,7 +218,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Sad
@@ -232,7 +232,7 @@ MonoBehaviour:
     width: 64
     height: 64
     xOffset: 0
-    yOffset: 64
+    yOffset: 56
     xAdvance: 64
     scale: 1
     name: Tongue_Out

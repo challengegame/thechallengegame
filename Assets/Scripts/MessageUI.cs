@@ -17,6 +17,7 @@ public class MessageUI : MonoBehaviour
         //Here we need to calculate the proper size for the text box, because the text component will actually be active
         MessageText.ForceMeshUpdate();
         float TextHeight = MessageText.preferredHeight;
+        float TextWidth = MessageText.preferredWidth;
         int linecount = MessageText.textInfo.lineCount;
 
         RectTransform rt = this.gameObject.transform as RectTransform;
