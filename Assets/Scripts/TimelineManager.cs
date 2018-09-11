@@ -222,7 +222,7 @@ public class TimelineManager : MonoBehaviour
         PriorityQueue<GameEvent> KyleQueue = new PriorityQueue<GameEvent>();
         Queues.Add("Kyle", KyleQueue);
         PriorityQueue<GameEvent> MsMorganQueue = new PriorityQueue<GameEvent>();
-        Queues.Add("MsMorgan", MsMorganQueue);
+        Queues.Add("Morgan", MsMorganQueue);
         PriorityQueue<GameEvent> JimmyQueue = new PriorityQueue<GameEvent>();
         Queues.Add("Jimmy", JimmyQueue);
 
@@ -333,7 +333,7 @@ public class TimelineManager : MonoBehaviour
 
     void ProcessQueues()
     {
-        if(WaitingOnChoiceCount <=0 && TotalWaitCount <= 0)
+        if (WaitingOnChoiceCount <= 0 && TotalWaitCount <= 0 && !DisplayManager.instance.WaitingForPlayerInput)
         {
             CurrentGameRealTime += (Time.deltaTime * DebugTimeFactor);
             foreach (KeyValuePair<string, PriorityQueue<GameEvent>> kvp in Queues)
@@ -367,7 +367,7 @@ public class TimelineManager : MonoBehaviour
                                 ChannelWaitCounts.Add(currentEvent.Channel, 1);
                             }
                         }
-                        
+
                     }
                 }
                 if (kvp.Value.Count() == 0 && WaitingOnChoiceCount <= 0)
@@ -378,6 +378,10 @@ public class TimelineManager : MonoBehaviour
                     //TODO: Handle the case of waiting for player input
                 }
             }
+        }
+        else
+        {
+            //Debug.Log("Stuck waiting! Waiting for choice: " + WaitingOnChoiceCount + " waiting for name: " + WaitingForNameInput);
         }
     }
 

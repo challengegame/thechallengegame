@@ -8,7 +8,4 @@ EXTERNAL PlayerObjectivePronoun()
 
 //This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
 #Jimmy
-
-
-
 -> END

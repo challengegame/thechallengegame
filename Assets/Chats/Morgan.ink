@@ -10,7 +10,6 @@ EXTERNAL PlayerObjectivePronoun()
 
 VAR sayHemaDrunk = true
 
-
 Morgan;Hello {PlayerName()}! #time=6:22:03:50
 Morgan;Sorry, I just missed your call. #time=6:22:03:53
 *[It's fine!]

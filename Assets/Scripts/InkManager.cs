@@ -161,6 +161,7 @@ public class InkManager : MonoBehaviour
         if (!CurrentStories.ContainsKey(Channel))
         {
             //No channel of that name - for now during early dev, that's fine, but we should put in an error eventually to catch this case
+            Debug.LogError("Tried to advancestory on channel "+Channel+" which was not found!");
             return;
         }
         //If we can continue, that means that we have no choices to worry about and there's still content to go
@@ -322,7 +323,7 @@ public class InkManager : MonoBehaviour
         else
         {
             //This line wasn't constructed appropriately, let's log an error
-            Debug.LogError("String " + line + " has no meta information (character name and in-game timestamp).");
+            Debug.LogError("String " + line + " in channel "+channel+" has no meta information (character name and in-game timestamp).");
         }
     }
 

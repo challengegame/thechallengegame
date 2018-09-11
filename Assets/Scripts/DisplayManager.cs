@@ -24,6 +24,7 @@ public class Channel
     public GameObject OutgoingMessagePrefab;
     public GameObject ContentPanel;
     public ChatMenuButton chatMenuButton;
+    public TextMeshProUGUI PlayerTextArea;
     public int RelationshipValue;
 }
 
@@ -58,6 +59,12 @@ public class DisplayManager : MonoBehaviour
 
     public TMPro.TextMeshProUGUI debugTimeText;
 
+    public float TextDisplaySpeed = 0.01f;
+    int CurrentVisibleCharacters;
+    int TotalVisibleCharacters;
+
+    IEnumerator TextDisplayCoroutine;
+
     string CurrentlyActiveChannel = "";
 
     string PlayerName = "Quinn";
@@ -65,7 +72,8 @@ public class DisplayManager : MonoBehaviour
 
     Queue<GameEvent> DisplayQueue;
 
-    bool Waiting = false;
+    [HideInInspector]
+    public bool WaitingForPlayerInput = false;
 
     //Ink variables
     bool PartyAnetta = false;
@@ -174,6 +182,72 @@ public class DisplayManager : MonoBehaviour
     }
 
 
+    void ShowPlayerTyping(Channel MessageChannel, string MessageContent)
+    {
+        TotalVisibleCharacters = MessageChannel.PlayerTextArea.textInfo.characterCount;
+        CurrentVisibleCharacters = 0;
+        if (TextDisplayCoroutine != null)
+        {
+            StopCoroutine(TextDisplayCoroutine);
+        }
+        TextDisplayCoroutine = DisplayText(MessageChannel, MessageContent);
+        StartCoroutine(TextDisplayCoroutine);
+        WaitingForPlayerInput = true;
+    }
+
+    IEnumerator DisplayText(Channel MessageChannel, string MessageContent)
+    {
+        // Force and update of the mesh to get valid information.
+        CurrentVisibleCharacters = 0;
+        MessageChannel.PlayerTextArea.ForceMeshUpdate();
+        TotalVisibleCharacters = MessageChannel.PlayerTextArea.textInfo.characterCount;
+        while (CurrentVisibleCharacters <= TotalVisibleCharacters)
+        {
+            MessageChannel.PlayerTextArea.maxVisibleCharacters = CurrentVisibleCharacters; // How many characters should TextMeshPro display?
+            CurrentVisibleCharacters += 1;
+            yield return new WaitForSeconds(TextDisplaySpeed);
+        }
+        //Debug.Log("Done revealing the text.");
+        //TODO: ACtually display the player message here
+        DisplayPlayerMessage(MessageChannel, MessageContent);
+    }
+
+    public void PlayerInputButtonPress()
+    {
+        if (CurrentVisibleCharacters < TotalVisibleCharacters)
+        {
+            CurrentVisibleCharacters = TotalVisibleCharacters;
+            StopCoroutine(TextDisplayCoroutine);
+            StartCoroutine(TextDisplayCoroutine);
+
+        }
+    }
+
+    void DisplayPlayerMessage(Channel MessageChannel, string MessageContent)
+    {
+        GameObject message;
+        message = GameObject.Instantiate(MessageChannel.OutgoingMessagePrefab, MessageChannel.ContentPanel.transform);
+        MessageUI M = message.GetComponent<MessageUI>();
+        //Player messages don't have a name or portrait to worry about
+        M.MessageText.text = MessageContent;
+        M.MessageText.ForceMeshUpdate();
+        float TextHeight = M.MessageText.preferredHeight;
+        int linecount = M.MessageText.textInfo.lineCount;
+        Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
+        RectTransform rt = M.MessagePrefabRect;
+        rt.sizeDelta = new Vector2(rt.rect.width, TextHeight + 10);
+        Canvas.ForceUpdateCanvases();
+        if (MessageChannel.ContentPanel.activeInHierarchy)
+        {
+            MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
+        }
+
+        Canvas.ForceUpdateCanvases();
+        MessageChannel.PlayerTextArea.text = "";
+        WaitingForPlayerInput = false;
+    }
+
+
     public void DisplayEvent(GameEvent e, bool immediate=true)
     {
         Debug.Log("DisplayEvent");
@@ -183,27 +257,16 @@ public class DisplayManager : MonoBehaviour
             if (immediate)
             {
                 //TODO: Figure out the length of the message and change the prefab based on that
-                GameObject message;
+                
                 if (e.CharacterName.ToLower() == "player")
                 {
-                    //TODO: Eventually this should wait to display the player message until the player has initiated action or something similar
-                    message = GameObject.Instantiate(MessageChannel.OutgoingMessagePrefab, MessageChannel.ContentPanel.transform);
-                    MessageUI M = message.GetComponent<MessageUI>();
-                    //Player messages don't have a name or portrait to worry about
-                    M.MessageText.text = e.Content;
-                    M.MessageText.ForceMeshUpdate();
-                    float TextHeight = M.MessageText.preferredHeight;
-                    int linecount = M.MessageText.textInfo.lineCount;
-                    Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
-                    RectTransform rt = M.MessagePrefabRect;
-                    rt.sizeDelta = new Vector2(rt.rect.width, TextHeight + 10);
-                    Canvas.ForceUpdateCanvases();
-                    if (MessageChannel.ContentPanel.activeInHierarchy)
+                    if (MessageChannel.PlayerTextArea != null)
                     {
-                        MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
+                        MessageChannel.PlayerTextArea.text = e.Content;
+                        ShowPlayerTyping(MessageChannel, e.Content);
                     }
-
-                    Canvas.ForceUpdateCanvases();
+                    //TODO: Eventually this should wait to display the player message until the player has initiated action or something similar
+                    
                 }
                 else
                 {
@@ -328,7 +391,7 @@ public class DisplayManager : MonoBehaviour
     private void Update()
     {
         //Process display queue
-        if (DisplayQueue.Count > 0 && !Waiting)
+        if (DisplayQueue.Count > 0 && !WaitingForPlayerInput)
         {
             //GameEvent ge = DisplayQueue.Dequeue();
             //DisplayEventFromQueue(ge);
@@ -337,7 +400,7 @@ public class DisplayManager : MonoBehaviour
 
     IEnumerator ShowMessageDelayed(GameEvent e, Channel MessageChannel)
     {
-        Waiting = true;
+        WaitingForPlayerInput = true;
         float seconds = 0;
         seconds = e.Content.Length * 0.1f;
         Debug.Log("Show Message Delayed, seconds: "+seconds);
@@ -353,7 +416,7 @@ public class DisplayManager : MonoBehaviour
         yield return new WaitForSeconds(0.1f/*seconds*/);
         Destroy(TypingObject);
         ShowMessage(e, MessageChannel);
-        Waiting = false;
+        WaitingForPlayerInput = false;
     }
 
     void ShowMessage(GameEvent e, Channel MessageChannel)
