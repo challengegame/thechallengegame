@@ -164,11 +164,7 @@ public class DisplayManager : MonoBehaviour
             MessageChannel.MessagePanel.SetActive(true);
             MessageChannel.chatMenuButton.SetNotificationsRead();
             TimelineManager.instance.ChannelViewed(channelName);
-            Canvas.ForceUpdateCanvases();
-
-            MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
-
-            Canvas.ForceUpdateCanvases();
+            CleanCanvases(MessageChannel);
             CurrentlyActiveChannel = channelName;
         }
     }
@@ -231,18 +227,13 @@ public class DisplayManager : MonoBehaviour
         //Player messages don't have a name or portrait to worry about
         M.MessageText.text = MessageContent;
         M.MessageText.ForceMeshUpdate();
+        Canvas.ForceUpdateCanvases();
         float TextHeight = M.MessageText.preferredHeight;
         int linecount = M.MessageText.textInfo.lineCount;
         Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
-        RectTransform rt = M.MessagePrefabRect;
+        RectTransform rt = M.gameObject.transform as RectTransform;
         rt.sizeDelta = new Vector2(rt.rect.width, TextHeight + 10);
-        Canvas.ForceUpdateCanvases();
-        if (MessageChannel.ContentPanel.activeInHierarchy)
-        {
-            MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
-        }
-
-        Canvas.ForceUpdateCanvases();
+        CleanCanvases(MessageChannel);
         MessageChannel.PlayerTextArea.text = "";
         WaitingForPlayerInput = false;
     }
@@ -318,106 +309,6 @@ public class DisplayManager : MonoBehaviour
 
 
     }
-    /*
-    public void DisplayEventFromQueue(GameEvent e)
-    {
-        Debug.Log("DisplayEventFromQueue "+e.Content);
-        Channel MessageChannel = Channels.Find(x => x.ChannelName == e.Channel);
-        if (MessageChannel != null)
-        {
-            //TODO: Figure out the length of the message and change the prefab based on that
-            GameObject message;
-            if (e.CharacterName.ToLower() == "player")
-            {
-                //TODO: Eventually this should wait to display the player message until the player has initiated action or something similar
-                message = GameObject.Instantiate(MessageChannel.OutgoingMessagePrefab, MessageChannel.ContentPanel.transform);
-                MessageUI M = message.GetComponent<MessageUI>();
-                //Player messages don't have a name or portrait to worry about
-                M.MessageText.text = e.Content;
-                M.MessageText.ForceMeshUpdate();
-                float TextHeight = M.MessageText.preferredHeight;
-                int linecount = M.MessageText.textInfo.lineCount;
-                Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
-                RectTransform rt = M.MessagePrefabRect;
-                rt.sizeDelta = new Vector2(0, TextHeight);
-                Canvas.ForceUpdateCanvases();
-                if (MessageChannel.ContentPanel.activeInHierarchy)
-                {
-                    MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
-                }
-
-                Canvas.ForceUpdateCanvases();
-            }
-            else
-            {
-
-                string PreviewText = "";
-                if (e.Content.Length > 20)
-                {
-                    PreviewText = e.Content.Substring(0, 17);
-                    PreviewText += "...";
-                }
-                else
-                {
-                    PreviewText = e.Content;
-                }
-                MessageChannel.chatMenuButton.SetPreviewText(PreviewText);
-
-                if (CurrentlyActiveChannel != e.Channel)
-                {
-                    MessageChannel.chatMenuButton.AddUnreadNotification();
-                    //TODO: Only launch these if the app is not "in focus" or whatever
-                    //TODO: Move this to the point where the message is queued and schedule based on the delay value
-                    //TODO: Combine all received messages into one notification
-#if UNITY_IOS
-                UnityEngine.iOS.LocalNotification localNotification = new UnityEngine.iOS.LocalNotification();
-
-                localNotification.fireDate = System.DateTime.Now;
-                localNotification.alertBody = e.Channel + ": "+PreviewText;
-#endif
-                    ShowMessage(e, MessageChannel);
-                }
-                else
-                {
-                    StartCoroutine(ShowMessageDelayed(e, MessageChannel));
-                }
-
-            }
-        }
-
-    }
-    */
-
-    private void Update()
-    {
-        //Process display queue
-        if (DisplayQueue.Count > 0 && !WaitingForPlayerInput)
-        {
-            //GameEvent ge = DisplayQueue.Dequeue();
-            //DisplayEventFromQueue(ge);
-        }
-    }
-
-    IEnumerator ShowMessageDelayed(GameEvent e, Channel MessageChannel)
-    {
-        WaitingForPlayerInput = true;
-        float seconds = 0;
-        seconds = e.Content.Length * 0.1f;
-        Debug.Log("Show Message Delayed, seconds: "+seconds);
-        GameObject TypingObject = GameObject.Instantiate(TypingPrefab, MessageChannel.ContentPanel.transform);
-        TypingObject.GetComponent<Talking>().NameText.text = (e.CharacterName + " is typing...");
-        Canvas.ForceUpdateCanvases();
-        if (MessageChannel.ContentPanel.activeInHierarchy)
-        {
-            MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
-        }
-
-        Canvas.ForceUpdateCanvases();
-        yield return new WaitForSeconds(0.1f/*seconds*/);
-        Destroy(TypingObject);
-        ShowMessage(e, MessageChannel);
-        WaitingForPlayerInput = false;
-    }
 
     void ShowMessage(GameEvent e, Channel MessageChannel)
     {
@@ -459,6 +350,8 @@ public class DisplayManager : MonoBehaviour
                 M.CharacterImage.sprite = CharChannel.Portrait;
             }
             M.MessageText.text = e.Content;
+            M.MessageChannel = MessageChannel;
+            M.BeginAnimation();
 
         }
         else
@@ -470,15 +363,11 @@ public class DisplayManager : MonoBehaviour
             MessageUI M = message.GetComponent<MessageUI>();
             //Single messages don't have to worry about the name or portrait either, just the text content
             M.MessageText.text = e.Content;
-            
-        }
-        Canvas.ForceUpdateCanvases();
-        if (MessageChannel.ContentPanel.activeInHierarchy)
-        {
-            MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
-        }
+            M.MessageChannel = MessageChannel;
+            M.BeginAnimation();
 
-        Canvas.ForceUpdateCanvases();
+        }
+        CleanCanvases(MessageChannel);
     }
 
     public void PostAnimationCleanup()
@@ -510,15 +399,20 @@ public class DisplayManager : MonoBehaviour
                 ChoiceButton.GetComponentInChildren<Button>().onClick.AddListener(delegate { HandleChoice(e.Channel, choiceIndex, message, e.Choices); });
             }
 
-            Canvas.ForceUpdateCanvases();
-            if (MessageChannel.ContentPanel.activeInHierarchy)
-            {
-                MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
-            }
-
-            Canvas.ForceUpdateCanvases();
+            CleanCanvases(MessageChannel);
 
         }
+    }
+
+    public void CleanCanvases(Channel MessageChannel)
+    {
+        Canvas.ForceUpdateCanvases();
+        if (MessageChannel.ContentPanel.activeInHierarchy)
+        {
+            MessageChannel.ContentPanel.GetComponentInParent<ScrollRect>().verticalNormalizedPosition = 0f;
+        }
+
+        Canvas.ForceUpdateCanvases();
     }
 
     public void HandleChoice(string Channel, int ChoiceIndex, GameObject ChoiceUI, List<string> choices)

@@ -379,8 +379,11 @@ public class InkManager : MonoBehaviour
         {
             return CurrentStories[ChannelName].state.ToJson();
         }
-        Debug.LogError("Error saving Ink state: no channel found named " + ChannelName);
-        return "";
+        else
+        {
+            Debug.LogError("Error saving Ink state: no channel found named " + ChannelName);
+            return "";
+        }
     }
 
     public void RestoreJSON(string ChannelName, string JSON)
@@ -389,7 +392,10 @@ public class InkManager : MonoBehaviour
         {
             CurrentStories[ChannelName].state.LoadJson(JSON);
         }
-        Debug.LogError("Error restoring Ink state: no channel found named " + ChannelName);
+        else
+        {
+            Debug.LogError("Error restoring Ink state: no channel found named " + ChannelName);
+        }
     }
 
 

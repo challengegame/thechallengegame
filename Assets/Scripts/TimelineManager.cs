@@ -162,6 +162,9 @@ public class SaveData
     public string AnettaInkJSON;
     public string JessieInkJSON;
     public string TanyaInkJSON;
+    public string JimmyInkJSON;
+    public string MorganInkJSON;
+    public string KyleInkJSON;
 
     public bool PartyAnetta;
 
@@ -174,7 +177,7 @@ public class SaveData
 //It keeps a queue of messages to display, fed by the InkManager, and when it is time to display them it sends them to the DisplayManager
 public class TimelineManager : MonoBehaviour
 {
-
+    bool Initialized = false;
     public bool LoadSaves = false;
     //TODO: I think this will need to look at system time, because this will not increment when we're in pause mode
     float CurrentGameRealTime = 0.0f;
@@ -243,6 +246,7 @@ public class TimelineManager : MonoBehaviour
             //Otherwise, do our startup tasks
             CurrentGameRealTime = StartingGameEventTime;
         }
+        Initialized = true;
     }
 
     public void RestartGame()
@@ -270,7 +274,7 @@ public class TimelineManager : MonoBehaviour
             //Here we are being paused by the phone OS, and need to save our state so that we can resume from where we left off
             SaveGame();
         }
-        else if(LoadSaves)
+        else if(LoadSaves && Initialized)
         {
             //Focus is back on us, we should restore our saved state
             LoadGame();
@@ -426,6 +430,9 @@ public class TimelineManager : MonoBehaviour
         sd.AnettaInkJSON = InkManager.instance.GetJSON("Anetta");
         sd.TanyaInkJSON = InkManager.instance.GetJSON("Tanya");
         sd.KalilInkJSON = InkManager.instance.GetJSON("Kalil");
+        sd.KalilInkJSON = InkManager.instance.GetJSON("Kyle");
+        sd.KalilInkJSON = InkManager.instance.GetJSON("Morgan");
+        sd.KalilInkJSON = InkManager.instance.GetJSON("Jimmy");
 
         sd.PartyAnetta = DisplayManager.instance.GetPartyAnetta();
 
@@ -500,12 +507,16 @@ public class TimelineManager : MonoBehaviour
         InkManager.instance.RestoreJSON("Anetta", sd.AnettaInkJSON);
         InkManager.instance.RestoreJSON("Tanya", sd.TanyaInkJSON);
         InkManager.instance.RestoreJSON("Kalil", sd.KalilInkJSON);
+        InkManager.instance.RestoreJSON("Jimmy", sd.JimmyInkJSON);
+        InkManager.instance.RestoreJSON("Kyle", sd.KyleInkJSON);
+        InkManager.instance.RestoreJSON("Morgan", sd.MorganInkJSON);
 
         DisplayManager.instance.SetPartyAnetta(sd.PartyAnetta);
     }
 
     void PopulateLoadedEvents()
     {
+        Debug.Log("PopulateLoadedEvents");
         foreach (GameEvent ge in PastEvents)
         {
             DisplayManager.instance.DisplayEvent(ge, true);
