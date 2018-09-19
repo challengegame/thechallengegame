@@ -369,6 +369,7 @@ MonoBehaviour:
     rgba: 4278190080
   m_fontColor: {r: 0.11764706, g: 0.09019608, b: 0.12156863, a: 1}
   m_enableVertexGradient: 0
+  m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
     topRight: {r: 1, g: 1, b: 1, a: 1}
@@ -489,11 +490,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d35439156fc61e41aac60791735e80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TypingPrefab: {fileID: 0}
+  MessagePrefab: {fileID: 0}
   MessageText: {fileID: 114838944591407696}
   CharacterNameText: {fileID: 114447369743121690}
   CharacterImage: {fileID: 114537387698628506}
   MessagePrefabRect: {fileID: 224209601212882424}
   animator: {fileID: 95708277436067528}
+  MessageChannel:
+    ChannelName: 
+    MessagePanel: {fileID: 0}
+    Portrait: {fileID: 0}
+    IncomingMessagePrefab: {fileID: 0}
+    OutgoingMessagePrefab: {fileID: 0}
+    ContentPanel: {fileID: 0}
+    chatMenuButton: {fileID: 0}
+    PlayerTextArea: {fileID: 0}
+    RelationshipValue: 0
+  AnimationWaitTime: 0.2
 --- !u!114 &114680516297136372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -598,6 +612,7 @@ MonoBehaviour:
     rgba: 4294967295
   m_fontColor: {r: 0.11764706, g: 0.09019608, b: 0.12156863, a: 1}
   m_enableVertexGradient: 0
+  m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
     topRight: {r: 1, g: 1, b: 1, a: 1}
@@ -723,6 +738,7 @@ MonoBehaviour:
     rgba: 4278190080
   m_fontColor: {r: 0.11764706, g: 0.09019608, b: 0.12156863, a: 1}
   m_enableVertexGradient: 0
+  m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
     topRight: {r: 1, g: 1, b: 1, a: 1}
@@ -1004,7 +1020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -328, y: 0.00003171}
+  m_AnchoredPosition: {x: -307.6, y: 0.00003171}
   m_SizeDelta: {x: 123.7, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224584147933654350
