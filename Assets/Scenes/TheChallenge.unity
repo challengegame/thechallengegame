@@ -353,7 +353,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: LiberationSans SDF Material (Instance)
-  m_Shader: {fileID: 4800000, guid: cafd18099dfc0114896e0a8b277b81b6, type: 3}
+  m_Shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
   m_ShaderKeywords: MASK_SOFT UNITY_UI_CLIP_RECT
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
@@ -377,7 +377,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2846298, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
+        m_Texture: {fileID: 2846298, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
@@ -792,47 +792,47 @@ Prefab:
     - target: {fileID: 224784191683960760, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224620566542280186, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224238856491950090, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224613529400113088, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224220943052716060, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224941096309880198, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224004032856682452, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224859008099638330, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224237768248323534, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224885695231977232, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
@@ -1558,6 +1558,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: 3.9000244
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050347283476178, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: m_overflowMode
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49b04d915a6acf644955b6552b0f4127, type: 2}

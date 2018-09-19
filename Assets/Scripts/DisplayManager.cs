@@ -166,7 +166,23 @@ public class DisplayManager : MonoBehaviour
             TimelineManager.instance.ChannelViewed(channelName);
             CleanCanvases(MessageChannel);
             CurrentlyActiveChannel = channelName;
+            ResizeAllMessagesInChannel(MessageChannel);
         }
+    }
+
+    void ResizeAllMessagesInChannel(Channel MessageChannel)
+    {
+        foreach (Transform child in MessageChannel.ContentPanel.transform)
+        {
+            MessageUI MUI = child.GetComponent<MessageUI>();
+            MUI.MessageText.ForceMeshUpdate();
+            float TextHeight = MUI.MessageText.preferredHeight;
+            int linecount = MUI.MessageText.textInfo.lineCount;
+            Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
+            RectTransform rt = MUI.gameObject.transform as RectTransform;
+            rt.sizeDelta = new Vector2(rt.rect.width, TextHeight + 10);
+        }
+        CleanCanvases(MessageChannel);
     }
 
     void HideAllMessagePanels()
@@ -227,7 +243,7 @@ public class DisplayManager : MonoBehaviour
         //Player messages don't have a name or portrait to worry about
         M.MessageText.text = MessageContent;
         M.MessageText.ForceMeshUpdate();
-        Canvas.ForceUpdateCanvases();
+        //Canvas.ForceUpdateCanvases();
         float TextHeight = M.MessageText.preferredHeight;
         int linecount = M.MessageText.textInfo.lineCount;
         Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
@@ -333,7 +349,8 @@ public class DisplayManager : MonoBehaviour
                 message = GameObject.Instantiate(PortraitImagePrefab, MessageChannel.ContentPanel.transform);
             }
             message.GetComponent<ImageMessageUI>().image.sprite = im.sprite;
-            
+            CleanCanvases(MessageChannel);
+
         }
         else if (e.Channel == "Group")
         {
@@ -351,7 +368,14 @@ public class DisplayManager : MonoBehaviour
             }
             M.MessageText.text = e.Content;
             M.MessageChannel = MessageChannel;
-            M.BeginAnimation();
+            if (CurrentlyActiveChannel != e.Channel)
+            {
+                StartCoroutine(PreFinishAnimation(M));
+            }
+            else
+            {
+                BeginAnimation(M);
+            }
 
         }
         else
@@ -364,10 +388,17 @@ public class DisplayManager : MonoBehaviour
             //Single messages don't have to worry about the name or portrait either, just the text content
             M.MessageText.text = e.Content;
             M.MessageChannel = MessageChannel;
-            M.BeginAnimation();
+            if (CurrentlyActiveChannel != e.Channel)
+            {
+                StartCoroutine(PreFinishAnimation(M));
+            }
+            else
+            {
+                BeginAnimation(M);
+            }
 
         }
-        CleanCanvases(MessageChannel);
+        
     }
 
     public void PostAnimationCleanup()
@@ -381,12 +412,13 @@ public class DisplayManager : MonoBehaviour
         if (MessageChannel != null)
         {
             //TODO: Instead of instantly displaying the panel, think about the actual flow we want here - some sort of notification system?
-            if (CurrentlyActiveChannel != e.Channel)
+            /*
+             * if (CurrentlyActiveChannel != e.Channel)
             {
                 HideAllMessagePanels();
                 MessageChannel.MessagePanel.SetActive(true);
             }
-            //TODO: Figure out the length of the message and change the prefab based on that
+            */
 
             GameObject message;
             
@@ -402,6 +434,49 @@ public class DisplayManager : MonoBehaviour
             CleanCanvases(MessageChannel);
 
         }
+    }
+
+    public void BeginAnimation(MessageUI MUI)
+    {
+        StartCoroutine(EndAnimation(MUI));
+    }
+
+    IEnumerator EndAnimation(MessageUI MUI)
+    {
+        yield return new WaitForSeconds(MUI.AnimationWaitTime);
+
+        StartCoroutine(PreFinishAnimation(MUI));
+    }
+
+    IEnumerator PreFinishAnimation(MessageUI MUI)
+    {
+        Debug.Log("PreFinishAnim " + MUI.MessageText.text);
+        MUI.animator.StopPlayback();
+        MUI.animator.enabled = false;
+        MUI.TypingPrefab.SetActive(false);
+        MUI.MessagePrefab.SetActive(true);
+        yield return new WaitForEndOfFrame();
+        OnAnimationFinished(MUI);
+    }
+
+    void OnAnimationFinished(MessageUI MUI)
+    {
+        //We also need to disable the animator component so that it doesn't activate again when the panel is reactivated
+
+        Debug.Log("OnAnimationFinished");
+
+        //Here we need to calculate the proper size for the text box, because the text component will actually be active
+        MUI.MessageText.ForceMeshUpdate();
+        float TextHeight = MUI.MessageText.preferredHeight;
+        float TextWidth = MUI.MessageText.preferredWidth;
+        int linecount = MUI.MessageText.textInfo.lineCount;
+
+        RectTransform rt = MUI.gameObject.transform as RectTransform;
+        Debug.Log("Message height: " + TextHeight + " line count: " + linecount + " rect width: " + rt.rect.width);
+        rt.sizeDelta = new Vector2(rt.rect.width, TextHeight + 10);
+
+        CleanCanvases(MUI.MessageChannel);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(MUI.MessageChannel.ContentPanel.transform as RectTransform);
     }
 
     public void CleanCanvases(Channel MessageChannel)
