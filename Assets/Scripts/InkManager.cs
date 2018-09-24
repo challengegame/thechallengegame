@@ -314,7 +314,7 @@ public class InkManager : MonoBehaviour
                 gameEvent.AbsoluteTimeString = absoluteTimeStamp;
                 gameEvent.GameTimeToBeActivated = ParseAbsoluteTimestamp(absoluteTimeStamp);
 
-                Debug.Log("Calculated game time active to be " + gameEvent.GameTimeToBeActivated);
+                Debug.Log("Calculated game time active to be " + gameEvent.GameTimeToBeActivated+" Current time: "+TimelineManager.instance.GetCurrentTime());
                 TimelineManager.instance.AddEventToQueue(gameEvent);
             }
 
@@ -375,7 +375,7 @@ public class InkManager : MonoBehaviour
 
     public string GetJSON(string ChannelName)
     {
-        if (CurrentStories.ContainsKey(ChannelName))
+        if ( CurrentStories != null && CurrentStories.ContainsKey(ChannelName))
         {
             return CurrentStories[ChannelName].state.ToJson();
         }

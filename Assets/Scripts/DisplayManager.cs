@@ -175,12 +175,15 @@ public class DisplayManager : MonoBehaviour
         foreach (Transform child in MessageChannel.ContentPanel.transform)
         {
             MessageUI MUI = child.GetComponent<MessageUI>();
-            MUI.MessageText.ForceMeshUpdate();
-            float TextHeight = MUI.MessageText.preferredHeight;
-            int linecount = MUI.MessageText.textInfo.lineCount;
-            Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
-            RectTransform rt = MUI.gameObject.transform as RectTransform;
-            rt.sizeDelta = new Vector2(rt.rect.width, TextHeight + 10);
+            if (MUI != null)
+            {
+                MUI.MessageText.ForceMeshUpdate();
+                float TextHeight = MUI.MessageText.preferredHeight;
+                int linecount = MUI.MessageText.textInfo.lineCount;
+                Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
+                RectTransform rt = MUI.gameObject.transform as RectTransform;
+                rt.sizeDelta = new Vector2(rt.rect.width, TextHeight + 10);
+            }
         }
         CleanCanvases(MessageChannel);
     }
@@ -197,6 +200,7 @@ public class DisplayManager : MonoBehaviour
     void ShowPlayerTyping(Channel MessageChannel, string MessageContent)
     {
         TotalVisibleCharacters = MessageChannel.PlayerTextArea.textInfo.characterCount;
+        MessageChannel.PlayerTextArea.firstVisibleCharacter = 0;
         CurrentVisibleCharacters = 0;
         if (TextDisplayCoroutine != null)
         {
@@ -217,6 +221,10 @@ public class DisplayManager : MonoBehaviour
         {
             MessageChannel.PlayerTextArea.maxVisibleCharacters = CurrentVisibleCharacters; // How many characters should TextMeshPro display?
             CurrentVisibleCharacters += 1;
+            if (CurrentVisibleCharacters > 35)
+            {
+                MessageChannel.PlayerTextArea.firstVisibleCharacter = CurrentVisibleCharacters - 35;
+            }
             yield return new WaitForSeconds(TextDisplaySpeed);
         }
         //Debug.Log("Done revealing the text.");
@@ -255,72 +263,63 @@ public class DisplayManager : MonoBehaviour
     }
 
 
-    public void DisplayEvent(GameEvent e, bool immediate=true)
+    public void DisplayEvent(GameEvent e, bool restoring=false)
     {
-        Debug.Log("DisplayEvent");
+        Debug.Log("DisplayEvent "+e.Content+ " " + e.Channel+ " restoring: "+restoring);
         Channel MessageChannel = Channels.Find(x => x.ChannelName == e.Channel);
         if (MessageChannel != null)
-        {
-            if (immediate)
+        { 
+            if (e.CharacterName.ToLower() == "player")
             {
-                //TODO: Figure out the length of the message and change the prefab based on that
-                
-                if (e.CharacterName.ToLower() == "player")
+                if (restoring)
                 {
-                    if (MessageChannel.PlayerTextArea != null)
-                    {
-                        MessageChannel.PlayerTextArea.text = e.Content;
-                        ShowPlayerTyping(MessageChannel, e.Content);
-                    }
-                    //TODO: Eventually this should wait to display the player message until the player has initiated action or something similar
-                    
+                    DisplayPlayerMessage(MessageChannel, e.Content);
+
                 }
-                else
+                else if (MessageChannel.PlayerTextArea != null)
                 {
-
-                    string PreviewText = "";
-                    if (e.Content.Length > 20)
-                    {
-                        PreviewText = e.Content.Substring(0, 17);
-                        PreviewText += "...";
-                    }
-                    else
-                    {
-                        PreviewText = e.Content;
-                    }
-                    MessageChannel.chatMenuButton.SetPreviewText(PreviewText);
-
-                    if (CurrentlyActiveChannel != e.Channel)
-                    {
-                        MessageChannel.chatMenuButton.AddUnreadNotification();
-                        MessageChannel.chatMenuButton.transform.SetAsFirstSibling();
-                        //TODO: Only launch these if the app is not "in focus" or whatever
-                        //TODO: Move this to the point where the message is queued and schedule based on the delay value
-                        //TODO: Combine all received messages into one notification
-#if UNITY_IOS
-                        UnityEngine.iOS.LocalNotification localNotification = new UnityEngine.iOS.LocalNotification();
-
-                        localNotification.fireDate = System.DateTime.Now;
-                        localNotification.alertBody = e.Channel + ": "+PreviewText;
-#elif UNITY_ANDROID
-                        NotificationManager.Send(TimeSpan.FromSeconds(5), "The Challenge", e.Channel + ": "+PreviewText, new Color(1f, 0.3f, 0.15f));
-#endif
-                        ShowMessage(e, MessageChannel);
-                    }
-                    else
-                    {
-                        ShowMessage(e, MessageChannel);
-                    }
-
+                    MessageChannel.PlayerTextArea.text = e.Content;
+                    ShowPlayerTyping(MessageChannel, e.Content);
                 }
             }
             else
             {
-                //Add message to display queue
-                DisplayQueue.Enqueue(e);
-                
-            }
 
+                string PreviewText = "";
+                if (e.Content.Length > 20)
+                {
+                    PreviewText = e.Content.Substring(0, 17);
+                    PreviewText += "...";
+                }
+                else
+                {
+                    PreviewText = e.Content;
+                }
+                MessageChannel.chatMenuButton.SetPreviewText(PreviewText);
+
+                if (CurrentlyActiveChannel != e.Channel || restoring)
+                {
+                    MessageChannel.chatMenuButton.AddUnreadNotification();
+                    MessageChannel.chatMenuButton.transform.SetAsFirstSibling();
+                    //TODO: Only launch these if the app is not "in focus" or whatever
+                    //TODO: Move this to the point where the message is queued and schedule based on the delay value
+                    //TODO: Combine all received messages into one notification
+#if UNITY_IOS
+                    UnityEngine.iOS.LocalNotification localNotification = new UnityEngine.iOS.LocalNotification();
+
+                    localNotification.fireDate = System.DateTime.Now;
+                    localNotification.alertBody = e.Channel + ": "+PreviewText;
+#elif UNITY_ANDROID
+                    NotificationManager.Send(TimeSpan.FromSeconds(5), "The Challenge", e.Channel + ": "+PreviewText, new Color(1f, 0.3f, 0.15f));
+#endif
+                    ShowMessage(e, MessageChannel);
+                }
+                else
+                {
+                    ShowMessage(e, MessageChannel);
+                }
+
+            }
         }
 
 
@@ -401,11 +400,6 @@ public class DisplayManager : MonoBehaviour
         
     }
 
-    public void PostAnimationCleanup()
-    {
-
-    }
-
     public void DisplayChoiceEvent(ChoiceEvent e)
     {
         Channel MessageChannel = Channels.Find(x => x.ChannelName == e.Channel);
@@ -450,7 +444,7 @@ public class DisplayManager : MonoBehaviour
 
     IEnumerator PreFinishAnimation(MessageUI MUI)
     {
-        Debug.Log("PreFinishAnim " + MUI.MessageText.text);
+        //Debug.Log("PreFinishAnim " + MUI.MessageText.text);
         MUI.animator.StopPlayback();
         MUI.animator.enabled = false;
         MUI.TypingPrefab.SetActive(false);
@@ -463,7 +457,7 @@ public class DisplayManager : MonoBehaviour
     {
         //We also need to disable the animator component so that it doesn't activate again when the panel is reactivated
 
-        Debug.Log("OnAnimationFinished");
+        //Debug.Log("OnAnimationFinished");
 
         //Here we need to calculate the proper size for the text box, because the text component will actually be active
         MUI.MessageText.ForceMeshUpdate();
@@ -472,7 +466,7 @@ public class DisplayManager : MonoBehaviour
         int linecount = MUI.MessageText.textInfo.lineCount;
 
         RectTransform rt = MUI.gameObject.transform as RectTransform;
-        Debug.Log("Message height: " + TextHeight + " line count: " + linecount + " rect width: " + rt.rect.width);
+        //Debug.Log("Message height: " + TextHeight + " line count: " + linecount + " rect width: " + rt.rect.width);
         rt.sizeDelta = new Vector2(rt.rect.width, TextHeight + 10);
 
         CleanCanvases(MUI.MessageChannel);

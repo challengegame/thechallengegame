@@ -312,7 +312,7 @@ public class TimelineManager : MonoBehaviour
         time %= 3600;
         int minutes = (int)(time / 60);
         time %= 60;
-        int seconds = (int)time;
+        //int seconds = (int)time;
         string retString = /*days.ToString() + ":" +*/ hours.ToString() + ":" + minutes.ToString() /*+ ":" + seconds.ToString()*/;
         return retString;
 
@@ -335,6 +335,14 @@ public class TimelineManager : MonoBehaviour
         }
     }
 
+    public void DebugShowQueues()
+    {
+        foreach (KeyValuePair<string, PriorityQueue<GameEvent>> kvp in Queues)
+        {
+            Debug.Log(kvp.Value.Peek().GameTimeToBeActivated + ": " + kvp.Value.Peek().Content);
+        }
+    }
+
     void ProcessQueues()
     {
         if (WaitingOnChoiceCount <= 0 && TotalWaitCount <= 0 && !DisplayManager.instance.WaitingForPlayerInput)
@@ -348,7 +356,7 @@ public class TimelineManager : MonoBehaviour
                     ChoiceEvent choiceEvent = currentEvent as ChoiceEvent;
                     if (choiceEvent != null)
                     {
-                        Debug.Log("Dequeuing choice event with " + choiceEvent.Choices.Count + " choices.");
+                        Debug.Log("Dequeuing choice event with " + choiceEvent.Choices.Count + " choices in channel "+choiceEvent.Channel+".");
                         DisplayManager.instance.DisplayChoiceEvent(choiceEvent);
                         WaitingOnChoiceCount++;
                     }
@@ -378,8 +386,6 @@ public class TimelineManager : MonoBehaviour
                 {
                     //Our queue is empty, let's see if the ink manager has more stuff for us
                     InkManager.instance.AdvanceStory(kvp.Key);
-                    //TODO: Set up a push notification for the next event scheduled to occur
-                    //TODO: Handle the case of waiting for player input
                 }
             }
         }
@@ -430,9 +436,9 @@ public class TimelineManager : MonoBehaviour
         sd.AnettaInkJSON = InkManager.instance.GetJSON("Anetta");
         sd.TanyaInkJSON = InkManager.instance.GetJSON("Tanya");
         sd.KalilInkJSON = InkManager.instance.GetJSON("Kalil");
-        sd.KalilInkJSON = InkManager.instance.GetJSON("Kyle");
-        sd.KalilInkJSON = InkManager.instance.GetJSON("Morgan");
-        sd.KalilInkJSON = InkManager.instance.GetJSON("Jimmy");
+        sd.KyleInkJSON = InkManager.instance.GetJSON("Kyle");
+        sd.MorganInkJSON = InkManager.instance.GetJSON("Morgan");
+        sd.JimmyInkJSON = InkManager.instance.GetJSON("Jimmy");
 
         sd.PartyAnetta = DisplayManager.instance.GetPartyAnetta();
 
