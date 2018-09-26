@@ -8,6 +8,7 @@ using UnityEngine;
 //Priority Queue taken from VS Magazine
 //https://visualstudiomagazine.com/articles/2012/11/01/priority-queues-with-c.aspx
 
+    [System.Serializable]
 public class PriorityQueue<T> where T : IComparable<T>
 {
     private List<T> data;
@@ -169,6 +170,19 @@ public class SaveData
     public bool PartyAnetta;
 
     public List<GameEvent> PastGameEvents;
+
+    public PriorityQueue<GameEvent> CurrentGroupQueue;
+    public PriorityQueue<GameEvent> CurrentHemaQueue;
+    public PriorityQueue<GameEvent> CurrentTanyaQueue;
+    public PriorityQueue<GameEvent> CurrentJimmyQueue;
+    public PriorityQueue<GameEvent> CurrentKalilQueue;
+    public PriorityQueue<GameEvent> CurrentAnettaQueue;
+    public PriorityQueue<GameEvent> CurrentMsMorganQueue;
+    public PriorityQueue<GameEvent> CurrentKyleQueue;
+    public PriorityQueue<GameEvent> CurrentJessieQueue;
+
+    public List<ChoiceEvent> ActiveChoices;
+
 }
 
 
@@ -201,6 +215,9 @@ public class TimelineManager : MonoBehaviour
     float DebugTimeFactor = 1.0f;
 
     List<GameEvent> PastEvents;
+
+
+    List<ChoiceEvent> CurrentActiveChoices;
 
     // Use this for initialization
     void Start ()
@@ -268,7 +285,7 @@ public class TimelineManager : MonoBehaviour
 
     private void OnApplicationPause(bool pause)
     {
-        Debug.Log("OnAppPause " + pause);
+        //Debug.Log("OnAppPause " + pause);
         if (pause)
         {
             //Here we are being paused by the phone OS, and need to save our state so that we can resume from where we left off
@@ -283,7 +300,7 @@ public class TimelineManager : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        Debug.Log("OnAppQuit");
+        //Debug.Log("OnAppQuit");
         SaveGame();
     }
 
@@ -321,7 +338,7 @@ public class TimelineManager : MonoBehaviour
     //Called on Awake() after singleton setup
     void Initialize()
     {
-
+        CurrentActiveChoices = new List<ChoiceEvent>();
     }
 
     public void AddEventToQueue(GameEvent ge)
@@ -356,14 +373,15 @@ public class TimelineManager : MonoBehaviour
                     ChoiceEvent choiceEvent = currentEvent as ChoiceEvent;
                     if (choiceEvent != null)
                     {
-                        Debug.Log("Dequeuing choice event with " + choiceEvent.Choices.Count + " choices in channel "+choiceEvent.Channel+".");
+                        //Debug.Log("Dequeuing choice event with " + choiceEvent.Choices.Count + " choices in channel "+choiceEvent.Channel+".");
                         DisplayManager.instance.DisplayChoiceEvent(choiceEvent);
                         WaitingOnChoiceCount++;
+                        CurrentActiveChoices.Add(choiceEvent);
                     }
                     else
                     {
 
-                        Debug.Log("Dequeueing event with content: " + currentEvent.Content + " DisplayTime: " + currentEvent.DisplayTime + " Character: " + currentEvent.CharacterName);
+                        //Debug.Log("Dequeueing event with content: " + currentEvent.Content + " DisplayTime: " + currentEvent.DisplayTime + " Character: " + currentEvent.CharacterName);
                         CurrentGameEventTime = (currentEvent.GameTimeToBeActivated == 0 ? CurrentGameEventTime : currentEvent.GameTimeToBeActivated);
                         DisplayManager.instance.DisplayEvent(currentEvent);
                         PastEvents.Add(currentEvent);
@@ -385,13 +403,14 @@ public class TimelineManager : MonoBehaviour
                 if (kvp.Value.Count() == 0 && WaitingOnChoiceCount <= 0)
                 {
                     //Our queue is empty, let's see if the ink manager has more stuff for us
+                    //Debug.Log("Advancing story from queue");
                     InkManager.instance.AdvanceStory(kvp.Key);
                 }
             }
         }
         else
         {
-            //Debug.Log("Stuck waiting! Waiting for choice: " + WaitingOnChoiceCount + " waiting for name: " + WaitingForNameInput);
+            //Debug.Log("Stuck waiting! Waiting for choice: " + WaitingOnChoiceCount + " waiting for name: " + WaitingForNameInput+" waiting for player: "+DisplayManager.instance.WaitingForPlayerInput);
         }
     }
 
@@ -400,10 +419,11 @@ public class TimelineManager : MonoBehaviour
         return CurrentGameEventTime;
     }
 
-    public void ChoiceMade()
+    public void ChoiceMade(ChoiceEvent e)
     {
         WaitingOnChoiceCount--;
         CurrentGameEventTime = CurrentGameRealTime;
+        CurrentActiveChoices.Remove(e);
     }
 
     public void ChannelViewed(string ChannelName)
@@ -439,6 +459,18 @@ public class TimelineManager : MonoBehaviour
         sd.KyleInkJSON = InkManager.instance.GetJSON("Kyle");
         sd.MorganInkJSON = InkManager.instance.GetJSON("Morgan");
         sd.JimmyInkJSON = InkManager.instance.GetJSON("Jimmy");
+
+        sd.CurrentGroupQueue = Queues["Group"];
+        sd.CurrentHemaQueue = Queues["Hema"];
+        sd.CurrentJessieQueue = Queues["Jessie"];
+        sd.CurrentAnettaQueue = Queues["Anetta"];
+        sd.CurrentTanyaQueue = Queues["Tanya"];
+        sd.CurrentKalilQueue = Queues["Kalil"];
+        sd.CurrentKyleQueue = Queues["Kyle"];
+        sd.CurrentMsMorganQueue = Queues["Morgan"];
+        sd.CurrentJimmyQueue = Queues["Jimmy"];
+
+        //sd.ActiveChoices = CurrentActiveChoices;
 
         sd.PartyAnetta = DisplayManager.instance.GetPartyAnetta();
 
@@ -500,11 +532,13 @@ public class TimelineManager : MonoBehaviour
 
     void RestoreData(SaveData sd)
     {
+        DisplayManager.instance.ClearAllChannels();
         CurrentGameRealTime = sd.CurrentGameRealTime;
         CurrentGameEventTime = sd.CurrentGameEventTime;
         DisplayManager.instance.SetPlayerName(sd.PlayerName);
         DisplayManager.instance.SetPlayerPronoun(sd.PlayerPronoun);
         PastEvents = sd.PastGameEvents;
+        //CurrentActiveChoices = sd.ActiveChoices;
         PopulateLoadedEvents();
 
         InkManager.instance.RestoreJSON("Group", sd.GroupInkJSON);
@@ -517,15 +551,31 @@ public class TimelineManager : MonoBehaviour
         InkManager.instance.RestoreJSON("Kyle", sd.KyleInkJSON);
         InkManager.instance.RestoreJSON("Morgan", sd.MorganInkJSON);
 
+        Queues["Group"] = sd.CurrentGroupQueue;
+        Queues["Hema"] = sd.CurrentHemaQueue;
+        Queues["Jessie"] = sd.CurrentJessieQueue;
+        Queues["Anetta"] = sd.CurrentAnettaQueue;
+        Queues["Tanya"] = sd.CurrentTanyaQueue;
+        Queues["Kalil"] = sd.CurrentKalilQueue;
+        Queues["Jimmy"] = sd.CurrentJimmyQueue;
+        Queues["Kyle"] = sd.CurrentKyleQueue;
+        Queues["Morgan"] = sd.CurrentMsMorganQueue;
+
         DisplayManager.instance.SetPartyAnetta(sd.PartyAnetta);
+        
     }
 
     void PopulateLoadedEvents()
     {
-        Debug.Log("PopulateLoadedEvents");
+        //Debug.Log("PopulateLoadedEvents");
         foreach (GameEvent ge in PastEvents)
         {
             DisplayManager.instance.DisplayEvent(ge, true);
+        }
+        //Unresolved choice events should be the last thing in their particular channel (because the channel can't advance with active choices)
+        foreach (ChoiceEvent ce in CurrentActiveChoices)
+        {
+            //DisplayManager.instance.DisplayChoiceEvent(ce);
         }
         //TODO: Instead of this, we should save the notification information for each channel and restore that
         DisplayManager.instance.SetAllNotificationsRead();

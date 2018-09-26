@@ -70,7 +70,7 @@ public class DisplayManager : MonoBehaviour
     string PlayerName = "Quinn";
     Pronoun PlayerPronoun = Pronoun.THEY;
 
-    Queue<GameEvent> DisplayQueue;
+    //Queue<GameEvent> DisplayQueue;
 
     [HideInInspector]
     public bool WaitingForPlayerInput = false;
@@ -99,14 +99,14 @@ public class DisplayManager : MonoBehaviour
 
     void Initialize()
     {
-        DisplayQueue = new Queue<GameEvent>();
+        //DisplayQueue = new Queue<GameEvent>();
     }
 
     public void ClearAllChannels()
     {
         foreach (Channel c in Channels)
         {
-            for (int i = c.ContentPanel.transform.childCount; i >= 0 ; i--)
+            for (int i = c.ContentPanel.transform.childCount-1; i >= 0 ; i--)
             {
                 Destroy(c.ContentPanel.transform.GetChild(i).gameObject);
             }
@@ -180,7 +180,7 @@ public class DisplayManager : MonoBehaviour
                 MUI.MessageText.ForceMeshUpdate();
                 float TextHeight = MUI.MessageText.preferredHeight;
                 int linecount = MUI.MessageText.textInfo.lineCount;
-                Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
+                //Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
                 RectTransform rt = MUI.gameObject.transform as RectTransform;
                 rt.sizeDelta = new Vector2(rt.rect.width, TextHeight + 10);
             }
@@ -221,9 +221,9 @@ public class DisplayManager : MonoBehaviour
         {
             MessageChannel.PlayerTextArea.maxVisibleCharacters = CurrentVisibleCharacters; // How many characters should TextMeshPro display?
             CurrentVisibleCharacters += 1;
-            if (CurrentVisibleCharacters > 35)
+            if (CurrentVisibleCharacters > 30)
             {
-                MessageChannel.PlayerTextArea.firstVisibleCharacter = CurrentVisibleCharacters - 35;
+                MessageChannel.PlayerTextArea.firstVisibleCharacter = CurrentVisibleCharacters - 30;
             }
             yield return new WaitForSeconds(TextDisplaySpeed);
         }
@@ -254,7 +254,11 @@ public class DisplayManager : MonoBehaviour
         //Canvas.ForceUpdateCanvases();
         float TextHeight = M.MessageText.preferredHeight;
         int linecount = M.MessageText.textInfo.lineCount;
-        Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
+        //Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
+        if (linecount == 1 && MessageContent.Length >= 45)
+        {
+            TextHeight *= 2;
+        }
         RectTransform rt = M.gameObject.transform as RectTransform;
         rt.sizeDelta = new Vector2(rt.rect.width, TextHeight + 10);
         CleanCanvases(MessageChannel);
@@ -265,7 +269,7 @@ public class DisplayManager : MonoBehaviour
 
     public void DisplayEvent(GameEvent e, bool restoring=false)
     {
-        Debug.Log("DisplayEvent "+e.Content+ " " + e.Channel+ " restoring: "+restoring);
+        //Debug.Log("DisplayEvent "+e.Content+ " " + e.Channel+ " restoring: "+restoring);
         Channel MessageChannel = Channels.Find(x => x.ChannelName == e.Channel);
         if (MessageChannel != null)
         { 
@@ -422,7 +426,7 @@ public class DisplayManager : MonoBehaviour
                 GameObject ChoiceButton = GameObject.Instantiate(ChoiceButtonPrefab, message.transform);
                 ChoiceButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = e.Choices[i];
                 int choiceIndex = i;
-                ChoiceButton.GetComponentInChildren<Button>().onClick.AddListener(delegate { HandleChoice(e.Channel, choiceIndex, message, e.Choices); });
+                ChoiceButton.GetComponentInChildren<Button>().onClick.AddListener(delegate { HandleChoice(e, e.Channel, choiceIndex, message, e.Choices); });
             }
 
             CleanCanvases(MessageChannel);
@@ -463,7 +467,7 @@ public class DisplayManager : MonoBehaviour
         MUI.MessageText.ForceMeshUpdate();
         float TextHeight = MUI.MessageText.preferredHeight;
         float TextWidth = MUI.MessageText.preferredWidth;
-        int linecount = MUI.MessageText.textInfo.lineCount;
+        //int linecount = MUI.MessageText.textInfo.lineCount;
 
         RectTransform rt = MUI.gameObject.transform as RectTransform;
         //Debug.Log("Message height: " + TextHeight + " line count: " + linecount + " rect width: " + rt.rect.width);
@@ -484,9 +488,9 @@ public class DisplayManager : MonoBehaviour
         Canvas.ForceUpdateCanvases();
     }
 
-    public void HandleChoice(string Channel, int ChoiceIndex, GameObject ChoiceUI, List<string> choices)
+    public void HandleChoice(ChoiceEvent e, string Channel, int ChoiceIndex, GameObject ChoiceUI, List<string> choices)
     {
-        Debug.Log("Handle choice called with channel " + Channel + " and index " + ChoiceIndex);
+        //Debug.Log("Handle choice called with channel " + Channel + " and index " + ChoiceIndex);
         InkManager.instance.HandleChoice(Channel, ChoiceIndex);
         string ChoicesString = "";
         foreach (string choice in choices)
@@ -499,7 +503,7 @@ public class DisplayManager : MonoBehaviour
             { "choice_chosen", ChoiceIndex }
         }));
         GameObject.Destroy(ChoiceUI);
-        TimelineManager.instance.ChoiceMade();
+        TimelineManager.instance.ChoiceMade(e);
 
     }
 
@@ -554,7 +558,7 @@ public class DisplayManager : MonoBehaviour
         
         PlayerPronoun = (Pronoun)pronoun;
 
-        Debug.Log("Chose pronoun " + PlayerPronoun);
+        //Debug.Log("Chose pronoun " + PlayerPronoun);
     }
 
     public string GetPlayerName()

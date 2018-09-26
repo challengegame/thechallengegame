@@ -237,7 +237,7 @@ public class InkManager : MonoBehaviour
             contentString = subStrings[1];
 
 
-            Debug.Log("ParseString found - Name: " + characterName + " Time: " + timeString + " Content: " + contentString+" Channel: "+channel);
+            //Debug.Log("ParseString found - Name: " + characterName + " Time: " + timeString + " Content: " + contentString+" Channel: "+channel);
 
             foreach (string Tag in tags)
             {
@@ -297,7 +297,7 @@ public class InkManager : MonoBehaviour
 
                 imageEvent.ImageName = ImageName;
 
-                Debug.Log("Calculated game time active to be " + imageEvent.GameTimeToBeActivated);
+                //Debug.Log("Calculated game time active to be " + imageEvent.GameTimeToBeActivated);
                 TimelineManager.instance.AddEventToQueue(imageEvent);
             }
             else
@@ -314,7 +314,7 @@ public class InkManager : MonoBehaviour
                 gameEvent.AbsoluteTimeString = absoluteTimeStamp;
                 gameEvent.GameTimeToBeActivated = ParseAbsoluteTimestamp(absoluteTimeStamp);
 
-                Debug.Log("Calculated game time active to be " + gameEvent.GameTimeToBeActivated+" Current time: "+TimelineManager.instance.GetCurrentTime());
+                //Debug.Log("Calculated game time active to be " + gameEvent.GameTimeToBeActivated+" Current time: "+TimelineManager.instance.GetCurrentTime());
                 TimelineManager.instance.AddEventToQueue(gameEvent);
             }
 
