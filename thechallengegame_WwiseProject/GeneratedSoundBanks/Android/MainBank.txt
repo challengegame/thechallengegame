@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	133642231	General			\Default Work Unit\General	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	5306346	General	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Android\SFX\Generalv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\General		17472
+

@@ -126,6 +126,8 @@ public class DisplayManager : MonoBehaviour
         CreditsPanel.SetActive(true);
         //Temp for testing
         TimelineManager.instance.SaveGame();
+        //Audio Test
+        AkSoundEngine.PostEvent("General", gameObject);
     }
 
     public void ShowMainMenu()

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="iOS" BasePlatform="iOS" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>/Users/alicedroni/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Repos/TheChallengeGit/thechallengegame/thechallengegame_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/alicedroni/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Repos/TheChallengeGit/thechallengegame/thechallengegame_WwiseProject/.cache/iOS/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/alicedroni/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Repos/TheChallengeGit/thechallengegame/thechallengegame_WwiseProject/GeneratedSoundBanks/iOS/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/alicedroni/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Documents/Repos/TheChallengeGit/thechallengegame/thechallengegame_WwiseProject/GeneratedSoundBanks/iOS</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2880737896" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\MainBank</ObjectPath>
+			<ShortName>MainBank</ShortName>
+			<Path>MainBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="133642231" Name="General" ObjectPath="\Events\Default Work Unit\General"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="5306346" Language="SFX">
+					<ShortName>Generalv1.wav</ShortName>
+					<Path>SFX/Generalv1_56D34C19.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

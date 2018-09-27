@@ -3,6 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{865752C7-E8A1-4723-BF47-D7988CDC7011}">
 			<PropertyList>
+				<Property Name="Event Action List\{4370083C-A9EA-40B7-9E6E-199641D9300D}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
 						<Value Platform="Mac"></Value>
@@ -21,6 +22,9 @@
 						<Value Platform="Android">GeneratedSoundBanks\Android\</Value>
 					</ValueList>
 				</Property>
+				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value="BvDMKA=="/>
+				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="Kv00BP2/AU+cQf8QIwiPsV5ztKGgIUZIiOOv7pftCvG1PrvQOGD1TZ3J4qyhrjme/wLw54Zrc0CFDBVDNLxq1dnmcpceA0tOqicfrhyxlIs="/>
+				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="eFgYXO2xwUGNCG3zg0VpyQ=="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
