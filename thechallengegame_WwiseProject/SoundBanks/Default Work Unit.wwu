@@ -5,7 +5,25 @@
 			<ChildrenList>
 				<SoundBank Name="MainBank" ID="{5C185878-B1ED-41C1-8D08-6DF3834569C9}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Kyle" ID="{9F68A8CC-4D5E-408B-8AC4-A7ACDC97E8F0}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="General" ID="{4370083C-A9EA-40B7-9E6E-199641D9300D}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Tanya" ID="{795DB6DF-E4E8-40C1-ACA6-ED62273DEF37}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Kalil" ID="{F32C95DB-D7DD-4119-BCF6-4AE8340AA37C}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Hema" ID="{BC2CCDBD-0831-41C1-A762-C02A05E44848}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Keyboard" ID="{E5EEF0C7-7A5C-4234-8DCC-A323713D4E98}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Message" ID="{E8BD8E07-8E5F-4424-A001-8B6969D0790D}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Reply" ID="{216AF4F6-0A52-4445-8DDD-25C77A25C9C3}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Home" ID="{832F816A-4E9F-4449-A26E-78747163DE16}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Jimmy" ID="{87E7857D-6C60-46CE-96DE-E90BAC2EF34C}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ChoiceAppear" ID="{D9841B28-6155-4901-ADAD-67F61A35444A}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Jessie" ID="{FAC99F12-6568-4965-831D-EA3FECFBFD64}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Submit" ID="{B1561F07-2840-4999-96F7-08F5E2864567}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Morgan" ID="{8B2F6106-FDB8-4BB1-96AE-BA43D52E5D38}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="SevenDays" ID="{734F836D-6A2B-4C07-A4D2-FEE28AAA9A9F}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Anetta" ID="{DC8EF1DB-E4D0-4C71-A8CA-28A5D4744D66}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="IsTyping" ID="{B91EB814-C56D-4CF4-B6BA-ABEB0723FF73}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Picture" ID="{DA5826FB-DE07-4D59-A719-B2854F47C737}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Group" ID="{BEAD90D7-A2EA-4ECC-BB16-54AB9B75E007}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
