@@ -16,6 +16,8 @@ public class InkManager : MonoBehaviour
     //This allows us to still separate out the chats into different files, for the ease of the writer
     Dictionary<string, Story> CurrentStories;
 
+    Dictionary<string, float> CurrentTimeClocks;
+
     public List<Chat> AllChats;
 
     public float ChoiceDelaySeconds = 3.0f;
@@ -75,6 +77,7 @@ public class InkManager : MonoBehaviour
     private void Initialize()
     {
         CurrentStories = new Dictionary<string, Story>();
+        CurrentTimeClocks = new Dictionary<string, float>();
         foreach (Chat C in AllChats)
         {
             Story s = new Story(C.ChatText.text);
@@ -129,30 +132,15 @@ public class InkManager : MonoBehaviour
 
         }
     }
-    /*
+    
     public void AdvanceStories()
     {
         foreach (KeyValuePair<string, Story> s in CurrentStories)
         {
-            //If we can continue, that means that we have no choices to worry about and there's still content to go
-            if (s.Value.canContinue)
-            {
-                string newText = s.Continue().Trim();
-                ParseLine(newText, s.currentTags, s.globalTags);
-            }
-            else if (s.currentChoices.Count > 0)
-            {
-                //We have a choice for the player to make - we need to deal with that separately
-                //TODO: Create a new event that is a choice and pass that on to the event manager
-            }
-            //Otherwise we need to figure something else out
-            else
-            {
-
-            }
+            AdvanceStory(s.Key);
         }
     }
-    */
+    
 
 
 
@@ -164,13 +152,17 @@ public class InkManager : MonoBehaviour
             Debug.LogError("Tried to advancestory on channel "+Channel+" which was not found!");
             return;
         }
+        Debug.Log("AdvanceStory "+Channel);
         //If we can continue, that means that we have no choices to worry about and there's still content to go
-        if (CurrentStories[Channel].canContinue)
+        //if (CurrentStories[Channel].canContinue)
         {
-            string newText = CurrentStories[Channel].Continue().Trim();
-            ParseLine(newText, CurrentStories[Channel].currentTags, CurrentStories[Channel].globalTags);
+            while (CurrentStories[Channel].canContinue)
+            {
+                string newText = CurrentStories[Channel].Continue().Trim();
+                ParseLine(newText, CurrentStories[Channel].currentTags, CurrentStories[Channel].globalTags);
+            }
         }
-        else if (CurrentStories[Channel].currentChoices.Count > 0)
+        if (CurrentStories[Channel].currentChoices.Count > 0)
         {
             //We have a choice for the player to make - we need to deal with that separately
             //TODO: Create a new event that is a choice and pass that on to the event manager
@@ -178,14 +170,24 @@ public class InkManager : MonoBehaviour
             choiceEvent.Channel = Channel;
             //No data besides the channel applies to choices
             choiceEvent.Choices = new List<string>();
-            //Put in a delay before displaying choices, so that they aren't instantaneous. This gives the player time to read the last message,
-            //plus for us to play the correct animations.
-            choiceEvent.GameTimeToBeActivated = TimelineManager.instance.GetCurrentTime() + ChoiceDelaySeconds;
+
             for (int i = 0; i < CurrentStories[Channel].currentChoices.Count; i++)
             {
                 choiceEvent.Choices.Add(CurrentStories[Channel].currentChoices[i].text);
 
             }
+            //Put in a delay before displaying choices, so that they aren't instantaneous. This gives the player time to read the last message,
+            //plus for us to play the correct animations.
+            if (CurrentTimeClocks.ContainsKey(Channel))
+            {
+                choiceEvent.GameTimeToBeActivated = CurrentTimeClocks[Channel] + ChoiceDelaySeconds;
+            }
+            else
+            {
+                Debug.LogError("Channel '" + Channel + "' has no associated key in the time clocks dictionary; skipping the choice "+choiceEvent.Choices[0]+"/"+choiceEvent.Choices[1]);
+                return;
+            }
+
             TimelineManager.instance.AddEventToQueue(choiceEvent);
         }
         //Otherwise we need to figure something else out
@@ -299,6 +301,7 @@ public class InkManager : MonoBehaviour
 
                 //Debug.Log("Calculated game time active to be " + imageEvent.GameTimeToBeActivated);
                 TimelineManager.instance.AddEventToQueue(imageEvent);
+                CurrentTimeClocks[channel] = imageEvent.GameTimeToBeActivated;
             }
             else
             {
@@ -314,8 +317,9 @@ public class InkManager : MonoBehaviour
                 gameEvent.AbsoluteTimeString = absoluteTimeStamp;
                 gameEvent.GameTimeToBeActivated = ParseAbsoluteTimestamp(absoluteTimeStamp);
 
-                //Debug.Log("Calculated game time active to be " + gameEvent.GameTimeToBeActivated+" Current time: "+TimelineManager.instance.GetCurrentTime());
+                Debug.Log("Calculated game time active to be " + gameEvent.GameTimeToBeActivated+" Current time: "+TimelineManager.instance.GetCurrentTime());
                 TimelineManager.instance.AddEventToQueue(gameEvent);
+                CurrentTimeClocks[channel] = gameEvent.GameTimeToBeActivated;
             }
 
 

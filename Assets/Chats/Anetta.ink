@@ -6,6 +6,9 @@ EXTERNAL PlayerPossessivePronoun()
 EXTERNAL PlayerObjectivePronoun()
 EXTERNAL PartyAnetta()
 
+//This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
+#Anetta
+
 VAR not_GiveSpace = false
 VAR hesitate_GiveSpace = false
 VAR bringAnetta = false
@@ -16,8 +19,7 @@ VAR bringAnetta = false
     ~ bringAnetta = false
 }
 
-//This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
-#Anetta
+
 
 Anetta;hey #time=1:22:13:00
 Anetta;are you thre? #time=1:22:13:04

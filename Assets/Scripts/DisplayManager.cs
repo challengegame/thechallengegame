@@ -182,7 +182,7 @@ public class DisplayManager : MonoBehaviour
             {
                 MUI.MessageText.ForceMeshUpdate();
                 float TextHeight = MUI.MessageText.preferredHeight;
-                int linecount = MUI.MessageText.textInfo.lineCount;
+                //int linecount = MUI.MessageText.textInfo.lineCount;
                 //Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
                 RectTransform rt = MUI.gameObject.transform as RectTransform;
                 rt.sizeDelta = new Vector2(rt.rect.width, TextHeight + 10);
@@ -258,7 +258,10 @@ public class DisplayManager : MonoBehaviour
         float TextHeight = M.MessageText.preferredHeight;
         int linecount = M.MessageText.textInfo.lineCount;
         //Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
-        if (linecount == 1 && MessageContent.Length >= 45)
+        //This is here to work around a bug in TMP where it doesn't always provide an accurate linecount/height if text is very close to the limit
+        //A character count is a terribly rough way to do this, but worst case is it makes extra-wide messages when they're not needed, which is
+        //better than overflowing
+        if (linecount == 1 && MessageContent.Length >= 42)
         {
             TextHeight *= 2;
         }

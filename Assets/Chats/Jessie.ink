@@ -5,9 +5,11 @@ EXTERNAL PlayerPersonalPronoun()
 EXTERNAL PlayerPossessivePronoun()
 EXTERNAL PlayerObjectivePronoun()
 
-VAR believedJ = false
 //This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
 #Jessie
+
+VAR believedJ = false
+
 
 Jessie;do you ever think about whales #time=1:06:40:24
 * [No?]

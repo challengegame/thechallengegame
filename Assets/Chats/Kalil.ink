@@ -6,6 +6,9 @@ EXTERNAL PlayerPossessivePronoun()
 EXTERNAL PlayerObjectivePronoun()
 EXTERNAL PartyAnetta()
 
+//This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
+#Kalil
+
 VAR kalil_forgive_day3 = false
 VAR kalil_week1confession = false
 VAR bringAnetta = true
@@ -16,8 +19,7 @@ VAR bringAnetta = true
     ~ bringAnetta = false
 }
 
-//This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
-#Kalil
+
 
 Kalil;I was a dick yesterday. #time=3:06:41:26
 Kalil;I know that, you know it, the entire group knows it. #time=3:06:41:29

@@ -6,6 +6,9 @@ EXTERNAL PlayerPossessivePronoun()
 EXTERNAL PlayerObjectivePronoun()
 EXTERNAL PartyAnetta()
 
+//This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
+#Group
+
 VAR hard_daddy = false
 VAR ahole = false 
 VAR KalilFunny = false
@@ -16,9 +19,6 @@ VAR bringAnetta = false
 - else: 
     ~ bringAnetta = false
 }
-
-//This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
-#Group
 
 Hema;good morning everyone! #time=1:06:30:52
 Hema;I'm getting ready for early morning practice #time=1:06:30:56
@@ -111,7 +111,7 @@ Hema;no no no #time=1:08:31:18
 Hema;this isn't the news #time=1:08:31:20
 Hema;OF COURSE THIS IS THE NEWS #time=1:08:31:25
 Jessie;What is this news #time=1:08:31:29
-Hema;I told (PlayerPersonalPronoun()) that i might have news a couple hours from then #time=1:08:31:31
+Hema;I told {PlayerPersonalPronoun()} that i might have news a couple hours from then #time=1:08:31:31
 Hema;AND I DO #time=1:08:31:33
 Tanya;You might not Know this, Jessie, but we don't usually Text in Class here. #time=1:08:31:37
 Jessie;Hey, I'm an exchange student #time=1:08:31:41
