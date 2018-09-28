@@ -330,7 +330,7 @@ public class TimelineManager : MonoBehaviour
         int minutes = (int)(time / 60);
         time %= 60;
         //int seconds = (int)time;
-        string retString = /*days.ToString() + ":" +*/ hours.ToString() + ":" + minutes.ToString() /*+ ":" + seconds.ToString()*/;
+        string retString = /*days.ToString() + ":" +*/ hours.ToString() + ":" + minutes.ToString("D2") /*+ ":" + seconds.ToString()*/;
         return retString;
 
     }
@@ -446,6 +446,7 @@ public class TimelineManager : MonoBehaviour
         SaveData sd = new SaveData();
         sd.CurrentGameEventTime = CurrentGameEventTime;
         sd.CurrentGameRealTime = CurrentGameRealTime;
+        //TODO: save off real system time, then load and compare, and set new real time appropriately
         sd.PlayerName = DisplayManager.instance.GetPlayerName();
         sd.PlayerPronoun = DisplayManager.instance.GetPlayerPronoun();
         sd.PastGameEvents = PastEvents;

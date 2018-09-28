@@ -303,7 +303,7 @@ public class DisplayManager : MonoBehaviour
                 }
                 MessageChannel.chatMenuButton.SetPreviewText(PreviewText);
 
-                if (CurrentlyActiveChannel != e.Channel || restoring)
+                if (CurrentlyActiveChannel != e.Channel && !restoring)
                 {
                     MessageChannel.chatMenuButton.AddUnreadNotification();
                     MessageChannel.chatMenuButton.transform.SetAsFirstSibling();
