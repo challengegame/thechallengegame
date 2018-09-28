@@ -136,6 +136,7 @@ public class DisplayManager : MonoBehaviour
         HideAllMessagePanels();
         MenuPanel.SetActive(true);
         CurrentlyActiveChannel = "";
+        AkSoundEngine.PostEvent("Home", gameObject);
     }
 
     public void ShowLandscapeImage(Sprite image)
