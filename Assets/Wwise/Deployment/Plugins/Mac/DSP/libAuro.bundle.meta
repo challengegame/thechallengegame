@@ -1,27 +1,40 @@
 fileFormatVersion: 2
 guid: 9a45f0f879d584bfa9f18473c46cb529
 PluginImporter:
-  serializedVersion: 1
+  externalObjects: {}
+  serializedVersion: 2
   iconMap: {}
   executionOrder: {}
   isPreloaded: 0
+  isOverridable: 0
   platformData:
-    Editor:
-      enabled: 1
-      settings:
-        DefaultValueInitialized: true
-    OSXIntel:
+  - first:
+      '': OSXIntel
+    second:
       enabled: 1
       settings: {}
-    OSXIntel64:
+  - first:
+      '': OSXIntel64
+    second:
       enabled: 1
       settings: {}
-    OSXUniversal:
-      enabled: 1
-      settings: {}
-    first:
+  - first:
+      '': first
+    second:
       enabled: 0
       settings: {}
+  - first:
+      Editor: Editor
+    second:
+      enabled: 0
+      settings:
+        DefaultValueInitialized: true
+  - first:
+      Standalone: OSXUniversal
+    second:
+      enabled: 1
+      settings:
+        CPU: 
   userData: 
   assetBundleName: 
   assetBundleVariant: 
