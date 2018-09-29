@@ -4,8 +4,16 @@ EXTERNAL PlayerName()
 EXTERNAL PlayerPersonalPronoun()
 EXTERNAL PlayerPossessivePronoun()
 EXTERNAL PlayerObjectivePronoun()
+EXTERNAL SetPartyAnetta(party)
 
 //This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
 #Kyle
-//Kyle;Emoji test: <sprite name="Smile"> <sprite name="Soft_Smile"> <sprite name="Frown"> <sprite name="Grimace"> <sprite name="Wink"> <sprite name="Poop"> <sprite name="Thumbs_Up"><sprite name="Explode"><sprite name="Roll_Eyes"><sprite name="Cocktail"><sprite name="Party"><sprite name="Skull"><sprite name="Heart"><sprite name="Eggplant"><sprite name="Sad"><sprite name="Tongue_Out"> #time=1:06:24:00
+
+Kyle: Who are you taking to the party?
+* [Anetta]
+Player: Probably Anetta {SetPartyAnetta(true)}
+* [Kalil]
+Player: Kalil is my bestie {SetPartyAnetta(false)}
+
+
 -> END

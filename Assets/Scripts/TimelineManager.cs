@@ -155,6 +155,7 @@ public class SaveData
 {
     public float CurrentGameEventTime = 0.0f;
     public float CurrentGameRealTime = 0.0f;
+    public DateTime CurrentDateTime;
     public string PlayerName = "";
     public Pronoun PlayerPronoun;
     public string GroupInkJSON;
@@ -181,6 +182,8 @@ public class SaveData
     public PriorityQueue<GameEvent> CurrentKyleQueue;
     public PriorityQueue<GameEvent> CurrentJessieQueue;
 
+    public PriorityQueue<GameEvent> CurrentMainEventQueue;
+
     public List<ChoiceEvent> ActiveChoices;
 
 }
@@ -202,7 +205,9 @@ public class TimelineManager : MonoBehaviour
 
     GameEvent CurrentGameEvent;
 
-    Dictionary<string, PriorityQueue<GameEvent>> Queues;
+    //Dictionary<string, PriorityQueue<GameEvent>> Queues;
+
+    PriorityQueue<GameEvent> MainEventQueue;
 
     int WaitingOnChoiceCount = 0;
     Dictionary<string, int> ChannelWaitCounts;
@@ -225,7 +230,7 @@ public class TimelineManager : MonoBehaviour
         ChannelWaitCounts = new Dictionary<string, int>();
 
         PastEvents = new List<GameEvent>();
-
+        /*
         Queues = new Dictionary<string, PriorityQueue<GameEvent>>();
         PriorityQueue<GameEvent> GroupQueue = new PriorityQueue<GameEvent>();
         Queues.Add("Group", GroupQueue);
@@ -245,6 +250,8 @@ public class TimelineManager : MonoBehaviour
         Queues.Add("Morgan", MsMorganQueue);
         PriorityQueue<GameEvent> JimmyQueue = new PriorityQueue<GameEvent>();
         Queues.Add("Jimmy", JimmyQueue);
+        */
+        MainEventQueue = new PriorityQueue<GameEvent>();
 
         string SavePath = Path.Combine(Application.persistentDataPath, "TheChallengeSave");
 
@@ -261,7 +268,7 @@ public class TimelineManager : MonoBehaviour
         {
             Debug.Log("No save game found, starting from scratch");
             //Otherwise, do our startup tasks
-            CurrentGameRealTime = StartingGameEventTime;
+            CurrentGameEventTime = CurrentGameRealTime = StartingGameEventTime;
         }
         Initialized = true;
     }
@@ -330,7 +337,7 @@ public class TimelineManager : MonoBehaviour
         int minutes = (int)(time / 60);
         time %= 60;
         //int seconds = (int)time;
-        string retString = /*days.ToString() + ":" +*/ hours.ToString() + ":" + minutes.ToString() /*+ ":" + seconds.ToString()*/;
+        string retString = /*days.ToString() + ":" +*/ hours.ToString("D2") + ":" + minutes.ToString("D2") /*+ ":" + seconds.ToString()*/;
         return retString;
 
     }
@@ -343,6 +350,11 @@ public class TimelineManager : MonoBehaviour
 
     public void AddEventToQueue(GameEvent ge)
     {
+        if (!MainEventQueue.Contains(ge))
+        {
+            MainEventQueue.Enqueue(ge);
+        }
+        /*
         if (Queues.ContainsKey(ge.Channel))
         {
             if (!Queues[ge.Channel].Contains(ge))
@@ -350,13 +362,24 @@ public class TimelineManager : MonoBehaviour
                 Queues[ge.Channel].Enqueue(ge);
             }
         }
+        */
     }
 
     public void DebugShowQueues()
     {
+        /*
         foreach (KeyValuePair<string, PriorityQueue<GameEvent>> kvp in Queues)
         {
             Debug.Log(kvp.Value.Peek().GameTimeToBeActivated + ": " + kvp.Value.Peek().Content);
+        }
+        */
+        if (MainEventQueue.Count() > 0)
+        {
+            Debug.Log(MainEventQueue.Peek().GameTimeToBeActivated + ": " + MainEventQueue.Peek().Content);
+        }
+        else
+        {
+            Debug.Log("MainEventQueue is empty");
         }
     }
 
@@ -365,15 +388,16 @@ public class TimelineManager : MonoBehaviour
         if (WaitingOnChoiceCount <= 0 && TotalWaitCount <= 0 && !DisplayManager.instance.WaitingForPlayerInput)
         {
             CurrentGameRealTime += (Time.deltaTime * DebugTimeFactor);
-            foreach (KeyValuePair<string, PriorityQueue<GameEvent>> kvp in Queues)
+            //foreach (KeyValuePair<string, PriorityQueue<GameEvent>> kvp in Queues)
             {
-                if (kvp.Value.Count() > 0 && kvp.Value.Peek().GameTimeToBeActivated <= CurrentGameRealTime)
+                if(MainEventQueue.Count() > 0 && MainEventQueue.Peek().GameTimeToBeActivated <= CurrentGameRealTime)//(kvp.Value.Count() > 0 && kvp.Value.Peek().GameTimeToBeActivated <= CurrentGameRealTime)
                 {
-                    GameEvent currentEvent = kvp.Value.Dequeue();
+                    //GameEvent currentEvent = kvp.Value.Dequeue();
+                    GameEvent currentEvent = MainEventQueue.Dequeue();
                     ChoiceEvent choiceEvent = currentEvent as ChoiceEvent;
                     if (choiceEvent != null)
                     {
-                        //Debug.Log("Dequeuing choice event with " + choiceEvent.Choices.Count + " choices in channel "+choiceEvent.Channel+".");
+                        Debug.Log("Dequeuing choice event with " + choiceEvent.Choices.Count + " choices in channel "+choiceEvent.Channel+" because its activation time was "+choiceEvent.GameTimeToBeActivated+" and our time is "+CurrentGameRealTime+".");
                         DisplayManager.instance.DisplayChoiceEvent(choiceEvent);
                         WaitingOnChoiceCount++;
                         CurrentActiveChoices.Add(choiceEvent);
@@ -381,7 +405,7 @@ public class TimelineManager : MonoBehaviour
                     else
                     {
 
-                        //Debug.Log("Dequeueing event with content: " + currentEvent.Content + " DisplayTime: " + currentEvent.DisplayTime + " Character: " + currentEvent.CharacterName);
+                        Debug.Log("Dequeueing event with content: " + currentEvent.Content + " DisplayTime: " + currentEvent.DisplayTime + " Character: " + currentEvent.CharacterName + " because its activation time was " + currentEvent.GameTimeToBeActivated + " and our time is " + CurrentGameRealTime + ".");
                         CurrentGameEventTime = (currentEvent.GameTimeToBeActivated == 0 ? CurrentGameEventTime : currentEvent.GameTimeToBeActivated);
                         DisplayManager.instance.DisplayEvent(currentEvent);
                         PastEvents.Add(currentEvent);
@@ -400,17 +424,18 @@ public class TimelineManager : MonoBehaviour
 
                     }
                 }
-                if (kvp.Value.Count() == 0 && WaitingOnChoiceCount <= 0)
+                if (MainEventQueue.Count() == 0 && WaitingOnChoiceCount <= 0)
                 {
                     //Our queue is empty, let's see if the ink manager has more stuff for us
                     //Debug.Log("Advancing story from queue");
-                    InkManager.instance.AdvanceStory(kvp.Key);
+                    //InkManager.instance.AdvanceStory(kvp.Key);
+                    InkManager.instance.AdvanceStories();
                 }
             }
         }
         else
         {
-            //Debug.Log("Stuck waiting! Waiting for choice: " + WaitingOnChoiceCount + " waiting for name: " + WaitingForNameInput+" waiting for player: "+DisplayManager.instance.WaitingForPlayerInput);
+            Debug.Log("Stuck waiting! Waiting for choice: " + WaitingOnChoiceCount + " waiting for name: " + WaitingForNameInput+" waiting for player: "+DisplayManager.instance.WaitingForPlayerInput);
         }
     }
 
@@ -446,6 +471,8 @@ public class TimelineManager : MonoBehaviour
         SaveData sd = new SaveData();
         sd.CurrentGameEventTime = CurrentGameEventTime;
         sd.CurrentGameRealTime = CurrentGameRealTime;
+        sd.CurrentDateTime = DateTime.Now;
+
         sd.PlayerName = DisplayManager.instance.GetPlayerName();
         sd.PlayerPronoun = DisplayManager.instance.GetPlayerPronoun();
         sd.PastGameEvents = PastEvents;
@@ -459,7 +486,7 @@ public class TimelineManager : MonoBehaviour
         sd.KyleInkJSON = InkManager.instance.GetJSON("Kyle");
         sd.MorganInkJSON = InkManager.instance.GetJSON("Morgan");
         sd.JimmyInkJSON = InkManager.instance.GetJSON("Jimmy");
-
+        /*
         sd.CurrentGroupQueue = Queues["Group"];
         sd.CurrentHemaQueue = Queues["Hema"];
         sd.CurrentJessieQueue = Queues["Jessie"];
@@ -469,6 +496,8 @@ public class TimelineManager : MonoBehaviour
         sd.CurrentKyleQueue = Queues["Kyle"];
         sd.CurrentMsMorganQueue = Queues["Morgan"];
         sd.CurrentJimmyQueue = Queues["Jimmy"];
+        */
+        sd.CurrentMainEventQueue = MainEventQueue;
 
         //sd.ActiveChoices = CurrentActiveChoices;
 
@@ -533,8 +562,16 @@ public class TimelineManager : MonoBehaviour
     void RestoreData(SaveData sd)
     {
         DisplayManager.instance.ClearAllChannels();
+
+        TimeSpan elapsedTime = DateTime.Now - sd.CurrentDateTime;
+
         CurrentGameRealTime = sd.CurrentGameRealTime;
+        CurrentGameRealTime += (float)elapsedTime.TotalSeconds;
         CurrentGameEventTime = sd.CurrentGameEventTime;
+
+        Debug.Log("Restoring game with real time: " + CurrentGameRealTime+" (time since last save is "+elapsedTime+")");
+
+
         DisplayManager.instance.SetPlayerName(sd.PlayerName);
         DisplayManager.instance.SetPlayerPronoun(sd.PlayerPronoun);
         PastEvents = sd.PastGameEvents;
@@ -550,7 +587,7 @@ public class TimelineManager : MonoBehaviour
         InkManager.instance.RestoreJSON("Jimmy", sd.JimmyInkJSON);
         InkManager.instance.RestoreJSON("Kyle", sd.KyleInkJSON);
         InkManager.instance.RestoreJSON("Morgan", sd.MorganInkJSON);
-
+        /*
         Queues["Group"] = sd.CurrentGroupQueue;
         Queues["Hema"] = sd.CurrentHemaQueue;
         Queues["Jessie"] = sd.CurrentJessieQueue;
@@ -560,6 +597,8 @@ public class TimelineManager : MonoBehaviour
         Queues["Jimmy"] = sd.CurrentJimmyQueue;
         Queues["Kyle"] = sd.CurrentKyleQueue;
         Queues["Morgan"] = sd.CurrentMsMorganQueue;
+        */
+        MainEventQueue = sd.CurrentMainEventQueue;
 
         DisplayManager.instance.SetPartyAnetta(sd.PartyAnetta);
         

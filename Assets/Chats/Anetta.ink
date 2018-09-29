@@ -5,7 +5,6 @@ EXTERNAL PlayerPersonalPronoun()
 EXTERNAL PlayerPossessivePronoun()
 EXTERNAL PlayerObjectivePronoun()
 EXTERNAL PartyAnetta()
-EXTERNAL SetPartyAnetta(party)
 
 //This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
 #Anetta
@@ -147,98 +146,99 @@ Anetta;dont text me #time=1:22:15:34
 Anetta;tell me in prson #time=1:22:15:36
 Anetta;or we could jst keep dropping it that sounds good too #time=1:22:15:39
 -
-
 Anetta;hey {PlayerName()} #time=4:18:34:12
 Anetta;i just #time=4:18:34:15
 Anetta;thnk ive not been the best ths week #time=4:18:34:18
 Anetta;or evn close to being ok actually #time=4:18:34:21
-Anetta;so i wanted to say sorry im a drag #time=4:18:34:24
-Anetta;and that you hve to put up w/me all th time #time=4:18:34:27
+Anetta;so i wanted to say sorry for dragging you down #time=4:18:34:24
+Anetta;and that you hve to put up w/me all th time #time=4:18:34:27 -> day4_evening_group_sequence1
+
+=== day4_night_group_sequence2 ===
+
 *[You're not a drag]
-Player;You're not a drag #time=4:18:34:42
-Player;Not at all! #time=4:18:34:45
-Player;The week's been hard on all of us. #time=4:18:34:47
-Player;We're just helping each other out #time=4:18:34:50
+Player;You're not a drag! #time=4:18:34:42
+Player;It's just been...hard this week. #time=4:18:34:45
+Player;for all of us #time=4:18:34:48
+Player;We're still here for each other though #time=4:18:34:50
+
+
 *[Don't say that]
-Player;It's not true, so don't say that! #time=4:18:34:42
-Player;The week's been hard on everyone. #time=4:18:34:45
-Player;We're just helping each other out #time=4:18:34:49
+Player;Don't you dare say that Anetta. youre valuable. To all of us #time=4:18:34:42
+Player;It's just been...hard this week. #time=4:18:34:46
+Player;We're still here for each other though #time=4:18:34:49
 -
 Anetta;most of us are anyway #time=4:18:34:53
 Anetta;i jst wanted to say somethng #time=4:18:34:58
 Anetta;sincere #time=4:18:35:02
 Anetta;and not copy-pasted #time=4:18:35:05
-Anetta;and also thanks? #time=4:18:35:08
-Anetta;hemas been so nice #time=4:18:35:11
+Anetta;and also thanks? #time=4:18:35:09
+Anetta;hemas been so nice #time=4:18:35:12
 Anetta;and i know youre here whn i need #time=4:18:35:14
 { not_GiveSpace:
 Anetta;even if you push too hard sometmes #time=4:18:35:17
-*[I'm sorry]
-Player;I'm sorry #time=4:18:35:21
-Anetta;I know #time=4:18:35:24
-Anetta;its still a bit hard though #time=4:18:35:26
-Anetta;but ill b fine #time=4:18:35:29
-->AnettaDay4
-*[I do, don't I?]
-Player;I do that don't I? #time=4:18:35:21
-Anetta;yeah a bit #time=4:18:35:24
-Anetta;not that it mattrd in the end #time=4:18:35:26
-Anetta;whethr i said somethng or not #time=4:18:35:29
-->AnettaDay4
-- else: 
-Anetta;even when I just brainsplode all my thoughts into yr phone #time=4:18:35:17
-Anetta;and make no snse #time=4:18:35:21
-Anetta;you listn #time=4:18:35:24
-{ hesitate_GiveSpace:
-Anetta;eventually #time=4:18:35:28
-->AnettaDay4
-- else: 
-Anetta;patiently #time=4:18:35:28
-->AnettaDay4
+	* * [I'm sorry]
+	Player;I'm sorry #time=4:18:35:21
+	Anetta;I know #time=4:18:35:24
+	Anetta;its still a bit hard though #time=4:18:35:26
+	Anetta;but ill b fine #time=4:18:35:29
+
+
+	* * [I do, don't I?]
+	Player;I do that don't I? #time=4:18:35:21
+	Anetta;yeah a bit #time=4:18:35:24
+	Anetta;not that it mattrd in the end #time=4:18:35:26
+	Anetta;whethr i said somethng or not #time=4:18:35:29
+	- else: 
+	Anetta;even when I just brainsplode all my thoughts into yr phone #time=4:18:35:17
+	Anetta;and make no snse #time=4:18:35:21
+	Anetta;you listn #time=4:18:35:24
+	{ hesitate_GiveSpace:
+	Anetta;eventually #time=4:18:35:28
+	- else: 
+	Anetta;patiently #time=4:18:35:28
+	}
 }
-}
--
-==AnettaDay4==
-Anetta;and also #time=4:18:35:32
-Anetta;jessie wants to help me with math stff #time=4:18:35:35
-Anetta;i think he saw i was having trouble concentrating in class #time=4:18:35:38
-Anetta;it was the usual issues but worse #time=4:18:35:42
-Anetta;cause of all the THINGS #time=4:18:35:45
-Anetta;that happnd #time=4:18:35:48
-*[I'm glad he's helping out]
-Player;I'm glad he's helping #time=4:18:35:53
-Player;In a way you're comfortable with #time=4:18:35:56
-Anetta;yeah, he even calld me lst night #time=4:18:36:00
-Anetta;no one calls ppl anymre! #time=4:18:36:03
-Player;I'm pretty sure my phone hasn't gone off in months #time=4:18:36:07
-Anetta;exctly #time=4:18:36:11
-Anetta;i didnt even know wht to do wth my phone #time=4:18:36:14
-Anetta;so i left the room #time=4:18:36:17
-Anetta;but hes givn me space now #time=4:18:36:22
-Anetta;a bit anyway #time=4:18:36:25
-Anetta;and math help if i need #time=4:18:36:28
-*[You've got this!]
-Player;I know you've got this, Anetta! #time=4:18:35:53
-Player;You're on your way to becoming an amazing architect #time=4:18:35:56
-Player;I've seen the evidence in Assassins of Mars #time=4:18:36:00
-Player;The womb growth chamber #time=4:18:36:04
-Player;The anti-sports track #time=4:18:36:08
-Anetta;i hvnt finishd that one #time=4:18:36:12
-Anetta;since it became anti-sprts #time=4:18:36:16
-Anetta;its new purpse will be *astounding* #time=4:18:36:20
-Player;I don't doubt it! #time=4:18:36:24
--
-Anetta;anywys #time=4:18:36:32
-Anetta;the whole thing is complicatd #time=4:18:36:35
-Anetta;like i was right but im not happy with what i saw coming #time=4:18:36:38
-Anetta;i'm annoyed that seeing it coming didnt make it better or easier or even possible to fix or preempt in any way #time=4:18:36:41
-Anetta;but maybe the pieces are too small and some are missing now and how are you even supposed to do the jigsaw without the picture? #time=4:18:36:46
-Anetta;excpt when you can #time=4:18:36:51
-Anetta;srry again #time=4:18:36:57
-Anetta;it sounds wrse than it is #time=4:18:37:00
-Anetta;its good to have u all #time=4:18:37:03
-Anetta;y'all #time=4:18:37:07
-Anetta;<sprite="Soft_Smile"> #time=4:18:37:10
+	- -
+	Anetta;and also #time=4:18:35:32
+	Anetta;jessie wants to help me with math stff #time=4:18:35:35
+	Anetta;i think he saw i was having trouble concentrating in class #time=4:18:35:38
+	Anetta;it was the usual issues but worse #time=4:18:35:42
+	Anetta;cause of all the THINGS #time=4:18:35:45
+	Anetta;that happnd #time=4:18:35:48
+		* * * [I'm glad he's helping.]
+		Player;I'm glad he's helping. #time=4:18:35:53
+		Player;In a way you're comfortable with #time=4:18:35:56
+		Anetta;yeah, he even calld me lst night #time=4:18:36:00
+		Anetta;no one calls ppl anymre! #time=4:18:36:03
+		Player;Wow. my phone hasn't gone off in *months* #time=4:18:36:07
+		Anetta;exctly #time=4:18:36:11
+		Anetta;i didnt even know wht to do wth my phone #time=4:18:36:14
+		Anetta;so i left the room #time=4:18:36:17
+		Anetta;but hes givn me space now #time=4:18:36:22
+		Anetta;a bit anyway #time=4:18:36:25
+		Anetta;and math help if i need #time=4:18:36:28
+
+
+		* * * [You've got this!]
+		Player;I know you've got this, Anetta! #time=4:18:35:53
+		Player;You're on your way to becoming an amazing architect #time=4:18:35:56
+		Player;Your Assassins of Mars universe #time=4:18:36:00
+		Player;The womb growth chamber and the anti-sports track? stunning. #time=4:18:36:04
+		Anetta;i hvnt redone that one #time=4:18:36:12
+		Anetta;since it became anti-sprts #time=4:18:36:16
+		Anetta;the new version will be *astounding* #time=4:18:36:20
+		Player;Yes, it will. <sprite name="Soft_Smile"> #time=4:18:36:24
+		- - -
+		Anetta;the whole thing is complicatd #time=4:18:36:35
+		Anetta;like i was right but im not happy with what i saw coming #time=4:18:36:38
+		Anetta;i'm annoyed that seeing it coming didnt make it better or easier or even possible to fix #time=4:18:36:41
+		Anetta;but maybe the pieces are too small and some are missing now and how are you even supposed to do the jigsaw without the picture? #time=4:18:36:43
+		Anetta;excpt when you can #time=4:18:36:46
+		Anetta;srry again #time=4:18:36:50
+		Anetta;it sounds wrse than it is #time=4:18:36:53
+		Anetta;its good to have u all #time=4:18:36:56
+		Anetta;y'all #time=4:18:36:59
+		Anetta;<sprite name="Soft_Smile"> #time=4:18:37:02
 
 { bringAnetta:
 ->AnettaMerge
@@ -249,25 +249,26 @@ Anetta;<sprite="Soft_Smile"> #time=4:18:37:10
 Anetta;the prty sounds kinda nice #time=6:10:07:13
 Anetta;i mean bcause youre all going #time=6:10:07:16
 Anetta;im sure its a normal party otherwise #time=6:10:07:19
-Anetta;srry i don't want to distract you #time=6:10:07:24
+Anetta;srry don't want to distract you #time=6:10:07:24
 Anetta;or butt into your chat or anythng #time=6:10:07:28
 Anetta;snce im the only one not going i thought mayb i should chat anyway #time=6:10:07:32
 Anetta;rathr than just ignre my phone #time=6:10:07:35
-Anetta;i knda wish i was going <sprite="Sad"> #time=6:10:08:28
-Player;I'm sorry Anetta #time=6:10:08:32
-*[I wish I could help]
-    Player;I really wish I could help somehow... #time=6:10:08:37
-    Player;It sucks that you can't come #time=6:10:08:41
-    Anetta;its okay #time=6:10:08:45
-    Anetta;i mean im a bit lonely #time=6:10:08:48
-    Anetta;but at least im not compltely missing out if youre all chattng about it #time=6:10:08:51
-    Anetta;i think im going to do something for myself this afternoon tho #time=6:10:08:56
-*[I thought you didn't want to go?]
-    Player;But I thought you didn't want to go to the party anyway? #time=6:10:08:37
-    Player;It's hard for you to go to new places and all that #time=6:10:08:41
-    Anetta;I guess #time=6:10:08:46
-    Anetta;Yeah. #time=6:10:08:50
-    Anetta;I'll just do something for myself this afternoon #time=6:10:08:54
+Anetta;i knda wish i was going <sprite name="Sad"> #time=6:10:08:28
+* * [I wish I could help]
+Player;I really wish I could help somehow... #time=6:10:08:37
+Player;It sucks that you can't come #time=6:10:08:41
+Anetta;its okay #time=6:10:08:45
+Anetta;i mean im a bit lonely #time=6:10:08:48
+Anetta;but at least im not compltely missing out if youre all chattng about it #time=6:10:08:51
+Anetta;i think im going to do something for myself this afternoon #time=6:10:08:56
+
+
+* * [I thought you didn't want to go?]
+Player;But I thought you didn't want to go to the party anyway? #time=6:10:08:37
+Player;You said that it's hard for you to go to new places #time=6:10:08:41
+Anetta;I guess #time=6:10:08:46
+Anetta;Yeah. #time=6:10:08:50
+Anetta;I'll just do something for myself this afternoon #time=6:10:08:54
 -
 Anetta;so if i dont message thats why #time=6:10:08:59
 Anetta;have fun #time=6:10:09:03
@@ -275,5 +276,3 @@ Anetta;have fun #time=6:10:09:03
 
 ==AnettaMerge==
 ->END
-=== function PartyAnetta() ===
-~ return true

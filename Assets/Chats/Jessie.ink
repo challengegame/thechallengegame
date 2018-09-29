@@ -5,9 +5,11 @@ EXTERNAL PlayerPersonalPronoun()
 EXTERNAL PlayerPossessivePronoun()
 EXTERNAL PlayerObjectivePronoun()
 
-VAR believedJ = false
 //This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
 #Jessie
+
+VAR believedJ = false
+
 
 Jessie;do you ever think about whales #time=1:06:40:24
 * [No?]
@@ -38,7 +40,7 @@ Jessie;We need to fight more krakens #time=1:06:41:06
 	
 	* * [...that's heavy.]
 	Player;Wow. #time=1:06:41:08
-	Player;That's, uh...deep. #time=1:06:41:11
+	Player;That's, uh...heavy. #time=1:06:41:11
 	Jessie;not as HEAVY as the CRUSHING WATER PRESSURE OF THE BLACK ABYSS on the WHALES #time=1:06:41:13
 	- -
 		* * * [...Anything else?]
@@ -278,16 +280,152 @@ Jessie;I thought I was going crazy #time=1:14:15:03
 		Jessie;Makes sense #time=1:14:15:40
 		- - -
 		Jessie;Thanks for at least hearing me out. #time=1:14:15:44
-		Jessie;Are you awake #time=3:04:21:09
-		Jessie;Wait #time=3:04:21:14
-		Jessie;If I ask you if you're awake then it sends you a notification #time=3:04:21:16
-		Jessie;And THAT wakes you up #time=3:04:21:19
-		Jessie;Shit #time=3:04:21:21
-		Jessie;I really didn't think this through #time=3:04:21:25
-		Jessie;Wait #time=3:04:21:30
-		Jessie;These are sending you notifications too #time=3:04:21:38
-		#time=3:04:21:48
-		Jessie;shiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiit -> day3_morning_jessie_sequence1
+		Jessie;Hey #time=2:15:21:06
+		#time=2:15:21:10
+		Jessie;Would you say the UK is...racist at all? -> day2_afternoon_jessie_sequence1
+		
+=== day2_afternoon_jessie_sequence1 ===
+
+* [Not really.]
+Player;Not really. #time=2:15:21:14
+Player;There's jerks, but that's the case anywhere #time=2:15:21:17
+Jessie;Someone literally yelled at you on the bus today #time=2:15:21:20
+Player;jerks #time=2:15:21:24
+Player;wankers #time=2:15:21:27
+Player;take your pick of terms but the principle is still the same #time=2:15:21:30
+Player;sometimes shit happens #time=2:15:21:34
+Player;can't really do anything but surround yourself with better people #time=2:15:21:37
+
+
+* [...maybe a little.]		
+Player;um #time=2:15:21:14
+Player;maybe a little? #time=2:15:21:17
+Player;You saw what happened on the bus today. #time=2:15:21:20
+Player;if you're vaguely brown, sometimes people act...odd #time=2:15:21:24
+Player;well #time=2:15:21:27
+Player;actually they can act like assholes #time=2:15:21:30
+Player;but you know what i mean <sprite name="Tongue_Out"> #time=2:15:21:34
+Player;So. #time=2:15:21:37
+Player;uh #time=2:15:21:39
+-
+Player;Why do you ask? #time=2:15:21:42
+Jessie;Well I heard something about the Windrush scandal #time=2:15:21:48
+Jessie;And it sounded both interesting AND messed up #time=2:15:21:52
+Jessie;So #time=2:15:21:55
+Jessie;of course #time=2:15:21:58
+Jessie;you know I had to look into it #time=2:15:22:02
+Player;Of course. #time=2:15:22:07
+Jessie;It turns out a bunch of the afro-carribean people who came over to rebuild England after WW2 have been getting detained and even deported #time=2:15:22:10
+Jessie;And nothing's happening #time=2:15:22:15
+Jessie;NO ONE is fixing it. #time=2:15:22:18
+Jessie;These people are still in legal limbo, months and months later #time=2:15:22:21
+Jessie;People who in some cases have just been in England their entire lives. This is their *home* #time=2:15:22:24
+Jessie;So I started asking a few people if this is common #time=2:15:22:29
+Jessie;(black people tbh) #time=2:15:22:33
+Jessie;And...it sounds like it is. #time=2:15:22:37
+Jessie;There was a thing called the Brixton riots back in the 80s. Really rough stuff. Lots of death #time=2:15:22:40
+Jessie;There's police brutality. Profiling. Incarceration rates are comparable to the states if not higher #time=2:15:22:45
+Jessie;grime musicians and events are targeted for harrassment #time=2:15:22:50
+Jessie;Conservative politicians have used the n-word TWICE in the past ten years with no major consequences #time=2:15:22:54
+Jessie;It feels like...a Lot? #time=2:15:23:00
+	* * [It's overblown.]
+	Player;Those are flashes of unfortunate stuff #time=2:15:23:04
+	Player;Again #time=2:15:23:07
+	Player;that'll happen. #time=2:15:23:10
+	Player;But look at what we've done #time=2:15:23:13
+	Player;Britain is one of the most multicultural societies on Earth--London in particular. #time=2:15:23:17
+	Player;We abolished slavery a long long time ago, and that shows. #time=2:15:23:21
+	Player;I'm not getting called Paki on the bus EVERY day #time=2:15:23:24
+	Player;Assholes just exist. Pretending otherwise sets up inappropriate expectations. #time=2:15:23:30
+	
+	
+	* * [It's a reality.]
+	Player;It's a reality of living with the legacy of empire. #time=2:15:23:04
+	Player;You find ways to stop feeling guilty as a society. #time=2:15:23:07
+	Player;In our case we really lean into the whole 'we abolished slavery' thing, but those divides are still there. #time=2:15:23:10
+	Player;Even in London #time=2:15:23:13
+	Player;They're just more...subtle. #time=2:15:23:17
+	Player;Usually #time=2:15:23:21
+	Player;I'm not getting called Paki on the bus EVERY day #time=2:15:23:24
+	Player;and Britain *has* done a lot of really good stuff in the terms of making a multiculturl society #time=2:15:23:30
+	- -
+	Jessie;This isn't my imagination though right? #time=2:15:23:35
+	Jessie;Like this doesn't just sound bad to me? #time=2:15:23:38
+	Player;I mean, did you not hear anything about Windrush before you got here? #time=2:15:23:42
+	Jessie;In the states y'all are still the quirky country with the people who apologize all the time #time=2:15:23:46
+	Jessie;And Idris Elba #time=2:15:23:48
+	Jessie;Little to nothing about Windrush--at least in our stuff #time=2:15:23:53
+	Jessie;Personally, Ive experienced much less weirdness here than I ever did in the USA #time=2:15:23:57
+	Jessie;But then I'll see something or feel something, and it's really jarring because I don't expect it #time=2:15:24:00
+	Jessie;and its just as intense as any racism i've experienced anywhere else #time=2:15:24:04
+	Jessie;Your thing among them #time=2:15:24:07
+	Jessie;Im not saying the UK is racist... #time=2:15:24:16
+	Jessie;Just that it seems more predjudiced than I was led to believe #time=2:15:24:20
+		* * * [We've still got a ways to go.]
+		Player;We've still got a ways to go #time=2:15:24:24
+		Player;for sure #time=2:15:24:28
+		Player;And that's going to be more difficult when people think they're in the right. #time=2:15:24:31
+		Player;But youve got to believe in something better #time=2:15:24:34
+		Player;and help work towards it if you can. #time=2:15:24:38
+		Jessie;absolutely agree #time=2:15:24:41
+		
+
+		* * * [Well, what about your country?]
+		Player;Well, what about your country? #time=2:15:24:24
+		Player;Speaking of deportations #time=2:15:24:27
+		Player;What's the orange guy up to today? #time=2:15:24:31
+		Jessie;Ha #time=2:15:24:34
+		Jessie;You've got me there. #time=2:15:24:38
+		Jessie;...I just thought the UK was supposed to be different #time=2:15:24:41
+		Jessie;That's all #time=2:15:24:44
+		- - -
+		Jessie;I don't know if you remember Peter? from chemistry? #time=2:15:24:48
+		Player;Skinny guy with acne? #time=2:15:24:53
+		Jessie;That's the one. #time=2:15:24:56
+		Jessie;He went to a concert last year. Very white #time=2:15:25:00
+		Player;so a Coachella ripoff #time=2:15:25:03
+		Jessie;basically yeah #time=2:15:25:08
+		Jessie;Black and East Asian people were the only ones in line being searched #time=2:15:25:11
+		Jessie;He didn't want to show them what was inside his backpack--I think he brought some snacks #time=2:15:25:15
+		Jessie;He tried to walk away from the line when he saw that they were only targeting people who looked like #time=2:15:25:19
+		Jessie;well #time=2:15:25:22
+		Jessie;him #time=2:15:25:28
+		Jessie;long story short, he ended up in a headlock #time=2:15:25:31
+		Player;Shit #time=2:15:25:34
+		Jessie;I know right? #time=2:15:25:37
+			* * * * [That's messed up.]
+			Player;That's...really messed up. #time=2:15:25:40
+			Player;Is he okay? #time=2:15:25:44
+			Jessie;I mean #time=2:15:25:47
+			Jessie;he's still got acne #time=2:15:25:50
+			Jessie;But yeah, he's okay now <sprite name="Wink"> #time=2:15:25:54
+			Jessie;It's really scary to consider what would happen if I was in his shoes or if i was an immigrant #time=2:15:25:57
+			Jessie;I didn't think England was a place where that happened #time=2:15:26:02
+			Player;yeah #time=2:15:26:06
+			
+		
+			* * * * [They must have had cause.]
+			Player;I like Peter well enough but they must have had some cause. #time=2:15:25:40
+			Player;Security doesn't just off and headlock someone without a good reason for it #time=2:15:25:43
+			Player;He could have had anything in that backpack #time=2:15:25:48
+			Jessie;That isn't the point. #time=2:15:25:52
+			Jessie;The point is that they wouldn't have singled him out if he looked like an extra from Downton Abbey #time=2:15:25:55
+			Jessie;It's really scary to consider what would happen if I was in his shoes or if i was an immigrant #time=2:15:25:58
+			Jessie;I didn't think England was a place where that happened #time=2:15:26:03
+			- - - -
+			Jessie;Anyway, thanks for talking to me about this. #time=2:15:26:10
+			Jessie;I have a lot to think about #time=2:15:26:15
+			Player;<sprite name="Thumbs_Up"> #time=2:15:26:19
+			Jessie;Are you awake #time=3:04:21:09
+			Jessie;Wait #time=3:04:21:14
+			Jessie;If I ask you if you're awake then it sends you a notification #time=3:04:21:16
+			Jessie;And THAT wakes you up #time=3:04:21:19
+			Jessie;Shit #time=3:04:21:21
+			Jessie;I really didn't think this through #time=3:04:21:25
+			Jessie;Wait #time=3:04:21:30
+			Jessie;These are sending you notifications too #time=3:04:21:38
+			#time=3:04:21:48
+			Jessie;shiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiit -> day3_morning_jessie_sequence1
 
 === day3_morning_jessie_sequence1 ===
 
@@ -299,7 +437,7 @@ Player;I REFUSE TO BELIEVE THAT #time=3:04:22:00
 Jessie;I'M SORRY #time=3:04:22:03
 Player;AGAIN #time=3:04:22:05
 Player;I DOUBT THIS GREATLY #time=3:04:22:08
-Player;I can't even go back to sleep now #time=3:04:22:12
+Player;I cant even go back to sleep now #time=3:04:22:12
 
 
 * [I'm going back to sleep now.]
@@ -393,10 +531,10 @@ Jessie;of The Smiths #time=3:04:22:36
 		Jessie;Maybe that's the problem #time=3:04:24:50
 		Jessie;you know? #time=3:04:24:52
 		Jessie;Everyone seeing Tanya as the person they want her to be rather than the person she is #time=3:04:24:58
-		Jessie;Talk more soon--next time about something that isn't a melodramatic 80s band <sprite="Tongue_Out"> #time=3:04:25:09
+		Jessie;Talk more soon--next time about something that isn't a melodramatic 80s band <sprite name="Tongue_Out"> #time=3:04:25:09
 			* * * * [For sure.]
 			Player;For sure. #time=3:04:25:13
-			Jessie;<sprite="Wink"> #time=3:04:24:15
+			Jessie;<sprite name="Wink"> #time=3:04:24:15
 			
 			
 			* * * * [No. Only 80s bands now.]
@@ -484,18 +622,18 @@ Jessie;...a little? #time=3:22:47:15
 		Jessie;night {PlayerName()} #time=3:22:47:44
 		Jessie;have a good one #time=3:22:47:47
 		Jessie;i'll certainly try #time=3:22:47:51
-		Jessie;<sprite="Soft_Smile"> #time=3:22:47:56
+		Jessie;<sprite name="Soft_Smile"> #time=3:22:47:56
 		->JessieDay4
 		
 ==JessieDay4==
+
 Jessie;So {PlayerName()}... #time=4:09:38:41
 Jessie;Things are a bit of a mess after yesterday #time=4:09:38:44
-Jessie;and not in the fun HAHA LET'S JUST SHAKE THINGS UP AND SEE WHAT HAPPENS kind of way, where everyone was secretly looking forward to it because they were bored of the routine #time=4:09:38:48
-Jessie;(a la breaking bad) #time=4:09:38:53
-Jessie;You've all been friends for years and you're the one that brought them all together #time=4:09:38:56
-Jessie;Plus you listen to me when I need reality checks or just getting random thoughts out of my head #time=4:09:39:01
-Jessie;so I wanted to see how you were feeling about this whole thing. #time=4:09:39:06
-Jessie;How ARE you feeling {PlayerName()}? #time=4:09:39:10
+Jessie;and not in the fun HAHA LET'S JUST SHAKE THINGS UP AND SEE WHAT HAPPENS EVERYONE IS DEFINITELY HAVING A GOOD TIME NOW kind of way #time=4:09:38:48
+Jessie;You've been friends for years  #time=4:09:38:56
+Jessie;You brought them together #time=4:09:39:01
+Jessie;How are you feeling about all of this? #time=4:09:39:06
+Jessie;...If anything? #time=4:09:39:10
 *[Still shocked]
 Player;I'm still shocked #time=4:09:39:16
     { believedJ:
@@ -508,7 +646,7 @@ Player;Well I wasn't really surprised #time=4:09:39:16
     { believedJ:
     Player;You did warn me about it #time=4:09:39:20
     - else: 
-    Player;Maybe a part of me did believe you when you first told me. #time=4:09:39:20
+    Player;Maybe a part of me believed you when you first told me. #time=4:09:39:20
     }
 -
 Jessie;It's still hard to see things unfold like that. #time=4:09:39:25
@@ -516,98 +654,114 @@ Jessie;It sucks #time=4:09:39:30
 Jessie;big time #time=4:09:39:33
 *[It makes me sad]
 Player;It just makes me sad... #time=4:09:39:37
-Player;We really felt like family, but now? #time=4:09:39:41
-Player;I'm having trouble imagining all of us milling around my house. #time=4:09:39:43
-Player;Just drinking Fanta and chatting about random stuff #time=4:09:39:48
+Player;We really felt like family. #time=4:09:39:41
+Player;Now I'm having trouble even *imagining* the good times. #time=4:09:39:44
+Player;Drinking Fanta at my house. Lying on the grass while Kalil plays a shitty Wonderwall cover... #time=4:09:39:47
+Player;normalcy you know? #time=4:09:39:50
 
     **[I'm also tired]
-    Player;I'm also tired you know? #time=4:09:39:53
+    Player;I'm also just TIRED #time=4:09:39:53
     Player;Tired of the same arguments #time=4:09:39:57
     Player;And new arguments I didn't know were a thing until now #time=4:09:40:02
-    Jessie;I'm sorry #time=4:09:40:09
-    Jessie;I really am #time=4:09:40:16
+    Jessie;...I'm sorry. I really am #time=4:09:40:16
     ->JessieOpinion
     
     **[But I'm annoyed too]
     Player;But I'm kind of annoyed too #time=4:09:39:53
     Player;just #time=4:09:39:56
-    Player;AAAARGHH #time=4:09:39:59
+    Player;ARGH #time=4:09:39:59
     Player;If we hadnt said these stupid things would it all be okay? #time=4:09:40:02
-    Player;Or was this inevitable and being frustrated just makes everything worse #time=4:09:40:06
-    Jessie;I'm sorry #time=4:09:40:10
-    Jessie;I really am #time=4:09:40:16
+    Player;Was this really inevitable? Have we spent all these years playing pretend, making up a friendship that didn't really exist? i don't know #time=4:09:40:06
+    Jessie;...I'm sorry. I really am #time=4:09:40:16
     ->JessieOpinion
     --
 *[It makes me angry]
 Player;It just makes me angry#time=4:09:39:37
-Player;like ACTUALLY ANGRY not a wishy washy sort of angry #time=4:09:39:40
+Player;like ACTUALLY. ANGRY. #time=4:09:39:40
 Player;Weren't we basically family? #time=4:09:39:44
-Player;we were there for each other and had each others backs even tho we are all kind of weird and focused on different things #time=4:09:39:47
+Player;we were weird and there for each other - even when we were focused on different things #time=4:09:39:47
 Player;That's like the definition of family #time=4:09:40:02
-Player;And now what, do we just just shrug and give up? #time=4:09:40:05
+Player;now what? are we just just shrugging and giving up? #time=4:09:40:05
 
-    **[I want to change things]
-    Player;I want to change things I just dont know how! #time=4:09:40:10
-    Player;How do I channel the rage into something productive? #time=4:09:40:13
+    **[I want to change things!]
+    Player;I want to change things. I just dont know how! #time=4:09:40:10
+    Player;How do I channel the helplessness into something productive? #time=4:09:40:13
     Player;How do I make things better? #time=4:09:40:17
-    Jessie;I'm really sorry #time=4:09:40:20
+    Jessie;...I'm really, really sorry {PlayerName()} #time=4:09:40:20
     ->JessieOpinion
     
-    **[A part of me says yes]
-    Player;But then a different part of me says yes #time=4:09:40:10
-    Player;There's no point in being angry #time=4:09:40:13
-    Player;It's not like it's helped so far #time=4:09:40:17
-    Jessie;I'm really sorry #time=4:09:40:20
+    **[Part of me says...okay]
+    Player;But then a different part of me says...okay #time=4:09:40:10
+    Player;This is just how it ends. #time=4:09:40:13
+    Player;Maybe its time to just let go and watch it burn #time=4:09:40:17
+    Jessie;...I'm really, really sorry {PlayerName()} #time=4:09:40:20
     ->JessieOpinion
     --
 -
 ->JessieOpinion
 
 == JessieOpinion ==
+
 Jessie;And... thanks for telling me #time=4:09:40:23
-Jessie;I hope it helps you to talk about it #time=4:09:40:23
+Jessie;I hope it helps you to talk about it? #time=4:09:40:23
 *[It does]
 Player;It does, actually #time=4:09:40:28
-Player;Typing the words in helps me figure out what I'm thinking #time=4:09:40:31
-Jessie;I'm glad <sprite="Soft_Smile"> #time=4:09:40:35
+Player;Typing the words helped me figure out a bit of what I'm thinking #time=4:09:40:31
+Jessie;I'm glad <sprite name="Soft_Smile"> #time=4:09:40:35
 *[Not really]
 Player;Not really #time=4:09:40:28
 Player;But I mean, I don't know what would #time=4:09:40:31
-Jessie;Yeah that's fair #time=4:09:40:35
+Jessie;extreme fair #time=4:09:40:35
 -
 Jessie;Sometimes when I feel like that I picture myself floating in space #time=4:09:40:40
-Jessie;Lazily adrift, with no pressures #time=4:09:40:44
-Jessie;Just watching planets orbit and the stars shine #time=4:09:40:48
+Jessie;adrift #time=4:09:40:44
+Jessie;Just watching planets orbit and stars shine in the cold #time=4:09:40:48
 *[Is this space whales?]
-Player;Are you a space whale now? #time=4:09:40:53
+Player;Is this a space whale thing? Are you a space whale now? #time=4:09:40:53
 Jessie;No i'm done with whales #time=4:09:40:56
-Jessie;for now #time=4:09:40:59
+Jessie;....Okay thats a lie #time=4:09:40:59
 Jessie;I just think about different kinds of deep darkness...es #time=4:09:41:02
-Jessie;This one is meant to be a relaxing experience #time=4:09:41:06
-*[That sounds nice]
-Player;That sounds nice, actually #time=4:09:40:53
+Jessie;This one just happens to be slightly more relaxing #time=4:09:41:06
+*[Sounds nice.]
+Player;That actually sounds nice. #time=4:09:40:53
 Jessie;Yeah #time=4:09:40:58
 Jessie;I like thinking about deep darkness...es #time=4:09:41:03
-Player;You don't say <sprite="Tongue_Out"> #time=4:09:41:07
+Player;You don't say <sprite name="Tongue_Out"> #time=4:09:41:07
 -
-Jessie;I guess I feel like we're interacting all the time #time=4:09:41:11
-Jessie;And when we're not, we're *thinking* about interacting with other people #time=4:09:41:15
-Jessie;So sometimes it's nice to imagine being in an isolation chamber with zero simuli #time=4:09:41:20
-Jessie;Nothing needing your attention and no one waiting for you to do something #time=4:09:41:25
-Jessie;Things happening in the span of millenia #time=4:09:41:29
-Jessie;Just you and silence and the dancing cosmos #time=4:09:41:33
-Jessie;Not that I'm advising you to do that during class #time=4:09:41:39
-Jessie;You aren't, are you? #time=4:09:41:44
-*[Nah it's too loud]
-Player;Nah it's too loud for that #time=4:09:41:50
+Jessie;I guess I feel like we're interacting all the time. #time=4:09:41:11
+Jessie;On a societal level #time=4:09:41:15
+Jessie;And when we're not we're *thinking* about interacting with other people #time=4:09:41:19
+Jessie;sometimes it's nice to imagine being in an isolation chamber with zero stimuli #time=4:09:41:23
+Jessie;Nothing needing your attention. No notifications. No one waiting for you to do something #time=4:09:41:28
+Jessie;Millenia passing in the silence #time=4:09:41:29
+Jessie;Just you, and the cosmos dancing like it always has #time=4:09:41:33
+Jessie;...Which actually isn't the best thought experiment to have during class #time=4:09:41:39
+Jessie;You aren't in space atm are you? #time=4:09:41:44
+*[It's too loud.]
+Player;Nah. Too loud for that #time=4:09:41:50
 Jessie;Okay good #time=4:09:41:54
 *[...]
 Player;... #time=4:09:41:50
-Jessie;Oh no what have I done #time=4:09:41:54
-Jessie;Return to Earth, lost soul! #time=4:09:41:57
+Jessie;what have I done #time=4:09:41:54
+Jessie;GROUND CONTROL TO MAJOR {PlayerName()}! #time=4:09:41:57
 Player;... #time=4:09:42:01
-Player;I have returned to my home #time=4:09:42:06
-Jessie;PRAISE THE LORD! #time=4:09:42:09
+Player;I'm floating in the most peculiar way #time=4:09:42:06
+Jessie;do the stars look very different today #time=4:09:42:11
+Player;yeah sure #time=4:09:42:19
+Jessie;<sprite name"Tongue_Out"> #time=4:09:42:22
 -
+-> day7_morning_jessie_sequence1
+
+
+=== day7_morning_jessie_sequence1 ===
+
+Jessie;hey #time=7:08:48:04
+Jessie;remember when the biggest issue in our lives was about whether to go for Korean or Kebab #time=7:08:48:11
+Jessie;INSERT SELFIE FROM FIRST DAY #time=7:08:48:14
+Jessie;i do #time=7:08:48:26
+Jessie;have a SPLITTING fucking hangover too #time=7:08:48:32
+Jessie;cancel sunlight #time=7:08:48:37
+Jessie;pls #time=7:08:48:41
+
 
 ->END
