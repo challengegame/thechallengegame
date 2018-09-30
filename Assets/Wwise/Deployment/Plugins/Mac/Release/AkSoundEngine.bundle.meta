@@ -20,7 +20,7 @@ PluginImporter:
       enabled: 1
       settings: {}
   - first:
-      Any: 
+      '': first
     second:
       enabled: 0
       settings: {}
@@ -34,7 +34,8 @@ PluginImporter:
       Standalone: OSXUniversal
     second:
       enabled: 1
-      settings: {}
+      settings:
+        CPU: 
   userData: 
   assetBundleName: 
   assetBundleVariant: 
