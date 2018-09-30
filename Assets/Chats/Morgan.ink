@@ -5,12 +5,10 @@ EXTERNAL PlayerPersonalPronoun()
 EXTERNAL PlayerPossessivePronoun()
 EXTERNAL PlayerObjectivePronoun()
 
-//This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
-#Morgan
-
 VAR sayHemaDrunk = true
 
-
+//This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
+#Morgan
 Morgan;{PlayerName()}! I am so sorry I missed your call. Phones these days are always missing something for one reason or another. #time=6:22:03:50
 Morgan;<sprite name="Tongue_Out"> What's going on? #time=6:22:03:53
 *[It's fine!]

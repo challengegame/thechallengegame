@@ -46,10 +46,6 @@ Tanya;...And keep As Much of the rest as Private as you Can. #time=2:18:02:47
 	Tanya;That is Enough. #time=2:18:02:54
 	Tanya;Have a good Evening, {PlayerName()}. #time=2:18:02:58
 -
-
-
-
--
 Tanya;I'm Gone now, and I'm Not coming Back. It isn't Your Fault. #time=7:10:16:24
 Tanya;Love, Tanya #time=7:10:16:25
 	

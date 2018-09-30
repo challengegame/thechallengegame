@@ -19,8 +19,6 @@ VAR bringAnetta = true
     ~ bringAnetta = false
 }
 
-
-
 Kalil;I was a dick yesterday. #time=3:06:41:26
 Kalil;I know that, you know it, the entire group knows it. #time=3:06:41:29
 Kalil;We don't need to go over that again. #time=3:06:41:31
@@ -248,7 +246,7 @@ Kalil;...does any of that make sense? #time=3:06:48:18
 	Kalil;take care #time=3:06:48:49
 	Kalil;shit #time=3:08:41:03
 	Kalil;SHIT #time=3:08:41:07
-
+-
 { bringAnetta:
 ->KalilMopeParty
 - else: 

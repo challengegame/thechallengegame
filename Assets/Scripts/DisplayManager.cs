@@ -77,8 +77,10 @@ public class DisplayManager : MonoBehaviour
 
     //Ink variables
     bool PartyAnetta = false;
-    
-	void Start ()
+    bool DrunkHema = false;
+
+
+    void Start ()
     {
 #if UNITY_IOS
         UnityEngine.iOS.NotificationServices.RegisterForNotifications(NotificationType.Alert | NotificationType.Badge | NotificationType.Sound);
@@ -532,16 +534,6 @@ public class DisplayManager : MonoBehaviour
         return 0;
     }
 
-    public bool GetPartyAnetta()
-    {
-        return PartyAnetta;
-    }
-
-    public void SetPartyAnetta(bool party)
-    {
-        PartyAnetta = party;
-    }
-
     public string GetCurrentlyActiveChannel()
     {
         return CurrentlyActiveChannel;
@@ -561,11 +553,35 @@ public class DisplayManager : MonoBehaviour
 
     public void OnPronounChosen(int pronoun)
     {
-        
+
         PlayerPronoun = (Pronoun)pronoun;
 
         //Debug.Log("Chose pronoun " + PlayerPronoun);
     }
+
+    //Ink functions
+
+    public bool GetPartyAnetta()
+    {
+        return PartyAnetta;
+    }
+
+    public void SetPartyAnetta(bool party)
+    {
+        PartyAnetta = party;
+    }
+
+    public bool GetHemaDrunk()
+    {
+        return DrunkHema;
+    }
+
+    public void SetHemaDrunk(bool drunk)
+    {
+        DrunkHema = drunk;
+    }
+
+
 
     public string GetPlayerName()
     {

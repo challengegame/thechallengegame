@@ -130,6 +130,18 @@ public class InkManager : MonoBehaviour
 
             });
 
+            s.BindExternalFunction("CheckHemaDrunk", () =>
+            {
+                return DisplayManager.instance.GetHemaDrunk();
+
+            });
+
+            s.BindExternalFunction("SetHemaDrunk", (bool drunk) =>
+            {
+                DisplayManager.instance.SetHemaDrunk(drunk);
+
+            });
+
         }
     }
     

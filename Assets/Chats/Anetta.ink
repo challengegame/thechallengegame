@@ -19,8 +19,6 @@ VAR bringAnetta = false
     ~ bringAnetta = false
 }
 
-
-
 Anetta;hey #time=1:22:13:00
 Anetta;are you thre? #time=1:22:13:04
 Anetta;i don't #time=1:22:13:03 09
@@ -188,7 +186,7 @@ Anetta;even if you push too hard sometmes #time=4:18:35:17
 	Anetta;yeah a bit #time=4:18:35:24
 	Anetta;not that it mattrd in the end #time=4:18:35:26
 	Anetta;whethr i said somethng or not #time=4:18:35:29
-	- else: 
+- else: 
 	Anetta;even when I just brainsplode all my thoughts into yr phone #time=4:18:35:17
 	Anetta;and make no snse #time=4:18:35:21
 	Anetta;you listn #time=4:18:35:24

@@ -6232,6 +6232,15 @@ MonoBehaviour:
   - ImageName: Test
     sprite: {fileID: 21300000, guid: 6ba4c916de322454dae0794f6c2af056, type: 3}
     orientation: 0
+  - ImageName: SelfieDay1Kebab
+    sprite: {fileID: 21300000, guid: c9e6af09239b8ca4dba3234b77a1b224, type: 3}
+    orientation: 1
+  - ImageName: SelfieDay1Korean
+    sprite: {fileID: 21300000, guid: f067cca06caad3b4b9e34e5beb5e39c8, type: 3}
+    orientation: 1
+  - ImageName: SelfieDay3
+    sprite: {fileID: 21300000, guid: 18dd9791b9752e74abe2cf199a66ae88, type: 3}
+    orientation: 1
 --- !u!4 &557083306
 Transform:
   m_ObjectHideFlags: 0
