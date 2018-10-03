@@ -283,6 +283,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Credits" ID="{953A97F0-DE07-4699-AC2E-2E1CE4A9CC28}">
+					<ChildrenList>
+						<Action Name="" ID="{63148272-9C57-4F82-BF95-0F5C768BA1BC}" ShortID="863932598">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Credits" ID="{5997FDEB-6E38-4572-86A4-5788B6C82E0C}" WorkUnitID="{DB1F6AE3-302D-4A75-BD96-6E00C1610B86}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

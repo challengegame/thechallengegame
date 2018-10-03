@@ -56,6 +56,10 @@
 					<ShortName>Jimmyv1.wav</ShortName>
 					<Path>SFX/Jimmyv1_56D34C19.wem</Path>
 				</File>
+				<File Id="68094195" Language="SFX">
+					<ShortName>SevenDaysv2.wav</ShortName>
+					<Path>SFX/SevenDaysv2_56D34C19.wem</Path>
+				</File>
 				<File Id="178849724" Language="SFX">
 					<ShortName>Homev1.wav</ShortName>
 					<Path>SFX/Homev1_56D34C19.wem</Path>
@@ -107,10 +111,6 @@
 				<File Id="675270912" Language="SFX">
 					<ShortName>Submitv1.wav</ShortName>
 					<Path>SFX/Submitv1_56D34C19.wem</Path>
-				</File>
-				<File Id="709475750" Language="SFX">
-					<ShortName>SevenDaysv1.wav</ShortName>
-					<Path>SFX/SevenDaysv1_56D34C19.wem</Path>
 				</File>
 				<File Id="837681531" Language="SFX">
 					<ShortName>Morganv1.wav</ShortName>

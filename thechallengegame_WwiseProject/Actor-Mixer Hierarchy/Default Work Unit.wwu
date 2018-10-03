@@ -246,6 +246,18 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{912B21B9-529D-4867-99C8-3F9BD2B89A7E}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Generalv1" ID="{A69BF651-922F-40DC-B1C8-A7FFF270449E}" ShortID="63221360">
+							<Language>SFX</Language>
+							<AudioFile>Generalv1.wav</AudioFile>
+							<ConvertedFileIDList>
+								<File ID="5306346"/>
+							</ConvertedFileIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Generalv1" ID="{A69BF651-922F-40DC-B1C8-A7FFF270449E}" Platform="Linked"/>
+					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Picture" ID="{A203FA37-C399-4450-A070-E1F89DC2851D}" ShortID="701257568">
 					<ReferenceList>
@@ -447,13 +459,13 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="SevenDaysv1" ID="{72FD8AEC-A2A4-4C3B-8874-15A5D1F27F9B}" ShortID="709475750">
+						<AudioFileSource Name="SevenDaysv2" ID="{E3537F36-0200-416D-88B5-71BE34B8659F}" ShortID="68094195">
 							<Language>SFX</Language>
-							<AudioFile>SevenDaysv1.wav</AudioFile>
+							<AudioFile>SevenDaysv2.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="SevenDaysv1" ID="{72FD8AEC-A2A4-4C3B-8874-15A5D1F27F9B}" Platform="Linked"/>
+						<ActiveSource Name="SevenDaysv2" ID="{E3537F36-0200-416D-88B5-71BE34B8659F}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<RandomSequenceContainer Name="IsTyping" ID="{D8E7766B-0D5E-4458-ACD7-B89B934E8E4B}" ShortID="1002017109">

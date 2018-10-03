@@ -14,6 +14,7 @@
 						<ObjectRef Name="Message" ID="{E8BD8E07-8E5F-4424-A001-8B6969D0790D}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Reply" ID="{216AF4F6-0A52-4445-8DDD-25C77A25C9C3}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Home" ID="{832F816A-4E9F-4449-A26E-78747163DE16}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Credits" ID="{953A97F0-DE07-4699-AC2E-2E1CE4A9CC28}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Jimmy" ID="{87E7857D-6C60-46CE-96DE-E90BAC2EF34C}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ChoiceAppear" ID="{D9841B28-6155-4901-ADAD-67F61A35444A}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Jessie" ID="{FAC99F12-6568-4965-831D-EA3FECFBFD64}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
@@ -24,6 +25,7 @@
 						<ObjectRef Name="IsTyping" ID="{B91EB814-C56D-4CF4-B6BA-ABEB0723FF73}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Picture" ID="{DA5826FB-DE07-4D59-A719-B2854F47C737}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Group" ID="{BEAD90D7-A2EA-4ECC-BB16-54AB9B75E007}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="StopIsTyping" ID="{6833B87A-E560-4EF9-B5E3-C8512AC6999C}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -28,6 +28,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	5306346	General	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Windows\SFX\Generalv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\General		17472
 	27575390	IsTypingv1	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Windows\SFX\IsTypingv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\IsTyping\IsTypingv1		124576
 	34996620	Jimmy	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Windows\SFX\Jimmyv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jimmy		88504
+	68094195	SevenDays	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Windows\SFX\SevenDaysv2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SevenDays		1565792
 	178849724	Home	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Windows\SFX\Homev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Home		23616
 	194501006	Reply	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Windows\SFX\Replyv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Reply		186356
 	203786248	Anetta	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Windows\SFX\Annettav1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Anetta		88392
@@ -41,7 +42,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	612855194	Jessie	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Windows\SFX\Jessiev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jessie		88308
 	666455822	Message	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Windows\SFX\Messagev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Message		175652
 	675270912	Submit	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Windows\SFX\Submitv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submit		20672
-	709475750	SevenDays	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Windows\SFX\SevenDaysv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SevenDays		803776
 	837681531	Morgan	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Windows\SFX\Morganv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Morgan		88428
 	868240090	Group	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Windows\SFX\Groupv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Group		132392
 	926353791	Tanya	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Windows\SFX\Tanyav1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Tanya		88620
