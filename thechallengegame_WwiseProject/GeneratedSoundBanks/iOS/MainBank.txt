@@ -32,18 +32,18 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	178849724	Home	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Homev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Home		23616
 	194501006	Reply	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Replyv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Reply		186356
 	203786248	Anetta	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Annettav1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Anetta		88392
-	213542934	Keyboard3	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\keyboard3v1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\Keyboard3		14992
-	430059595	Keyboard1	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\keyboard1v1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\Keyboard1		16844
+	236832989	Keyboard1	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\keyboard1v1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\Keyboard1		16844
 	477624162	Picture	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Picturev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Picture		201824
-	479970538	Keyboard2	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\keyboard2v1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\Keyboard2		16024
+	508712527	ChoiceAppear	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\ChoiceAppearv2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ChoiceAppear		97120
 	530008824	Kyle	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Kylev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Kyle		88156
 	605179356	Hema	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Hemav1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hema		88372
 	612359276	Kalil	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Kalilv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Kalil		97096
 	612855194	Jessie	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Jessiev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jessie		88308
 	666455822	Message	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Messagev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Message		175652
 	675270912	Submit	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Submitv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submit		20672
+	803335895	Keyboard2	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\keyboard2v1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\Keyboard2		16024
 	837681531	Morgan	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Morganv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Morgan		88428
 	868240090	Group	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Groupv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Group		132392
+	913247350	Keyboard3	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\keyboard3v1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\Keyboard3		14992
 	926353791	Tanya	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Tanyav1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Tanya		88620
-	1037875560	ChoiceAppear	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\ChoiceAppearv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ChoiceAppear		15232
 

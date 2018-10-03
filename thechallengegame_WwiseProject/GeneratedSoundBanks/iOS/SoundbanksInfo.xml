@@ -72,11 +72,7 @@
 					<ShortName>Annettav1.wav</ShortName>
 					<Path>SFX/Annettav1_56D34C19.wem</Path>
 				</File>
-				<File Id="213542934" Language="SFX">
-					<ShortName>keyboard3v1.wav</ShortName>
-					<Path>SFX/keyboard3v1_56D34C19.wem</Path>
-				</File>
-				<File Id="430059595" Language="SFX">
+				<File Id="236832989" Language="SFX">
 					<ShortName>keyboard1v1.wav</ShortName>
 					<Path>SFX/keyboard1v1_56D34C19.wem</Path>
 				</File>
@@ -84,9 +80,9 @@
 					<ShortName>Picturev1.wav</ShortName>
 					<Path>SFX/Picturev1_56D34C19.wem</Path>
 				</File>
-				<File Id="479970538" Language="SFX">
-					<ShortName>keyboard2v1.wav</ShortName>
-					<Path>SFX/keyboard2v1_56D34C19.wem</Path>
+				<File Id="508712527" Language="SFX">
+					<ShortName>ChoiceAppearv2.wav</ShortName>
+					<Path>SFX/ChoiceAppearv2_56D34C19.wem</Path>
 				</File>
 				<File Id="530008824" Language="SFX">
 					<ShortName>Kylev1.wav</ShortName>
@@ -112,6 +108,10 @@
 					<ShortName>Submitv1.wav</ShortName>
 					<Path>SFX/Submitv1_56D34C19.wem</Path>
 				</File>
+				<File Id="803335895" Language="SFX">
+					<ShortName>keyboard2v1.wav</ShortName>
+					<Path>SFX/keyboard2v1_56D34C19.wem</Path>
+				</File>
 				<File Id="837681531" Language="SFX">
 					<ShortName>Morganv1.wav</ShortName>
 					<Path>SFX/Morganv1_56D34C19.wem</Path>
@@ -120,13 +120,13 @@
 					<ShortName>Groupv1.wav</ShortName>
 					<Path>SFX/Groupv1_56D34C19.wem</Path>
 				</File>
+				<File Id="913247350" Language="SFX">
+					<ShortName>keyboard3v1.wav</ShortName>
+					<Path>SFX/keyboard3v1_56D34C19.wem</Path>
+				</File>
 				<File Id="926353791" Language="SFX">
 					<ShortName>Tanyav1.wav</ShortName>
 					<Path>SFX/Tanyav1_56D34C19.wem</Path>
-				</File>
-				<File Id="1037875560" Language="SFX">
-					<ShortName>ChoiceAppearv1.wav</ShortName>
-					<Path>SFX/ChoiceAppearv1_56D34C19.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
