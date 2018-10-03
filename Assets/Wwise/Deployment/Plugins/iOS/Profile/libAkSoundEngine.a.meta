@@ -1,16 +1,27 @@
 fileFormatVersion: 2
 guid: 8ecf5bb3d54da4e7eba40592df9ad9ae
 PluginImporter:
-  serializedVersion: 1
+  externalObjects: {}
+  serializedVersion: 2
   iconMap: {}
   executionOrder: {}
   isPreloaded: 0
+  isOverridable: 0
   platformData:
-    Editor:
+  - first:
+      '': first
+    second:
+      enabled: 0
+      settings: {}
+  - first:
+      Editor: Editor
+    second:
       enabled: 0
       settings:
         DefaultValueInitialized: true
-    first:
+  - first:
+      iPhone: iOS
+    second:
       enabled: 0
       settings: {}
   userData: 

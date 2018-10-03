@@ -4,11 +4,14 @@ EXTERNAL PlayerName()
 EXTERNAL PlayerPersonalPronoun()
 EXTERNAL PlayerPossessivePronoun()
 EXTERNAL PlayerObjectivePronoun()
-
-VAR sayHemaDrunk = true
+EXTERNAL SetHemaDrunk(drunk)
 
 //This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
 #Morgan
+
+VAR sayHemaDrunk = true
+
+
 Morgan;{PlayerName()}! I am so sorry I missed your call. Phones these days are always missing something for one reason or another. #time=6:22:03:50
 Morgan;<sprite name="Tongue_Out"> What's going on? #time=6:22:03:53
 *[It's fine!]
@@ -31,7 +34,7 @@ Morgan;Is she alright? #time=6:22:04:24
     Morgan;Ill have a talk with Hema in the morning. #time=6:22:04:44
 	Morgan;ill #time=6:22:04:47
 	Morgan;i hope you know what I mean #time=6:22:04:54
-    ~ sayHemaDrunk = true
+    {SetHemaDrunk(true)}
 	
 	
 *[Yeah. Just a long night.]
@@ -42,7 +45,7 @@ Morgan;Is she alright? #time=6:22:04:24
     Morgan;Yu're a good friend {PlayerName()}. #time=6:22:04:44
 	Morgan;Youre #time=6:22:04:47
 	Morgan;i hope you know what I mean #time=6:22:04:54
-    ~ sayHemaDrunk = false
+	{SetHemaDrunk(false)}
 -
 Morgan;I should be there in fifteen minutes #time=6:22:04:57
 Morgan;Do you need a ride as well? #time=6:22:05:01

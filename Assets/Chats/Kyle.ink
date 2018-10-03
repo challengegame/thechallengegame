@@ -61,7 +61,7 @@ Kyle;From what Tanya says, they both sound cool! #time=5:20:14:53
 	Player;She could really use the support right now--emotionally and mentally. I think our recent rough patch as a group has been particularly rough for her. #time=5:20:15:05
 	Kyle;Wow. #time=5:20:15:10
 	Kyle;That's a lot. #time=5:20:15:15
-	Kyle;I'm not exactly sure what 14 bags of crisps will do for her state of afffairs... #time=5:20:15:19
+	Kyle;I'm not exactly sure what 14 bags of crisps will do for her state of affairs... #time=5:20:15:19
 	Kyle;but I hope it helps! :D #time=5:20:15:23
 	{SetPartyAnetta(true)}
 	- -
