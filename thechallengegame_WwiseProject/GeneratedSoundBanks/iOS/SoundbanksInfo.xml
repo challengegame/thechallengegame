@@ -23,6 +23,7 @@
 			<IncludedEvents>
 				<Event Id="4221601770" Name="Anetta" ObjectPath="\Events\Default Work Unit\Anetta"/>
 				<Event Id="212160671" Name="ChoiceAppear" ObjectPath="\Events\Default Work Unit\ChoiceAppear"/>
+				<Event Id="2201105581" Name="Credits" ObjectPath="\Events\Default Work Unit\Credits"/>
 				<Event Id="133642231" Name="General" ObjectPath="\Events\Default Work Unit\General"/>
 				<Event Id="3944382562" Name="Group" ObjectPath="\Events\Default Work Unit\Group"/>
 				<Event Id="3649605926" Name="Hema" ObjectPath="\Events\Default Work Unit\Hema"/>
@@ -38,6 +39,7 @@
 				<Event Id="945962381" Name="Picture" ObjectPath="\Events\Default Work Unit\Picture"/>
 				<Event Id="3866603715" Name="Reply" ObjectPath="\Events\Default Work Unit\Reply"/>
 				<Event Id="37891289" Name="SevenDays" ObjectPath="\Events\Default Work Unit\SevenDays"/>
+				<Event Id="1633608428" Name="StopIsTyping" ObjectPath="\Events\Default Work Unit\StopIsTyping" MaxAttenuation="0.000000"/>
 				<Event Id="2320974141" Name="Submit" ObjectPath="\Events\Default Work Unit\Submit"/>
 				<Event Id="1731911000" Name="Tanya" ObjectPath="\Events\Default Work Unit\Tanya"/>
 			</IncludedEvents>
@@ -45,6 +47,10 @@
 				<File Id="5306346" Language="SFX">
 					<ShortName>Generalv1.wav</ShortName>
 					<Path>SFX/Generalv1_56D34C19.wem</Path>
+				</File>
+				<File Id="27575390" Language="SFX">
+					<ShortName>IsTypingv1.wav</ShortName>
+					<Path>SFX/IsTypingv1_56D34C19.wem</Path>
 				</File>
 				<File Id="34996620" Language="SFX">
 					<ShortName>Jimmyv1.wav</ShortName>
@@ -105,10 +111,6 @@
 				<File Id="709475750" Language="SFX">
 					<ShortName>SevenDaysv1.wav</ShortName>
 					<Path>SFX/SevenDaysv1_56D34C19.wem</Path>
-				</File>
-				<File Id="726159539" Language="SFX">
-					<ShortName>IsTypingv1.wav</ShortName>
-					<Path>SFX/IsTypingv1_56D34C19.wem</Path>
 				</File>
 				<File Id="837681531" Language="SFX">
 					<ShortName>Morganv1.wav</ShortName>

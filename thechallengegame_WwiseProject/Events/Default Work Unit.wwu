@@ -117,13 +117,13 @@
 				</Event>
 				<Event Name="IsTyping" ID="{B91EB814-C56D-4CF4-B6BA-ABEB0723FF73}">
 					<ChildrenList>
-						<Action Name="" ID="{AF4FF02A-5D5B-4DB6-A702-8B353901E495}" ShortID="407616565">
+						<Action Name="" ID="{0A195B8B-CB44-4A3F-8200-F20942DEACFD}" ShortID="722944283">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="IsTyping" ID="{3337E664-051A-4267-8250-C19CA5A65416}" WorkUnitID="{DB1F6AE3-302D-4A75-BD96-6E00C1610B86}"/>
+									<ObjectRef Name="IsTyping" ID="{D8E7766B-0D5E-4458-ACD7-B89B934E8E4B}" WorkUnitID="{DB1F6AE3-302D-4A75-BD96-6E00C1610B86}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -264,6 +264,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Tanya" ID="{05F892DE-ACCA-4257-9EA2-8B26EAAE6906}" WorkUnitID="{DB1F6AE3-302D-4A75-BD96-6E00C1610B86}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StopIsTyping" ID="{6833B87A-E560-4EF9-B5E3-C8512AC6999C}">
+					<ChildrenList>
+						<Action Name="" ID="{F966EC9E-A406-423E-8E0F-BED62E7A5763}" ShortID="165834892">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="IsTyping" ID="{D8E7766B-0D5E-4458-ACD7-B89B934E8E4B}" WorkUnitID="{DB1F6AE3-302D-4A75-BD96-6E00C1610B86}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

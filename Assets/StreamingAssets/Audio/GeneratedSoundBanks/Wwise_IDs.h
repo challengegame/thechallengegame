@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID ANETTA = 4221601770U;
         static const AkUniqueID CHOICEAPPEAR = 212160671U;
+        static const AkUniqueID CREDITS = 2201105581U;
         static const AkUniqueID GENERAL = 133642231U;
         static const AkUniqueID GROUP = 3944382562U;
         static const AkUniqueID HEMA = 3649605926U;
@@ -30,6 +31,7 @@ namespace AK
         static const AkUniqueID PICTURE = 945962381U;
         static const AkUniqueID REPLY = 3866603715U;
         static const AkUniqueID SEVENDAYS = 37891289U;
+        static const AkUniqueID STOPISTYPING = 1633608428U;
         static const AkUniqueID SUBMIT = 2320974141U;
         static const AkUniqueID TANYA = 1731911000U;
     } // namespace EVENTS

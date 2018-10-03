@@ -4,8 +4,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	212160671	ChoiceAppear			\Default Work Unit\ChoiceAppear	
 	945962381	Picture			\Default Work Unit\Picture	
 	1403540682	Keyboard			\Default Work Unit\Keyboard	
+	1633608428	StopIsTyping			\Default Work Unit\StopIsTyping	
 	1731911000	Tanya			\Default Work Unit\Tanya	
 	2045542996	IsTyping			\Default Work Unit\IsTyping	
+	2201105581	Credits			\Default Work Unit\Credits	
 	2229701220	Kalil			\Default Work Unit\Kalil	
 	2320974141	Submit			\Default Work Unit\Submit	
 	2565061260	Kyle			\Default Work Unit\Kyle	
@@ -19,8 +21,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	3944382562	Group			\Default Work Unit\Group	
 	4221601770	Anetta			\Default Work Unit\Anetta	
 
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	940951554	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\IsTyping\silence\Wwise Silence	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	5306346	General	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Generalv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\General		17472
+	27575390	IsTypingv1	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\IsTypingv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\IsTyping\IsTypingv1		124576
 	34996620	Jimmy	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Jimmyv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jimmy		88504
 	178849724	Home	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Homev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Home		23616
 	194501006	Reply	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Replyv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Reply		186356
@@ -36,7 +42,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	666455822	Message	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Messagev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Message		175652
 	675270912	Submit	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Submitv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submit		20672
 	709475750	SevenDays	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\SevenDaysv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SevenDays		803776
-	726159539	IsTyping	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\IsTypingv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\IsTyping		124576
 	837681531	Morgan	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Morganv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Morgan		88428
 	868240090	Group	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Groupv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Group		132392
 	926353791	Tanya	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\iOS\SFX\Tanyav1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Tanya		88620

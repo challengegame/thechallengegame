@@ -129,7 +129,7 @@ public class DisplayManager : MonoBehaviour
         //Temp for testing
         TimelineManager.instance.SaveGame();
         //Audio Test
-        AkSoundEngine.PostEvent("General", gameObject);
+        AkSoundEngine.PostEvent("Credits", gameObject);
     }
 
     public void ShowMainMenu()
@@ -224,6 +224,8 @@ public class DisplayManager : MonoBehaviour
         TotalVisibleCharacters = MessageChannel.PlayerTextArea.textInfo.characterCount;
         while (CurrentVisibleCharacters <= TotalVisibleCharacters)
         {
+            //audio for player choice typed out
+            AkSoundEngine.PostEvent("Keyboard", gameObject);
             MessageChannel.PlayerTextArea.maxVisibleCharacters = CurrentVisibleCharacters; // How many characters should TextMeshPro display?
             CurrentVisibleCharacters += 1;
             if (CurrentVisibleCharacters > 30)
@@ -272,6 +274,9 @@ public class DisplayManager : MonoBehaviour
         CleanCanvases(MessageChannel);
         MessageChannel.PlayerTextArea.text = "";
         WaitingForPlayerInput = false;
+        //audio player sends message
+        AkSoundEngine.PostEvent("Reply", gameObject);
+
     }
 
 
@@ -325,10 +330,14 @@ public class DisplayManager : MonoBehaviour
                     NotificationManager.Send(TimeSpan.FromSeconds(5), "The Challenge", e.Channel + ": "+PreviewText, new Color(1f, 0.3f, 0.15f));
 #endif
                     ShowMessage(e, MessageChannel);
+                    //audio for offscreen notifications
+                    AkSoundEngine.PostEvent("Group", gameObject);
                 }
                 else
                 {
                     ShowMessage(e, MessageChannel);
+                    //audio for onscreen reply
+                    AkSoundEngine.PostEvent("Message", gameObject);
                 }
 
             }
@@ -435,6 +444,8 @@ public class DisplayManager : MonoBehaviour
                 ChoiceButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = e.Choices[i];
                 int choiceIndex = i;
                 ChoiceButton.GetComponentInChildren<Button>().onClick.AddListener(delegate { HandleChoice(e, e.Channel, choiceIndex, message, e.Choices); });
+                //audio for choice
+                AkSoundEngine.PostEvent("ChoiceAppear", gameObject);
             }
 
             CleanCanvases(MessageChannel);
@@ -445,6 +456,8 @@ public class DisplayManager : MonoBehaviour
     public void BeginAnimation(MessageUI MUI)
     {
         StartCoroutine(EndAnimation(MUI));
+        //audio for npc is typing
+        AkSoundEngine.PostEvent("IsTyping", gameObject);
     }
 
     IEnumerator EndAnimation(MessageUI MUI)
@@ -452,6 +465,8 @@ public class DisplayManager : MonoBehaviour
         yield return new WaitForSeconds(MUI.AnimationWaitTime);
 
         StartCoroutine(PreFinishAnimation(MUI));
+        //audio
+        AkSoundEngine.PostEvent("StopIsTyping", gameObject);
     }
 
     IEnumerator PreFinishAnimation(MessageUI MUI)
@@ -656,6 +671,8 @@ public class DisplayManager : MonoBehaviour
         NameEntryPanel.SetActive(false);
         NarrativeIntroPanel.GetComponent<Image>().DOFade(0.0f, 5.0f).OnComplete(CloseNarrativeIntroPanel);
         NarrativeIntroPanel.GetComponentInChildren<TextMeshProUGUI>().DOFade(0.0f, 3.0f);
+        //Audio for seven days splash
+        AkSoundEngine.PostEvent("SevenDays", gameObject);
     }
 
 
