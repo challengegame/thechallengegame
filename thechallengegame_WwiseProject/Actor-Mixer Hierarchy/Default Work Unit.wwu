@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{DB1F6AE3-302D-4A75-BD96-6E00C1610B86}" PersistMode="Standalone">
 			<ChildrenList>
 				<Sound Name="Home" ID="{F75604CE-D122-40F0-9BCC-67F9870E9482}" ShortID="738241206">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -70,7 +77,7 @@
 					<PropertyList>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
-								<Value>5</Value>
+								<Value>15</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Pitch" Type="int32">
@@ -92,6 +99,18 @@
 								<Value>True</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{60C322D5-CB57-47A5-9AEE-0F2639AE1B1C}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Min" Type="Real64" Value="-3"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -102,7 +121,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="Keyboard1" ID="{0ACF0F72-D7D1-431C-99CB-A7FC0A30DD51}" ShortID="436728320">
+						<Sound Name="keyboard1v1" ID="{27B9B92A-6D23-47E8-BA7B-9C4B370AF498}" ShortID="842234530">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -112,16 +131,16 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="keyboard1v1" ID="{88BAED79-BE2C-4AEE-89C8-9F37D90160A7}" ShortID="430059595">
+								<AudioFileSource Name="keyboard1v1" ID="{476CCC9F-EE5F-4B4C-AB5D-8FD68920743E}" ShortID="158192762">
 									<Language>SFX</Language>
 									<AudioFile>keyboard1v1.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="keyboard1v1" ID="{88BAED79-BE2C-4AEE-89C8-9F37D90160A7}" Platform="Linked"/>
+								<ActiveSource Name="keyboard1v1" ID="{476CCC9F-EE5F-4B4C-AB5D-8FD68920743E}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Keyboard2" ID="{2644D7EE-14C0-4709-A862-31412D5666C0}" ShortID="412709954">
+						<Sound Name="keyboard2v1" ID="{5599A38D-01FA-4C8F-96A8-84DAE1D9767F}" ShortID="165168419">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -131,16 +150,16 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="keyboard2v1" ID="{A56E5F68-A6C1-447D-A7C0-65D9AFFC634D}" ShortID="479970538">
+								<AudioFileSource Name="keyboard2v1" ID="{D3AC2588-44FB-44B8-B6B3-4DB6BF6599F3}" ShortID="749689392">
 									<Language>SFX</Language>
 									<AudioFile>keyboard2v1.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="keyboard2v1" ID="{A56E5F68-A6C1-447D-A7C0-65D9AFFC634D}" Platform="Linked"/>
+								<ActiveSource Name="keyboard2v1" ID="{D3AC2588-44FB-44B8-B6B3-4DB6BF6599F3}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Keyboard3" ID="{5C1361E0-4892-4D4E-8D2A-4BCB4FB258D8}" ShortID="583697373">
+						<Sound Name="keyboard3v1" ID="{B336DD3B-CAFA-4752-8B75-AD781A32F04C}" ShortID="872586389">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -150,13 +169,69 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="keyboard3v1" ID="{87ADE3E1-533C-48BB-A00C-87931BB411B3}" ShortID="213542934">
+								<AudioFileSource Name="keyboard3v1" ID="{57E85C8B-0DE4-4529-AD11-8479B03EE35F}" ShortID="72918886">
 									<Language>SFX</Language>
 									<AudioFile>keyboard3v1.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="keyboard3v1" ID="{87ADE3E1-533C-48BB-A00C-87931BB411B3}" Platform="Linked"/>
+								<ActiveSource Name="keyboard3v1" ID="{57E85C8B-0DE4-4529-AD11-8479B03EE35F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="pause" ID="{F1389FA9-3F21-4ED4-925C-8B04A4901BC1}" ShortID="399736122">
+							<PropertyList>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>29</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{912B21B9-529D-4867-99C8-3F9BD2B89A7E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Wwise Silence" ID="{481F1AAB-F17F-41ED-B6F1-6B3BCFD45733}" ShortID="822969765" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+									<PropertyList>
+										<Property Name="Length" Type="Real32" Value="0.1"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wwise Silence" ID="{481F1AAB-F17F-41ED-B6F1-6B3BCFD45733}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="pause_01" ID="{DB165837-446E-4A5A-8E89-E4BD3A4D6717}" ShortID="227399844">
+							<PropertyList>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>17</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{912B21B9-529D-4867-99C8-3F9BD2B89A7E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Wwise Silence" ID="{D503E669-347C-4B4C-97A1-B8EA35633C31}" ShortID="433568920" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+									<PropertyList>
+										<Property Name="Length" Type="Real32" Value="0.1"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wwise Silence" ID="{D503E669-347C-4B4C-97A1-B8EA35633C31}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -190,16 +265,23 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Messagev1" ID="{4201D9C3-D9CB-4D8F-A506-BC2DE1D084CA}" ShortID="666455822">
+						<AudioFileSource Name="Messagev2" ID="{3E7DE7B2-1129-4177-8BD8-F70522E36606}" ShortID="760777128">
 							<Language>SFX</Language>
-							<AudioFile>Messagev1.wav</AudioFile>
+							<AudioFile>Messagev2.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Messagev1" ID="{4201D9C3-D9CB-4D8F-A506-BC2DE1D084CA}" Platform="Linked"/>
+						<ActiveSource Name="Messagev2" ID="{3E7DE7B2-1129-4177-8BD8-F70522E36606}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="ChoiceAppear" ID="{1E22EE2F-7FF1-4E01-BA69-5FB5C4DD3548}" ShortID="734256926">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -209,13 +291,13 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="ChoiceAppearv1" ID="{B6D11CB1-C981-4C70-B920-52C22298DF80}" ShortID="1037875560">
+						<AudioFileSource Name="ChoiceAppearv2" ID="{84FBEFA8-09BA-43EB-8B53-0CAF5FA002FA}" ShortID="138734547">
 							<Language>SFX</Language>
-							<AudioFile>ChoiceAppearv1.wav</AudioFile>
+							<AudioFile>ChoiceAppearv2.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="ChoiceAppearv1" ID="{B6D11CB1-C981-4C70-B920-52C22298DF80}" Platform="Linked"/>
+						<ActiveSource Name="ChoiceAppearv2" ID="{84FBEFA8-09BA-43EB-8B53-0CAF5FA002FA}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Reply" ID="{9CB233D4-4DEC-45A9-86C4-9EB12FA36762}" ShortID="256858745">
@@ -228,13 +310,13 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Replyv1" ID="{C50B6F03-EA6F-4ECE-9BF0-EDBBBB1D1749}" ShortID="194501006">
+						<AudioFileSource Name="Replyv2" ID="{49BC1F17-8742-4596-89D8-CFC8B677A192}" ShortID="644817157">
 							<Language>SFX</Language>
-							<AudioFile>Replyv1.wav</AudioFile>
+							<AudioFile>Replyv2.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Replyv1" ID="{C50B6F03-EA6F-4ECE-9BF0-EDBBBB1D1749}" Platform="Linked"/>
+						<ActiveSource Name="Replyv2" ID="{49BC1F17-8742-4596-89D8-CFC8B677A192}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Credits" ID="{5997FDEB-6E38-4572-86A4-5788B6C82E0C}" ShortID="243922293">
@@ -450,6 +532,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="SevenDays" ID="{A1141155-E011-4FAD-957A-89BDA4F7735E}" ShortID="658524288">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -459,13 +548,13 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="SevenDaysv2" ID="{E3537F36-0200-416D-88B5-71BE34B8659F}" ShortID="68094195">
+						<AudioFileSource Name="SevenDaysv3" ID="{B10D1EB6-3C2A-4D39-99B8-2DC8C72B006B}" ShortID="730018957">
 							<Language>SFX</Language>
-							<AudioFile>SevenDaysv2.wav</AudioFile>
+							<AudioFile>SevenDaysv3.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="SevenDaysv2" ID="{E3537F36-0200-416D-88B5-71BE34B8659F}" Platform="Linked"/>
+						<ActiveSource Name="SevenDaysv3" ID="{B10D1EB6-3C2A-4D39-99B8-2DC8C72B006B}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<RandomSequenceContainer Name="IsTyping" ID="{D8E7766B-0D5E-4458-ACD7-B89B934E8E4B}" ShortID="1002017109">
