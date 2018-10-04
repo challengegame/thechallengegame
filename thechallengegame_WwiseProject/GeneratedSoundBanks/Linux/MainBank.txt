@@ -22,28 +22,30 @@ Event	ID	Name			Wwise Object Path	Notes
 	4221601770	Anetta			\Default Work Unit\Anetta	
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	433568920	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\pause_01\Wwise Silence	
+	822969765	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\pause\Wwise Silence	
 	940951554	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\IsTyping\silence\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	5306346	General	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Generalv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\General		17472
 	27575390	IsTypingv1	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\IsTypingv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\IsTyping\IsTypingv1		124576
 	34996620	Jimmy	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Jimmyv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jimmy		88504
-	68094195	SevenDays	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\SevenDaysv2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SevenDays		1565792
+	72918886	keyboard3v1	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\keyboard3v1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\keyboard3v1		17412
+	138734547	ChoiceAppear	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\ChoiceAppearv2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ChoiceAppear		97120
+	158192762	keyboard1v1	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\keyboard1v1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\keyboard1v1		19132
 	178849724	Home	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Homev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Home		23616
-	194501006	Reply	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Replyv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Reply		186356
 	203786248	Anetta	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Annettav1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Anetta		88392
-	236832989	Keyboard1	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\keyboard1v1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\Keyboard1		16844
 	477624162	Picture	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Picturev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Picture		201824
-	508712527	ChoiceAppear	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\ChoiceAppearv2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ChoiceAppear		97120
 	530008824	Kyle	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Kylev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Kyle		88156
 	605179356	Hema	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Hemav1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hema		88372
 	612359276	Kalil	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Kalilv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Kalil		97096
 	612855194	Jessie	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Jessiev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jessie		88308
-	666455822	Message	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Messagev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Message		175652
+	644817157	Reply	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Replyv2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Reply		48514
 	675270912	Submit	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Submitv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submit		20672
-	803335895	Keyboard2	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\keyboard2v1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\Keyboard2		16024
+	730018957	SevenDays	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\SevenDaysv3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SevenDays		1078160
+	749689392	keyboard2v1	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\keyboard2v1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\keyboard2v1		18944
+	760777128	Message	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Messagev2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Message		43894
 	837681531	Morgan	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Morganv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Morgan		88428
 	868240090	Group	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Groupv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Group		132392
-	913247350	Keyboard3	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\keyboard3v1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\Keyboard3		14992
 	926353791	Tanya	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Tanyav1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Tanya		88620
 
