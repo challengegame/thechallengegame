@@ -26,6 +26,7 @@ public class Channel
     public ChatMenuButton chatMenuButton;
     public TextMeshProUGUI PlayerTextArea;
     public int RelationshipValue;
+    public Color ChatBubbleColor;
 }
 
 public enum Pronoun
@@ -56,6 +57,8 @@ public class DisplayManager : MonoBehaviour
     public GameObject TypingPrefab;
     public GameObject LandscapeImagePrefab;
     public GameObject PortraitImagePrefab;
+
+    public Color PlayerMessageColor = Color.gray;
 
     public TMPro.TextMeshProUGUI debugTimeText;
 
@@ -258,6 +261,8 @@ public class DisplayManager : MonoBehaviour
         //Player messages don't have a name or portrait to worry about
         M.MessageText.text = MessageContent;
         M.MessageText.ForceMeshUpdate();
+        M.CharacterName = "Player";
+        M.BackgroundImage.color = PlayerMessageColor;
         //Canvas.ForceUpdateCanvases();
         float TextHeight = M.MessageText.preferredHeight;
         int linecount = M.MessageText.textInfo.lineCount;
@@ -385,9 +390,12 @@ public class DisplayManager : MonoBehaviour
             if (CharChannel != null)
             {
                 M.CharacterImage.sprite = CharChannel.Portrait;
+                M.BackgroundImage.color = CharChannel.ChatBubbleColor;
             }
             M.MessageText.text = e.Content;
             M.MessageChannel = MessageChannel;
+            M.CharacterName = e.CharacterName;
+            
             if (CurrentlyActiveChannel != e.Channel)
             {
                 StartCoroutine(PreFinishAnimation(M));
@@ -408,6 +416,8 @@ public class DisplayManager : MonoBehaviour
             //Single messages don't have to worry about the name or portrait either, just the text content
             M.MessageText.text = e.Content;
             M.MessageChannel = MessageChannel;
+            M.CharacterName = e.CharacterName;
+            M.BackgroundImage.color = MessageChannel.ChatBubbleColor;
             if (CurrentlyActiveChannel != e.Channel)
             {
                 StartCoroutine(PreFinishAnimation(M));

@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19cfd556b45e1eb4287be8a9483498ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadSaves: 0
+  LoadSaves: 1
   StartingGameEventTime: 23040
   WaitingForNameInput: 1
 --- !u!4 &644284271
@@ -495,47 +495,47 @@ Prefab:
     - target: {fileID: 224784191683960760, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224620566542280186, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224238856491950090, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224613529400113088, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224220943052716060, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224941096309880198, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224004032856682452, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224859008099638330, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 224237768248323534, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 141.03401
       objectReference: {fileID: 0}
     - target: {fileID: 114918899325217472, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
@@ -1160,7 +1160,7 @@ Prefab:
     - target: {fileID: 224756122091570504, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000043536176
+      value: 0.000078531935
       objectReference: {fileID: 0}
     - target: {fileID: 114331178690402260, guid: 49b04d915a6acf644955b6552b0f4127,
         type: 2}
@@ -1206,6 +1206,171 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[0].ChatBubbleColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[1].ChatBubbleColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[1].ChatBubbleColor.r
+      value: 0.9882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[1].ChatBubbleColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[1].ChatBubbleColor.b
+      value: 0.5803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[2].ChatBubbleColor.r
+      value: 0.9372549
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[2].ChatBubbleColor.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[2].ChatBubbleColor.b
+      value: 0.49019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[2].ChatBubbleColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[3].ChatBubbleColor.r
+      value: 0.32156864
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[3].ChatBubbleColor.g
+      value: 0.23137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[3].ChatBubbleColor.b
+      value: 0.2509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[3].ChatBubbleColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[4].ChatBubbleColor.r
+      value: 0.6431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[4].ChatBubbleColor.g
+      value: 0.8509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[4].ChatBubbleColor.b
+      value: 0.6313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[4].ChatBubbleColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[5].ChatBubbleColor.r
+      value: 0.99215686
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[5].ChatBubbleColor.g
+      value: 0.7882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[5].ChatBubbleColor.b
+      value: 0.5254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[5].ChatBubbleColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[6].ChatBubbleColor.r
+      value: 0.84705883
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[6].ChatBubbleColor.g
+      value: 0.9254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[6].ChatBubbleColor.b
+      value: 0.4745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[6].ChatBubbleColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[7].ChatBubbleColor.r
+      value: 0.75686276
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[7].ChatBubbleColor.g
+      value: 0.7411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[7].ChatBubbleColor.b
+      value: 0.7411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[7].ChatBubbleColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[8].ChatBubbleColor.r
+      value: 0.8901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[8].ChatBubbleColor.g
+      value: 0.77254903
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[8].ChatBubbleColor.b
+      value: 0.6313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369748142042606, guid: 49b04d915a6acf644955b6552b0f4127,
+        type: 2}
+      propertyPath: Channels.Array.data[8].ChatBubbleColor.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49b04d915a6acf644955b6552b0f4127, type: 2}

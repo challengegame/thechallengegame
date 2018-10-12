@@ -397,7 +397,9 @@ public class TimelineManager : MonoBehaviour
                     ChoiceEvent choiceEvent = currentEvent as ChoiceEvent;
                     if (choiceEvent != null)
                     {
+                        
                         Debug.Log("Dequeuing choice event with " + choiceEvent.Choices.Count + " choices in channel "+choiceEvent.Channel+" because its activation time was "+choiceEvent.GameTimeToBeActivated+" and our time is "+CurrentGameRealTime+".");
+                        CurrentGameRealTime = choiceEvent.GameTimeToBeActivated;
                         DisplayManager.instance.DisplayChoiceEvent(choiceEvent);
                         WaitingOnChoiceCount++;
                         CurrentActiveChoices.Add(choiceEvent);
@@ -435,7 +437,7 @@ public class TimelineManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Stuck waiting! Waiting for choice: " + WaitingOnChoiceCount + " waiting for name: " + WaitingForNameInput+" waiting for player: "+DisplayManager.instance.WaitingForPlayerInput);
+            //Debug.Log("Stuck waiting! Waiting for choice: " + WaitingOnChoiceCount + " waiting for name: " + WaitingForNameInput+" waiting for player: "+DisplayManager.instance.WaitingForPlayerInput);
         }
     }
 
@@ -499,7 +501,7 @@ public class TimelineManager : MonoBehaviour
         */
         sd.CurrentMainEventQueue = MainEventQueue;
 
-        //sd.ActiveChoices = CurrentActiveChoices;
+        sd.ActiveChoices = CurrentActiveChoices;
 
         sd.PartyAnetta = DisplayManager.instance.GetPartyAnetta();
 
@@ -575,7 +577,7 @@ public class TimelineManager : MonoBehaviour
         DisplayManager.instance.SetPlayerName(sd.PlayerName);
         DisplayManager.instance.SetPlayerPronoun(sd.PlayerPronoun);
         PastEvents = sd.PastGameEvents;
-        //CurrentActiveChoices = sd.ActiveChoices;
+        CurrentActiveChoices = sd.ActiveChoices;
         PopulateLoadedEvents();
 
         InkManager.instance.RestoreJSON("Group", sd.GroupInkJSON);
@@ -614,7 +616,8 @@ public class TimelineManager : MonoBehaviour
         //Unresolved choice events should be the last thing in their particular channel (because the channel can't advance with active choices)
         foreach (ChoiceEvent ce in CurrentActiveChoices)
         {
-            //DisplayManager.instance.DisplayChoiceEvent(ce);
+            DisplayManager.instance.DisplayChoiceEvent(ce);
+            CurrentGameRealTime = ce.GameTimeToBeActivated;
         }
         //TODO: Instead of this, we should save the notification information for each channel and restore that
         DisplayManager.instance.SetAllNotificationsRead();
