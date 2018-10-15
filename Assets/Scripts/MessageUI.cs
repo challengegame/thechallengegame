@@ -11,6 +11,9 @@ public class MessageUI : MonoBehaviour
     public Image CharacterImage;
     public RectTransform MessagePrefabRect;
     public Animator animator;
+    public Image BackgroundImage;
+
+    public string CharacterName;
 
     [HideInInspector]
     public Channel MessageChannel;
