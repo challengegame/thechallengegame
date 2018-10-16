@@ -378,6 +378,8 @@ MonoBehaviour:
   CharacterImage: {fileID: 0}
   MessagePrefabRect: {fileID: 224856124199540220}
   animator: {fileID: 95557156531708824}
+  BackgroundImage: {fileID: 114366689640960512}
+  CharacterName: 
   MessageChannel:
     ChannelName: 
     MessagePanel: {fileID: 0}
@@ -388,6 +390,7 @@ MonoBehaviour:
     chatMenuButton: {fileID: 0}
     PlayerTextArea: {fileID: 0}
     RelationshipValue: 0
+    ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
   AnimationWaitTime: 0.2
 --- !u!114 &114366689640960512
 MonoBehaviour:
@@ -569,7 +572,8 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9de8642bf7b98c647bf8945b7a6946bf, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 21127517800135430, guid: 9de8642bf7b98c647bf8945b7a6946bf,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

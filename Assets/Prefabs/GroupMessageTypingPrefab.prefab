@@ -512,6 +512,8 @@ MonoBehaviour:
   CharacterImage: {fileID: 114537387698628506}
   MessagePrefabRect: {fileID: 224209601212882424}
   animator: {fileID: 95708277436067528}
+  BackgroundImage: {fileID: 114267184138717476}
+  CharacterName: 
   MessageChannel:
     ChannelName: 
     MessagePanel: {fileID: 0}
@@ -522,6 +524,7 @@ MonoBehaviour:
     chatMenuButton: {fileID: 0}
     PlayerTextArea: {fileID: 0}
     RelationshipValue: 0
+    ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
   AnimationWaitTime: 0.2
 --- !u!114 &114680516297136372
 MonoBehaviour:
