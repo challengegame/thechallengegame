@@ -326,14 +326,17 @@ public class DisplayManager : MonoBehaviour
                     //TODO: Only launch these if the app is not "in focus" or whatever
                     //TODO: Move this to the point where the message is queued and schedule based on the delay value
                     //TODO: Combine all received messages into one notification
+                    if (TimelineManager.instance.Paused)
+                    {
 #if UNITY_IOS
-                    UnityEngine.iOS.LocalNotification localNotification = new UnityEngine.iOS.LocalNotification();
+                        UnityEngine.iOS.LocalNotification localNotification = new UnityEngine.iOS.LocalNotification();
 
-                    localNotification.fireDate = System.DateTime.Now;
-                    localNotification.alertBody = e.Channel + ": "+PreviewText;
+                        localNotification.fireDate = System.DateTime.Now;
+                        localNotification.alertBody = e.Channel + ": " + PreviewText;
 #elif UNITY_ANDROID
-                    NotificationManager.Send(TimeSpan.FromSeconds(5), "The Challenge", e.Channel + ": "+PreviewText, new Color(1f, 0.3f, 0.15f));
+                        NotificationManager.Send(TimeSpan.FromSeconds(5), "The Challenge", e.Channel + ": "+PreviewText, new Color(1f, 0.3f, 0.15f));
 #endif
+                    }
                     ShowMessage(e, MessageChannel);
                     //audio for offscreen notifications
                     AkSoundEngine.PostEvent("Group", gameObject);

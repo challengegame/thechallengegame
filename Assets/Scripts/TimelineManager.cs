@@ -224,6 +224,8 @@ public class TimelineManager : MonoBehaviour
 
     List<ChoiceEvent> CurrentActiveChoices;
 
+    public bool Paused = false;
+
     // Use this for initialization
     void Start ()
     {
@@ -297,11 +299,13 @@ public class TimelineManager : MonoBehaviour
         {
             //Here we are being paused by the phone OS, and need to save our state so that we can resume from where we left off
             SaveGame();
+            Paused = true;
         }
         else if(LoadSaves && Initialized)
         {
             //Focus is back on us, we should restore our saved state
             LoadGame();
+            Paused = false;
         }
     }
 
