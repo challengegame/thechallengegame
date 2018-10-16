@@ -9357,7 +9357,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 658b1fa9eaef30d4b9af07bb7eb17d84, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10291,6 +10291,7 @@ MonoBehaviour:
     chatMenuButton: {fileID: 114974967698520208}
     PlayerTextArea: {fileID: 114707083405389356}
     RelationshipValue: 0
+    ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
   - ChannelName: Anetta
     MessagePanel: {fileID: 1536120592702580}
     Portrait: {fileID: 21300000, guid: d6d960fb3976ea74684e3400fa91d3a7, type: 3}
@@ -10302,6 +10303,7 @@ MonoBehaviour:
     chatMenuButton: {fileID: 114159146502546122}
     PlayerTextArea: {fileID: 114042929359152972}
     RelationshipValue: 0
+    ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
   - ChannelName: Tanya
     MessagePanel: {fileID: 1433358917124992}
     Portrait: {fileID: 21300000, guid: 9c5c0be44da69f74ebc2d640b26cc50a, type: 3}
@@ -10313,6 +10315,7 @@ MonoBehaviour:
     chatMenuButton: {fileID: 114127602514353110}
     PlayerTextArea: {fileID: 114091574181855748}
     RelationshipValue: 0
+    ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
   - ChannelName: Kalil
     MessagePanel: {fileID: 1241577902192322}
     Portrait: {fileID: 21300000, guid: ed7424774f3fe604aa104b9b88d92428, type: 3}
@@ -10324,6 +10327,7 @@ MonoBehaviour:
     chatMenuButton: {fileID: 114122406628081138}
     PlayerTextArea: {fileID: 114719589427120936}
     RelationshipValue: 0
+    ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
   - ChannelName: Hema
     MessagePanel: {fileID: 1487551840787066}
     Portrait: {fileID: 21300000, guid: fd6e56ab2f315d54994315fdda5a1fe3, type: 3}
@@ -10335,6 +10339,7 @@ MonoBehaviour:
     chatMenuButton: {fileID: 114938344558357612}
     PlayerTextArea: {fileID: 114050347283476178}
     RelationshipValue: 0
+    ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
   - ChannelName: Jessie
     MessagePanel: {fileID: 1900656744534638}
     Portrait: {fileID: 21300000, guid: d1edf730219994240ad8ebfa2d764c4b, type: 3}
@@ -10346,6 +10351,7 @@ MonoBehaviour:
     chatMenuButton: {fileID: 114025285426962902}
     PlayerTextArea: {fileID: 114426032795718716}
     RelationshipValue: 0
+    ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
   - ChannelName: Jimmy
     MessagePanel: {fileID: 1968968316772516}
     Portrait: {fileID: 21300000, guid: a2796cef80105f84a90e32da64dc7b48, type: 3}
@@ -10357,6 +10363,7 @@ MonoBehaviour:
     chatMenuButton: {fileID: 114201822814558488}
     PlayerTextArea: {fileID: 114359830876849620}
     RelationshipValue: 0
+    ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
   - ChannelName: Morgan
     MessagePanel: {fileID: 1357305762755734}
     Portrait: {fileID: 21300000, guid: 6483cf6d41c505c4e8085f9478b88719, type: 3}
@@ -10368,6 +10375,7 @@ MonoBehaviour:
     chatMenuButton: {fileID: 114441757888179404}
     PlayerTextArea: {fileID: 114054286488534170}
     RelationshipValue: 0
+    ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
   - ChannelName: Kyle
     MessagePanel: {fileID: 1579217779219886}
     Portrait: {fileID: 21300000, guid: f354aeb34f45353428cb935a74cbba09, type: 3}
@@ -10379,6 +10387,7 @@ MonoBehaviour:
     chatMenuButton: {fileID: 114436911795270340}
     PlayerTextArea: {fileID: 114352622505605066}
     RelationshipValue: 0
+    ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
   ChatPanel: {fileID: 1293764791223680}
   MenuPanel: {fileID: 1054072262452636}
   CreditsPanel: {fileID: 1286653525509668}
@@ -10398,6 +10407,7 @@ MonoBehaviour:
     type: 2}
   PortraitImagePrefab: {fileID: 1369356807515274, guid: c277ab2e888376741b0bec1fc8ab71c6,
     type: 2}
+  PlayerMessageColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   debugTimeText: {fileID: 114761854592365336}
   TextDisplaySpeed: 0.05
   WaitingForPlayerInput: 0
@@ -14159,7 +14169,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14177,10 +14187,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 35
-  m_fontSizeBase: 14
+  m_fontSize: 42.2
+  m_fontSizeBase: 42.2
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -14226,7 +14236,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -21674,8 +21684,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -55.905, y: 0}
+  m_SizeDelta: {x: -111.81, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224082341218720464
 RectTransform:
@@ -22471,7 +22481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -38.799988, y: 339}
+  m_AnchoredPosition: {x: -38.80005, y: 182}
   m_SizeDelta: {x: -225.20001, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224248750650239094
@@ -23281,8 +23291,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50.3, y: -7.9}
-  m_SizeDelta: {x: -154.07, y: -13}
+  m_AnchoredPosition: {x: 1.0524902, y: -7.8999634}
+  m_SizeDelta: {x: -51.364975, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224398205156256634
 RectTransform:
@@ -25665,7 +25675,7 @@ RectTransform:
   m_GameObject: {fileID: 1124248572452406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 224287071179085048}
   m_Father: {fileID: 224269953309741728}
@@ -25673,7 +25683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.60009766, y: -346.1}
+  m_AnchoredPosition: {x: 0.60009766, y: -520}
   m_SizeDelta: {x: -640, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224887880899908606
