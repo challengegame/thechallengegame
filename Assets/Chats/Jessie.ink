@@ -226,7 +226,7 @@ Player;Even if its true, what can we do about it? #time=1:14:14:02
 Jessie;I mean #time=1:14:14:05
 Jessie;i don't think there really IS anything you can do #time=1:14:14:07
 Jessie;Pick the friends you want to have after this, I guess? #time=1:14:14:13
-Player;The bloody fuck is that supposed to mean #time=1:14:14:15
+Player;The hell is that supposed to mean #time=1:14:14:15
 Jessie;I just uh #time=1:14:14:17
 Jessie;If this all goes sideways #time=1:14:14:21
 Jessie;Or...when #time=1:14:14:26
@@ -446,7 +446,7 @@ Player;i'm going to pretend you didn't wake me up at 4am #time=3:04:21:58
 Jessie;Oh no #time=3:04:22:00
 Jessie;There's no way you're going back to sleep now #time=3:04:22:03
 Jessie;You've already looked at your phone #time=3:04:22:05
-Jessie;Your circadian rhythm is fucked #time=3:04:22:08
+Jessie;Your circadian rhythm is screwed #time=3:04:22:08
 Player;... #time=3:04:22:11
 -
 Player;so #time=3:04:22:16
@@ -560,7 +560,7 @@ Jessie;of The Smiths #time=3:04:22:36
 === day3_evening_jessie_sequence1 ===	
 			
 * [Leave her alone.]
-Player;You need to leave her the fuck alone Jessie. #time=3:22:45:42
+Player;You need to leave her the hell alone Jessie. #time=3:22:45:42
 Player;I mean that as kindly as possible. #time=3:22:45:46
 Player;Texting won't help. #time=3:22:45:49
 Player;'supportive' messages won't help. #time=3:22:45:52
@@ -608,11 +608,11 @@ Jessie;...a little? #time=3:22:47:15
 		Jessie;gladly #time=3:22:47:37
 		->JessieDay4
 		
-		* * [Fuck The Smiths.]
-		Player;Fuck The Smiths. #time=3:22:47:17
+		* * [Sod The Smiths.]
+		Player;Sod The Smiths. #time=3:22:47:17
 		Jessie;... #time=3:22:47:20
-		Jessie;fuck the smiths? #time=3:22:47:24
-		Player;yup. #time=3:22:47:26
+		Jessie;sod the smiths? #time=3:22:47:24
+		Player;yup. sod as in dirt as in screw that #time=3:22:47:26
 		Jessie;...anything else to add to that? #time=3:22:47:30
 		Player;nope #time=3:22:47:33
 		Jessie;haha #time=3:22:47:36
@@ -758,7 +758,7 @@ Jessie;hey #time=7:08:48:04
 Jessie;remember when the biggest issue in our lives was about whether to go for Korean or Kebab #time=7:08:48:11
 Jessie;INSERT SELFIE FROM FIRST DAY #time=7:08:48:14
 Jessie;i do #time=7:08:48:26
-Jessie;have a SPLITTING fucking hangover too #time=7:08:48:32
+Jessie;have a SPLITTING hangover too #time=7:08:48:32
 Jessie;cancel sunlight #time=7:08:48:37
 Jessie;pls #time=7:08:48:41
 

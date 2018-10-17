@@ -121,7 +121,7 @@ Kalil;I thought you might know. #time=3:06:42:59
 		Player;When I was younger, mum and dad stayed away overnight for a date. #time=3:06:45:03
 		Player;They left me at home with a sitter. #time=3:06:45:06
 		Player;At first everything was okay, but then the sitter started muttering about 'being reduced' to looking over 'barbarian children' and took her stuff and walked out the door #time=3:06:45:10
-		Kalil;what the fuck??? #time=3:06:45:12
+		Kalil;what the hell??? #time=3:06:45:12
 		Player;yeah #time=3:06:45:15
 		Player;I grew up in London mate #time=3:06:45:18
 		Player;and dad's from Camden #time=3:06:45:20
@@ -151,14 +151,14 @@ Kalil;I thought you might know. #time=3:06:42:59
 		Player;When I was younger, mum and dad stayed away overnight for a date. #time=3:06:45:03
 		Player;They left me at home with a sitter. #time=3:06:45:06
 		Player;At first everything was okay, but then the sitter started muttering about 'being reduced' to looking over 'barbarian children' and took her stuff and walked out the door #time=3:06:45:10
-		Kalil;what the fuck??? #time=3:06:45:12
+		Kalil;what the hell?? #time=3:06:45:12
 		Player;yeah #time=3:06:45:15
 		Player;I grew up in London mate #time=3:06:45:18
 		Player;and dad's from Camden #time=3:06:45:20
 		Player;Anyway #time=3:06:45:23
 		Player;I didn't know how to cook, and all the cabinets and such were locked--the sitter had the key #time=3:06:45:27
 		Player;when mum and dad came back the next day, I had chewed up every nail I had and was starting on a couch cushion #time=3:06:45:32
-		Kalil;that's fucking horrific #time=3:06:45:35
+		Kalil;that's bloody horrific #time=3:06:45:35
 		Player;yeah, well #time=3:06:45:37
 		Player;I certainly know what it's like to be hungry--and the cabinets aren't locked anymore #time=3:06:45:41
 		Player;which is nice #time=3:06:45:44
@@ -204,7 +204,7 @@ Player;Understood. #time=3:06:47:07
 Kalil;"Mother" and father messed me up #time=3:06:47:16
 Kalil;They made it clear that I was going somewhere beneath our station, so i could be in touch with 'the common people' #time=3:06:47:18
 Kalil;(now they say i'm too in touch with the common people but that's a different issue) #time=3:06:47:22
-Kalil;They want me to be some kind of fucking politician like her #time=3:06:47:25
+Kalil;They want me to be some kind of politician. like her #time=3:06:47:25
 Kalil;when I came to school, I was supposed to be like everyone else but...not. #time=3:06:47:27
 Kalil;and it worked #time=3:06:47:30
 Kalil;I was just on the outskirts #time=3:06:47:32
@@ -270,8 +270,8 @@ Kalil;Fuckin party #time=6:10:08:10
 	* [Sorry, but you brought it upon yourself]
     Player;I'm sorry you're in this position, Kalil. #time=6:10:08:15
     Player;But you kind of brought it upon yourself #time=6:10:08:19
-    Kalil;fuck #time=6:10:08:26
-    Kalil;you #time=6:10:08:30
+    Kalil;piss #time=6:10:08:26
+    Kalil;off #time=6:10:08:30
 -
 ->KalilOther
 ==KalilOther==

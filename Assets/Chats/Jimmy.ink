@@ -31,7 +31,7 @@ Player;You know it. #time=3:12:12:07
 
 * [one]
 Player;one #time=3:12:11:45
-Jimmy;fucking hell {PlayerName()} #time=3:12:11:49
+Jimmy;bloody hell {PlayerName()} #time=3:12:11:49
 Jimmy;... #time=3:12:11:55
 Player;it's still a little funny isn't it #time=3:12:12:00
 Jimmy;...yes. #time=3:12:12:04
@@ -64,7 +64,7 @@ Jimmy;Message me the alphanumeric character "2" if you understand. #time=3:12:12
 			Jimmy;I am absolutely serious. #time=3:12:13:27
 			Jimmy;Do you agree to my terms? #time=3:12:13:32
 			Jimmy;You can just reply "Yes" or "No." #time=3:12:13:36
-			Jimmy;Fuck it. Let's get it over with. The longer we draw it out, the more attention it attracts anyway. #time=3:12:13:39
+			Jimmy;Sod it. Let's get it over with. The longer we draw it out, the more attention it attracts anyway. #time=3:12:13:39
 				* * * * * [...Fine.]
 				Player;...Fine. #time=3:12:13:43
 				Player;"Yes" #time=3:12:13:46

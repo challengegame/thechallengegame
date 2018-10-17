@@ -60,11 +60,11 @@ Anetta;Kalil is texting Tanya and he changes his opinion to match hers or to suc
 Anetta;what the FUCK #time=1:22:14:19
 Anetta;ARE POEMS #time=1:22:14:22
 Anetta;WHY DO WE NEED TO BE TESTED ON POEMS #time=1:22:14:24
-Anetta;'BUT WHAT DO THEY REALLY REALLY REALLY MEAN' FUCK YOU #time=1:22:14:26
+Anetta;'BUT WHAT DO THEY REALLY REALLY REALLY MEAN' PISS OFF #time=1:22:14:26
 Anetta;IF I WANT TO KNOW WHAT SPORTIVE MEANS #time=1:22:14:28
 Anetta;I'LL ASK SOMEONE #time=1:22:14:30
 Anetta;OR LOOK IT UP #time=1:22:14:32
-Anetta;WHY DO I HAVE TO KNOW WHAT INSENSATE MEANS TO MAKE A FUCKING BUILDING #time=1:22:14:34
+Anetta;WHY DO I HAVE TO KNOW WHAT INSENSATE MEANS TO MAKE A DAMN BUILDING #time=1:22:14:34
 Anetta;shit #time=1:22:14:43
 Anetta;okay #time=1:22:14:47
 Anetta;yeah #time=1:22:14:49
@@ -179,13 +179,13 @@ Anetta;even if you push too hard sometmes #time=4:18:35:17
 	Anetta;I know #time=4:18:35:24
 	Anetta;its still a bit hard though #time=4:18:35:26
 	Anetta;but ill b fine #time=4:18:35:29
-
-
+	->continue
 	* * [I do, don't I?]
 	Player;I do that don't I? #time=4:18:35:21
 	Anetta;yeah a bit #time=4:18:35:24
 	Anetta;not that it mattrd in the end #time=4:18:35:26
 	Anetta;whethr i said somethng or not #time=4:18:35:29
+	-> continue
 - else: 
 	Anetta;even when I just brainsplode all my thoughts into yr phone #time=4:18:35:17
 	Anetta;and make no snse #time=4:18:35:21
@@ -195,8 +195,9 @@ Anetta;even if you push too hard sometmes #time=4:18:35:17
 	- else: 
 	Anetta;patiently #time=4:18:35:28
 	}
+	-> continue
 }
-	- -
+=== continue ===
 	Anetta;and also #time=4:18:35:32
 	Anetta;jessie wants to help me with math stff #time=4:18:35:35
 	Anetta;i think he saw i was having trouble concentrating in class #time=4:18:35:38
