@@ -540,6 +540,7 @@ public class DisplayManager : MonoBehaviour
             { "choice_chosen", ChoiceIndex }
         }));
         GameObject.Destroy(ChoiceUI);
+        AkSoundEngine.PostEvent("ChoicePick", gameObject);
         TimelineManager.instance.ChoiceMade(e);
 
     }
