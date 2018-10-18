@@ -15,9 +15,11 @@
 						<ObjectRef Name="Reply" ID="{216AF4F6-0A52-4445-8DDD-25C77A25C9C3}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Home" ID="{832F816A-4E9F-4449-A26E-78747163DE16}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ChoicePick" ID="{1131CCDD-A7CD-4500-9383-7DDCCF93A18A}" WorkUnitID="{DB1F6AE3-302D-4A75-BD96-6E00C1610B86}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ChoicePick" ID="{388FEF4D-BA8F-45D6-98C1-AA625CB75A4B}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Credits" ID="{953A97F0-DE07-4699-AC2E-2E1CE4A9CC28}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Jimmy" ID="{87E7857D-6C60-46CE-96DE-E90BAC2EF34C}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ChoiceAppear" ID="{D9841B28-6155-4901-ADAD-67F61A35444A}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="KeyboardPlayer" ID="{2DBE82E3-13DC-4902-9BC5-45E6F0985C2E}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Jessie" ID="{FAC99F12-6568-4965-831D-EA3FECFBFD64}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Submit" ID="{B1561F07-2840-4999-96F7-08F5E2864567}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Morgan" ID="{8B2F6106-FDB8-4BB1-96AE-BA43D52E5D38}" WorkUnitID="{63497EE4-0A7D-414B-8BBD-2D877AFD2281}" Filter="7" Origin="Manual"/>

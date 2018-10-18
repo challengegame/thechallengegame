@@ -14,6 +14,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2580029223	ChoicePick			\Default Work Unit\ChoicePick	
 	2836931289	Jimmy			\Default Work Unit\Jimmy	
 	2992761690	Jessie			\Default Work Unit\Jessie	
+	3015419933	KeyboardPlayer			\Default Work Unit\KeyboardPlayer	
 	3181406844	Home			\Default Work Unit\Home	
 	3330463761	Morgan			\Default Work Unit\Morgan	
 	3649605926	Hema			\Default Work Unit\Hema	
@@ -29,9 +30,9 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	5306346	General	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Generalv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\General		17472
-	27575390	IsTypingv1	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\IsTypingv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\IsTyping\IsTypingv1		124576
 	34996620	Jimmy	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Jimmyv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jimmy		88504
 	72918886	keyboard3v1	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\keyboard3v1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\keyboard3v1		17412
+	90536484	IsTypingv1	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\IsTypingv2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\IsTyping\IsTypingv1		62360
 	138734547	ChoiceAppear	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\ChoiceAppearv2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ChoiceAppear		97120
 	158192762	keyboard1v1	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\keyboard1v1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\keyboard1v1		19132
 	178849724	Home	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Homev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Home		23616

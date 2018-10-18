@@ -26,6 +26,7 @@ namespace AK
         static const AkUniqueID JIMMY = 2836931289U;
         static const AkUniqueID KALIL = 2229701220U;
         static const AkUniqueID KEYBOARD = 1403540682U;
+        static const AkUniqueID KEYBOARDPLAYER = 3015419933U;
         static const AkUniqueID KYLE = 2565061260U;
         static const AkUniqueID MESSAGE = 3690986026U;
         static const AkUniqueID MORGAN = 3330463761U;

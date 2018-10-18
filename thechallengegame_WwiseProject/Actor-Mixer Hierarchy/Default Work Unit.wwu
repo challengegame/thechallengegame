@@ -594,9 +594,13 @@
 									<Language>SFX</Language>
 									<AudioFile>IsTypingv1.wav</AudioFile>
 								</AudioFileSource>
+								<AudioFileSource Name="IsTypingv2" ID="{FFC2EE7D-9CD1-4EC9-BBB2-BB5049425BAC}" ShortID="90536484">
+									<Language>SFX</Language>
+									<AudioFile>IsTypingv2.wav</AudioFile>
+								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="IsTypingv1" ID="{5E29BBCC-8E24-4744-A700-2E418018CB1A}" Platform="Linked"/>
+								<ActiveSource Name="IsTypingv2" ID="{FFC2EE7D-9CD1-4EC9-BBB2-BB5049425BAC}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="silence" ID="{D231CC56-D5E2-4F42-A7CF-1DE4E2AEE247}" ShortID="523638327">
@@ -650,6 +654,188 @@
 						<ActiveSource Name="Generalv1" ID="{E1FBDF0E-2913-4558-8C4E-02DC5623CD8C}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<RandomSequenceContainer Name="KeyboardPlayer" ID="{4C6783F5-821F-4F05-848A-A308FA0753A6}" ShortID="92279451">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>15</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{4EAEA571-D6F5-4A44-8AC0-3095202D4B2D}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{956D3A7D-C067-4485-9E1B-699E839AD634}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Min" Type="Real64" Value="-3"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{912B21B9-529D-4867-99C8-3F9BD2B89A7E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="keyboard1v1" ID="{F4A49CC2-235F-488A-AF35-0A59694B032A}" ShortID="852880237">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{912B21B9-529D-4867-99C8-3F9BD2B89A7E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="keyboard1v1" ID="{7181D9C1-2275-4DD7-B3D2-945953BAB26F}" ShortID="422823222">
+									<Language>SFX</Language>
+									<AudioFile>keyboard1v1.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="158192762"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="keyboard1v1" ID="{7181D9C1-2275-4DD7-B3D2-945953BAB26F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="keyboard2v1" ID="{ECB2338E-88C7-48F5-8D40-1EB9A6E45170}" ShortID="1050488045">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{912B21B9-529D-4867-99C8-3F9BD2B89A7E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="keyboard2v1" ID="{2F3FCE12-8D01-4BE0-999E-E2D1D07F3DC3}" ShortID="618264319">
+									<Language>SFX</Language>
+									<AudioFile>keyboard2v1.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="749689392"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="keyboard2v1" ID="{2F3FCE12-8D01-4BE0-999E-E2D1D07F3DC3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="keyboard3v1" ID="{DC3D3F06-746B-486C-9D71-52FCECF1D572}" ShortID="1029559713">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{912B21B9-529D-4867-99C8-3F9BD2B89A7E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="keyboard3v1" ID="{D7C1CED5-1712-4244-9048-41BD609B0B01}" ShortID="359624464">
+									<Language>SFX</Language>
+									<AudioFile>keyboard3v1.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="72918886"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="keyboard3v1" ID="{D7C1CED5-1712-4244-9048-41BD609B0B01}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="pause" ID="{20C680F8-42DA-4434-8AF7-F14259BE5959}" ShortID="162644578">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>29</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{912B21B9-529D-4867-99C8-3F9BD2B89A7E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Wwise Silence" ID="{616455F2-F61A-4CC2-9D91-B0AFB4198178}" ShortID="926648131" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+									<PropertyList>
+										<Property Name="Length" Type="Real32" Value="0.1"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wwise Silence" ID="{616455F2-F61A-4CC2-9D91-B0AFB4198178}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="pause_01" ID="{58EF5CCA-46D4-4198-9B9F-A9DB1C626275}" ShortID="328376293">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>17</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{912B21B9-529D-4867-99C8-3F9BD2B89A7E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Wwise Silence" ID="{C73C920F-FAC6-4785-B2AE-980FCEE18A3B}" ShortID="827388555" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+									<PropertyList>
+										<Property Name="Length" Type="Real32" Value="0.1"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wwise Silence" ID="{C73C920F-FAC6-4785-B2AE-980FCEE18A3B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

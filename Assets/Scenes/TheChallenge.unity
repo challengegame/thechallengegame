@@ -9275,7 +9275,6 @@ GameObject:
   - component: {fileID: 659387770}
   - component: {fileID: 659387769}
   - component: {fileID: 659387774}
-  - component: {fileID: 659387773}
   m_Layer: 5
   m_Name: TextMeshPro - InputField
   m_TagString: Untagged
@@ -9465,28 +9464,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 659387767}
---- !u!114 &659387773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 659387767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8390fd6df5fc4c3faa4720747fc3560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  eventID: 0
-  m_callbackData: {fileID: 0}
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  valueGuid: 00000000000000000000000000000000
 --- !u!114 &659387774
 MonoBehaviour:
   m_ObjectHideFlags: 0

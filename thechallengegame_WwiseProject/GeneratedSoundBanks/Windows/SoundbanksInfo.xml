@@ -34,6 +34,7 @@
 				<Event Id="2836931289" Name="Jimmy" ObjectPath="\Events\Default Work Unit\Jimmy"/>
 				<Event Id="2229701220" Name="Kalil" ObjectPath="\Events\Default Work Unit\Kalil"/>
 				<Event Id="1403540682" Name="Keyboard" ObjectPath="\Events\Default Work Unit\Keyboard"/>
+				<Event Id="3015419933" Name="KeyboardPlayer" ObjectPath="\Events\Default Work Unit\KeyboardPlayer"/>
 				<Event Id="2565061260" Name="Kyle" ObjectPath="\Events\Default Work Unit\Kyle"/>
 				<Event Id="3690986026" Name="Message" ObjectPath="\Events\Default Work Unit\Message"/>
 				<Event Id="3330463761" Name="Morgan" ObjectPath="\Events\Default Work Unit\Morgan"/>
@@ -49,10 +50,6 @@
 					<ShortName>Generalv1.wav</ShortName>
 					<Path>SFX/Generalv1_56D34C19.wem</Path>
 				</File>
-				<File Id="27575390" Language="SFX">
-					<ShortName>IsTypingv1.wav</ShortName>
-					<Path>SFX/IsTypingv1_56D34C19.wem</Path>
-				</File>
 				<File Id="34996620" Language="SFX">
 					<ShortName>Jimmyv1.wav</ShortName>
 					<Path>SFX/Jimmyv1_56D34C19.wem</Path>
@@ -60,6 +57,10 @@
 				<File Id="72918886" Language="SFX">
 					<ShortName>keyboard3v1.wav</ShortName>
 					<Path>SFX/keyboard3v1_56D34C19.wem</Path>
+				</File>
+				<File Id="90536484" Language="SFX">
+					<ShortName>IsTypingv2.wav</ShortName>
+					<Path>SFX/IsTypingv2_56D34C19.wem</Path>
 				</File>
 				<File Id="138734547" Language="SFX">
 					<ShortName>ChoiceAppearv2.wav</ShortName>

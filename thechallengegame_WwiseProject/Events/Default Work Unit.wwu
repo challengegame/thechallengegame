@@ -311,6 +311,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="KeyboardPlayer" ID="{2DBE82E3-13DC-4902-9BC5-45E6F0985C2E}">
+					<ChildrenList>
+						<Action Name="" ID="{5C6A3257-7227-40F2-B6D9-09E55781E1A6}" ShortID="723544105">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="KeyboardPlayer" ID="{4C6783F5-821F-4F05-848A-A308FA0753A6}" WorkUnitID="{DB1F6AE3-302D-4A75-BD96-6E00C1610B86}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
