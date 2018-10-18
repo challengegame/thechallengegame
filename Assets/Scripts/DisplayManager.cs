@@ -51,6 +51,8 @@ public class DisplayManager : MonoBehaviour
     public Image PortraitImage;
     public GameObject LandscapeImagePanel;
     public Image LandscapeImage;
+    public GameObject SquareImagePanel;
+    public Image SquareImage;
 
     public GameObject ChoicePrefab;
     public GameObject ChoiceButtonPrefab;
@@ -156,10 +158,17 @@ public class DisplayManager : MonoBehaviour
         PortraitImage.sprite = image;
     }
 
+    public void ShowSquareImage(Sprite image)
+    {
+        SquareImagePanel.SetActive(true);
+        SquareImage.sprite = image;
+    }
+
     public void CloseImagePanel()
     {
         PortraitImagePanel.SetActive(false);
         LandscapeImagePanel.SetActive(false);
+        SquareImagePanel.SetActive(false);
     }
 
     public void ShowMessagePanel(string channelName)
