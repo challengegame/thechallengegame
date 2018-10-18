@@ -11,6 +11,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2229701220	Kalil			\Default Work Unit\Kalil	
 	2320974141	Submit			\Default Work Unit\Submit	
 	2565061260	Kyle			\Default Work Unit\Kyle	
+	2580029223	ChoicePick			\Default Work Unit\ChoicePick	
 	2836931289	Jimmy			\Default Work Unit\Jimmy	
 	2992761690	Jessie			\Default Work Unit\Jessie	
 	3181406844	Home			\Default Work Unit\Home	

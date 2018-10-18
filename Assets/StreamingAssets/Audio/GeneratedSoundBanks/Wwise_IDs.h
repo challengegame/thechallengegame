@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID ANETTA = 4221601770U;
         static const AkUniqueID CHOICEAPPEAR = 212160671U;
+        static const AkUniqueID CHOICEPICK = 2580029223U;
         static const AkUniqueID CREDITS = 2201105581U;
         static const AkUniqueID GENERAL = 133642231U;
         static const AkUniqueID GROUP = 3944382562U;

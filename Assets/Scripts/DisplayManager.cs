@@ -175,6 +175,7 @@ public class DisplayManager : MonoBehaviour
             CleanCanvases(MessageChannel);
             CurrentlyActiveChannel = channelName;
             ResizeAllMessagesInChannel(MessageChannel);
+            AkSoundEngine.PostEvent("General", gameObject);
         }
     }
 
@@ -583,6 +584,7 @@ public class DisplayManager : MonoBehaviour
     {
 
         PlayerPronoun = (Pronoun)pronoun;
+        AkSoundEngine.PostEvent("ChoicePick", gameObject);
 
         //Debug.Log("Chose pronoun " + PlayerPronoun);
     }

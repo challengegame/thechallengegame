@@ -297,6 +297,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="ChoicePick" ID="{388FEF4D-BA8F-45D6-98C1-AA625CB75A4B}">
+					<ChildrenList>
+						<Action Name="" ID="{7A8DB697-05AF-4408-8A85-4F15AEFF4C61}" ShortID="429018985">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ChoicePick" ID="{1131CCDD-A7CD-4500-9383-7DDCCF93A18A}" WorkUnitID="{DB1F6AE3-302D-4A75-BD96-6E00C1610B86}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
