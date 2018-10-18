@@ -199,7 +199,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 56.05
+  m_fontSize: 55.9
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1139,8 +1139,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1515972670}
   m_HandleRect: {fileID: 1515972669}
   m_Direction: 2
-  m_Value: 0.9999996
-  m_Size: 0.75962764
+  m_Value: 0.9999992
+  m_Size: 0.7596275
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4078,9 +4078,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.8632076, g: 0.95976686, b: 1, a: 1}
-    m_PressedColor: {r: 0.8666667, g: 0.9607843, b: 1, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 0.91372555, g: 0.7254902, b: 0.654902, a: 1}
+    m_PressedColor: {r: 0.9137255, g: 0.7254902, b: 0.654902, a: 1}
+    m_DisabledColor: {r: 0.9137255, g: 0.7254902, b: 0.654902, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4123,7 +4123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.47070923, g: 0.30153078, b: 0.5283019, a: 1}
+  m_Color: {r: 0.537099, g: 0.40005338, b: 0.5849056, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8846,7 +8846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19cfd556b45e1eb4287be8a9483498ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadSaves: 0
+  LoadSaves: 1
   StartingGameEventTime: 23040
   WaitingForNameInput: 1
   Paused: 0
@@ -17134,7 +17134,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 42.2
+  m_fontSize: 42.05
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -24087,7 +24087,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 56.05
+  m_fontSize: 55.9
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -24478,7 +24478,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 39.8
+  m_fontSize: 39.7
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
