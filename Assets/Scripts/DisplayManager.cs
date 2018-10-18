@@ -349,7 +349,8 @@ public class DisplayManager : MonoBehaviour
                     }
                     ShowMessage(e, MessageChannel);
                     //audio for offscreen notifications
-                    AkSoundEngine.PostEvent("Group", gameObject);
+                    //AkSoundEngine.PostEvent("Group", gameObject);
+                    AkSoundEngine.PostEvent(e.CharacterName, gameObject);
                 }
                 else
                 {
