@@ -23,6 +23,7 @@
 			<IncludedEvents>
 				<Event Id="4221601770" Name="Anetta" ObjectPath="\Events\Default Work Unit\Anetta"/>
 				<Event Id="212160671" Name="ChoiceAppear" ObjectPath="\Events\Default Work Unit\ChoiceAppear"/>
+				<Event Id="2580029223" Name="ChoicePick" ObjectPath="\Events\Default Work Unit\ChoicePick"/>
 				<Event Id="2201105581" Name="Credits" ObjectPath="\Events\Default Work Unit\Credits"/>
 				<Event Id="133642231" Name="General" ObjectPath="\Events\Default Work Unit\General"/>
 				<Event Id="3944382562" Name="Group" ObjectPath="\Events\Default Work Unit\Group"/>

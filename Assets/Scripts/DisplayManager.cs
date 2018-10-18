@@ -175,6 +175,7 @@ public class DisplayManager : MonoBehaviour
             CleanCanvases(MessageChannel);
             CurrentlyActiveChannel = channelName;
             ResizeAllMessagesInChannel(MessageChannel);
+            AkSoundEngine.PostEvent("General", gameObject);
         }
     }
 
@@ -539,6 +540,7 @@ public class DisplayManager : MonoBehaviour
             { "choice_chosen", ChoiceIndex }
         }));
         GameObject.Destroy(ChoiceUI);
+        AkSoundEngine.PostEvent("ChoicePick", gameObject);
         TimelineManager.instance.ChoiceMade(e);
 
     }
@@ -583,6 +585,7 @@ public class DisplayManager : MonoBehaviour
     {
 
         PlayerPronoun = (Pronoun)pronoun;
+        AkSoundEngine.PostEvent("ChoicePick", gameObject);
 
         //Debug.Log("Chose pronoun " + PlayerPronoun);
     }

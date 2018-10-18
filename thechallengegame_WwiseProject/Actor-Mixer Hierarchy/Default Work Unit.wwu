@@ -64,13 +64,21 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Generalv1" ID="{E1FBDF0E-2913-4558-8C4E-02DC5623CD8C}" ShortID="5306346">
+						<AudioFileSource Name="Generalv1" ID="{99B6F7E8-F2B8-4B6C-97EA-8A9C4CA5B955}" ShortID="656469681">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>Generalv1.wav</AudioFile>
+							<ConvertedFileIDList>
+								<File ID="5306346"/>
+							</ConvertedFileIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Generalv1" ID="{E1FBDF0E-2913-4558-8C4E-02DC5623CD8C}" Platform="Linked"/>
+						<ActiveSource Name="Generalv1" ID="{99B6F7E8-F2B8-4B6C-97EA-8A9C4CA5B955}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<RandomSequenceContainer Name="Keyboard" ID="{047A5AE4-190D-4CEE-B2AF-87D59B981887}" ShortID="562647447">
@@ -618,6 +626,30 @@
 						<ItemRef Name="silence" ID="{D231CC56-D5E2-4F42-A7CF-1DE4E2AEE247}"/>
 					</Playlist>
 				</RandomSequenceContainer>
+				<Sound Name="ChoicePick" ID="{1131CCDD-A7CD-4500-9383-7DDCCF93A18A}" ShortID="1017688115">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{912B21B9-529D-4867-99C8-3F9BD2B89A7E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Generalv1" ID="{E1FBDF0E-2913-4558-8C4E-02DC5623CD8C}" ShortID="5306346">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
+								</Reference>
+							</ReferenceList>
+							<Language>SFX</Language>
+							<AudioFile>Generalv1.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Generalv1" ID="{E1FBDF0E-2913-4558-8C4E-02DC5623CD8C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
