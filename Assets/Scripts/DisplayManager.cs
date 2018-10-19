@@ -597,6 +597,11 @@ public class DisplayManager : MonoBehaviour
         Debug.Log("Set name " + name);
     }
 
+    public void KeyboardInput()
+    {
+        AkSoundEngine.PostEvent("KeyboardPlayer", gameObject);
+    }
+
     public void OnPronounChosen(int pronoun)
     {
 
