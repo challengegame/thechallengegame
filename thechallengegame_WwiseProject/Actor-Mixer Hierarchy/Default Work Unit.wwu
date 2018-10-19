@@ -337,16 +337,13 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Generalv1" ID="{A69BF651-922F-40DC-B1C8-A7FFF270449E}" ShortID="63221360">
+						<AudioFileSource Name="Creditsv2" ID="{7193B714-8B00-4EAF-9C36-CB35835A4EA8}" ShortID="1033616064">
 							<Language>SFX</Language>
-							<AudioFile>Generalv1.wav</AudioFile>
-							<ConvertedFileIDList>
-								<File ID="5306346"/>
-							</ConvertedFileIDList>
+							<AudioFile>Creditsv2.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Generalv1" ID="{A69BF651-922F-40DC-B1C8-A7FFF270449E}" Platform="Linked"/>
+						<ActiveSource Name="Creditsv2" ID="{7193B714-8B00-4EAF-9C36-CB35835A4EA8}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Picture" ID="{A203FA37-C399-4450-A070-E1F89DC2851D}" ShortID="701257568">
@@ -590,10 +587,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="IsTypingv1" ID="{5E29BBCC-8E24-4744-A700-2E418018CB1A}" ShortID="27575390">
-									<Language>SFX</Language>
-									<AudioFile>IsTypingv1.wav</AudioFile>
-								</AudioFileSource>
 								<AudioFileSource Name="IsTypingv2" ID="{FFC2EE7D-9CD1-4EC9-BBB2-BB5049425BAC}" ShortID="90536484">
 									<Language>SFX</Language>
 									<AudioFile>IsTypingv2.wav</AudioFile>
@@ -603,7 +596,7 @@
 								<ActiveSource Name="IsTypingv2" ID="{FFC2EE7D-9CD1-4EC9-BBB2-BB5049425BAC}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="silence" ID="{D231CC56-D5E2-4F42-A7CF-1DE4E2AEE247}" ShortID="523638327">
+						<Sound Name="silence 03s" ID="{D231CC56-D5E2-4F42-A7CF-1DE4E2AEE247}" ShortID="523638327">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -615,7 +608,7 @@
 							<ChildrenList>
 								<SourcePlugin Name="Wwise Silence" ID="{B5DFF8DB-14D3-48C9-8D43-03D5C63E5E81}" ShortID="940951554" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
 									<PropertyList>
-										<Property Name="Length" Type="Real32" Value="0.5"/>
+										<Property Name="Length" Type="Real32" Value="0.3"/>
 									</PropertyList>
 									<Language>SFX</Language>
 								</SourcePlugin>
@@ -624,10 +617,32 @@
 								<ActiveSource Name="Wwise Silence" ID="{B5DFF8DB-14D3-48C9-8D43-03D5C63E5E81}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="silence 02s" ID="{E0BAA9E6-BBB2-45D7-A7D3-8BBAA0E861D5}" ShortID="600148974">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{912B21B9-529D-4867-99C8-3F9BD2B89A7E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Wwise Silence" ID="{0EC30E02-B829-48DF-863A-433260F2D3AE}" ShortID="111076203" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+									<PropertyList>
+										<Property Name="Length" Type="Real32" Value="0.2"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wwise Silence" ID="{0EC30E02-B829-48DF-863A-433260F2D3AE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<Playlist>
+						<ItemRef Name="silence 02s" ID="{E0BAA9E6-BBB2-45D7-A7D3-8BBAA0E861D5}"/>
 						<ItemRef Name="IsTypingv1" ID="{949579A0-B392-47D5-8E0F-ADBDE58F004B}"/>
-						<ItemRef Name="silence" ID="{D231CC56-D5E2-4F42-A7CF-1DE4E2AEE247}"/>
+						<ItemRef Name="silence 03s" ID="{D231CC56-D5E2-4F42-A7CF-1DE4E2AEE247}"/>
 					</Playlist>
 				</RandomSequenceContainer>
 				<Sound Name="ChoicePick" ID="{1131CCDD-A7CD-4500-9383-7DDCCF93A18A}" ShortID="1017688115">
@@ -640,18 +655,13 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Generalv1" ID="{E1FBDF0E-2913-4558-8C4E-02DC5623CD8C}" ShortID="5306346">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
-								</Reference>
-							</ReferenceList>
+						<AudioFileSource Name="ChoicePickv1" ID="{17D8A10F-2DD0-49E0-B016-0E896F14D28F}" ShortID="619299867">
 							<Language>SFX</Language>
-							<AudioFile>Generalv1.wav</AudioFile>
+							<AudioFile>ChoicePickv1.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Generalv1" ID="{E1FBDF0E-2913-4558-8C4E-02DC5623CD8C}" Platform="Linked"/>
+						<ActiveSource Name="ChoicePickv1" ID="{17D8A10F-2DD0-49E0-B016-0E896F14D28F}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<RandomSequenceContainer Name="KeyboardPlayer" ID="{4C6783F5-821F-4F05-848A-A308FA0753A6}" ShortID="92279451">

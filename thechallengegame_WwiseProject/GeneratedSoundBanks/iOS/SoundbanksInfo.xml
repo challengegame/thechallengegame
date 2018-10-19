@@ -98,6 +98,10 @@
 					<ShortName>Jessiev1.wav</ShortName>
 					<Path>SFX/Jessiev1_56D34C19.wem</Path>
 				</File>
+				<File Id="619299867" Language="SFX">
+					<ShortName>ChoicePickv1.wav</ShortName>
+					<Path>SFX/ChoicePickv1_56D34C19.wem</Path>
+				</File>
 				<File Id="644817157" Language="SFX">
 					<ShortName>Replyv2.wav</ShortName>
 					<Path>SFX/Replyv2_56D34C19.wem</Path>
@@ -129,6 +133,10 @@
 				<File Id="926353791" Language="SFX">
 					<ShortName>Tanyav1.wav</ShortName>
 					<Path>SFX/Tanyav1_56D34C19.wem</Path>
+				</File>
+				<File Id="1033616064" Language="SFX">
+					<ShortName>Creditsv2.wav</ShortName>
+					<Path>SFX/Creditsv2_56D34C19.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

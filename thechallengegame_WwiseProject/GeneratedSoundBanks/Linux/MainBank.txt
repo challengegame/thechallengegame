@@ -24,9 +24,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	4221601770	Anetta			\Default Work Unit\Anetta	
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	111076203	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\IsTyping\silence 02s\Wwise Silence	
 	433568920	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\pause_01\Wwise Silence	
 	822969765	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Keyboard\pause\Wwise Silence	
-	940951554	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\IsTyping\silence\Wwise Silence	
+	940951554	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\IsTyping\silence 03s\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	5306346	General	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Generalv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\General		17472
@@ -42,6 +43,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	605179356	Hema	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Hemav1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hema		88372
 	612359276	Kalil	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Kalilv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Kalil		97096
 	612855194	Jessie	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Jessiev1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jessie		88308
+	619299867	ChoicePick	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\ChoicePickv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ChoicePick		69572
 	644817157	Reply	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Replyv2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Reply		48514
 	675270912	Submit	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Submitv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submit		20672
 	730018957	SevenDays	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\SevenDaysv3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SevenDays		1078160
@@ -50,4 +52,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	837681531	Morgan	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Morganv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Morgan		88428
 	868240090	Group	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Groupv1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Group		132392
 	926353791	Tanya	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Tanyav1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Tanya		88620
+	1033616064	Credits	Y:\Documents\Repos\TheChallengeGit\thechallengegame\thechallengegame_WwiseProject\.cache\Linux\SFX\Creditsv2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Credits		327440
 
