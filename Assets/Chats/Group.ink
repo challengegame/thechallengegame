@@ -14,6 +14,7 @@ VAR hard_daddy = false
 VAR ahole = false 
 VAR KalilFunny = false
 VAR bringAnetta = false
+VAR kebab = false
 
 { PartyAnetta():
     ~ bringAnetta = true
@@ -368,6 +369,7 @@ Hema;anyone else? #time=1:18:25:43
 === day1_evening_group_sequence2 ===
 
 * [Korean.]
+~ kebab = false
 Player;Let's do Korean! #time=1:18:27:58
 Player;I fancy Bulgogi, and other Such Dishes. #time=1:18:28:02
 Jessie;YES #time=1:18:28:04
@@ -382,6 +384,7 @@ Hema;see you soon! #time=1:18:28:24
 
 
 * [Kebab.]
+~ kebab = true
 Player;I say we go for Kebab. #time=1:18:27:58
 Player;It IS a tradition after all. #time=1:18:27:02
 Kalil;BOOM #time=1:18:28:04
@@ -394,8 +397,13 @@ Hema;we will make sure you get an A in kebab #time=1:18:28:16
 Jessie;*thank you* #time=1:18:28:18
 Anetta;ill see you all there <sprite name="Smile"> #time=1:18:28:20
 Hema;See you soon! #time=1:18:28:22
--		
-Hema;[INSERT SELFIE OF THE GROUP HERE] #time=1:20:01:27	
+-
+{ kebab:
+		
+Hema;<SelfieDay1Kebab> #time=1:20:01:27	
+ - else:
+ Hema;<SelfieDay1Korean> #time=1:20:01:27	
+ }
 Hema;There we go! #time=1:20:01:29
 Hema;Talk more tomorrow <sprite name="Heart"> #time=1:20:01:33
 Hema;morning! #time=2:06:23:52
@@ -2436,7 +2444,7 @@ Hema;you know, i actually like this song too. Maybe itll be cool to get a video 
 Hema;um #time=6:19:43:19
 Hema;i forget how to do it on the other camera #time=6:19:43:22
 Hema;never mind its selfie time instead #time=6:19:43:27
-Hema;INSERT SELFIE HERE #time=6:19:43:36
+Hema;<SelfieDay3> #time=6:19:43:36
 Hema;this is it, the heart of hte party!!! #time=6:19:43:40
 Hema;Everyone having fun! #time=6:19:43:43
 { bringAnetta:

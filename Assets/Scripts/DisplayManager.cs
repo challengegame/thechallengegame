@@ -195,12 +195,15 @@ public class DisplayManager : MonoBehaviour
             MessageUI MUI = child.GetComponent<MessageUI>();
             if (MUI != null)
             {
-                MUI.MessageText.ForceMeshUpdate();
-                float TextHeight = MUI.MessageText.preferredHeight;
-                //int linecount = MUI.MessageText.textInfo.lineCount;
-                //Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
-                RectTransform rt = MUI.gameObject.transform as RectTransform;
-                rt.sizeDelta = new Vector2(rt.rect.width, TextHeight + 10);
+                if (MUI.MessageText != null)
+                {
+                    MUI.MessageText.ForceMeshUpdate();
+                    float TextHeight = MUI.MessageText.preferredHeight;
+                    //int linecount = MUI.MessageText.textInfo.lineCount;
+                    //Debug.Log("Message height: " + TextHeight + " line count: " + linecount);
+                    RectTransform rt = MUI.gameObject.transform as RectTransform;
+                    rt.sizeDelta = new Vector2(rt.rect.width, TextHeight + 10);
+                }
             }
         }
         CleanCanvases(MessageChannel);
