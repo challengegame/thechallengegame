@@ -5,6 +5,16 @@
 			<ChildrenList>
 				<Sound Name="Home" ID="{F75604CE-D122-40F0-9BCC-67F9870E9482}" ShortID="738241206">
 					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>5</Value>
@@ -245,6 +255,18 @@
 					</ChildrenList>
 				</RandomSequenceContainer>
 				<Sound Name="Submit" ID="{F55AF7A1-15AD-4630-B9B5-4B6DA0FF1837}" ShortID="962864813">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -264,6 +286,18 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Message" ID="{58677BD0-202F-4916-956B-0E34CE694FF8}" ShortID="861370068">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -284,6 +318,16 @@
 				</Sound>
 				<Sound Name="ChoiceAppear" ID="{1E22EE2F-7FF1-4E01-BA69-5FB5C4DD3548}" ShortID="734256926">
 					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-2</Value>
@@ -309,6 +353,18 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Reply" ID="{9CB233D4-4DEC-45A9-86C4-9EB12FA36762}" ShortID="256858745">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -328,6 +384,18 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Credits" ID="{5997FDEB-6E38-4572-86A4-5788B6C82E0C}" ShortID="243922293">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -347,6 +415,18 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Picture" ID="{A203FA37-C399-4450-A070-E1F89DC2851D}" ShortID="701257568">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -366,6 +446,18 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Group" ID="{2939D510-7886-42E5-A564-04D64AA84746}" ShortID="979629416">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -385,6 +477,18 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Kalil" ID="{C9FEB081-3604-42E2-8966-6BF1E2D2AA82}" ShortID="994628816">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -404,6 +508,18 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Hema" ID="{7C6B5447-145A-49BE-A6B7-EBA148A3B489}" ShortID="38668305">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -423,6 +539,18 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Jessie" ID="{CADB01B0-F963-4B3C-8076-487314C57EA3}" ShortID="1031207224">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -442,6 +570,18 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Tanya" ID="{05F892DE-ACCA-4257-9EA2-8B26EAAE6906}" ShortID="897362892">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -461,6 +601,18 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Anetta" ID="{89B1A7BD-4DDE-4626-8532-2D7D614334F6}" ShortID="862743138">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -480,6 +632,18 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Jimmy" ID="{9AF5BE44-2B43-426C-B4E5-FBF2D340B68C}" ShortID="484002269">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -499,6 +663,18 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Morgan" ID="{9648BDB0-9D66-4536-B94D-A01E2B038843}" ShortID="601661770">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -518,6 +694,18 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Kyle" ID="{BC65022E-A65B-4B5F-BB8F-976645EED378}" ShortID="859559024">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>
@@ -538,6 +726,16 @@
 				</Sound>
 				<Sound Name="SevenDays" ID="{A1141155-E011-4FAD-957A-89BDA4F7735E}" ShortID="658524288">
 					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-3</Value>
@@ -564,9 +762,19 @@
 				</Sound>
 				<RandomSequenceContainer Name="IsTyping" ID="{D8E7766B-0D5E-4458-ACD7-B89B934E8E4B}" ShortID="1002017109">
 					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -646,6 +854,18 @@
 					</Playlist>
 				</RandomSequenceContainer>
 				<Sound Name="ChoicePick" ID="{1131CCDD-A7CD-4500-9383-7DDCCF93A18A}" ShortID="1017688115">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5A485EEE-885A-4BFC-9463-55017B734646}"/>

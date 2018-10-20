@@ -394,6 +394,7 @@ public class DisplayManager : MonoBehaviour
             }
             else
             {
+                AkSoundEngine.PostEvent("Picture", gameObject);
                 message = GameObject.Instantiate(PortraitImagePrefab, MessageChannel.ContentPanel.transform);
             }
             message.GetComponent<ImageMessageUI>().image.sprite = im.sprite;
