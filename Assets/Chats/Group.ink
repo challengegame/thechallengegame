@@ -6,6 +6,7 @@ EXTERNAL PlayerPossessivePronoun()
 EXTERNAL PlayerObjectivePronoun()
 EXTERNAL PartyAnetta()
 EXTERNAL CheckHemaDrunk()
+EXTERNAL SetKebab(kebab)
 
 //This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
 #Group
@@ -370,6 +371,7 @@ Hema;anyone else? #time=1:18:25:43
 
 * [Korean.]
 ~ kebab = false
+{SetKebab(false)}
 Player;Let's do Korean! #time=1:18:27:58
 Player;I fancy Bulgogi, and other Such Dishes. #time=1:18:28:02
 Jessie;YES #time=1:18:28:04
@@ -385,6 +387,7 @@ Hema;see you soon! #time=1:18:28:24
 
 * [Kebab.]
 ~ kebab = true
+{SetKebab(true)}
 Player;I say we go for Kebab. #time=1:18:27:58
 Player;It IS a tradition after all. #time=1:18:27:02
 Kalil;BOOM #time=1:18:28:04

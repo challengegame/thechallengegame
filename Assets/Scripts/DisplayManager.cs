@@ -83,6 +83,7 @@ public class DisplayManager : MonoBehaviour
     //Ink variables
     bool PartyAnetta = false;
     bool DrunkHema = false;
+    bool Kebab = false;
 
 
     void Start ()
@@ -637,6 +638,15 @@ public class DisplayManager : MonoBehaviour
         DrunkHema = drunk;
     }
 
+    public bool GetKebab()
+    {
+        return Kebab;
+    }
+
+    public void SetKebab(bool kebab)
+    {
+        Kebab = kebab;
+    }
 
 
     public string GetPlayerName()

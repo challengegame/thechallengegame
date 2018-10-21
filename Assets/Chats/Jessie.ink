@@ -4,6 +4,7 @@ EXTERNAL PlayerName()
 EXTERNAL PlayerPersonalPronoun()
 EXTERNAL PlayerPossessivePronoun()
 EXTERNAL PlayerObjectivePronoun()
+EXTERNAL GetKebab()
 
 //This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
 #Jessie
@@ -756,7 +757,11 @@ Jessie;<sprite name"Tongue_Out"> #time=4:09:42:22
 
 Jessie;hey #time=7:08:48:04
 Jessie;remember when the biggest issue in our lives was about whether to go for Korean or Kebab #time=7:08:48:11
-Jessie;INSERT SELFIE FROM FIRST DAY #time=7:08:48:14
+{ GetKebab():
+	Jessie;<SelfieDay1Kebab> #time=7:08:48:14
+	- else:
+	Jessie;<SelfieDay1Korean> #time=7:08:48:14
+}
 Jessie;i do #time=7:08:48:26
 Jessie;have a SPLITTING hangover too #time=7:08:48:32
 Jessie;cancel sunlight #time=7:08:48:37
