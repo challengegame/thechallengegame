@@ -324,8 +324,14 @@ public class DisplayManager : MonoBehaviour
                 string PreviewText = "";
                 if (e.Content.Length > 20)
                 {
+
                     PreviewText = e.Content.Substring(0, 17);
                     PreviewText += "...";
+                    if (PreviewText.Contains("<sprite name"))
+                    {
+                        int endIndex = e.Content.IndexOf('>');
+                        PreviewText = e.Content.Substring(0, endIndex);
+                    }
                 }
                 else
                 {

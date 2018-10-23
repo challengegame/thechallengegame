@@ -169,7 +169,7 @@ Jimmy;Message me the alphanumeric character "2" if you understand. #time=3:12:12
 	Jimmy;Alright! #time=3:12:22:17
 	Jimmy;Have a good one. #time=3:12:22:20
 	Jimmy;As always, our code: #time=3:12:22:25
-	Jimmy;<sprite name="Skull"><sprite name="Party"><sprite name="Heart"><sprite name="Party"><sprite name ="Eggplant"> #time=3:12:22:30
+	Jimmy;<sprite name="Skull"><sprite name="Party"><sprite name="Heart"><sprite name="Party"><sprite name="Eggplant"> #time=3:12:22:30
 	Player;...thanks #time=3:12:22:35
 	
 -> END
