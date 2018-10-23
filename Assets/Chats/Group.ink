@@ -1516,7 +1516,7 @@ Anetta;undergrnd skate parks with complicatd structres featured in games that rh
 	Hema;agh but im being called downstairs to help with something #time=4:22:25:59
 	Hema;tell me all the good bits! #time=4:22:26:03
 	Hema;I'll read them when I get back #time=4:22:26:06
-	Anetta;good plan <sprite name="Thumb"> #time=4:22:26:10
+	Anetta;good plan <sprite name="Thumbs_Up"> #time=4:22:26:10
 	Anetta;fast-forwrd to the highlghts #time=4:22:26:13
 	Jessie;would love to <sprite name="Smile"> #time=4:22:26:17
 	Hema;Looking forward to it!! #time=4:22:26:21

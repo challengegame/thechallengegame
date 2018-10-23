@@ -615,7 +615,10 @@ public class TimelineManager : MonoBehaviour
         //Debug.Log("PopulateLoadedEvents");
         foreach (GameEvent ge in PastEvents)
         {
-            DisplayManager.instance.DisplayEvent(ge, true);
+            if (TimeSpan.FromSeconds(CurrentGameEventTime - ge.GameTimeToBeActivated) < TimeSpan.FromDays(1))
+            {
+                DisplayManager.instance.DisplayEvent(ge, true);
+            }
         }
         //Unresolved choice events should be the last thing in their particular channel (because the channel can't advance with active choices)
         foreach (ChoiceEvent ce in CurrentActiveChoices)

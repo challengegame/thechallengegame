@@ -284,7 +284,7 @@ public class DisplayManager : MonoBehaviour
         //This is here to work around a bug in TMP where it doesn't always provide an accurate linecount/height if text is very close to the limit
         //A character count is a terribly rough way to do this, but worst case is it makes extra-wide messages when they're not needed, which is
         //better than overflowing
-        if (linecount == 1 && MessageContent.Length >= 42)
+        if (linecount == 1 && MessageContent.Length >= 36)
         {
             TextHeight *= 2;
         }
