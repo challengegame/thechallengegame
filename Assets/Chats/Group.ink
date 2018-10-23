@@ -682,8 +682,8 @@ Kalil;You gotta admit I'm at least a *bit* funny <sprite name="Wink"> #time=2:14
 	Anetta;fair #time=2:14:09:41
 	Anetta;<sprite name="Tongue_Out"> #time=2:14:09:43
 	Tanya;Have you ever Met Kyle, Kalil? #time=2:14:09:45
-	Damien;I just told you #time=2:14:09:49
-	Damien;he taught me to hate #time=2:14:09:51
+	Kalil;I just told you #time=2:14:09:49
+	Kalil;he taught me to hate #time=2:14:09:51
 	Tanya;In other words: #time=2:14:09:53
 	Tanya;You're dragging Another name through the Mud for a conversation that is Problematic at Best. #time=2:14:09:55
 	Tanya;Slandering someone you barely Know along the way of showing how Cool and Funny You think it is to discuss the equivalent of preying on a minor. #time=2:14:09:59
@@ -2447,7 +2447,7 @@ Hema;you know, i actually like this song too. Maybe itll be cool to get a video 
 Hema;um #time=6:19:43:19
 Hema;i forget how to do it on the other camera #time=6:19:43:22
 Hema;never mind its selfie time instead #time=6:19:43:27
-Hema;<SelfieDay3> #time=6:19:43:36
+Hema;<SelfieDay6> #time=6:19:43:36
 Hema;this is it, the heart of hte party!!! #time=6:19:43:40
 Hema;Everyone having fun! #time=6:19:43:43
 { bringAnetta:

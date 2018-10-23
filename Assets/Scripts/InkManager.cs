@@ -142,6 +142,18 @@ public class InkManager : MonoBehaviour
 
             });
 
+            s.BindExternalFunction("SetKebab", (bool kebab) =>
+            {
+                DisplayManager.instance.SetKebab(kebab);
+
+            });
+
+            s.BindExternalFunction("CheckKebab", () =>
+            {
+                return DisplayManager.instance.GetKebab();
+
+            });
+
         }
     }
     

@@ -190,7 +190,7 @@ Hema;which snacks should I pick up tonight? #time=3:17:08:28
 	Hema;I have to believe that. #time=3:17:13:14
 	Hema;we're too close for one stupid-ass party to tear us apart #time=3:17:13:18
 	Hema;LAZY SELFIE #time=3:19:20:18
-	Hema;[INSERT SELFIE OF HEMA AND ANETTA WATCHING TRASHY ANIME AND BEING HAPPY FOR ONCE HERE] #time=3:19:20:20
+	Hema;<SelfieDay3> #time=3:19:20:20
 	Hema;god i love anime #time=3:19:20:50
 -
 -> day6_evening_hema_sequence1
