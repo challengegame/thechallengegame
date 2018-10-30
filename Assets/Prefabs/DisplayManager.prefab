@@ -10292,6 +10292,7 @@ MonoBehaviour:
     PlayerTextArea: {fileID: 114707083405389356}
     RelationshipValue: 0
     ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
+    OfflineText: {fileID: 0}
   - ChannelName: Anetta
     MessagePanel: {fileID: 1536120592702580}
     Portrait: {fileID: 21300000, guid: d6d960fb3976ea74684e3400fa91d3a7, type: 3}
@@ -10304,6 +10305,7 @@ MonoBehaviour:
     PlayerTextArea: {fileID: 114042929359152972}
     RelationshipValue: 0
     ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
+    OfflineText: {fileID: 0}
   - ChannelName: Tanya
     MessagePanel: {fileID: 1433358917124992}
     Portrait: {fileID: 21300000, guid: 9c5c0be44da69f74ebc2d640b26cc50a, type: 3}
@@ -10316,6 +10318,7 @@ MonoBehaviour:
     PlayerTextArea: {fileID: 114091574181855748}
     RelationshipValue: 0
     ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
+    OfflineText: {fileID: 0}
   - ChannelName: Kalil
     MessagePanel: {fileID: 1241577902192322}
     Portrait: {fileID: 21300000, guid: ed7424774f3fe604aa104b9b88d92428, type: 3}
@@ -10328,6 +10331,7 @@ MonoBehaviour:
     PlayerTextArea: {fileID: 114719589427120936}
     RelationshipValue: 0
     ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
+    OfflineText: {fileID: 0}
   - ChannelName: Hema
     MessagePanel: {fileID: 1487551840787066}
     Portrait: {fileID: 21300000, guid: fd6e56ab2f315d54994315fdda5a1fe3, type: 3}
@@ -10340,6 +10344,7 @@ MonoBehaviour:
     PlayerTextArea: {fileID: 114050347283476178}
     RelationshipValue: 0
     ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
+    OfflineText: {fileID: 0}
   - ChannelName: Jessie
     MessagePanel: {fileID: 1900656744534638}
     Portrait: {fileID: 21300000, guid: d1edf730219994240ad8ebfa2d764c4b, type: 3}
@@ -10352,6 +10357,7 @@ MonoBehaviour:
     PlayerTextArea: {fileID: 114426032795718716}
     RelationshipValue: 0
     ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
+    OfflineText: {fileID: 0}
   - ChannelName: Jimmy
     MessagePanel: {fileID: 1968968316772516}
     Portrait: {fileID: 21300000, guid: a2796cef80105f84a90e32da64dc7b48, type: 3}
@@ -10364,6 +10370,7 @@ MonoBehaviour:
     PlayerTextArea: {fileID: 114359830876849620}
     RelationshipValue: 0
     ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
+    OfflineText: {fileID: 0}
   - ChannelName: Morgan
     MessagePanel: {fileID: 1357305762755734}
     Portrait: {fileID: 21300000, guid: 6483cf6d41c505c4e8085f9478b88719, type: 3}
@@ -10376,6 +10383,7 @@ MonoBehaviour:
     PlayerTextArea: {fileID: 114054286488534170}
     RelationshipValue: 0
     ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
+    OfflineText: {fileID: 0}
   - ChannelName: Kyle
     MessagePanel: {fileID: 1579217779219886}
     Portrait: {fileID: 21300000, guid: f354aeb34f45353428cb935a74cbba09, type: 3}
@@ -10388,6 +10396,7 @@ MonoBehaviour:
     PlayerTextArea: {fileID: 114352622505605066}
     RelationshipValue: 0
     ChatBubbleColor: {r: 0, g: 0, b: 0, a: 0}
+    OfflineText: {fileID: 0}
   ChatPanel: {fileID: 1293764791223680}
   MenuPanel: {fileID: 1054072262452636}
   CreditsPanel: {fileID: 1286653525509668}
@@ -15496,29 +15505,72 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Digital Liberties
+  m_text: 'A game by Digital Liberties
 
-    --
+
+
+
+
+
+    Artist
+
+    Leyre Granero
+
+
+    Narrative designer
+
+    Xalavier Nelson Jr.
+
+
+    Producer
 
     Rosa Carbo-Mascarell
 
-    Fabian Thompsett
 
-    --
+    Programmer
 
-    Writing by Xalavier Nelson Jr.
+    Johnnemann Nordhagen
 
-    Art by Leyre Granero
 
-    Audio by Ali Cedroni
+    Sound designer
 
-    Programming by Johnnemann Nordhagen
+    Ali Cedroni
 
-    Additional writing by Florencia Minuzzi
 
-    --
+    Additional writing
 
-    Thanks to The Challenge'
+    Florencia Minuzzi
+
+
+    Funded and supported by
+
+
+
+
+
+
+    The Challenge
+
+
+
+
+
+
+    ISD
+
+
+
+
+
+
+    Cohere Partners
+
+
+
+
+
+
+    Google'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9de8642bf7b98c647bf8945b7a6946bf, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

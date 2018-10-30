@@ -18614,7 +18614,6 @@ MonoBehaviour:
   m_text: 'A game by Digital Liberties
 
 
-    (logo)
 
 
 
@@ -18651,22 +18650,31 @@ MonoBehaviour:
 
     Funded and supported by
 
-    (logo)
+
+
+
+
 
     The Challenge
 
 
-    (logo)
+
+
+
 
     ISD
 
 
-    (logo)
+
+
+
 
     Cohere Partners
 
 
-    (logo.)
+
+
+
 
     Google'
   m_isRightToLeft: 0
