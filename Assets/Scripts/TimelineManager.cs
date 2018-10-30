@@ -151,6 +151,12 @@ public class ImageEvent : GameEvent
 }
 
 [System.Serializable]
+public class OfflineEvent : GameEvent
+{
+    public bool offline = true;
+}
+
+[System.Serializable]
 public class SaveData
 {
     public float CurrentGameEventTime = 0.0f;

@@ -27,6 +27,7 @@ public class Channel
     public TextMeshProUGUI PlayerTextArea;
     public int RelationshipValue;
     public Color ChatBubbleColor;
+    public GameObject OfflineText;
 }
 
 public enum Pronoun
@@ -385,6 +386,7 @@ public class DisplayManager : MonoBehaviour
     {
         GameObject message;
         ImageEvent imageEvent = e as ImageEvent;
+        OfflineEvent offlineEvent = e as OfflineEvent;
         if (imageEvent != null)
         {
             //Handle image messages
@@ -408,6 +410,10 @@ public class DisplayManager : MonoBehaviour
             CleanCanvases(MessageChannel);
 
         }
+        else if (offlineEvent != null)
+        {
+            SetCharacterOffline(offlineEvent.CharacterName);
+        }
         else if (e.Channel == "Group")
         {
             message = GameObject.Instantiate(MessageChannel.IncomingMessagePrefab, MessageChannel.ContentPanel.transform);
@@ -426,7 +432,8 @@ public class DisplayManager : MonoBehaviour
             M.MessageText.text = e.Content;
             M.MessageChannel = MessageChannel;
             M.CharacterName = e.CharacterName;
-            
+            SetCharacterOnline(e.CharacterName);
+
             if (CurrentlyActiveChannel != e.Channel)
             {
                 StartCoroutine(PreFinishAnimation(M));
@@ -448,6 +455,7 @@ public class DisplayManager : MonoBehaviour
             M.MessageText.text = e.Content;
             M.MessageChannel = MessageChannel;
             M.CharacterName = e.CharacterName;
+            SetCharacterOnline(e.CharacterName);
             M.BackgroundImage.color = MessageChannel.ChatBubbleColor;
             if (CurrentlyActiveChannel != e.Channel)
             {
@@ -570,6 +578,25 @@ public class DisplayManager : MonoBehaviour
         AkSoundEngine.PostEvent("ChoicePick", gameObject);
         TimelineManager.instance.ChoiceMade(e);
 
+    }
+
+    public void SetCharacterOffline(string CharacterName)
+    {
+        Channel MessageChannel = Channels.Find(x => x.ChannelName == CharacterName);
+        if (MessageChannel != null)
+        {
+            MessageChannel.OfflineText.SetActive(true);
+        }
+
+    }
+
+    public void SetCharacterOnline(string CharacterName)
+    {
+        Channel MessageChannel = Channels.Find(x => x.ChannelName == CharacterName);
+        if (MessageChannel != null)
+        {
+            MessageChannel.OfflineText.SetActive(false);
+        }
     }
 
     public void AddRelationshipValue(string channel, int RelationshipChange)

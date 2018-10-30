@@ -327,6 +327,27 @@ public class InkManager : MonoBehaviour
                 TimelineManager.instance.AddEventToQueue(imageEvent);
                 CurrentTimeClocks[channel] = imageEvent.GameTimeToBeActivated;
             }
+            else if (contentString.StartsWith("[") && contentString.Contains("offline"))
+            {
+                //This is an offline message, not a normal message
+
+
+                OfflineEvent offlineEvent = new OfflineEvent();
+                offlineEvent.Content = contentString;
+                offlineEvent.DisplayTime = timeString;
+                offlineEvent.CharacterName = characterName;
+
+
+                offlineEvent.Channel = channel;
+                offlineEvent.ShouldWaitAfter = shouldWait;
+                offlineEvent.AbsoluteTimeString = absoluteTimeStamp;
+                offlineEvent.GameTimeToBeActivated = ParseAbsoluteTimestamp(absoluteTimeStamp);
+                offlineEvent.offline = true;
+
+                //Debug.Log("Calculated game time active to be " + imageEvent.GameTimeToBeActivated);
+                TimelineManager.instance.AddEventToQueue(offlineEvent);
+                CurrentTimeClocks[channel] = offlineEvent.GameTimeToBeActivated;
+            }
             else
             {
 
