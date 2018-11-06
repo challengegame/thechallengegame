@@ -78,6 +78,10 @@
 					<ShortName>Annettav1.wav</ShortName>
 					<Path>SFX/Annettav1_56D34C19.wem</Path>
 				</File>
+				<File Id="362155184" Language="SFX">
+					<ShortName>Creditsv3.wav</ShortName>
+					<Path>SFX/Creditsv3_56D34C19.wem</Path>
+				</File>
 				<File Id="477624162" Language="SFX">
 					<ShortName>Picturev1.wav</ShortName>
 					<Path>SFX/Picturev1_56D34C19.wem</Path>
@@ -110,10 +114,6 @@
 					<ShortName>Submitv1.wav</ShortName>
 					<Path>SFX/Submitv1_56D34C19.wem</Path>
 				</File>
-				<File Id="730018957" Language="SFX">
-					<ShortName>SevenDaysv3.wav</ShortName>
-					<Path>SFX/SevenDaysv3_56D34C19.wem</Path>
-				</File>
 				<File Id="749689392" Language="SFX">
 					<ShortName>keyboard2v1.wav</ShortName>
 					<Path>SFX/keyboard2v1_56D34C19.wem</Path>
@@ -130,13 +130,13 @@
 					<ShortName>Groupv1.wav</ShortName>
 					<Path>SFX/Groupv1_56D34C19.wem</Path>
 				</File>
+				<File Id="924120073" Language="SFX">
+					<ShortName>SevenDaysv4.wav</ShortName>
+					<Path>SFX/SevenDaysv4_56D34C19.wem</Path>
+				</File>
 				<File Id="926353791" Language="SFX">
 					<ShortName>Tanyav1.wav</ShortName>
 					<Path>SFX/Tanyav1_56D34C19.wem</Path>
-				</File>
-				<File Id="1033616064" Language="SFX">
-					<ShortName>Creditsv2.wav</ShortName>
-					<Path>SFX/Creditsv2_56D34C19.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

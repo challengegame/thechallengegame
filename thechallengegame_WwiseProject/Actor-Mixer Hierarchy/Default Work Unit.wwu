@@ -10,6 +10,19 @@
 								<Value>5</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{8257C4F7-6F65-4764-BF66-6AE9D1E9B3A0}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-50"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseMaxSoundPerInstance" Type="bool">
 							<ValueList>
 								<Value>True</Value>
@@ -43,7 +56,7 @@
 					<PropertyList>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
-								<Value>5</Value>
+								<Value>2</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Pitch" Type="int32">
@@ -52,8 +65,8 @@
 									<Modifier Name="" ID="{47A8BDCF-4C35-4950-AEF0-112ACE2A0317}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="2"/>
-											<Property Name="Min" Type="Real64" Value="-2"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -99,14 +112,13 @@
 							</ValueList>
 						</Property>
 						<Property Name="Pitch" Type="int32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{A62FA031-16D2-4449-9229-47484EE181B5}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -123,7 +135,7 @@
 									<Modifier Name="" ID="{60C322D5-CB57-47A5-9AEE-0F2639AE1B1C}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Min" Type="Real64" Value="-3"/>
+											<Property Name="Min" Type="Real64" Value="-5"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -261,6 +273,19 @@
 								<Value>1</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{8E980783-15B3-43C3-BCA1-4D565B521E6A}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseMaxSoundPerInstance" Type="bool">
 							<ValueList>
 								<Value>True</Value>
@@ -387,7 +412,7 @@
 					<PropertyList>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
-								<Value>5</Value>
+								<Value>2</Value>
 							</ValueList>
 						</Property>
 						<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -405,13 +430,13 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Creditsv2" ID="{7193B714-8B00-4EAF-9C36-CB35835A4EA8}" ShortID="1033616064">
+						<AudioFileSource Name="Creditsv3" ID="{435A6BE1-6445-4B65-8BB1-22534875CFD6}" ShortID="362155184">
 							<Language>SFX</Language>
-							<AudioFile>Creditsv2.wav</AudioFile>
+							<AudioFile>Creditsv3.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Creditsv2" ID="{7193B714-8B00-4EAF-9C36-CB35835A4EA8}" Platform="Linked"/>
+						<ActiveSource Name="Creditsv3" ID="{435A6BE1-6445-4B65-8BB1-22534875CFD6}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Picture" ID="{A203FA37-C399-4450-A070-E1F89DC2851D}" ShortID="701257568">
@@ -451,6 +476,18 @@
 							<ValueList>
 								<Value>1</Value>
 							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{CBBFAE69-53BB-4C6E-ADC6-0E8CA1D76E1B}">
+										<PropertyList>
+											<Property Name="Max" Type="Real64" Value="3"/>
+											<Property Name="Min" Type="Real64" Value="-3"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
 						</Property>
 						<Property Name="UseMaxSoundPerInstance" Type="bool">
 							<ValueList>
@@ -751,13 +788,13 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="SevenDaysv3" ID="{B10D1EB6-3C2A-4D39-99B8-2DC8C72B006B}" ShortID="730018957">
+						<AudioFileSource Name="SevenDaysv4" ID="{4EFED83B-4FF2-4DA1-9358-93DAC5F4C53E}" ShortID="924120073">
 							<Language>SFX</Language>
-							<AudioFile>SevenDaysv3.wav</AudioFile>
+							<AudioFile>SevenDaysv4.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="SevenDaysv3" ID="{B10D1EB6-3C2A-4D39-99B8-2DC8C72B006B}" Platform="Linked"/>
+						<ActiveSource Name="SevenDaysv4" ID="{4EFED83B-4FF2-4DA1-9358-93DAC5F4C53E}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<RandomSequenceContainer Name="IsTyping" ID="{D8E7766B-0D5E-4458-ACD7-B89B934E8E4B}" ShortID="1002017109">
@@ -892,14 +929,13 @@
 							</ValueList>
 						</Property>
 						<Property Name="Pitch" Type="int32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{4EAEA571-D6F5-4A44-8AC0-3095202D4B2D}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -916,7 +952,7 @@
 									<Modifier Name="" ID="{956D3A7D-C067-4485-9E1B-699E839AD634}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Min" Type="Real64" Value="-3"/>
+											<Property Name="Min" Type="Real64" Value="-5"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
