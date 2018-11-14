@@ -47,6 +47,8 @@ public class DisplayManager : MonoBehaviour
     public GameObject CreditsPanel;
     public GameObject NameEntryPanel;
     public GameObject NarrativeIntroPanel;
+    public GameObject StartGamePanel;
+    public GameObject EndGamePanel;
 
     public GameObject PortraitImagePanel;
     public Image PortraitImage;
@@ -748,6 +750,27 @@ public class DisplayManager : MonoBehaviour
             default:
                 return "them";
         }
+    }
+
+    public void CloseStartGamePanel()
+    {
+        StartGamePanel.SetActive(false);
+    }
+
+    public void CloseEndGamePanel()
+    {
+        EndGamePanel.SetActive(false);
+    }
+
+    IEnumerator ShowEndGamePanelDelay()
+    {
+        yield return new WaitForSeconds(5.0f);
+        EndGamePanel.SetActive(true);
+    }
+
+    public void ShowEndGamePanel()
+    {
+        StartCoroutine(ShowEndGamePanelDelay());
     }
 
     public void CloseNameEntryPanel()

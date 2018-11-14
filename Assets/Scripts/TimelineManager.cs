@@ -267,6 +267,7 @@ public class TimelineManager : MonoBehaviour
         {
             Debug.Log("Saved game exists, loading it...");
             //Here we have a save already, so load that and continue from there
+            DisplayManager.instance.CloseStartGamePanel();
             DisplayManager.instance.CloseNameEntryPanel();
             DisplayManager.instance.CloseNarrativeIntroPanel();
             DisplayManager.instance.ShowMainMenu();
