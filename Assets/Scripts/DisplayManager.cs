@@ -573,8 +573,7 @@ public class DisplayManager : MonoBehaviour
         }
         Debug.Log(AnalyticsEvent.Custom("choice_made", new Dictionary<string, object>
         {
-            { "choice_text", ChoicesString },
-            { "choice_chosen", ChoiceIndex }
+            { "choice_chosen", choices[ChoiceIndex] }
         }));
         GameObject.Destroy(ChoiceUI);
         AkSoundEngine.PostEvent("ChoicePick", gameObject);

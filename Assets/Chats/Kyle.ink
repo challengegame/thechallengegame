@@ -13,7 +13,7 @@ Kyle;Hello! #time=5:20:13:00
 Kyle;This is Kyle. From school? #time=5:20:13:04
 Kyle;My picture should be in the top-left. #time=5:20:13:08
 Kyle;I am a very generic white guy, so I wouldn't blame you if you dont remember me. #time=5:20:13:13
-Kyle;Anyway--I'm holding a party tomorrow! #time=5:20:13:17
+Kyle;Anyway--I'm having a bash tomorrow! #time=5:20:13:17
 Kyle;I finished sending out invitations this morning #time=5:20:13:21
 Kyle;(though we both know full well people are going to sneak in) #time=5:20:13:25
 Kyle;Tanya wanted me to make an exception though #time=5:20:13:29
@@ -45,7 +45,7 @@ Kyle;The other people in your group are... #time=5:20:14:32
 Kyle;Kalil and Anetta, right? #time=5:20:14:40
 Kyle;Which of them would you like to bring along tomorrow? #time=5:20:14:45
 Kyle;I don't mind either way. #time=5:20:14:49
-Kyle;From what Tanya says, they both sound cool! #time=5:20:14:53
+Kyle;From what Tanya says, they both sound quite cool! #time=5:20:14:53
 	* * [I'm bringing Kalil.]
 	Player;I'll be bringing Kalil. #time=5:20:14:56
 	Player;The group has been a bit fractured lately--especially where he's concerned--and I think this is exactly what we need to stick together. #time=5:20:15:05
@@ -67,5 +67,6 @@ Kyle;From what Tanya says, they both sound cool! #time=5:20:14:53
 	- -
 	Kyle;I think that's everything! #time=5:20:15:27
 	Kyle;Take care of yourself. :) #time=5:20:15:31
+	Kyle;[offline] #time=5:20:15:33
 
 -> END

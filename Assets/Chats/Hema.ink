@@ -9,112 +9,131 @@ EXTERNAL CheckHemaDrunk()
 //This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
 #Hema
 
-Hema;gooooooooooooood morning! #time=1:06:24:14
-Hema;how did the storage upgrade go? #time=1:06:24:18
-Hema;did you manage to transfer any of your stuff over to that new memory card you installed last night? #time=1:06:24:20
+Hema;gooooooooooooood morning! #time=1:06:26:20
+Hema;how's the new phone? #time=1:06:26:25
+Hema;did you manage to transfer any of your stuff over? #time=1:06:26:29
 * [Not really]
-Player;Not really #time=1:06:24:23
-Player;I've got my contacts, but that's about it #time=1:06:24:25
-Player;Now that I think about it, there isn't too much I'm going to miss #time=1:06:24:29
-Hema;That's pretty zen of you considering you just deleted 2 years of history #time=1:06:24:35
-Player;Ehhhhhhhhhh #time=1:06:24:38
-Player;I get what you mean, but #time=1:06:24:42
+Player;Not really #time=1:06:26:33
+Player;I've got my contacts, and... #time=1:06:26:37
+Player;That's about it #time=1:06:26:41
+Hema;i heard it got run over by a bus because you dropped it #time=1:06:26:46
+Hema;in the road #time=1:06:26:49
+Hema;like a dingus #time=1:06:26:52
+Player;uh #time=1:06:26:57
+Player;where/how did you hear this? #time=1:06:27:01
 
 
 * [I did!]
-Player;I did! #time=1:06:24:22
-Player;I transferred everything over to a set of extra databanks I've got lying around #time=1:06:24:24
-Player;My digital hoard only grows #time=1:06:24:26
-Player;I am *endless* #time=1:06:24:29
-Hema;uhh #time=1:06:24:33
-Hema;really? #time=1:06:24:35
-Player;Nah #time=1:06:24:37
-Player;Everything's gone #time=1:06:24:39
-Player;I did manage to move my contacts over #time=1:06:24:42
+Player;I did! transferred everything over with some extra memory cards I've got lying around #time=1:06:26:33
+Player;My digital hoard *grows* #time=1:06:26:37
+Hema;really? cause i heard your last phone got run over by a bus #time=1:06:26:41
+Hema;because you dropped it #time=1:06:26:46
+Hema;in the road #time=1:06:26:49
+Hema;like a dingus #time=1:06:26:52
+Player;uh #time=1:06:26:57
+Player;where/how did you hear this? #time=1:06:27:01
 -
-Player;...It's pretty nice having a clean slate for once #time=1:06:24:47
-#time=1:06:24:50
-Hema;SPEAKING of clean slates...  -> day1_morning_hema_sequence2
+Hema;i hear everything from everywhere. #time=1:06:27:07
+Hema;you should absolutely know this by now #time=1:06:27:11
+Hema;<sprite name="Wink"> #time=1:06:27:14
+Player;...well, it is pretty nice having a clean slate for once #time=1:06:27:18
+Hema;that is the EXACT kind of excuse a clumsy person would make #time=1:06:27:23
+Hema;(i know because ive made it before) #time=1:06:27:27
+#time=1:06:27:31
+Hema;SPEAKING of clean slates...i have *news*  -> day1_morning_hema_sequence2
 
 === day1_morning_hema_sequence2 ===
 
-* [...Rinsed tablets?]
-Player;Let me guess...Rinsed tablets? #time=1:06:24:52
-Player;Bleached sheets? #time=1:06:24:54
-Player;Washed leaflets? #time=1:06:24:56
-Hema;HA #time=1:06:24:58
-Hema;see #time=1:06:25:04
-Hema;that's me, laughing #time=1:06:25:08
+* [HOW MUCH GOSSIP CAN ONE PERSON HAVE]
+Player;HOW MUCH GOSSIP CAN ONE PERSON HAVE #time=1:06:27:35
+Player;YOU ALWAYS #time=1:06:27:39
+Player;HAVE #time=1:06:27:43
+Player;SO MUCH GOSSIP #time=1:06:27:47
+Hema;HA #time=1:06:27:50
+Hema;oh {PlayerName()} #time=1:06:27:54
+Hema;you have no idea #time=1:06:27:58
 
 
 * [Secrets?]
-Player;Ooooh, there are secrets about? #time=1:06:24:52
-Player;gimmegimme #time=1:06:24:55
-Hema;hahaha #time=1:06:24:57
-Hema;not really secrets #time=1:06:25:00
-Hema;just rumors #time=1:06:25:03
-Hema;gossip #time=1:06:25:05
-Hema;"Scuttlebutt" if my thesaurus isn't failing me #time=1:06:25:07
+Player;Ooooh, you've got some secrets about? that aren't mine? #time=1:06:27:35
+Player;gimmegimme #time=1:06:27:39
+Hema;hahaha #time=1:06:27:43
+Hema;not really secrets #time=1:06:27:47
+Hema;just rumors #time=1:06:27:50
+Hema;gossip #time=1:06:27:54
+Hema;"Scuttlebutt" if my thesaurus isn't failing me #time=1:06:27:58
 -
-Hema;seriously I might have some interesting news for the group chat in a couple hours #time=1:06:25:10
-	* * [It's not even 7...]
-	Player;It's not even 7 and you've already got *news* #time=1:06:25:15
-	Player;You never fail to impress, Hema #time=1:06:25:17
-	Hema;What can I say #time=1:06:25:20
-	Hema;i'm 'sportive' #time=1:06:25:22
-	Hema;(that word is going to be on the literature exam btw. you heard it here first) #time=1:06:25:25
-	Hema;oh wow #time=1:06:25:27
-	Hema;I've been such a cock #time=1:06:25:33
-	Hema;How are you? #time=1:06:25:35
-	Hema;are you doing well this morning? #time=1:06:25:38
+Hema;seriously I might have some interesting news for the group chat very very soon, and it may be <sprite name="Skull"><sprite name="Party"><sprite name="Skull"> related  #time=1:06:28:02
+	* * [Death party related?]
+	Player;Perhaps it was...death party related? #time=1:06:28:07
+	Hema;w-was that your guess #time=1:06:28:12
+	Player;...maybe <sprite name="Grimace"> #time=1:06:28:16
+	Hema;im not going to say it's a bad guess, but i will not lie to you #time=1:06:28:21
+	Hema;because friends dont do that #time=1:06:28:25
+	Hema;OH WOW #time=1:06:28:28
+	Hema;I've been so rude <sprite name="Grimace"> #time=1:06:28:34
+	Hema;How are you? #time=1:06:28:38
+	Hema;are you doing well this morning? #time=1:06:28:41
 	
 	
 	* * [Well, thanks for that.]
-	Player;well #time=1:06:25:12
-	Player;I won't be able to think about anything else for the next two hours #time=1:06:25:15
-	Player;So thanks for that #time=1:06:25:18
-	Hema;hahaha #time=1:06:25:21
-	Hema;What can I say #time=1:06:25:23
-	Hema;i'm 'gregarious' #time=1:06:25:25
-	Hema;(that word is going to be on the literature exam btw. you heard it here first) #time=1:06:25:28
-	Hema;oh wow #time=1:06:25:30
-	Hema;I've been such a cock #time=1:06:25:34
-	Hema;How are you? #time=1:06:25:36
-	Hema;are you doing well this morning? #time=1:06:25:38
+	Player;well I won't be able to think about anything else until you post it #time=1:06:28:07
+	Player;So thanks for that #time=1:06:28:12
+	Hema;hahaha #time=1:06:28:16
+	Hema;What can I say - i'm 'sportive' #time=1:06:28:21
+	Hema;(that word is going to be on the literature exam btw. you heard it here first) #time=1:06:28:25
+	Hema;oh wow #time=1:06:28:28
+	Hema;I've been so rude <sprite name="Grimace"> #time=1:06:28:34
+	Hema;How are you? #time=1:06:28:38
+	Hema;are you doing well this morning? #time=1:06:28:41
 	- -
-	Hema;i really should have started with that, sorry #time=1:06:25:40
+	Hema;i really should have started with that, sorry <sprite name="Sad"> #time=1:06:28:46
 		* * * [It's okay.]
-		Player;It's okay, Hema #time=1:06:25:44
-		Player;Seriously #time=1:06:25:46
-		Player;You're one of the most thoughtful people i know #time=1:06:25:49
-		Player;I'm doing more than okay. #time=1:06:25:51
-		Player;Thanks for asking <sprite name="Smile"> #time=1:06:25:54
-		Player;How are you? #time=1:06:25:56
+		Player;It's okay, Hema #time=1:06:28:49
+		Player;Seriously #time=1:06:28:54
+		Player;You're one of the most thoughtful people i know #time=1:06:28:58
+		Player;I'm doing more than okay. #time=1:06:29:01
+		Player;Thanks for asking <sprite name="Smile"> #time=1:06:29:05
+		Player;How are you? #time=1:06:29:09
 		
 		
 		* * * [Fine-ish?]
-		Player;It's sixth form. #time=1:06:25:43
-		Player;I think we're all fine-ish? #time=1:06:25:45
-		Player;<sprite name="Tongue_Out"> #time=1:06:25:47 
-		Player;thx for asking #time=1:06:25:51
-		Player;How are you? #time=1:06:25:53
+		Player;It's sixth form. #time=1:06:28:49
+		Player;I think we're all fine #time=1:06:28:54
+		Player;ish? #time=1:06:28:58
+		Player;<sprite name="Tongue_Out"> #time=1:06:29:01
+		Player;thx for asking #time=1:06:29:05
+		Player;How are you? #time=1:06:29:09
 		- - -
-		Hema;well #time=1:06:25:59
-		Hema;between you and me #time=1:06:26:02
-		Hema;I'll probably be doing a LOT better #time=1:06:26:04
-		Hema;...in the next couple hours #time=1:06:26:08
-		Hema;<sprite name="Wink"> #time=1:06:26:11
-			* * * * [URGH]
-			Player;URGH #time=1:06:26:13
+		Hema;well #time=1:06:29:13
+		Hema;between you and me #time=1:06:29:16
+		Hema;I'll probably be doing a LOT better very soon, if you know what I mean <sprite name="Wink"> #time=1:06:29:20
+		Hema;... #time=1:06:29:28
+		Hema;i cant hide anything from you {PlayerName()} #time=1:06:29:32
+			* * * * [Knew it!!]
+			Player;Knew it!! #time=1:06:29:36
+			Player;utterly irresistible. #time=1:06:29:41
 			
 			
-			* * * * [Don't leave me hanging!]
-			Player;Don't leave me hanging like this Hema!! #time=1:06:26:13
+			* * * * [...Is that a good thing?]
+			Player;on one hand, that's great. love it. friendship. awesome.  #time=1:06:29:36
+			Player;on the other hand that could definitely be an issue depending on the situation #time=1:06:29:41
 			- - - -
-			Hema;haha #time=1:06:26:16
-			Hema;I have to start getting ready for early morning practice #time=1:06:26:20
-			Hema;which of course is different than early mid-morning practice #time=1:06:26:22
-			Hema;talk more soon!!! #time=1:06:26:25
+			Hema;haha #time=1:06:29:44
+			Hema;you arent wrong <sprite name="Wink"> #time=1:06:29:48
+			Hema;ANYWAY #time=1:06:29:52
+			Hema;one of the richest people at our school is throwing a party at his house #time=1:06:29:56
+			Hema;and a couple of eastenders #time=1:06:30:00
+			Hema;(also from our school) #time=1:06:30:04
+			Hema;are planning to crash it #time=1:06:30:08
+			Hema;(also at his house) #time=1:06:30:12
+			Player;eastender as in fans of the show, or people who live more on the east end? #time=1:06:30:18
+			Hema;probably both? #time=1:06:30:21
+			Player;how many ways could that go horribly wrong? #time=1:06:30:26
+			Hema;SO MANY #time=1:06:30:31
+			Hema;talk more soon!!! #time=1:06:30:35
+			Player;oh okay yeah conversation over - talk then! <sprite name="Party"> #time=1:06:30:39
+			Hema;[offline] #time=1:06:30:40
 			Hema;hey #time=2:21:08:25
 			Hema;what happened today wasn't your fault #time=2:21:08:29
 			Hema;It was mine #time=2:21:08:35
@@ -129,7 +148,7 @@ Player;Kalil was just being a dick. #time=2:21:08:45
 Hema;well #time=2:21:08:48
 Hema;I could have done more you know? #time=2:21:08:50
 Hema;Better #time=2:21:08:52
-Hema;there were ways that could have gone where everyone went away happy and I wasn't the only one in bed with indigestion because shrimp pizza was not a good idea on a Tuesday night #time=2:21:08:56
+Hema;there were ways that could have gone where everyone went away happy and I wasn't the only one in bed with indigestion because prawn pizza was not a good idea on a Tuesday night #time=2:21:08:56
 Hema;I just keep thinking about it #time=2:21:09:05
 Hema;...anyway #time=2:21:09:08
 Hema;see you tomorrow {PlayerName()} <sprite name="Smile"> #time=2:21:09:10
@@ -143,6 +162,7 @@ Hema;<sprite name="Smile"> #time=2:21:08:50
 Hema;you know that isn't what I was talking about #time=2:21:08:53
 Hema;but it's nice of you to say #time=2:21:08:56
 Hema;see you tomorrow {PlayerName()} #time=2:21:09:01
+Hema;[offline] #time=2:21:09:03
 -
 Hema;i invited Anetta over to watch that trashy anime I mentioned earlier today #time=3:17:08:14
 Hema;BUT #time=3:17:08:18
@@ -189,9 +209,11 @@ Hema;which snacks should I pick up tonight? #time=3:17:08:28
 	Hema;we'll get over this #time=3:17:13:10
 	Hema;I have to believe that. #time=3:17:13:14
 	Hema;we're too close for one stupid-ass party to tear us apart #time=3:17:13:18
+	Hema;[offline] #time=3:17:13:20
 	Hema;LAZY SELFIE #time=3:19:20:18
-	Hema;<SelfieDay3> #time=3:19:20:20
+	Hema;[INSERT SELFIE OF HEMA AND ANETTA WATCHING TRASHY ANIME AND BEING HAPPY FOR ONCE HERE] #time=3:19:20:20
 	Hema;god i love anime #time=3:19:20:50
+	Hema;[offline] #time=3:19:20:52
 -
 -> day6_evening_hema_sequence1
 
@@ -264,8 +286,10 @@ Hema;may get more cheese puffs #time=6:21:10:38
 *[Let's go hunting.]
     Player;Let's go hunt for cheese puffs together #time=6:21:10:43
     Hema;FUCKYE AH HCEESE PUFFS #time=6:21:10:47
+    Hema;[offline] #time=6:21:10:49
 *[Take it slowly...]
     Player;Okay, let's take it slowly... #time=6:21:10:43
     Hema;good plan #time=6:21:10:47
+    Hema;[offline] #time=6:21:10:49
 -
 ->END

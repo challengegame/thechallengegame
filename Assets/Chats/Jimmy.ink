@@ -24,7 +24,7 @@ Jimmy;please #time=3:12:11:42
 Player;1 #time=3:12:11:45
 Jimmy;thank you #time=3:12:11:49
 Jimmy;By the way, how's your mum? #time=3:12:11:53
-Jimmy;(Not an insult. Genuine question.) #time=3:12:11:56
+Jimmy;(Not an insult. Genuine question. <sprite name="Thumbs_Up">) #time=3:12:11:56
 Player;She's giving a lecture tonight! #time=3:12:12:00
 Jimmy;Brill. Teutonic period? #time=3:12:12:04
 Player;You know it. #time=3:12:12:07
@@ -83,6 +83,7 @@ Jimmy;Message me the alphanumeric character "2" if you understand. #time=3:12:12
 				Jimmy;Yeah. #time=3:12:14:37
 				Jimmy;You don't even want to KNOW the things I had to do to get this intel. #time=3:12:14:41
 				Jimmy;1 sec! Gotta switch to another app. I think someone noticed me. #time=3:12:14:46
+				Jimmy;[offline] #time=3:12:14:48
 				
 				
 				* * * * * [No.]
@@ -93,10 +94,11 @@ Jimmy;Message me the alphanumeric character "2" if you understand. #time=3:12:12
 				Player;...No? #time=3:12:13:57
 				Player;Is it? #time=3:12:14:01
 				Jimmy;Uh. #time=3:12:14:06
-				Jimmy;No. #time=3:12:14:12
-				Jimmy;it's not the biggest scoop either. #time=3:12:14:15
+				Jimmy;No. <sprite name="Smile"> #time=3:12:14:12
+				Jimmy;it's not the biggest scoop either. <sprite name="Thumbs_Up"> #time=3:12:14:15
 				Jimmy;I respect your decision, for the record. #time=3:12:14:19
 				Jimmy;1 sec. Gotta switch to another app. I think someone noticed me. #time=3:12:14:24
+				Jimmy;[offline] #time=3:12:14:26
 				
 				
 				
@@ -118,6 +120,7 @@ Jimmy;Message me the alphanumeric character "2" if you understand. #time=3:12:12
 			Jimmy;Yeah. #time=3:12:14:22
 			Jimmy;You don't even want to KNOW the things I had to do to get this intel. #time=3:12:14:26
 			Jimmy;1 sec! Gotta switch to another app. I think someone noticed me. #time=3:12:14:29
+			Jimmy;[offline] #time=3:12:14:31
 			
 		
 		* * * [3]
@@ -125,6 +128,7 @@ Jimmy;Message me the alphanumeric character "2" if you understand. #time=3:12:12
 		Jimmy;I warned you. #time=3:12:13:18
 		Jimmy;1 sec. Gotta switch to another app. #time=3:12:13:22
 		Jimmy;I think someone noticed me. #time=3:12:13:25
+		Jimmy;[offline] #time=3:12:13:27
 	
 	* * [2]
 	Player;2 #time=3:12:12:37
@@ -151,6 +155,7 @@ Jimmy;Message me the alphanumeric character "2" if you understand. #time=3:12:12
 		Jimmy;Yeah. #time=3:12:14:00
 		Jimmy;You don't even want to KNOW the things I had to do to get this intel. #time=3:12:14:05
 		Jimmy;1 sec! Gotta switch to another app. I think someone noticed me. #time=3:12:14:09
+		Jimmy;[offline] #time=3:12:14:11
 		
 		* * * [Can't do that.]
 		Player;Sorry Jimmy. #time=3:12:13:01
@@ -160,16 +165,18 @@ Jimmy;Message me the alphanumeric character "2" if you understand. #time=3:12:12
 		Player;...No? #time=3:12:13:15
 		Player;Is it? #time=3:12:13:19
 		Jimmy;Uh. #time=3:12:13:23
-		Jimmy;No. #time=3:12:13:30
-		Jimmy;it's not the biggest scoop either. #time=3:12:13:33
+		Jimmy;No. <sprite name="Smile"> #time=3:12:13:30
+		Jimmy;it's not the biggest scoop either. <sprite name="Thumbs_Up"> #time=3:12:13:33
 		Jimmy;I respect your decision. #time=3:12:13:37
 		Jimmy;1 sec. Gotta switch to another app. I think someone noticed me. #time=3:12:13:41
+		Jimmy;[offline] #time=3:12:13:43
 	- -
 	Jimmy;...All clear. #time=3:12:22:13
 	Jimmy;Alright! #time=3:12:22:17
 	Jimmy;Have a good one. #time=3:12:22:20
 	Jimmy;As always, our code: #time=3:12:22:25
-	Jimmy;<sprite name="Skull"><sprite name="Party"><sprite name="Heart"><sprite name="Party"><sprite name="Eggplant"> #time=3:12:22:30
+	Jimmy;<sprite name="Skull"><sprite name="Party"><sprite name="Heart"><sprite name="Party"><sprite name ="Eggplant"> #time=3:12:22:30
 	Player;...thanks #time=3:12:22:35
+	Jimmy;[offline] #time=3:12:22:37
 	
 -> END

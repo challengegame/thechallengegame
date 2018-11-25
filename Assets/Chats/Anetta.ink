@@ -35,7 +35,7 @@ Anetta;this is kind of a big deal for me to talk about #time=1:22:13:35
 
 
 * [I hope you can.]
-Player;I certainly hope you can. #time=1:22:13:24
+Player;I hope you can. #time=1:22:13:24
 Anetta;srry... #time=1:22:13:27
 Anetta;this is kind of a big deal for me to talk about #time=1:22:13:31
 -
@@ -57,7 +57,7 @@ Anetta;is it on my face am i crying can #time=1:22:14:09
 Anetta;are people seeing me cry right now? are they watching me? #time=1:22:14:11
 Anetta;and youre freaking out and the words all look wrong and if you want to be an architect you have to have really good grades and you keep thinking about your grades and the words are wrong and you cant mess this up #time=1:22:14:13
 Anetta;Kalil is texting Tanya and he changes his opinion to match hers or to suck up and hes been doing it for YEARS and its like #time=1:22:14:15
-Anetta;what the FUCK #time=1:22:14:19
+Anetta;what the HELL #time=1:22:14:19
 Anetta;ARE POEMS #time=1:22:14:22
 Anetta;WHY DO WE NEED TO BE TESTED ON POEMS #time=1:22:14:24
 Anetta;'BUT WHAT DO THEY REALLY REALLY REALLY MEAN' PISS OFF #time=1:22:14:26
@@ -90,6 +90,7 @@ Anetta;i dont know how tlking about it more will help #time=1:22:15:23
 	Anetta;if it was really bad, id let you know #time=1:22:15:41
 	Anetta;...and i'm not into Kalil #time=1:22:15:46
 	Anetta;just to be completely clear #time=1:22:15:50
+	Anetta;[offline] #time=1:22:15:52
 	~ hesitate_GiveSpace = true
 	
 	
@@ -117,7 +118,8 @@ Anetta;i dont know how tlking about it more will help #time=1:22:15:23
 		Anetta;and friends dont push their friends to talk talk talk talk talk when they say no #time=1:22:16:21
 		Anetta;there's the big secret #time=1:22:16:25
 		Anetta;achievement unlocked #time=1:22:16:28
-		Anetta;hve a good fucking night #time=1:22:16:30
+		Anetta;hve a good bloody night #time=1:22:16:30
+		Anetta;[offline] #time=1:22:16:31
 		~ not_GiveSpace = true
 		
 		
@@ -127,6 +129,7 @@ Anetta;i dont know how tlking about it more will help #time=1:22:15:23
 		Player;You really want to drop it, I will. #time=1:22:15:46
 		Anetta;thanks #time=1:22:15:50
 		Anetta;see you tomorrow #time=1:22:15:55
+		Anetta;[offline] #time=1:22:15:57
 		~ hesitate_GiveSpace = true
 		
 		
@@ -143,6 +146,7 @@ Anetta;does that make sense? #time=1:22:15:32
 Anetta;dont text me #time=1:22:15:34
 Anetta;tell me in prson #time=1:22:15:36
 Anetta;or we could jst keep dropping it that sounds good too #time=1:22:15:39
+Anetta;[offline] #time=1:22:15:42
 -
 Anetta;hey {PlayerName()} #time=4:18:34:12
 Anetta;i just #time=4:18:34:15
@@ -238,6 +242,7 @@ Anetta;even if you push too hard sometmes #time=4:18:35:17
 		Anetta;its good to have u all #time=4:18:36:56
 		Anetta;y'all #time=4:18:36:59
 		Anetta;<sprite name="Soft_Smile"> #time=4:18:37:02
+		Anetta;[offline] #time=4:18:37:04
 
 { bringAnetta:
 ->AnettaMerge
@@ -271,6 +276,7 @@ Anetta;I'll just do something for myself this afternoon #time=6:10:08:54
 -
 Anetta;so if i dont message thats why #time=6:10:08:59
 Anetta;have fun #time=6:10:09:03
+Anetta;[offline] #time=6:10:09:05
 ->AnettaMerge
 
 ==AnettaMerge==

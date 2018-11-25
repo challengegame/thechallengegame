@@ -61,20 +61,20 @@ Kalil;You're the one who's known her longest #time=3:06:42:56
 Kalil;I thought you might know. #time=3:06:42:59
 	* * [No way.]
 	Player;No way. #time=3:06:43:03
-	Player;Not a snail's chance in hell. #time=3:06:43:05
+	Player;Not a chance. #time=3:06:43:05
 	Player;ENTIRELY out of the question--sorry #time=3:06:43:07
 	Kalil;Thanks for the vote of confidence m8 #time=3:06:43:10
 	Kalil;Really, totally appreciated. #time=3:06:43:12
 	Kalil;really #time=3:06:43:15
-	Player;She hasn't dated *anyone* Kalil #time=3:06:43:18
+	Player;She hasn't gone out with *anyone* Kalil #time=3:06:43:18
 	Player;What makes you think she'd even be interested? #time=3:06:43:20
 	Kalil;Wait...Not anyone? #time=3:06:43:26
 	Kalil;What about what's his name in year 6...Patrick Millwing? #time=3:06:43:29
 	Kalil;He moved away? #time=3:06:43:32
-	Player;Nope, they just hung out because their moms were a part of the same diocese #time=3:06:43:36
+	Player;Nope, they just hung out because their mums went to the same church #time=3:06:43:36
 	Kalil;wow... #time=3:06:43:42
 	Kalil;I didn't even--i just assumed? #time=3:06:43:45
-	Kalil;If she HASNT dated anyone so far, then I could have a better chance than just about anyone. #time=3:06:43:48
+	Kalil;If she HASNT gone out with anyone so far, then I could have a better chance than just about anyone. #time=3:06:43:48
 	Kalil;I'm her friend. #time=3:06:43:51
 	Kalil;...maybe she's even been waiting for me. #time=3:06:43:53
 	
@@ -89,9 +89,9 @@ Kalil;I thought you might know. #time=3:06:42:59
 	Kalil;she's private but, wow... #time=3:06:43:20
 	Kalil;I didn't even--i just assumed? #time=3:06:43:23
 	Kalil;It MUST have happened at some point, right? #time=3:06:43:27
-	Kalil;What about what's his name in year 6...Patrick Millwing? #time=3:06:43:31
+	Kalil;What about what's his name in year 10...Patrick Millwing? #time=3:06:43:31
 	Kalil;He moved away? #time=3:06:43:33
-	Player;Nope, they just hung out because their moms were a part of the same diocese #time=3:06:43:38
+	Player;Nope, they just hung out because their mums went to the same church #time=3:06:43:38
 	Kalil;wow... #time=3:06:43:42
 	Kalil;If she HASNT dated anyone so far, then I could have a better chance than just about anyone. #time=3:06:43:46
 	Kalil;I'm her friend. #time=3:06:43:49
@@ -106,7 +106,7 @@ Kalil;I thought you might know. #time=3:06:42:59
 	Kalil;Like you'd understand. #time=3:06:44:15
 	Kalil;Do you know how long I've fancied Tanya? #time=3:06:44:18
 	Kalil;It's been YEARS, {PlayerName()} #time=3:06:44:20
-	Kalil;from the day you introduced us in 4th year #time=3:06:44:22
+	Kalil;from the day you introduced us #time=3:06:44:22
 	Kalil;i was helpless. #time=3:06:44:25
 	Kalil;... #time=3:06:44:27
 	Kalil;Do you know what its like to be hungry? #time=3:06:44:33
@@ -120,17 +120,17 @@ Kalil;I thought you might know. #time=3:06:42:59
 		Kalil;tell me when #time=3:06:44:51
 		Player;When I was younger, mum and dad stayed away overnight for a date. #time=3:06:45:03
 		Player;They left me at home with a sitter. #time=3:06:45:06
-		Player;At first everything was okay, but then the sitter started muttering about 'being reduced' to looking over 'barbarian children' and took her stuff and walked out the door #time=3:06:45:10
+		Player;At first everything was okay, but then after about 5 min, the sitter started muttering about how I 'didnt belong in this country' and how 'the last thing england needed was more brown kids'. Then she took the money and walked out #time=3:06:45:10
 		Kalil;what the hell??? #time=3:06:45:12
 		Player;yeah #time=3:06:45:15
 		Player;I grew up in London mate #time=3:06:45:18
 		Player;and dad's from Camden #time=3:06:45:20
 		Player;Anyway #time=3:06:45:23
-		Player;I didn't know how to cook, and all the cabinets and such were locked--the sitter had the key #time=3:06:45:27
+		Player;I didn't know how to cook, and all the cabinets and such were empty anyway #time=3:06:45:27
 		Player;when mum and dad came back the next day, I had chewed up every nail I had and was starting on a couch cushion #time=3:06:45:32
-		Kalil;that's fucking horrific #time=3:06:45:35
+		Kalil;that's horrific #time=3:06:45:35
 		Player;yeah, well #time=3:06:45:37
-		Player;I certainly know what it's like to be hungry--and the cabinets aren't locked anymore #time=3:06:45:41
+		Player;I certainly know what it's like to be hungry--and the cabinets are always full now #time=3:06:45:41
 		Player;which is nice #time=3:06:45:44
 		Player;So why did you want to hear about my occasionally disturbing childhood? #time=3:06:45:48
 		Kalil;... #time=3:06:45:50
@@ -150,28 +150,28 @@ Kalil;I thought you might know. #time=3:06:42:59
 		Player;*playing along* #time=3:06:44:58
 		Player;When I was younger, mum and dad stayed away overnight for a date. #time=3:06:45:03
 		Player;They left me at home with a sitter. #time=3:06:45:06
-		Player;At first everything was okay, but then the sitter started muttering about 'being reduced' to looking over 'barbarian children' and took her stuff and walked out the door #time=3:06:45:10
+		Player;At first everything was okay, but after about 5 mins, the the sitter started muttering about how I 'didnt belong in this country' and how 'the last thing england needed was more brown kids'. Then she took the money and walked out #time=3:06:45:10
 		Kalil;what the hell?? #time=3:06:45:12
 		Player;yeah #time=3:06:45:15
 		Player;I grew up in London mate #time=3:06:45:18
 		Player;and dad's from Camden #time=3:06:45:20
 		Player;Anyway #time=3:06:45:23
-		Player;I didn't know how to cook, and all the cabinets and such were locked--the sitter had the key #time=3:06:45:27
+		Player;I didn't know how to cook, and all the cabinets and such were empty anyway #time=3:06:45:27
 		Player;when mum and dad came back the next day, I had chewed up every nail I had and was starting on a couch cushion #time=3:06:45:32
 		Kalil;that's bloody horrific #time=3:06:45:35
 		Player;yeah, well #time=3:06:45:37
-		Player;I certainly know what it's like to be hungry--and the cabinets aren't locked anymore #time=3:06:45:41
+		Player;I certainly know what it's like to be hungry--and the cabinets are always full now #time=3:06:45:41
 		Player;which is nice #time=3:06:45:44
 		Player;So why did you want to hear about my occasionally disturbing childhood? #time=3:06:45:48
 		Kalil... #time=3:06:45:50
 		Kalil;i feel like I've been starving my entire life #time=3:06:45:53
 		Kalil;and when I met Tanya, it was like I saw my first chance to be truly full #time=3:06:45:56
 		Player;... #time=3:06:45:58
-		Player;are you fucking kidding me #time=3:06:46:04
+		Player;are you actually kidding me #time=3:06:46:04
 		- - -
 		Kalil;sure #time=3:06:46:09
 		Kalil;yeah #time=3:06:46:12
-		Kalil;I'm fucking kidding #time=3:06:46:14
+		Kalil;I'm kidding #time=3:06:46:14
 		Kalil;have a good morning #time=3:06:46:17
 		Kalil;forget I said anything #time=3:06:46:20
 		Player;Kalil #time=3:06:46:24
@@ -216,7 +216,7 @@ Kalil;but it's always been there #time=3:06:47:53
 Kalil;it's always growing #time=3:06:47:55
 Kalil;i don't know what happens when the hole gets larger than me #time=3:06:47:58 
 Kalil;that's why this party stuff is so important #time=3:06:48:01
-Kalil;When you introduced me to Tanya, I saw pain in her. The same pain that haunted me when I closed my eyes. #time=3:06:48:05
+Kalil;When you introduced me to Tanya, I could see she was huring too. It made me thing she might actually understand me. #time=3:06:48:05
 Kalil;I thought, here was a person who could finally fill that gap #time=3:06:48:08
 Kalil;And I don't know...I feel like if I don't make my move now, I'll never get another chance #time=3:06:48:10
 Kalil;To be Whole. #time=3:06:48:13
@@ -244,8 +244,9 @@ Kalil;...does any of that make sense? #time=3:06:48:18
 	Kalil;Not like Tanya will. #time=3:06:48:45
 	- -
 	Kalil;take care #time=3:06:48:49
-	Kalil;shit #time=3:08:41:03
-	Kalil;SHIT #time=3:08:41:07
+	Kalil;[offline] #time=3:06:48:51
+	Kalil;why did I do that? #time=3:08:41:03
+	Kalil;WHY THE HELL DID I DO THAT? #time=3:08:41:07
 -
 { bringAnetta:
 ->KalilMopeParty
@@ -253,7 +254,7 @@ Kalil;...does any of that make sense? #time=3:06:48:18
 ->KalilOther
 }
 ==KalilMopeParty==
-Kalil;Fuckin party #time=6:10:08:10
+Kalil;Bloody party #time=6:10:08:10
 	* [Sorry...]
     Player;I'm sorry Kalil. #time=6:10:08:15
     Player;I really wish we could all go #time=6:10:08:18
@@ -272,6 +273,7 @@ Kalil;Fuckin party #time=6:10:08:10
     Player;But you kind of brought it upon yourself #time=6:10:08:19
     Kalil;piss #time=6:10:08:26
     Kalil;off #time=6:10:08:30
+    Kalil;[offline] #time=6:10:08:31
 -
 ->KalilOther
 ==KalilOther==

@@ -41,13 +41,13 @@ Jessie;We need to fight more krakens #time=1:06:41:06
 	* * [...that's heavy.]
 	Player;Wow. #time=1:06:41:08
 	Player;That's, uh...heavy. #time=1:06:41:11
-	Jessie;not as HEAVY as the CRUSHING WATER PRESSURE OF THE BLACK ABYSS on the WHALES #time=1:06:41:13
+	Jessie;not as HEAVY as the CRUSHING PRESSURE OF THE BLACK ABYSS on the WHALES #time=1:06:41:13
 	- -
 		* * * [...Anything else?]
 		Player;soooooo #time=1:06:41:16
 		Player;Aside from existential nightmares #time=1:06:41:18
 		Player;Is there anything else you wanted to talk to me about? #time=1:06:41:20
-		Jessie;You LOVE my existential nightmares. #time=1:06:41:24
+		Jessie;You <sprite name="Heart"> my existential nightmares. #time=1:06:41:24
 		Jessie;But actually #time=1:06:41:26
 		Jessie;Yeah #time=1:06:41:28
 		Jessie;Have you noticed something odd about the group? #time=1:06:41:36
@@ -68,7 +68,7 @@ Jessie;We need to fight more krakens #time=1:06:41:06
 			Player;What? #time=1:06:41:40
 			Player;What do you mean odd? #time=1:06:41:44
 			Player;Is something wrong? #time=1:06:41:47
-			Jessie;Mmm #time=1:06:41:53
+			Jessie;... #time=1:06:41:53
 			Jessie;Yeah #time=1:06:41:56
 			Jessie;Nevermind #time=1:06:41:58
 			Jessie;We can talk about it at lunch #time=1:06:42:02
@@ -84,6 +84,7 @@ Jessie;We need to fight more krakens #time=1:06:41:06
 			Jessie;Nevermind #time=1:06:41:55
 			Jessie;We can talk about it at lunch #time=1:06:41:57
 			Jessie;I have to start getting ready. See you at school. #time=1:06:42:01
+			Jessie;[offline] #time=1:06:42:03
 			- - - -
 			Jessie;Okay #time=1:14:11:19
 			Jessie;I know we're all chatting at the lunch table #time=1:14:11:21
@@ -137,7 +138,7 @@ Jessie;Do you remember what I was talking about earlier today? #time=1:14:11:47
 	Jessie;... #time=1:14:12:11
 	Jessie;Okay, I can see how you'd get goth from that #time=1:14:12:13
 	Jessie;Third, the REAL takeaway you should have had from that conversation is that there was something odd with the group #time=1:14:12:20
-	Jessie;I know Im the new guy, but I think that means I can see things from a somewhat outside perspective #time=1:14:12:24
+	Jessie;I know Im the new guy, but I think that means I can kinda see things from an outside perspective #time=1:14:12:24
 	Jessie;Small issues that could have a big impact very soon #time=1:14:12:26
 	- -
 	Jessie;In fact, I think it's already happening #time=1:14:12:32
@@ -204,7 +205,7 @@ Jessie;Wait #time=1:14:14:03
 Jessie;What? #time=1:14:14:05
 Jessie;What do you mean? #time=1:14:14:09
 Player;Just what I said. #time=1:14:14:12
-Player;Probably important to mention if your cataloging social dynamics #time=1:14:14:14
+Player;Probably important to mention if your making judgements about us #time=1:14:14:14
 Player;You like Anetta. #time=1:14:14:20
 Player;LIKE #time=1:14:14:22
 Player;*like* #time=1:14:14:24
@@ -271,6 +272,7 @@ Jessie;I thought I was going crazy #time=1:14:15:03
 		Jessie;Phew #time=1:14:15:34
 		Jessie;cool. #time=1:14:15:36
 		Jessie;Cool #time=1:14:15:39
+		Jessie;[offline] #time=1:14:15:41
 
 		
 		* * * [...]
@@ -280,6 +282,7 @@ Jessie;I thought I was going crazy #time=1:14:15:03
 		Jessie;Makes sense #time=1:14:15:40
 		- - -
 		Jessie;Thanks for at least hearing me out. #time=1:14:15:44
+		Jessie;[offline] #time=1:14:15:46
 		Jessie;Hey #time=2:15:21:06
 		#time=2:15:21:10
 		Jessie;Would you say the UK is...racist at all? -> day2_afternoon_jessie_sequence1
@@ -291,7 +294,7 @@ Player;Not really. #time=2:15:21:14
 Player;There's jerks, but that's the case anywhere #time=2:15:21:17
 Jessie;Someone literally yelled at you on the bus today #time=2:15:21:20
 Player;jerks #time=2:15:21:24
-Player;wankers #time=2:15:21:27
+Player;pricks #time=2:15:21:27
 Player;take your pick of terms but the principle is still the same #time=2:15:21:30
 Player;sometimes shit happens #time=2:15:21:34
 Player;can't really do anything but surround yourself with better people #time=2:15:21:37
@@ -316,17 +319,18 @@ Jessie;of course #time=2:15:21:58
 Jessie;you know I had to look into it #time=2:15:22:02
 Player;Of course. #time=2:15:22:07
 Jessie;It turns out a bunch of the afro-carribean people who came over to rebuild England after WW2 have been getting detained and even deported #time=2:15:22:10
-Jessie;And nothing's happening #time=2:15:22:15
-Jessie;NO ONE is fixing it. #time=2:15:22:18
-Jessie;These people are still in legal limbo, months and months later #time=2:15:22:21
+Jessie;And nothing seem sto be happening #time=2:15:22:15
+Jessie;These people were in limbo, months and months later #time=2:15:22:21
 Jessie;People who in some cases have just been in England their entire lives. This is their *home* #time=2:15:22:24
-Jessie;So I started asking a few people if this is common #time=2:15:22:29
+Jessie;So I started asking a few people if racism is common #time=2:15:22:29
 Jessie;(black people tbh) #time=2:15:22:33
 Jessie;And...it sounds like it is. #time=2:15:22:37
-Jessie;There was a thing called the Brixton riots back in the 80s. Really rough stuff. Lots of death #time=2:15:22:40
-Jessie;There's police brutality. Profiling. Incarceration rates are comparable to the states if not higher #time=2:15:22:45
+Jessie;There was a thing called the Brixton riots back in the 80s. Really rough stuff. Apparently started from or by racist police #time=2:15:22:40
+Jessie;now there's still invasive stop and searches. Profiling. Proportion of black people in prison is way higher than any other demographic #time=2:15:22:44
+Jessie;i'm talking US level proportions #time=2:15:22:46
 Jessie;grime musicians and events are targeted for harrassment #time=2:15:22:50
-Jessie;Conservative politicians have used the n-word TWICE in the past ten years with no major consequences #time=2:15:22:54
+Jessie;I've heard the n-word TWICE in the past week #time=2:15:22:54
+Jessie;no one said ANYTHING #time=2:15:22:57
 Jessie;It feels like...a Lot? #time=2:15:23:00
 	* * [It's overblown.]
 	Player;Those are flashes of unfortunate stuff #time=2:15:23:04
@@ -383,7 +387,7 @@ Jessie;It feels like...a Lot? #time=2:15:23:00
 		Player;Skinny guy with acne? #time=2:15:24:53
 		Jessie;That's the one. #time=2:15:24:56
 		Jessie;He went to a concert last year. Very white #time=2:15:25:00
-		Player;so a Coachella ripoff #time=2:15:25:03
+		Player;so a Coldplay kinda vibe? #time=2:15:25:03
 		Jessie;basically yeah #time=2:15:25:08
 		Jessie;Black and East Asian people were the only ones in line being searched #time=2:15:25:11
 		Jessie;He didn't want to show them what was inside his backpack--I think he brought some snacks #time=2:15:25:15
@@ -391,7 +395,7 @@ Jessie;It feels like...a Lot? #time=2:15:23:00
 		Jessie;well #time=2:15:25:22
 		Jessie;him #time=2:15:25:28
 		Jessie;long story short, he ended up in a headlock #time=2:15:25:31
-		Player;Shit #time=2:15:25:34
+		Player;<sprite name="Frown"> #time=2:15:25:34
 		Jessie;I know right? #time=2:15:25:37
 			* * * * [That's messed up.]
 			Player;That's...really messed up. #time=2:15:25:40
@@ -416,16 +420,17 @@ Jessie;It feels like...a Lot? #time=2:15:23:00
 			Jessie;Anyway, thanks for talking to me about this. #time=2:15:26:10
 			Jessie;I have a lot to think about #time=2:15:26:15
 			Player;<sprite name="Thumbs_Up"> #time=2:15:26:19
+			Jessie;[offline] #time=2:15:26:21
 			Jessie;Are you awake #time=3:04:21:09
 			Jessie;Wait #time=3:04:21:14
 			Jessie;If I ask you if you're awake then it sends you a notification #time=3:04:21:16
 			Jessie;And THAT wakes you up #time=3:04:21:19
-			Jessie;Shit #time=3:04:21:21
+			Jessie;SORRY! #time=3:04:21:21
 			Jessie;I really didn't think this through #time=3:04:21:25
 			Jessie;Wait #time=3:04:21:30
 			Jessie;These are sending you notifications too #time=3:04:21:38
 			#time=3:04:21:48
-			Jessie;shiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiit -> day3_morning_jessie_sequence1
+			Jessie;Sorry, sorry, sorry! -> day3_morning_jessie_sequence1
 
 === day3_morning_jessie_sequence1 ===
 
@@ -527,7 +532,7 @@ Jessie;of The Smiths #time=3:04:22:36
 		Jessie;... #time=3:04:24:36
 		Jessie;I don't know. #time=3:04:24:40
 		Jessie;It seems she's reaching out more. Making an effort #time=3:04:24:43
-		Jessie;But I don't know if that's the genuine truth, or just me seeing her actions through the expectations I was putting on her #time=3:04:24:47
+		Jessie;But I don't know if that's the genuine truth, or just me seeing what I want to see #time=3:04:24:47
 		Jessie;Maybe that's the problem #time=3:04:24:50
 		Jessie;you know? #time=3:04:24:52
 		Jessie;Everyone seeing Tanya as the person they want her to be rather than the person she is #time=3:04:24:58
@@ -535,6 +540,7 @@ Jessie;of The Smiths #time=3:04:22:36
 			* * * * [For sure.]
 			Player;For sure. #time=3:04:25:13
 			Jessie;<sprite name="Wink"> #time=3:04:24:15
+			Jessie;[offline] #time=3:04:24:17
 			
 			
 			* * * * [No. Only 80s bands now.]
@@ -542,6 +548,7 @@ Jessie;of The Smiths #time=3:04:22:36
 			Player;Sorry #time=3:04:25:13
 			Player;Only melodramatic 80s bands now #time=3:04:25:16
 			Jessie;oh youre playing around, but I can DO that #time=3:04:25:20
+			Jessie;[offline] #time=3:04:25:22
 			- - - -
 			Jessie;{PlayerName()} #time=3:22:45:02
 			Jessie;you there? #time=3:22:45:04
@@ -552,7 +559,7 @@ Jessie;of The Smiths #time=3:04:22:36
 			Jessie;I even tried CALLING #time=3:22:45:19
 			Jessie;I don't know whats happening #time=3:22:45:21
 			Jessie;kalil #time=3:22:45:24
-			Jessie;FUCKING Kalil #time=3:22:45:27
+			Jessie;THAT PRICK #time=3:22:45:27
 			Jessie;DAMNIT #time=3:22:45:30
 			Jessie;I don't know what to do #time=3:22:45:34
 			#time=3:22:45:39
@@ -607,13 +614,14 @@ Jessie;...a little? #time=3:22:47:15
 		Player;now take your melodramatic arsehole music and go #time=3:22:47:31
 		Jessie;haha #time=3:22:47:33
 		Jessie;gladly #time=3:22:47:37
+		Jessie;[offline] #time=3:22:47:40
 		->JessieDay4
 		
 		* * [Sod The Smiths.]
 		Player;Sod The Smiths. #time=3:22:47:17
 		Jessie;... #time=3:22:47:20
 		Jessie;sod the smiths? #time=3:22:47:24
-		Player;yup. sod as in dirt as in screw that #time=3:22:47:26
+		Player;yup. sod as in screw that #time=3:22:47:26
 		Jessie;...anything else to add to that? #time=3:22:47:30
 		Player;nope #time=3:22:47:33
 		Jessie;haha #time=3:22:47:36
@@ -623,6 +631,7 @@ Jessie;...a little? #time=3:22:47:15
 		Jessie;have a good one #time=3:22:47:47
 		Jessie;i'll certainly try #time=3:22:47:51
 		Jessie;<sprite name="Soft_Smile"> #time=3:22:47:56
+		Jessie;[offline] #time=3:22:48:00
 		->JessieDay4
 		
 ==JessieDay4==
@@ -656,7 +665,7 @@ Jessie;big time #time=4:09:39:33
 Player;It just makes me sad... #time=4:09:39:37
 Player;We really felt like family. #time=4:09:39:41
 Player;Now I'm having trouble even *imagining* the good times. #time=4:09:39:44
-Player;Drinking Fanta at my house. Lying on the grass while Kalil plays a shitty Wonderwall cover... #time=4:09:39:47
+Player;Drinking Fanta at my house. Lying on the grass while Kalil plays a crappy Wonderwall cover... #time=4:09:39:47
 Player;normalcy you know? #time=4:09:39:50
 
     **[I'm also tired]
@@ -740,8 +749,8 @@ Jessie;You aren't in space atm are you? #time=4:09:41:44
 *[It's too loud.]
 Player;Nah. Too loud for that #time=4:09:41:50
 Jessie;Okay good #time=4:09:41:54
-*[...]
-Player;... #time=4:09:41:50
+*[.........]
+Player;......... #time=4:09:41:50
 Jessie;what have I done #time=4:09:41:54
 Jessie;GROUND CONTROL TO MAJOR {PlayerName()}! #time=4:09:41:57
 Player;... #time=4:09:42:01
@@ -749,6 +758,7 @@ Player;I'm floating in the most peculiar way #time=4:09:42:06
 Jessie;do the stars look very different today #time=4:09:42:11
 Player;yeah sure #time=4:09:42:19
 Jessie;<sprite name"Tongue_Out"> #time=4:09:42:22
+Jessie;[offline] #time=4:09:42:24
 -
 -> day7_morning_jessie_sequence1
 
@@ -756,7 +766,7 @@ Jessie;<sprite name"Tongue_Out"> #time=4:09:42:22
 === day7_morning_jessie_sequence1 ===
 
 Jessie;hey #time=7:08:48:04
-Jessie;remember when the biggest issue in our lives was about whether to go for Korean or Kebab #time=7:08:48:11
+Jessie;remember when the biggest issue in our lives was about whether to go for Chinese or Kebab #time=7:08:48:11
 { GetKebab():
 	Jessie;<SelfieDay1Kebab> #time=7:08:48:14
 	- else:
@@ -766,6 +776,7 @@ Jessie;i do #time=7:08:48:26
 Jessie;have a SPLITTING hangover too #time=7:08:48:32
 Jessie;cancel sunlight #time=7:08:48:37
 Jessie;pls #time=7:08:48:41
+Jessie;[offline] #time=7:08:48:43
 
 
 ->END

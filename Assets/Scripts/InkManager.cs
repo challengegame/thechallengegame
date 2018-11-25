@@ -148,9 +148,15 @@ public class InkManager : MonoBehaviour
 
             });
 
-            s.BindExternalFunction("CheckKebab", () =>
+            s.BindExternalFunction("GetKebab", () =>
             {
                 return DisplayManager.instance.GetKebab();
+
+            });
+
+            s.BindExternalFunction("ShowEndGamePanel", () =>
+            {
+                DisplayManager.instance.ShowEndGamePanel();
 
             });
 

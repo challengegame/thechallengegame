@@ -7,6 +7,7 @@ EXTERNAL PlayerObjectivePronoun()
 EXTERNAL PartyAnetta()
 EXTERNAL CheckHemaDrunk()
 EXTERNAL SetKebab(kebab)
+EXTERNAL ShowEndGamePanel()
 
 //This tag at the top of the file determines which channel this goes to - one of the characters, or the group.
 #Group
@@ -24,7 +25,7 @@ VAR kebab = false
 }
 
 Hema;good morning everyone! #time=1:06:30:52
-Hema;I'm getting ready for early morning practice #time=1:06:30:56
+Hema;I'm getting ready for early morning practice because i have to do crap like that apparently #time=1:06:30:56
 Hema;How are all of you? #time=1:06:31:00
 
 * [I'm good!]
@@ -55,7 +56,7 @@ Tanya;If you're texting this early, I'm Assuming you all Finished Studying for t
 Anetta;is tht today #time=1:06:32:55
 Tanya;Yes. #time=1:06:32:57
 Anetta;omg #time=1:06:33:01
-Anetta;Im fuuuuuucked #time=1:06:33:03
+Anetta;Im screeeeewed #time=1:06:33:03
 Jessie;I could help you study a bit before Anetta #time=1:06:33:07
 Jessie;If that helps #time=1:06:33:11
 Hema;I have to get up this early #time=1:06:33:13
@@ -71,10 +72,15 @@ Kalil;you could see it that way is all i'm saying #time=1:06:33:41
 Kalil;A joke #time=1:06:33:45
 Tanya;K. #time=1:06:33:53
 Anetta;I'm going bck to bed #time=1:06:33:55
+Anetta;[offline] #time=1:06:33:56
 Hema;*godspeed* #time=1:06:33:57
+Hema;[offline] #time=1:06:33:59
 Kalil;I'll see "y'all" at school. #time=1:06:34:01
 Jessie;IT'S A GOOD CONTRACTION KALIL #time=1:06:34:05
 Kalil;SURE I,T IS #time=1:06:34:07
+Jessie;[offline] #time=1:06:34:09
+Tanya;[offline] #time=1:06:34:30
+Kalil;[offline] #time=1:06:34:32
 	- -
 	Hema;I GOT THE HOOKUP #time=1:08:31:04
 	Hema;ALL HAIL HEMA #time=1:08:31:08
@@ -86,9 +92,9 @@ Kalil;SURE I,T IS #time=1:06:34:07
 
 * [What's going on?]
 Player;What's going on? #time=1:08:31:16
-Player;I mean i'm all for "hailing hema" #time=1:08:31:18
-Player;but still #time=1:08:31:22
-Jessie;Also lost #time=1:08:31:24
+Player;i definitely don't know #time=1:08:31:18
+Player;hail hema #time=1:08:31:22
+Jessie;...Okay I am very lost #time=1:08:31:24
 Tanya;You might not Know this, Jessie, but we don't usually Text in Class here. #time=1:08:31:28
 Jessie;all due respect for your valedictorian status but I'm an exchange student #time=1:08:31:32
 Jessie;As long as I pass, im all for wacky shenanigans #time=1:08:31:34
@@ -106,10 +112,15 @@ Hema;DO YOU WANT TO HEAR THE NEWS OR NOT #time=1:08:32:02
 Jessie;YES #time=1:08:32:04
 Jessie;god yes #time=1:08:32:07
 Hema;TEACHER LOOKING SHUT UP #time=1:08:32:09
+Tanya;[offline] #time=1:08:32:09
+Anetta;[offline] #time=1:08:32:09
+Hema;[offline] #time=1:08:32:09
+Jessie;[offline] #time=1:08:32:09
+Kalil;[offline] #time=1:08:32:10
 
 
 * [IS THIS THE NEWS???]
-Player;IS THIS THE NEWS??? #time=1:08:31:16
+Player;IS THIS THE NEWS WHICH I DEFINITELY HAVEN'T HEARD YET??? #time=1:08:31:16
 Hema;no no no #time=1:08:31:18
 Hema;this isn't the news #time=1:08:31:20
 Hema;OF COURSE THIS IS THE NEWS #time=1:08:31:25
@@ -132,6 +143,11 @@ Hema;DO YOU WANT TO HEAR THE NEWS OR NOT #time=1:08:32:05
 Jessie;YES #time=1:08:32:07
 Jessie;god yes #time=1:08:32:10
 Hema;TEACHER LOOKING SHUT UP #time=1:08:32:12
+Tanya;[offline] #time=1:08:32:12
+Anetta;[offline] #time=1:08:32:12
+Hema;[offline] #time=1:08:32:12
+Jessie;[offline] #time=1:08:32:12
+Kalil;[offline] #time=1:08:32:13
 -
 Hema;okay heres the deal #time=1:08:37:00
 Hema;someone's holding a party this Saturday #time=1:08:37:05
@@ -174,7 +190,7 @@ Hema;It's DAMIEN #time=1:08:37:30
 	Hema;also #time=1:08:37:46
 	Hema;it will be nice to drink Fanta somewhere other than your living room for once #time=1:08:37:48
 	Hema;no offense #time=1:08:37:52
-	Player;You know my mom doesn't like alcohol! #time=1:08:37:55
+	Player;You know my mum doesn't like alcohol! #time=1:08:37:55
 	Player;Secular or not... #time=1:08:37:57
 	Hema;it isn't the drink choice #time=1:08:37:59
 	Hema;it's the living room #time=1:08:38:01
@@ -210,6 +226,11 @@ Hema;It's DAMIEN #time=1:08:37:30
 		Hema;OMG #time=1:08:39:16
 		Tanya;Agreed. #time=1:08:39:19
 		Tanya;Good luck on the Exam, Everyone. #time=1:08:39:23
+		Tanya;[offline] #time=1:08:39:25
+		Kalil;[offline] #time=1:08:39:26
+		Hema;[offline] #time=1:08:39:26
+		Anetta;[offline] #time=1:08:39:27
+		Jessie;[offline] #time=1:08:39:27
 		~ ahole = true
 
 		* * * [Well, if I was invited...]
@@ -231,9 +252,15 @@ Hema;It's DAMIEN #time=1:08:37:30
 		Hema;in person #time=1:08:39:24
 		Tanya;Agreed. #time=1:08:39:27
 		Tanya;Good luck on the Exam, Everyone. #time=1:08:39:31 
+		Tanya;[offline] #time=1:08:39:33
+		Kalil;[offline] #time=1:08:39:34
+		Hema;[offline] #time=1:08:39:34
+		Anetta;[offline] #time=1:08:39:35
+		Jessie;[offline] #time=1:08:39:35
 		~ ahole = false
 		- - -
 		Hema;anyone have evening plans? #time=1:16:03:10
+		Hema;[offline] #time=1:16:10:00
 		Kalil;Sorry. #time=1:18:24:00
 		Kalil;Just saw this. #time=1:18:24:02
 		Kalil;Was out with the rebelrousers #time=1:18:24:04
@@ -343,14 +370,14 @@ Hema;anyone else? #time=1:18:25:43
 	Kalil;You've never heard of night kebab? #time=1:18:26:53
 	Kalil;It's an English tradition! #time=1:18:26:55
 	Kalil;Late night kebab and colonialism! #time=1:18:26:57
-	Kalil;Which preceded the former, actually... #time=1:18:27:00
-	Jessie;If its all the same to you, I'd prefer to go to the Korean place on Chester. #time=1:18:27:06
+	Kalil;That's england in a nutshell! #time=1:18:27:00
+	Jessie;If its all the same to you, I'd prefer to go to the Chinese place on Chester. #time=1:18:27:06
 	Kalil;It isn't the same to me. #time=1:18:27:08
 	Kalil;I vote kebab. #time=1:18:27:10
-	Hema;id prefer Korean tonight actually #time=1:18:27:13
+	Hema;id prefer Chinese tonight actually #time=1:18:27:13
 	Hema;been craving gimbap for a while now you mention it #time=1:18:27:15
 	Anetta;sorry but kebab actually sounds really good right now #time=1:18:27:17
-	Tanya;I vote for Korean. #time=1:18:27:19
+	Tanya;I vote for Chinese. #time=1:18:27:19
 	Anetta;we dont even need to be doing this tbh #time=1:18:27:21
 	Anetta;ive got some leftover shepherds pie in the fridge #time=1:18:27:26
 	Anetta;and you know my moms shepherds pie is good #time=1:18:27:28
@@ -369,11 +396,11 @@ Hema;anyone else? #time=1:18:25:43
 	
 === day1_evening_group_sequence2 ===
 
-* [Korean.]
+* [Chinese.]
 ~ kebab = false
 {SetKebab(false)}
-Player;Let's do Korean! #time=1:18:27:58
-Player;I fancy Bulgogi, and other Such Dishes. #time=1:18:28:02
+Player;Let's do Chinese! #time=1:18:27:58
+Player;I fancy crispy duck, and other Such Dishes. #time=1:18:28:02
 Jessie;YES #time=1:18:28:04
 Tanya;Cool. #time=1:18:28:06
 Kalil;Enh #time=1:18:28:08
@@ -383,6 +410,11 @@ Hema;the other great English tradition #time=1:18:28:16
 Kalil;You know it #time=1:18:28:18
 Anetta;ill see you all there <sprite name="Smile"> #time=1:18:28:22
 Hema;see you soon! #time=1:18:28:24
+Hema;[offline] #time=1:18:28:26
+Anetta;[offline] #time=1:18:28:27
+Tanya;[offline] #time=1:18:28:27
+Jessie;[offline] #time=1:18:28:27
+Kalil;[offline] #time=1:18:28:27
 
 
 * [Kebab.]
@@ -400,6 +432,11 @@ Hema;we will make sure you get an A in kebab #time=1:18:28:16
 Jessie;*thank you* #time=1:18:28:18
 Anetta;ill see you all there <sprite name="Smile"> #time=1:18:28:20
 Hema;See you soon! #time=1:18:28:22
+Hema;[offline] #time=1:18:28:24
+Anetta;[offline] #time=1:18:28:25
+Tanya;[offline] #time=1:18:28:25
+Jessie;[offline] #time=1:18:28:25
+Kalil;[offline] #time=1:18:28:25
 -
 { kebab:
 		
@@ -409,6 +446,7 @@ Hema;<SelfieDay1Kebab> #time=1:20:01:27
  }
 Hema;There we go! #time=1:20:01:29
 Hema;Talk more tomorrow <sprite name="Heart"> #time=1:20:01:33
+Hema;[offline] #time=1:20:01:35
 Hema;morning! #time=2:06:23:52
 Anetta;hi #time=2:06:24:43
 Anetta;!! #time=2:06:23:47
@@ -491,6 +529,10 @@ Anetta;yeah #time=2:06:44:16
 	Hema;seriously #time=2:06:48:18
 	Jessie;... #time=2:06:48:22
 	Jessie;yes #time=2:06:48:24
+	Jessie;[offline] #time=2:06:48:26 
+	Tanya;[offline] #time=2:06:48:27
+	Anetta;[offline] #time=2:06:28:27
+	Hema;[offline] #time=2:06:28:28
 	
 	* * [are you familiar with "daddy"]
 	Player;okay #time=2:06:44:20
@@ -503,7 +545,7 @@ Anetta;yeah #time=2:06:44:16
 	Jessie;I KNEW IT #time=2:06:44:37
 	Jessie;FRIEAKING KNEW IT #time=2:06:44:39
 	Jessie;*FREAKING #time=2:06:44:42
-	Jessie;SHIT #time=2:06:44:44
+	Jessie;<sprite name="Shit"> #time=2:06:44:44
 	Player;hahaha #time=2:06:44:46
 	Player;no no no #time=2:06:44:49
 	Player;I meant daddy in the BRITISH sense #time=2:06:44:51
@@ -543,6 +585,10 @@ Anetta;yeah #time=2:06:44:16
 	Hema;um #time=2:06:46:44
 	Hema;yeah sure #time=2:06:46:54
 	Jessie;Your awkward lack of commitment is more proof than I could have ever hoped for #time=2:06:46:59
+	Jessie;[offline] #time=2:06:49:01 
+	Tanya;[offline] #time=2:06:49:02
+	Anetta;[offline] #time=2:06:49:02
+	Hema;[offline] #time=2:06:49:03
 	~ hard_daddy = true
 	- -
 	Kalil;Hey #time=2:14:04:11
@@ -621,7 +667,7 @@ Kalil;...i am going to tell you tho #time=2:14:06:43
 -
 Kalil;Apparently, Damien's been trading invites to his party for snogs. #time=2:14:06:47
 Hema;Scummy, but checks out. #time=2:14:06:50
-Kalil;Word is...a teacher took the deal. #time=2:14:06:53
+Kalil;Word is...a cleaner took the deal. #time=2:14:06:53
 Anetta;ewww! #time=2:14:06:57
 Jessie;No way #time=2:14:07:00
 Jessie;Isn't that illegal here? #time=2:14:07:03
@@ -641,13 +687,13 @@ Hema;probably #time=2:14:07:42
 Jessie;Snogging is making out right #time=2:14:07:45
 Hema;...you didn't do much research into your study abroad program, did you #time=2:14:07:48
 Jessie;I really didnt #time=2:14:07:52
-Jessie;what's a tuppence and why does everyone have a different answer #time=2:14:07:55
+Jessie;what's a banger and why does everyone have a different answer #time=2:14:07:55
 Anetta;haha #time=2:14:07:58
 Jessie;<sprite name="Smile">	#time=2:14:08:01
 Kalil;Playing devil's advocate #time=2:14:08:03
-Kalil;Let's say Damien snogged a teacher for real #time=2:14:08:06
+Kalil;Let's say Damien snogged a cleaner for real #time=2:14:08:06
 Kalil;Would it be that bad? #time=2:14:08:09
-Kalil;Damien gets a snog out of it, and the teacher gets an invite to a cool party filled with OTHER eligible young souls. #time=2:14:08:14
+Kalil;Damien gets a snog out of it, and the cleaner gets an invite to a cool party filled with OTHER eligible young souls. #time=2:14:08:14
 Tanya;I think I've figured It out. #time=2:14:08:18
 Kalil;Oh? #time=2:14:08:20
 Tanya;You Think you're Being Funny. #time=2:14:08:26
@@ -693,25 +739,26 @@ Kalil;You gotta admit I'm at least a *bit* funny <sprite name="Wink"> #time=2:14
 	Tanya;And I'm disappointed I have to Tell you that, Kalil. #time=2:14:10:07 
 	Jessie;wow #time=2:14:10:10
 	Kalil;... #time=2:14:10:17
-	Kalil;What do you think teacher tongue tastes like? #time=2:14:10:26
-	Kalil;Seriously--is it like worn smooth from being used so much or What #time=2:14:10:30
+	Kalil;What do you think cleaner tongue tastes like? #time=2:14:10:26
+	Kalil;Seriously--is it like worn smooth by the sweat of one's brow or what <sprite name="Tongue_Out"> #time=2:14:10:30
 	Hema;what did I come back to?? #time=2:14:10:32
 	Kalil;I WANT TO KNOW is all! #time=2:14:10:35
 	Kalil;Is it better for being aged? #time=2:14:10:39
 	Kalil;Worse? #time=2:14:10:41
-	Kalil;is there a hint of the *forbidden* #time=2:14:10:44
+	Kalil;is there a hint of the *forbidden* <sprite name="Eggplant"><sprite name="eggplant"> #time=2:14:10:44
 	Tanya;I'm Done. #time=2:14:10:46
+	Tanya;[offline] #time=2:14:10:47
 	Kalil;Come on! #time=2:14:10:49
 	Kalil;tanya #time=2:14:10:51
 	Kalil;Tanya! #time=2:14:10:55
 	Kalil;We didn't even go over whether Damien went for a feel! #time=2:14:11:01
-	Kalil;What was even the gender of the teacher? #time=2:14:11:03
+	Kalil;What was even the gender of the cleaner? #time=2:14:11:03
 	Kalil;There's so many questions, right?! #time=2:14:11:06
 		* * * [CUT. IT. OUT.]
 		Player;Tanya already left, Kalil. #time=2:14:11:09
 		Player;None of this is getting better. #time=2:14:11:12
 		Player;Cut it out already. #time=2:14:11:16
-		Kalil;See, this is the shit I'm talking about. #time=2:14:11:18
+		Kalil;See, this is the stuff I'm talking about. #time=2:14:11:18
 		Kalil;You lot don't appreciate me #time=2:14:11:20
 		Kalil;I bring you PRIMO gossip #time=2:14:11:22
 		Kalil;tip-top material, here #time=2:14:11:25
@@ -721,14 +768,16 @@ Kalil;You gotta admit I'm at least a *bit* funny <sprite name="Wink"> #time=2:14
 		Kalil;Something of *substance*? #time=2:14:11:40
 		Kalil;Suddenly its the bloody inquisition. #time=2:14:11:43
 		Kalil;You lot know what I really want to know? #time=2:14:11:46
-		Kalil;If Damien got EXTREMELY excited, and was juuuuust close enough to the teacher to *prick* them #time=2:14:11:49
+		Kalil;If Damien got EXTREMELY excited #time=2:14:11:49
 		Kalil;shall we say #time=2:14:11:51
-		Kalil;and if the teacher *shuddered* every time they thought about it, every moment of the day afterward #time=2:14:11:53
+		Kalil;and if the cleaner *shuddered* every time they thought about it, every moment of the day afterward #time=2:14:11:53
 		Jessie;Dude #time=2:14:11:56
 		Jessie;I'm stepping out too #time=2:14:12:01
 		Jessie;Youre crossing lines man #time=2:14:12:03
 		Kalil;The best comedians do. #time=2:14:12:06
 		Kalil;Good riddance. #time=2:14:12:08
+		Jessie;[offline] #time=2:14:12:09
+		Hema;[offline] #time=2:14:12:10
 		Kalil;Hema, you on your hypocritical way out too? #time=2:14:12:12
 		Kalil;Figures. #time=2:14:12:19
 		Kalil;Anetta? #time=2:14:12:22
@@ -737,8 +786,10 @@ Kalil;You gotta admit I'm at least a *bit* funny <sprite name="Wink"> #time=2:14
 		Anetta;ill be rght back as soon as im done!! #time=2:14:12:31
 		Kalil;Doesn't matter either way. #time=2:14:12:34
 		Kalil;See you then. #time=2:14:12:36
+		Anetta;[offline] #time=2:14:12:38
 		Kalil;You too, {PlayerName()}. #time=2:14:12:40
 		Kalil;Don't let the digital door hit you on your way out. #time=2:14:12:42
+		Kalil;[offline] #time=2:14:12:44
 		~ KalilFunny = false
 		
 		
@@ -751,7 +802,7 @@ Kalil;You gotta admit I'm at least a *bit* funny <sprite name="Wink"> #time=2:14
 		Kalil;location #time=2:14:11:20
 		Kalil;degree o' intimacy #time=2:14:11:22
 		Kalil;degree o' arousal? #time=2:14:11:24
-		Kalil;just how excited DID Damien get for teacher, ladies and gentlemen? #time=2:14:11:28
+		Kalil;just how excited DID Damien get for our cleaner, ladies and gentlemen? #time=2:14:11:28
 		Kalil;*questions* #time=2:14:11:32
 		Jessie;Dude #time=2:14:11:35
 		Kalil;Mmmhmm #time=2:14:11:37
@@ -759,6 +810,8 @@ Kalil;You gotta admit I'm at least a *bit* funny <sprite name="Wink"> #time=2:14
 		Jessie;Youre crossing lines man #time=2:14:11:43
 		Kalil;The best comedians do. #time=2:14:11:47
 		Kalil;Good riddance. #time=2:14:11:50
+		Jessie;[offline] #time=2:14:11:51
+		Hema;[offline] #time=2:14:11:51
 		Kalil;Hema, you on your way out too? #time=2:14:11:53
 		Kalil;Figures. #time=2:14:12:00
 		Kalil;Anetta? #time=2:14:12:04
@@ -767,9 +820,11 @@ Kalil;You gotta admit I'm at least a *bit* funny <sprite name="Wink"> #time=2:14
 		Anetta;ill be rght back as soon as im done tho!! #time=2:14:12:12
 		Kalil;Doesn't matter either way. #time=2:14:12:15
 		Kalil;See you then. #time=2:14:12:17
+		Anetta;[offline] #time=2:14:12:18
 		Kalil;You too, {PlayerName()}. <sprite name="Wink"> #time=2:14:12:21
 		Kalil;Maybe next time we'll have a crowd that can TAKE A JOKE #time=2:14:12:23
 		Kalil;god #time=2:14:12:26
+		Kalil;[offline] #time=2:14:12:28
 		~ KalilFunny = true
 		- - -
 		Hema;damien? #time=2:17:43:23
@@ -786,12 +841,13 @@ Kalil;You gotta admit I'm at least a *bit* funny <sprite name="Wink"> #time=2:14
 		Anetta;my parents wnt to see movies tnght #time=2:17:43:56
 		Anetta;its half-off day at the cinema #time=2:17:43:58
 		Anetta;only comes once a month #time=2:17:44:00
-		Anetta;a dble feature too, so they rlly dont want to miss it #time=2:17:44:03
+		Anetta;they rlly dont want to miss it #time=2:17:44:03
 		Anetta;srry #time=2:17:44:05
 		Anetta;would totally cme <sprite name="Frown"> #time=2:17:44:08
 		Hema;That's okay sweetie #time=2:17:44:10
 		Hema;<sprite name="Smile"> #time=2:17:44:13
 		Hema;We'll find time. #time=2:17:44:16
+		Anetta;[offline] #time=2:17:44:18
 		Kalil;sorry for the delay i'm out #time=2:17:44:18
 		Kalil;Jamie said they wanted to hang out at the pub, so here i am #time=2:17:44:22
 		Hema;Who's Jamie? #time=2:17:44:25
@@ -800,6 +856,7 @@ Kalil;You gotta admit I'm at least a *bit* funny <sprite name="Wink"> #time=2:14
 		Kalil;later #time=2:17:44:32
 		Hema;oh, okay. #time=2:17:44:34
 		Hema;good luck, I guess #time=2:17:44:36
+		Kalil;[offline] #time=2:17:44:37
 		Hema;anyone else? #time=2:17:44:38
 		Jessie;I can come along #time=2:17:44:41
 		Jessie;Let's get something trashy and cheap #time=2:17:44:44
@@ -815,6 +872,7 @@ Kalil;You gotta admit I'm at least a *bit* funny <sprite name="Wink"> #time=2:14
 		Tanya;I just Can't. #time=2:17:45:18
 		Tanya;I'll see you later for Sure. #time=2:17:45:20
 		Hema;gotcha. Thanks for the update. #time=2:17:45:23
+		Tanya;[offline] #time=2:17:45:25
 		Hema;{PlayerName()}? #time=2:17:45:26
 		Hema;you've been a bit quiet! #time=2:17:45:28
 		#time=2:17:45:31
@@ -824,7 +882,7 @@ Kalil;You gotta admit I'm at least a *bit* funny <sprite name="Wink"> #time=2:14
 
 * [Not sure...]
 Player;I'm not sure... #time=2:17:45:34
-Player;I want to, but mum has a lecture tonight about her medieval history course. #time=2:17:45:36
+Player;I want to, but mum's giving this big presentation on her medieval history research. #time=2:17:45:36
 Player;Want to make sure I support her/don't get myself grounded by ditching early <sprite name="Tongue_Out"> #time=2:17:45:41
 Hema;oh of course!! #time=2:17:45:44
 Hema;tell your mum I said congratulations and good luck! #time=2:17:45:47
@@ -837,11 +895,13 @@ Jessie;Talk more soon #time=2:17:46:06
 Jessie;and thanks for using y'all #time=2:17:46:08
 Jessie;I really feel appreciated right now #time=2:17:46:11
 Hema;*fingerguns* #time=2:17:46:14
+Jessie;[offline] #time=2:17:50:00 
+Hema;[offline] #time=2:17:50:00 
 
 
 * [I'll try!]
 Player;I'll try! #time=2:17:45:34
-Player;Mum has a lecture tonight about her medieval history course, but if there's a way I can make it out before the evening is over, I will #time=2:17:45:37
+Player;Mum's giving this big presentation on her medieval history research, but if there's a way I can make it out before the evening is over, I will #time=2:17:45:37
 Hema;oh of course! #time=2:17:45:39
 Hema;tell your mum I said congratulations!! #time=2:17:45:41
 Hema;and good luck!!! #time=2:17:45:43
@@ -855,6 +915,8 @@ Jessie; Talk more soon #time=2:17:46:04
 Jessie;and thanks for using y'all #time=2:17:46:07
 Jessie;I really feel appreciated right now #time=2:17:46:11
 Hema;*fingerguns* #time=2:17:46:14
+Jessie;[offline] #time=2:17:50:00 
+Hema;[offline] #time=2:17:50:00 
 -
 Hema;can we outlaw sports #time=3:06:25:08
 Hema;just until we come to terms with the fact that just because someone is good at them doesn't mean they wouldn't rather be asleep #time=3:06:25:12
@@ -874,11 +936,12 @@ Hema;you uploaded some fantastic sketches not long ago #time=3:06:26:01
 Anetta;good! #time=3:06:26:06
 Anetta;mum found a rlly cool old architecture book at a chrity shop #time=3:06:26:10
 Anetta;the print is small so a lot of the words jumble and im not reading as fast as id like but im learning SO MUCH #time=3:06:26:13
-Anetta;the Chamber of the Assassin Empress is going to blow your fcking minds #time=3:06:26:16
+Anetta;im just sketching an illustration now #time=3:06:26:12
+Anetta;the Chamber of the Assassin Empress is going to blow your minds #time=3:06:26:16
 Hema;DAMN #time=3:06:26:19
 Hema;RIGHT #time=3:06:26:21
 Anetta;oh #time=3:06:29:37
-Anetta;my Challenge stuff is going to take up a lot of time during and after class today #time=3:06:29:40
+Anetta;my HeadStart stuff is going to take up a lot of time during and after class today #time=3:06:29:40
 Anetta;i know we usually like to text during the day #time=3:06:29:44
 Anetta;can you let me knw if i missed anythng imprtant when i come back? #time=3:06:29:46
 Hema;are you alleging #time=3:06:29:49
@@ -888,6 +951,8 @@ Anetta;... #time=3:06:29:59
 Hema;you can count on me anetta #time=3:06:30:08
 Hema;<sprite name="Wink"> #time=3:06:30:10
 Anetta;<sprite name="Smile"> #time=3:06:30:14
+Anetta;[offline] #time=3:06:30:16 
+Hema;[offline] #time=3:06:30:17
 Kalil;WHAT UP PARTY PLAYAS #time=3:08:34:14
 Jessie;well those are certainly words you just said #time=3:08:34:17
 Hema;WHAT UP KALIL #time=3:08:34:19
@@ -927,7 +992,7 @@ Kalil;Really? #time=3:08:35:19
 Kalil;Okay. #time=3:08:35:21
 -
 Kalil;Right. #time=3:08:35:25
-Kalil;If we connect at the Korean place on Chester, it should only be a brisk 10 minute walk to the tube. #time=3:08:35:27
+Kalil;If we meet up at the Chinese place, it should only be a brisk 10 minute walk to the tube. #time=3:08:35:27
 Kalil;From there, it can't be more than another 5 to get to Damien's place. #time=3:08:35:30
 Hema;you know where Damien lives? #time=3:08:35:32
 Kalil;I know the part of town. #time=3:08:35:35
@@ -943,7 +1008,7 @@ Kalil;and have a good time, generally #time=3:08:36:00
 Kalil;Who's with me? #time=3:08:36:04
 Tanya;You've been Invited? #time=3:08:36:06
 Kalil;No--not yet. #time=3:08:36:10
-Kalil;But that doesn't mean I can't have my shit together ahead of time. #time=3:08:36:12
+Kalil;But that doesn't mean I can't sort myself out ahead of time. #time=3:08:36:12
 Kalil;Or make sure that I go there with someone I really care about. #time=3:08:36:14
 Jessie;Us! #time=3:08:36:17
 Hema;yeah! #time=3:08:36:19
@@ -1025,7 +1090,7 @@ Kalil;That....doesn't mean I didn't mean it #time=3:08:38:03
 	Kalil;As I said: buried #time=3:08:39:32
 	Tanya;Did you know Jessie? #time=3:08:39:34
 	Jessie;I wasn't...certain. #time=3:08:39:38
-	Kalil;Bullshit. #time=3:08:39:40
+	Kalil;Bollocks. #time=3:08:39:40
 	Kalil;He didn't know. #time=3:08:39:43
 	Jessie;I noticed things. #time=3:08:39:45
 	Kalil;bull #time=3:08:39:48
@@ -1051,6 +1116,10 @@ Kalil;That....doesn't mean I didn't mean it #time=3:08:38:03
 		Kalil;yeah #time=3:08:40:54
 		Kalil;good #time=3:08:40:56
 		Kalil;good idea #time=3:08:40:59
+		Tanya;[offline] #time=3:08:41:01 
+		Kalil;[offline] #time=3:08:41:02 
+		Jessie;[offline] #time=3:08:41:03 
+		Hema;[offline] #time=3:08:41:03
 
 
 		* * * [I am so sorry.]
@@ -1068,13 +1137,19 @@ Kalil;That....doesn't mean I didn't mean it #time=3:08:38:03
 		Tanya;. #time=3:08:40:33
 		Tanya;We should get Back to it. #time=3:08:40:42
 		Kalil;yeah #time=3:08:40:54
-		Kalil;good #time=3:08:40:56
-		Kalil;good idea #time=3:08:40:59
+		Kalil;good #time=3:08:41:01
+		Kalil;good idea #time=3:08:41:09
+		Tanya;[offline] #time=3:08:41:10  
+		Kalil;[offline] #time=3:08:41:11  
+		Jessie;[offline] #time=3:08:41:12 
+		Hema;[offline] #time=3:08:41:12
 		- - -
-		Anetta;hey evryone! #time=3:16:11:59
-		Anetta;im back from volnteering #time=3:16:12:02
-		Anetta;i can introdce you to the challenge people at some point if you want <sprite name="Smile"> #time=3:16:12:05
-		Anetta;rlly good stuff we're doing #time=3:16:12:08
+		Anetta;hey evryone! #time=3:16:11:40
+		Anetta;im back from headstart #time=3:16:11:44
+		Anetta;its prt cool, you do some volnteering and get a guaranteed job intervew at the end #time=3:16:11:49
+		Anetta;i should introdce you to the people at headstart some point if you want <sprite name="Smile"> #time=3:16:11:56
+		Anetta;rlly nice #time=3:16:12:04
+		Anetta;and we're doing good stuff #time=3:16:12:08
 		Anetta;oh wow #time=3:16:12:13
 		Anetta;yall DID text during class #time=3:16:12:15
 		Anetta;lot to catch up on #time=3:16:12:18
@@ -1090,8 +1165,8 @@ Kalil;That....doesn't mean I didn't mean it #time=3:08:38:03
 		Hema;sweetie, no #time=3:16:13:12
 		Hema;i'm messaging you privately #time=3:16:13:15
 		Hema;please check #time=3:16:13:18
-		Anetta;what the fuck #time=3:16:13:21
-		Anetta;what the FUCK #time=3:16:13:27
+		Anetta;WTF #time=3:16:13:21
+		Anetta;what the HELL is this? #time=3:16:13:27
 		Anetta;kalil? #time=3:16:13:32
 		Anetta;Tanya? #time=3:16:13:34
 		Anetta;did that really happen? #time=3:16:13:36
@@ -1102,7 +1177,7 @@ Kalil;That....doesn't mean I didn't mean it #time=3:08:38:03
 		Kalil;you read the messages. it's done #time=3:16:13:50
 		Kalil;drop it #time=3:16:13:52
 		Anetta;dnt tell me to DROP IT #time=3:16:13:54
-		Anetta;why would you ask Tanya... #time=3:16:13:58
+		Anetts;why would you ask Tanya... #time=3:16:13:58
 		Anetta;you've felt lke that for this lng? #time=3:16:14:00
 		Anetta;oh god #time=3:16:13:14:04
 		Kalil;You CAN read, right? #time=3:16:14:07
@@ -1112,7 +1187,7 @@ Kalil;That....doesn't mean I didn't mean it #time=3:08:38:03
 		Kalil;You clearly want me to say SOMETHING Anetta. #time=3:16:14:19
 		Kalil;Make up your mind! #time=3:16:14:22
 		Kalil;Its been a long day #time=3:16:14:24
-		Anetta;my mind says that your apology today was shite #time=3:16:14:29
+		Anetta;my mind says that your apology today was crap #time=3:16:14:29
 		Anetta;and you nver answred anyone's questions about why #time=3:16:14:33
 		Kalil;Maybe if people spoke to you outside of group chat, you'd understand the full scope of the situation. #time=3:16:14:37
 		Tanya;There isn't Much to Understand. #time=3:16:14:39
@@ -1125,7 +1200,7 @@ Kalil;That....doesn't mean I didn't mean it #time=3:08:38:03
 		Anetta;people tlk to me a lot #time=3:16:15:03
 		Kalil;Oh really? #time=3:16:15:05
 		Kalil;Do they? #time=3:16:15:08
-		Kalil;Saying where the class placements are going to be posted doesn't count. #time=3:16:15:12
+		Kalil;Listing off the exam timetable doesn't count. #time=3:16:15:12
 		Jessie;You really need to shut up Kalil #time=3:16:15:14
 		Kalil;oh you're one to TALK aren't you Jessie #time=3:16:15:17
 		Kalil;Youre the perfect example! #time=3:16:15:19
@@ -1174,17 +1249,22 @@ Kalil;That....doesn't mean I didn't mean it #time=3:08:38:03
 		Anetta;Posh bellend. #time=3:16:17:33
 		Kalil;That #time=3:16:17:37
 		Kalil;Is a low blow #time=3:16:17:40
-		Kalil;You know how I feel about my parents politics. #time=3:16:17:43
+		Kalil;You know what I think about my parents. #time=3:16:17:43
 		Anetta;Sorry #time=3:16:17:46
 		Anetta;It takes a low blow to reach into that hole you dug for yourself. #time=3:16:17:50
 		Anetta;peace #time=3:16:17:53
+		Anetta;[offline] #time=3:16:17:54
+		Kalil;[offline] #time=3:16:17:56 
+		Hema;[offline] #time=3:16:20:00 
+		Jessie;[offline] #time=3:16:20:03 
+		Tanya;[offline] #time=3:16:21:01 
 		Hema;so we've got another fine morning of drizzle in our hnads #time=4:06:25:08
 		Hema;Hands #time=4:06:25:12
 		Hema;hi my name is hema and i beli eve no one should havet o be awake at 6 #time=4:06:25:17
 		Hema;why's the coach so excited about laps? #time=4:06:47:20
 		Anetta;we may nevr know #time=4:06:47:23
 		Hema;waaaaaait #time=4:06:47:27
-		Hema;I can see you in the bleachers! #time=4:06:47:32
+		Hema;I can see you over there! #time=4:06:47:32
 		Anetta;you see #time=4:06:47:35
 		Anetta;nthing #time=4:06:47:38
 		Hema;hahaha #time=4:06:47:41
@@ -1193,6 +1273,8 @@ Kalil;That....doesn't mean I didn't mean it #time=3:08:38:03
 		Anetta;i actually didnt know you were so fast until today #time=4:06:47:53
 		Hema;oh just wait until I do this next relay #time=4:06:47:56
 		Hema;i'm about to blow your MIND #time=4:06:48:00
+		Hema;[offline] #time=4:06:48:02 
+		Anetta;[offline] #time=4:06:48:03 
 
 		Jessie;Wait did you have a sleepover? #time=4:07:10:35
 		Jessie;An honest to goodness PJ party? #time=4:07:10:38
@@ -1206,13 +1288,13 @@ Kalil;That....doesn't mean I didn't mean it #time=3:08:38:03
 		Hema;giving up the things you love so you can do more of the things you think other people think you should be doing--it's the essence of adolescence! #time=4:07:11:10
 		Anetta;that rhymed! #time=4:07:11:13
 		Hema;wait #time=4:07:11:17
-		Hema;oh shit you're right #time=4:07:11:19
-		Jessie;"oh shit you're right" #time=4:07:11:23
+		Hema;oh crap you're right #time=4:07:11:19
+		Jessie;"oh crap you're right" #time=4:07:11:23
 		Jessie;the poetry just keeps flowing <sprite name="Wink"> #time=4:07:11:27
 		Hema;hahaha #time=4:07:11:30
 		Anetta;lol #time=4:07:11:32
 
-		Tanya;I hope You did not Tire yourselves before Class even Starts. #time=4:07:28:05
+		Tanya;I hope You did not Tire yourselves before College even Starts. #time=4:07:28:05
 		Hema;we're all good <sprite name="Smile"> #time=4:07:28:09
 		Hema;Just the same old morning catch-up #time=4:07:28:12
 		Anetta;not mch to catch up on #time=4:07:28:16
@@ -1261,6 +1343,11 @@ Tanya;It's time for Class everyone. #time=4:07:29:44
 Tanya;Let's Focus. #time=4:07:29:48
 Tanya;On learning Things. #time=4:07:29:52
 Jessie;I am very much on board with this non-specific plan #time=4:07:29:55
+Tanya;[offline] #time=4:07:29:55
+Jessie;[offline] #time=4:07:29:56 
+Kalil;[offline] #time=4:07:29:56 
+Anetta;[offline] #time=4:07:29:57
+Hema;[offline] #time=4:07:29:57
 
 Kalil;Speaking of "Things," what's everyone learning? #time=4:11:05:12
 Kalil;In Literature we're asking why Meursault doesn't mourn his mother. #time=4:11:05:16
@@ -1338,15 +1425,20 @@ Kalil;What's everyone else up to? <sprite name="Soft_Smile"> #time=4:11:05:56
 	Anetta;why do they have to be diffrent sizes?? #time=4:11:08:35
 	Jessie;I can help, if you want. #time=4:11:08:39
 	Jessie;We can go over it during lunch while it's still sort of fresh in your mind #time=4:11:08:42
+	Tanya;[offline] #time=4:11:08:45
 	Anetta;mybe #time=4:11:08:47
 	Anetta;thks <sprite name="Soft_Smile"> #time=4:11:08:50
+	Anetta;[offline] #time=4:11:08:52
+	Jessie;[offline] #time=4:11:08:53 
+	Hema;[offline] #time=4:11:08:59
+	Kalil;[offline] #time=4:11:09:34
 
 	Jessie;Holy crap I almost got a plateful of food in my face #time=4:13:48:12
 	Jessie;just barely got out of the way with my life #time=4:13:48:16
 	Anetta;usng your ninja reflexs #time=4:13:48:20
 	Jessie;YES #time=4:13:48:22
 	Jessie;...why is there no ninja emoji when you need it #time=4:13:48:26
-	Hema;Is this in the cafeteria? #time=4:13:48:30
+	Hema;Is this in the canteen? #time=4:13:48:30
 	Anetta;yea #time=4:13:48:33
 	Jessie;Never mind it's on my shirt #time=4:13:48:36
 	Jessie;i dont deserve the ninja #time=4:13:48:40
@@ -1379,8 +1471,8 @@ Kalil;What's everyone else up to? <sprite name="Soft_Smile"> #time=4:11:05:56
 	Anetta;their frends are hlding them back #time=4:13:50:19
 	Kalil;Not for long! #time=4:13:50:22
 	Kalil;GOD they are such a mess <sprite name="Tongue_Out"> #time=4:13:50:26
-	Kalil;Think a teacher will step in for once? #time=4:13:50:29
-	Kalil;Wait what if its the one on Damien's snog list!! #time=4:13:50:33
+	Kalil;Think an adult will step in for once? #time=4:13:50:29
+	Kalil;Wait what if its the cleaner on Damien's snog list!! #time=4:13:50:33
 	Kalil;Wouldn't that just be perfect? #time=4:13:50:37
 	Kalil;Actually maybe I should be recording right now. Wouldn't want that opportunity to go to waste and regret it later... #time=4:13:50:41
 	Anetta;stop it Kalil #time=4:13:50:44
@@ -1401,13 +1493,13 @@ Kalil;What's everyone else up to? <sprite name="Soft_Smile"> #time=4:11:05:56
 		Player;so far #time=4:13:51:13
 		- - -
 		Kalil;You know, this almost makes me feel better about going to his party. #time=4:13:51:17
-		Kalil;Eating all his canapes and making fun of him and his friends behind his back... #time=4:13:51:20
+		Kalil;Eating all his food and making fun of him and his friends behind his back... #time=4:13:51:20
 		Kalil;Maybe not even showing up. #time=4:13:51:23
 		Kalil;It's a win-win either way! <sprite name="Wink"> #time=4:13:51:27
 		Jessie;So they've kind of calmed down now but as a last dig Kyle said for everyone to hear #time=4:13:51:30
 		Hema;what jessie #time=4:13:51:34
 		Hema;i NEED TO KNOW #time=4:13:51:37
-		Jessie;Apparently Damien made up that teacher snogging thing #time=4:13:51:41
+		Jessie;Apparently Damien made up that groundskeeper snogging thing #time=4:13:51:41
 		Anetta;zero percnt surprised #time=4:13:51:45
 		Jessie;because he wanted to get Romina to kiss him?? #time=4:13:51:48
 		Anetta;that sounds lke a lie #time=4:13:51:51
@@ -1415,6 +1507,7 @@ Kalil;What's everyone else up to? <sprite name="Soft_Smile"> #time=4:11:05:56
 		Anetta;tall grl in math class #time=4:13:51:59
 		Anetta;the one wth the plaits #time=4:13:52:02
 		Kalil;Apparently Damien's friend heard her say she wants something casual, with no strings attached. #time=4:13:52:07
+		Tanya;[offline] #time=4:13:52:11
 		Hema;Ok I'm finally here! #time=4:13:52:15
 		Hema;why is no one shouting anymoreeee #time=4:13:52:23
 		Hema;did i miss the big fight <sprite name="Sad"> #time=4:13:52:26
@@ -1447,10 +1540,10 @@ Anetta;corrosive #time=4:13:53:13
 Kalil;This has been the perfect lunch. #time=4:13:53:16
 Kalil;Watching idiots tantrums #time=4:13:53:19
 Kalil;Throwing food and crap insults around... #time=4:13:53:22
-Kalil;"At least I don't have a sex sock!" #time=4:13:53:25
+Kalil;"At least I can kick a football more than 10 feet!" #time=4:13:53:25
 Hema;I missed the lame insults??? #time=4:13:53:28
-Anetta;"well my parnts dont need to pay for me to sleep w/someone" #time=4:13:53:31
-Jessie;"No they need that money to bribe teachers so you don't get flunked" #time=4:13:53:35
+Anetta;"well my parnts didnt build a bloody gym in my basement" #time=4:13:53:31
+Jessie;"No they need that money to bribe teachers so you don't get expelled" #time=4:13:53:35
 Hema;What a Lame-ien comeback #time=4:13:53:40
 Kalil;Douche-ien just isn't very good at this. #time=4:13:53:42
 Anetta;thats cause hes a jellyfish. #time=4:13:53:45
@@ -1478,6 +1571,10 @@ Anetta;<sprite name="Eggplant"> #time=4:13:55:12
 Jessie;NO #time=4:13:55:15
 Kalil;Hahaha #time=4:13:55:19
 Hema;stop i cant eat if i'm laughinggg #time=4:13:55:22
+Kalil;[offline] #time=4:13:55:24 
+Anetta;[offline] #time=4:13:55:26 
+Hema;[offline] #time=4:13:55:27
+Jessie;[offline] #time=4:13:55:27
 Jessie;What's almost as good as a sleepover? #time=4:22:24:10
 Hema;all-you-can-eat buffet? #time=4:22:24:14
 Anetta;undergrnd skate parks with complicatd structres featured in games that rhyme with grony rawk #time=4:22:24:17
@@ -1504,7 +1601,7 @@ Anetta;undergrnd skate parks with complicatd structres featured in games that rh
 	Jessie;"...including the Black-Eye Locus, a station manned by beautiful vampires!" #time=4:22:25:03
 	Hema;welp. it's an anime #time=4:22:25:07
 	Anetta;lke many anime combined #time=4:22:25:10
-	Jessie;It stars sexy twin vampires who own a space bar and *serve* visiting humans in more ways than one. #time=4:22:25:15
+	Jessie;It stars sexy twin vampires who own a space bar and prey on humans. #time=4:22:25:15
 	Anetta;lol thats not gnna go well #time=4:22:25:20
 	Hema;is there space racism? #time=4:22:25:30
 	Hema;I cant tell if it's taking itself seriously or not #time=4:22:25:36
@@ -1516,7 +1613,8 @@ Anetta;undergrnd skate parks with complicatd structres featured in games that rh
 	Hema;agh but im being called downstairs to help with something #time=4:22:25:59
 	Hema;tell me all the good bits! #time=4:22:26:03
 	Hema;I'll read them when I get back #time=4:22:26:06
-	Anetta;good plan <sprite name="Thumbs_Up"> #time=4:22:26:10
+	Hema;[offline] #time=4:22:26:08
+	Anetta;good plan <sprite name="Thumb"> #time=4:22:26:10
 	Anetta;fast-forwrd to the highlghts #time=4:22:26:13
 	Jessie;would love to <sprite name="Smile"> #time=4:22:26:17
 	Hema;Looking forward to it!! #time=4:22:26:21
@@ -1545,8 +1643,8 @@ Anetta;undergrnd skate parks with complicatd structres featured in games that rh
 		Jessie;(the vampires aren't sparkling, but the light always seems to hit them just right? It would be good camerawork if it weren't so over-the-top) #time=4:22:27:37
 		Jessie;Vampire one is now whispering to vampire two that the humans might be wanted criminals? #time=4:22:27:47
 		Anetta;why are they jst drinking and chattng then? #time=4:22:27:52
-			* * * * [Space rules.]
-			Player;It's space. Normal rules don't apply. #time=4:22:27:58
+			* * * * [It's sexy space vampires.]
+			Player;It's sexy space vampires. Don't think about it too hard. #time=4:22:27:58
 			Anetta;gotcha #time=4:22:28:02
 
 
@@ -1564,8 +1662,8 @@ Anetta;undergrnd skate parks with complicatd structres featured in games that rh
 			Jessie;legal trouble #time=4:22:28:48
 			Anetta;k #time=4:22:28:52
 			Jessie;So #time=4:22:29:02
-			Jessie;Theyve already started getting busy offscreen #time=4:22:29:05
-			Anetta;ths just snds like prn #time=4:22:29:09
+			Jessie;THINGS have STARTED offscreen #time=4:22:29:05
+			Anetta;ths just snds wrse than 50 shades #time=4:22:29:09
 			Jessie;that would probably have more of a buildup #time=4:22:29:13
 			Jessie;I was led to believe there would be broody longing stares #time=4:22:29:16
 			#time=4:22:29:20
@@ -1619,15 +1717,15 @@ Jessie;I don't want to make y'all uncomfortable #time=4:22:31:47
 Jessie;I hope I didn't #time=4:22:31:53
 Anetta;no #time=4:22:31:58
 Anetta;it could be wrse #time=4:22:32:05
+Anetta;[offline] #time=4:22:32:07 
 ->EndEp
 *[Tell me more...]
 Player;...So are they still twister kissing #time=4:22:31:00
-Player;Or have they moved on to more *interesting* things? #time=4:22:31:03
-Jessie;IM GLAD YOU ASKED #time=4:22:31:06
+Jessie;IM GLAD YOU ASKED #time=4:22:31:03
 Jessie;theyre definitely past the kissing stage #time=4:22:31:09
-Jessie;clothes are floating off #time=4:22:31:12
-Jessie;theres some zero gravity blood from where Vamp 2 bit Josh #time=4:22:31:15
-Jessie;which vamp 2 is licking #time=4:22:31:18
+Jessie;moving on to biting #time=4:22:31:12
+Jessie;theres some zero gravity blood #time=4:22:31:15
+Jessie;vamp 2 is licking it from the air #time=4:22:31:18
 Anetta;mybe its time to stop #time=4:22:31:22
 Anetta;wth the descrptions #time=4:22:31:26
 Jessie;oh #time=4:22:31:29
@@ -1646,11 +1744,12 @@ Jessie;I'm not Kalil though!! #time=4:22:32:03
 Jessie;I don't want to make y'all uncomfortable #time=4:22:32:06
 Jessie;I hope I didn't #time=4:22:32:09
 Anetta;it could have been wrse <sprite name="Soft_Smile"> #time=4:22:32:12
+Anetta;[offline] #time=4:22:32:14 
 ->EndEp
 *[I could keep going]
 Player;I mean I could keep going #time=4:22:31:45
 { KalilFunny:
-Anetta;You thought kalil was funny when he went on about snogging teachers {PlayerName()}... #time=4:22:31:48
+Anetta;You thought kalil was funny when he went on about snogging groundskeepers {PlayerName()}... #time=4:22:31:48
 Anetta;So you'd find this funny too. #time=4:22:31:53
 Jessie;oh wait wait wait #time=4:22:31:56
 Jessie;I'm not like Kalil! i wasnt trying to go there! #time=4:22:31:59
@@ -1660,6 +1759,7 @@ Jessie;no but i don't want to make you uncomfortable. #time=4:22:32:10
 Jessie;Sorry <sprite name="Sad"> #time=4:22:32:13
 Jessie;I hope I didn't #time=4:22:32:15
 Anetta;we're fine #time=4:22:32:23
+Anetta;[offline] #time=4:22:32:25 
 ->EndEp
 - else: 
 Anetta;you go on then. #time=4:22:31:48
@@ -1675,6 +1775,7 @@ Jessie;I'm not Kalil though!! #time=4:22:32:13
 Jessie;I don't want to make y'all uncomfortable #time=4:22:32:16
 Jessie;I hope I didn't #time=4:22:32:19
 Anetta;we're fine #time=4:22:32:23
+Anetta;[offline] #time=4:22:32:25 
 }
 -> EndEp
 -
@@ -1685,9 +1786,10 @@ Anetta;we're fine #time=4:22:32:23
 Hema;And I'm back! Reading now... #time=4:22:32:26
 Jessie;I just uh, texted a whole lot #time=4:22:32:30
 Jessie;speaking of: I'll stop now #time=4:22:32:34
+Jessie;[offline] #time=4:22:32:36
 Hema;whoa. This IS ridiculous. #time=4:22:32:46
 Hema;I really get the "it's so bad it's good" vibe from this Jessie #time=4:22:32:49
-Hema;Kinda weird and porny but I'm sure if we were all there we'd be having a laugh. #time=4:22:32:52
+Hema;Kinda weird but I'm sure if we were all there we'd be having a laugh. #time=4:22:32:52
 Hema;Maybe next time we can do TV night in the same room! #time=4:22:32:56
 Hema;We could all vote for what show to watch and come prepared with snacks #time=4:22:32:59
 Jessie;coming back from self imposed exile to say--I'd be really into that #time=4:22:33:04
@@ -1696,6 +1798,8 @@ Jessie;I should get ready for bed #time=4:22:33:15
 Jessie;Night all! #time=4:22:33:18
 Hema;Good night <sprite name="Smile"> #time=4:22:33:22
 #time=4:22:33:29
+Jessie;[offline] #time=4:22:33:30
+Hema;[offline] #time=4:22:33:32
 Anetta;zzz -> day5_morning_group_sequence1
 
 === day5_morning_group_sequence1 ===
@@ -1744,6 +1848,8 @@ Kalil;I dont think I have much choice #time=5:05:56:03
 -
 Hema;...are you going to elaborate on that? #time=5:05:56:21
 Kalil;I don't think so, no. #time=5:05:56:33
+Kalil;[offline] #time=5:05:56:35
+Hema;[offline] #time=5:56:40
 
 Jessie;I'm sorry about yesterday. #time=5:08:21:06
 Jessie;About hurting you Kalil, and for making you uncomfortable Anetta #time=5:08:21:12
@@ -1759,7 +1865,7 @@ Anetta;will be a final bad tweet #time=5:08:21:47
 Kalil;Why the airlock bit? #time=5:08:21:51
 Anetta;only ting tht can kill me is space #time=5:08:21:55
 Kalil;Noted. #time=5:08:21:59
-Jessie;Well, now I feel better for my shitposting haha #time=5:08:22:02
+Jessie;Well, now I feel better for my shtposting haha #time=5:08:22:02
 Anetta;no #time=5:08:22:06
 Anetta;you need to thnk before shitposting still #time=5:08:22:11
 Hema;yeah #time=5:08:22:14
@@ -1770,6 +1876,10 @@ Anetta;<sprite name="Smile"> #time=5:08:22:27
 Hema;<sprite name="Smile"> <sprite name="Thumbs_Up"> <sprite name="Thumbs_Up"> <sprite name="Explode"> #time=5:08:22:31
 Kalil;awwww #time=5:08:22:40
 Kalil;how sweet #time=5:08:22:44
+Anetta;[offline] #time=5:08:22:46
+Jessie;[offline] #time=5:08:22:47
+Kalil;[offline] #time=5:08:22:47
+Hema;[offline] #time=5:08:22:50
 
 Kalil;Has anyone heard from Tanya? #time=5:13:19:14
 Jessie;I saw her going to geography again today? #time=5:13:19:20
@@ -1779,7 +1889,7 @@ Kalil;Has anyone HEARD from her? #time=5:13:19:31
 Kalil;has she texted us at all? #time=5:13:19:35
 Jessie;You havent been reading? #time=5:13:19:39
 Kalil;For obvious reasons--no #time=5:13:19:42
-Hema;last time she texted was last lunch period according to my calculations #time=5:13:19:47
+Hema;last time she texted was last lunch time according to my calculations #time=5:13:19:47
 Hema;(i just scrolled backward) #time=5:13:19:51
 Kalil;Thanks. #time=5:13:19:55
 Kalil;Tanya, if you're reading this - we'd really like to hear from you okay? #time=5:13:19:59
@@ -1822,7 +1932,7 @@ Hema;you just give people your number?? #time=5:13:22:15
 Jessie;WELL YEAH I FIGURED THERE COULDNT BE ANY HARM CRIME DOESNT REALLY HAPPEN HERE #time=5:13:22:19
 Hema;CRIME MOST DEFINITELY HAPPENS HERE #time=5:13:22:23
 Hema;ITS STILL A MAJOR CITY #time=5:13:22:27
-Anetta;if you read the sun it gets wrse #time=5:13:22:31
+Anetta;if you read the papers it gets wrse #time=5:13:22:31
 Hema;yeah dont do that #time=5:13:22:34
 Hema;some crime does happen though #time=5:13:22:39
 Anetta;a lot of rough sleeping too #time=5:13:22:42
@@ -1835,12 +1945,12 @@ Jessie;yeah #time=5:13:23:06
 Jessie;he used to be a rough sleeper #time=5:13:23:11
 Hema;LACROSSE TEAM GRANT?! #time=5:13:23:14
 Jessie;his family was in a bad place #time=5:13:23:18
-Jessie;They ended up on Picadilly high street because it was cold and the taller buildings helped #time=5:13:23:22
+Jessie;They ended up on Picadilly Circus because it was cold and the taller buildings helped #time=5:13:23:22
 Jessie;after a couple days, the police came by and routed them out from the pretty okay place they had found near BAFTA #time=5:13:23:26
 Jessie;thing is, there was a few other people rough sleeping just a door down #time=5:13:23:31
 Jessie;WAY more disruptive #time=5:13:23:34
 Jessie;the police didn't touch them at all #time=5:13:23:38
-Jessie;jerked his mom and sister and Grant right back on the street #time=5:13:23:43
+Jessie;threw his mom and sister and Grant right back on the street #time=5:13:23:43
 Anetta;why? <sprite name="Sad"> #time=5:13:23:47
 Jessie;Well, Grant is black #time=5:13:23:52
 Jessie;Those guys werent #time=5:13:23:57
@@ -1877,11 +1987,15 @@ Kalil;Lots of differences. #time=5:13:24:55
 	Player;us being...all of us, I guess? The world? idk. #time=5:13:25:27
 	Player;All I know is that the stuff is happening and that it needs to change. #time=5:13:25:31
 	- -
-	Kalil;Annnnd it turns out my instructor has been staring at me for the past few minutes. #time=5:13:25:38
+	Kalil;Annnnd it turns out the teacher has been staring at me for the past few minutes. #time=5:13:25:38
 	Kalil;Might be a little late to lunch... #time=5:13:25:43
+	Kalil;[offline] #time=5:13:25:45
 	Hema;Good luck! #time=5:13:25:47
 	Jessie;godspeed you brave soul #time=5:13:25:51
+	Hema;[offline] #time=5:13:25:52
 	Anetta;good luck!! #time=5:13:25:54
+	Anetta;[offline] #time=5:13:25:55
+	Jessie;[offline] #time=5:13:25:56
 	
 	Hema;...Am I seeing what I think I'm seeing? #time=5:13:39:11
 	Jessie;uh #time=5:13:39:15
@@ -1891,7 +2005,7 @@ Kalil;Lots of differences. #time=5:13:24:55
 	Anetta;congrats Tanya!!! #time=5:13:39:34
 	Kalil;Okay I was in dangerous straits for a while there. #time=5:14:02:12
 	Kalil;What's the big occasion? #time=5:14:02:18
-	Kalil;why the shit is Tanya cuddling Kyle #time=5:14:02:30
+	Kalil;why the hell is Tanya cuddling Kyle #time=5:14:02:30
 	Anetta;she dsnt owe us any answers #time=5:14:02:34
 	Anetta;it isnt even a big deal #time=5:14:02:38
 	Kalil;um, yes it is #time=5:14:02:41
@@ -1922,7 +2036,7 @@ Kalil;Lots of differences. #time=5:13:24:55
 	Kalil;When you said we were friends. #time=5:14:03:55
 	Kalil;If I knew you were in a relationship I wouldnt have asked you out to the party #time=5:14:03:58
 	Tanya;Not returning Your Feelings is not My fault. #time=5:14:04:02
-	Anetta;so this IS coming back to your dick #time=5:14:04:05
+	Anetta;so this IS just all about you Kalil #time=5:14:04:05
 	Kalil;oh piss off #time=5:14:04:09
 	Anetta;youre disappointed that you didnt get what you felt you deserved so you take it out on her #time=5:14:04:13
 	Anetta;its WRONG #time=5:14:04:16
@@ -1999,7 +2113,13 @@ Kalil;Lots of differences. #time=5:13:24:55
 		Tanya;You're trying to do the impossible. #time=5:14:08:09
 		Tanya;If you'll Excuse me, I'm going to have a Pleasant Lunch. #time=5:14:08:12
 		#time=5:14:08:16
-		Tanya;With my Boyfriend. -> day5_evening_group_sequence1
+		Tanya;With my Boyfriend. #time=5:14:08:20
+		Tanya;[offline] #time=5:14:08:22
+		Kalil;[offline] #time=5:14:08:43
+		Jessie;[offline] #time=5:14:10:20
+		Anetta;[offline] #time=5:14:12:40 
+		Hema;[offline] #time=5:14:12:43
+		-> day5_evening_group_sequence1
 	
 === day5_evening_group_sequence1 ===	
 
@@ -2021,10 +2141,14 @@ Hema;I don't think so... #time=5:21:04:13
 	Kalil;I hope you have a genuinely fantastic time. #time=5:21:05:05
 	Anetta;that means a lot #time=5:21:05:10
 	Kalil;i hope so #time=5:21:05:17
+	Kalil;[offline] #time=5:21:05:19
+	Anetta;[offline] #time=5:21:05:22
+	Jessie;[offline] #time=5:21:05:23
+	Hema;[offline] #time=5:21:05:25
 - else:
 	Kalil;Actually, I've got some news. #time=5:21:04:17
 	Kalil;I got an 11th hour invite #time=5:21:04:22
-	Kalil;I'm going to the party after all benches!! #time=5:21:04:26
+	Kalil;I'm going to the party after all bitches!! #time=5:21:04:26
 	Jessie;nice one Kalil. <sprite name="Thumbs_Up"> #time=5:21:04:30
 	Hema;you know what this is right? #time=5:21:04:33
 	Hema;it's a gift from Tanya #time=5:21:04:37
@@ -2045,6 +2169,10 @@ Hema;I don't think so... #time=5:21:04:13
 	Kalil;That's good then. #time=5:21:05:32
 	Kalil;See you all tomorrow! #time=5:21:05:36
 	Hema;See you! #time=5:21:05:40
+	Anetta;[offline] #time=5:21:05:42
+	Hema;[offline] #time=5:21:05:43
+	Jessie;[offline] #time=5:21:05:43
+	Kalil;[offline] #time=5:21:05:44
 }
 -
 -> day6_sequence1
@@ -2153,6 +2281,7 @@ Jessie;*What am I going to wear today??* #time=6:10:05:47
     Kalil;Right, this is a great time to check out of the conversation. #time=6:10:05:51
     Kalil;Peace. #time=6:10:05:54
     Hema;bye Kalil #time=6:10:05:57
+    Kalil;[offline] #time=6:10:05:58
 - else:
     Anetta;an importnt question #time=6:10:05:51
     Jessie;It is, isn't it? #time=6:10:05:55
@@ -2198,9 +2327,13 @@ Jessie;No, the contrast helps me stand out! Let me be fashionable tonight!! #tim
     Kalil;I just came here to turn off the damn notifications. #time=6:10:07:40
     Kalil;Shouldn't have bothered to engage. #time=6:10:07:43
     Kalil;*OFF* #time=6:10:07:45
+    Kalil[offline] #time=6:10:07:47
     Hema;Kalil... #time=6:10:07:50
     Anetta;i have stff to do anyway. #time=6:10:07:54
+    Anetta;[offline] #time=6:10:07:56 
     Jessie;Yeah me too #time=6:10:07:58
+    Jessie;[offline] #time=6:10:08:00 
+    Hema;[offline] #time=6:10:08:02
 - else:
     Anetta;what abt you kalil #time=6:10:07:18
     Kalil;Branded everyday clothing for me. #time=6:10:07:22
@@ -2212,8 +2345,12 @@ Jessie;No, the contrast helps me stand out! Let me be fashionable tonight!! #tim
     Anetta;it sound lke youll have a fun time there #time=6:10:07:48
     Anetta;i have some stff to do so talk later! #time=6:10:07:52
 	Anetta;! #time=6:10:07:55
+	Anetta;[offline] #time=6:10:07:57
     Jessie;Me too #time=6:10:07:58
     Jessie;Later! #time=6:10:08:02
+    Jessie;[offline] #time=6:10:08:04
+    Hema;[offline] #time=6:10:08:07 
+    Kalil;[offline] #time=6:10:08:09
 }
 
 
@@ -2305,7 +2442,7 @@ Jessie;I have another existential question #time=6:19:05:20
 Jessie;I'm just a few months from being old enough to drink in the UK, but YEARS from it in the US. #time=6:19:05:28
 Jessie;Is it somehow *less bad* for me to drink while I'm here? Like is it seen as a more minor offense because I'd be able to soon anyway? #time=6:19:05:33
 Hema;Hmmmm tough one #time=6:19:05:40
-Hema;especially since some of these drinks are actually nice and not just alcopop sugareyness #time=6:19:05:43
+Hema;itll save you from just dirnking coke all night #time=6:19:05:43
 { bringAnetta:
     Anetta;dont people in the states get fake ids #time=6:19:05:48
 - else: 
@@ -2316,10 +2453,10 @@ Jessie;what do y'all think I am?? #time=6:19:05:55
 Hema;hahaha #time=6:19:05:58
 { bringAnetta:
     Anetta;sorry <sprite name="Tongue_Out"> #time=6:19:06:02
-    Hema;I say go for it! Most kids in the UK start drinking e a r l y anyway regardless of legal age. #time=6:19:06:06
+    Hema;I say go for it! Its not like everyone here waits till theyre 18 to start drinking anyway. #time=6:19:06:06
 - else: 
     Kalil;You should try it though #time=6:19:06:02
-    Hema;I say go for it! Most kids in the UK start drinking e a r l y anyway regardless of legal age. #time=6:19:06:04
+    Hema;I say go for it! Its not like everyone here waits till theyre 18 to start drinking anyway. #time=6:19:06:04
 }
 Jessie;But is it morally correct? #time=6:19:06:08
 { bringAnetta:
@@ -2383,7 +2520,7 @@ Hema;might surpise you #time=6:19:07:27
 		{ bringAnetta:
 		Anetta;WHAT ARE YOU SAYING #time=6:19:08:07
 		- else:
-		Kalil;WHAT IS IT LASSIE? IS TIMMY IN THE WELL?! #time=6:19:08:07
+		Kalil;WHAT DO THESE CRYPTIC HIEROGLYPHICS MEAN? #time=6:19:08:07
 		}
 
     --
@@ -2416,6 +2553,8 @@ Hema;I would describe the situation with <sprite name="Smile"> <sprite name="Coc
 Jessie;I get the feeling there's more to this than that #time=6:19:08:29
 Hema;Its a secret!! #time=6:19:08:33
 Hema;haha nah i just need more emojis #time=6:19:08:37
+Jessie;[offline] #time=6:19:08:39 
+Hema;[offline] #time=6:19:08:41
 
 { bringAnetta:
     Anetta;i havnt seen tanya yet. anyne else spot her? #time=6:19:42:22
@@ -2443,11 +2582,13 @@ Hema;{PlayerName()} is being cool as always #time=6:19:42:50
     Player;Hema is kindly watching over all of us, a benevolent deity among the disco lights #time=6:19:42:55
 -
 Hema;Yup! Hema! thats me! #time=6:19:42:59
+Hema;so it turns out eastenders didnt crsah the party #time=6:19:43:02
+Hema;they were hella invited #time=6:19:43:07
 Hema;you know, i actually like this song too. Maybe itll be cool to get a video so we can remember thi #time=6:19:43:10
 Hema;um #time=6:19:43:19
 Hema;i forget how to do it on the other camera #time=6:19:43:22
 Hema;never mind its selfie time instead #time=6:19:43:27
-Hema;<SelfieDay6> #time=6:19:43:36
+Hema;<SelfieDay3> #time=6:19:43:36
 Hema;this is it, the heart of hte party!!! #time=6:19:43:40
 Hema;Everyone having fun! #time=6:19:43:43
 { bringAnetta:
@@ -2470,10 +2611,12 @@ Hema;has the party lived up to your expectations so far #time=6:19:44:14
     Player;Yeah, it has! #time=6:19:44:19
     Player;let's hope the good times last all night #time=6:19:44:22
     Anetta;tht seems like such a long time away #time=6:19:44:30
+    Hema;[offline] #time=6:19:45:00 
 *[Not really]
     Player;No, not really #time=6:19:44:19
     Player;There's still time though #time=6:19:44:22
     Anetta;ther really is a lot of time, isn't there #time=6:19:44:30
+    Hema;[offline] #time=6:19:45:00
 -
 { bringAnetta:
 ->AnettaParty
@@ -2507,6 +2650,8 @@ Jessie;Anetta? Is this a panic attack? #time=6:19:45:34
 Anetta;dunno cant think mayeb #time=6:19:45:38
 Jessie;breathe! #time=6:19:45:41
 Jessie;i'll be down in a sec #time=6:19:45:45
+Jessie;[offline] #time=6:19:45:47
+Anetta;[offline] #time=6:19:45:50
 
 Jessie;I think it's okay now #time=6:19:47:18
 Jessie;Anetta says you're supposed to stay where you are and let the panic pass #time=6:19:47:23
@@ -2517,14 +2662,17 @@ Jessie;I think it mostly has but we're gonna hang out here for a bit #time=6:19:
     Jessie;BBQ and cheese chips #time=6:19:47:40
     Jessie;CRISPS! #time=6:19:47:43
     Jessie;I corrected myself so it doesn't count #time=6:19:47:46
+    Jessie;[offline] #time=6:19:47:48
 *[Thanks, Jessie]
     Player;Thanks, Jessie #time=6:19:47:32
     Jessie;No problem <sprite name="Soft_Smile"> #time=6:19:47:36
+    Jessie;[offline] #time=6:19:47:38
 -
 Hema;Anetta! #time=6:19:48:28
 Hema;i'm so sorry!!! #time=6:19:48:33
 Hema;I was talking to someone and didnt see #time=6:19:48:36
 Hema;Ill be there in a sec #time=6:19:48:40
+Hema;[offline] #time=6:19:48:42
 ->BackToParty
 
 ==AnettaLibrary==
@@ -2569,21 +2717,26 @@ Jessie;Why even show up if you're going to be fake? #time=6:19:46:28
 Kalil;I'm trying to *help* you little shit! #time=6:19:46:31
 *[Is this a panic attack?]
     Player;Is this a panic attack? #time=6:19:46:36
+    Anetta;[offline] #time=6:19:46:40
 *[What can we do?]
     Player;What can we do to help? #time=6:19:46:36
+    Anetta;[offline] #time=6:19:46:40
 -
 Kalil;Anetta? #time=6:19:46:43
 Jessie;Hold on. I'm coming! #time=6:19:46:46
 Jessie;Had enough of this party anyway #time=6:19:46:49
 Jessie;And Kyle's place shouldn't be far from the library. #time=6:19:46:52
+Jessie;[offline] #time=6:19:46:54
 Kalil;okay #time=6:19:46:56
 Kalil;Yeah #time=6:19:47:00
 Kalil;Good idea. #time=6:19:47:03
+Kalil;[offline] #time=6:19:47:05
 Hema;im so sorry i didnt see this earlier anetta!! #time=6:19:48:28
 Hema;jessie are you there? #time=6:19:48:32
 Hema;is she okay??? #time=6:19:48:38
 Hema;should i call her parents #time=6:19:48:43
 Jessie;hold on almost there #time=6:19:48:47
+Jessie;[offline] #time=6:19:48:49
 Jessie;It's fine now I think #time=6:19:50:15
 Hema;im so glad! #time=6:19:50:18
 Jessie;We'll sit here for a bit #time=6:19:50:22
@@ -2592,11 +2745,15 @@ Jessie;Then I think I'll walk her home #time=6:19:50:25
     Player;thanks Jessie #time=6:19:50:31
     Jessie;No brainer #time=6:19:50:35
     Jessie;Y'all enjoy the rest of the party #time=6:19:50:39
+    Jessie;[offline] #time=6:19:50:41
+    Hema;[offline] #time=6:19:50:44
 *[you're not coming back?]
     Player;you're not coming back to the party? #time=6:19:50:31
     Jessie;Nah, it's probably best for me to go home afterwards #time=6:19:50:35
     Jessie;Wasn't super into the party anyway #time=6:19:50:39
     Jessie;y'all have fun! #time=6:19:50:42
+    Jessie;[offline] #time=6:19:50:44
+    Hema;[offline] #time=6:19:50:48
 -
 ->BackToParty
 
@@ -2662,6 +2819,7 @@ Hema;are theyy?? #time=6:21:06:31
     Player;I can't find you #time=6:21:06:39
 -
 Hema;bathroom upstaisr #time=6:21:06:46
+Jessie;[offline] #time=6:21:06:48
 
 { bringAnetta:
     Jessie;Well #time=6:22:02:01
@@ -2675,6 +2833,8 @@ Hema;bathroom upstaisr #time=6:21:06:46
     Hema;later!!! #time=6:22:02:31
     Jessie;Chat later! #time=6:22:02:35
     Anetta;bye <sprite name="Grimace"> #time=6:22:02:39
+    Hema;[offline] #time=6:22:02:41
+    Anetta;[offline] #time=6:22:02:42
 - else: 
     Kalil;That was such a good song #time=6:22:02:01
     Kalil;I think the night has peaked #time=6:22:02:04
@@ -2686,6 +2846,8 @@ Hema;bathroom upstaisr #time=6:21:06:46
     Hema;yeah im just leaaavign #time=6:22:02:29
     Hema;later!!! #time=6:22:02:32
     Kalil;See you both later. #time=6:22:02:36
+    Hema;[offline] #time=6:22:02:37
+    Kalil;[offline] #time=6:22:02:38
 }
 
 { bringAnetta:
@@ -2701,10 +2863,13 @@ Hema;bathroom upstaisr #time=6:21:06:46
 Jessie;Well, time for me to sign off. maybe find a way to get some sleep too #time=6:23:12:57
 Jessie;'night folks! #time=6:23:13:00
 Jessie;<sprite name="Cocktail"> <sprite name="Thumbs_Up"> #time=6:23:13:02
+Jessie;[offline] #time=6:23:13:05
 { bringAnetta:
     Anetta;<sprite name="Party"> <sprite name="Explode"> #time=6:23:13:05
+    Anetta;[offline] #time=6:23:13:07 
 - else: 
     Kalil;<sprite name="Skull"> <sprite name="Tongue_Out"> #time=6:23:13:05
+    Kalil;[offline] #time=6:23:13:07
 }
 *[<sprite name="Party"> <sprite name="Soft_Smile">]
     Player;<sprite name="Party"> <sprite name="Soft_Smile"> #time=6:23:13:10
@@ -2720,14 +2885,14 @@ Hema;NOT THE TIME #time=7:10:11:31
 Hema;Did anyone see Tanya last night? It's really really important #time=7:10:11:36
 { bringAnetta:
     Kalil;I wasn't invited, so no. #time=7:10:11:40
-	Anetta;cn there be one fucking day that isnt about you #time=7:10:11:43
+	Anetta;cn there be one day that isnt about you #time=7:10:11:43
 	Kalil;those are bold words considering Hema is clearly distressed and you're trying to start a fight instead of answering her question #time=7:10:11:47
 	Anetta;shut up #time=7:10:11:51
 	Kalil;If I'm selfish, you're JUST as selfish as me #time=7:10:11:55
 	Anetta;SHUT UP #time=7:10:11:58
 	Kalil;No matter what you say or how many depressed ellipses you text, you want the spotlight just as much as I do #time=7:10:12:02
 	Kalil;Why else are you working on some sci-fi epic? #time=7:10:12:06
-	Anetta;BECUASE IT MAKES ME HAPPY YOU JACKASS #time=7:10:12:10
+	Anetta;BECUASE IT MAKES ME HAPPY YOU DICK #time=7:10:12:10
 	Jessie;You know I thought you were a real asshole before, but this really confirms it #time=7:10:12:14
 	Kalil;Get out of here #time=7:10:12:18
 	Jessie;Don't push me. #time=7:10:12:22
@@ -2736,10 +2901,10 @@ Hema;Did anyone see Tanya last night? It's really really important #time=7:10:11
 	Jessie;You really mean that bellend? #time=7:10:12:35
 	Kalil;Ha! You don't even know what that word means. #time=7:10:12:39
 	Kalil;You're parroting. #time=7:10:12:42
-	Kalil;You know she won't sleep with you just because you stick up for her in a couple text chats right? #time=7:10:12:46
+	Kalil;You know she won't fancy you just because you stick up for her in a couple text chats right? #time=7:10:12:46
 	Jessie;You as brave without a screen and your groupies? #time=7:10:12:50
 	Anetta;this isn't about me #time=7:10:12:54
-	Anetta;its about you two measuring your cocks #time=7:10:13:00
+	Anetta;its about you two and your massive egos #time=7:10:13:00
 	Anetta;again #time=7:10:13:03
 	Jessie;I didn't mean for that #time=7:10:13:07
 	Anetta;you nver do right #time=7:10:13:11
@@ -2773,7 +2938,7 @@ Hema;Did anyone see Tanya last night? It's really really important #time=7:10:11
 	Kalil;You wouldn't dare saying something like that to my face. #time=7:10:12:49
 	Jessie;Try me. I'm willing to bet you arent so brave when you dont have your screen and groupies. #time=7:10:12:53
 	Anetta;this isn't about me #time=7:10:12:56
-	Anetta;its about you two measuring your cocks #time=7:10:13:00
+	Anetta;its about you two and your massive egos #time=7:10:13:00
 	Anetta;again #time=7:10:13:02
 	Jessie;I didn't mean for that #time=7:10:13:05
 	Anetta;you nver do right #time=7:10:13:08
@@ -2801,7 +2966,7 @@ Jessie;You switch sides FAST #time=7:10:13:58
 Kalil;Didn't switch anything. #time=7:10:14:02
 Kalil;Just acknowledging the fact that {PlayerName()} has been a bit of an asshole this week too #time=7:10:14:06
 Jessie;How could you say that? #time=7:10:14:09
-Kalil;Am I wrong, or do they get free passes for stuff we'd get raked over the coals for? #time=7:10:14:12
+Kalil;Am I wrong, or do they get free passes for stuff you guys would have a right go at me for if I did it? #time=7:10:14:12
 Jessie;I thought you didn't want a free pass anymore, considering your parents and all #time=7:10:14:16
 Kalil;I dont. I wanted friends #time=7:10:14:22
 
@@ -2811,9 +2976,9 @@ Player;Stop, Kalil! #time=7:10:13:34
 Player;There's bigger things happening right now #time=7:10:13:37
 Kalil;Easy for you to say! #time=7:10:13:41
 { bringAnetta:
-	Kalil;You didn't get fucking DUMPED by your best friends yesterday #time=7:10:13:45
+	Kalil;You didn't get DUMPED by your best friends yesterday #time=7:10:13:45
 - else:
-	Kalil;You don't get treated like a fucking pariah all the time #time=7:10:13:45
+	Kalil;You don't get treated like a goddamn pariah all the time #time=7:10:13:45
 }
 Player;Excuse me? #time=7:10:13:48
 Kalil;I'm always the bad guy! #time=7:10:13:52
@@ -2853,7 +3018,7 @@ Hema;{PlayerName()}, did you talk to Tanya in any way, shape, or form yesterday?
 
 	* * [Is this unusual?]
 	Player;Is this unusual? #time=7:10:15:29
-	Player;She started detaching a while ago. Maybe she's just doing her own thing for a little? #time=7:10:15:32
+	Player;She started drifting away a while ago. Maybe she's just doing her own thing for a little? #time=7:10:15:32
 	Player;No one saw or heard ANYTHING? #time=7:10:15:35
 	- -
 	Hema;that's why theyre starting to panic. #time=7:10:15:40
@@ -2913,5 +3078,6 @@ Hema;{PlayerName()}, did you talk to Tanya in any way, shape, or form yesterday?
 		Hema;guys #time=7:10:18:21
 		Hema;What if... #time=7:10:18:25
 		Hema;What if Tanya's really gone? #time=7:10:18:34
+		{ShowEndGamePanel()}
 
 -> END
