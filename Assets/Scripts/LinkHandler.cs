@@ -36,6 +36,10 @@ public class LinkHandler : MonoBehaviour, IPointerClickHandler
                 case "Challenge":
                     Application.OpenURL("https://the-challenge.org/programmes/");
                     break;
+
+                case "Form":
+                    Application.OpenURL("http://onthesurface.the-challenge.org/");
+                    break;
             }
         }
     }

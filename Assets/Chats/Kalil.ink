@@ -54,7 +54,7 @@ Kalil;yes #time=3:06:42:34
 Kalil;I didnt #time=3:06:42:36
 Kalil;I wasn't sure #time=3:06:42:38
 Kalil;god #time=3:06:42:40
-Kalil;FUCK #time=3:06:42:42
+Kalil;SHIT #time=3:06:42:42
 Kalil;Okay: #time=3:06:42:47
 Kalil;Do you think I have a shot with Tanya? Orrrrrr... #time=3:06:42:52 
 Kalil;You're the one who's known her longest #time=3:06:42:56
@@ -137,7 +137,7 @@ Kalil;I thought you might know. #time=3:06:42:59
 		Kalil;i feel like I've been starving my entire life #time=3:06:45:53
 		Kalil;and when I met Tanya, it was like I saw my first chance to be truly full #time=3:06:45:56
 		Player;... #time=3:06:45:58
-		Player;are you fucking kidding me #time=3:06:46:04
+		Player;are you actually kidding me #time=3:06:46:04
 		
 		
 		* * * [...Where is this going?]
@@ -264,7 +264,7 @@ Kalil;Bloody party #time=6:10:08:10
         Kalil;Have fun. I'll find other things to occupy my time. Don't worry. #time=6:10:08:34
     -else:
         Kalil;You don't really get me #time=6:10:08:28
-        Kalil;But at least you realise what a shitty situation we're in #time=6:10:08:31
+        Kalil;But at least you realise what a crappy situation we're in #time=6:10:08:31
         Kalil;Have fun i guess. I'll find other things to occupy my time. #time=6:10:08:34
     }
     Kalil;Other people. #time=6:10:08:38

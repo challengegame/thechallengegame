@@ -47,7 +47,7 @@ Morgan;Is she alright? #time=6:22:04:24
 	Morgan;i hope you know what I mean #time=6:22:04:54
 	{SetHemaDrunk(false)}
 -
-Morgan;I should be there in fifteen minutes <sprite name="Eggplant"> #time=6:22:04:57
+Morgan;I should be there in fifteen minutes #time=6:22:04:57
 Morgan;Do you need a ride as well? #time=6:22:05:01
 *[No, I'm fine.]
     Player;No, I'm fine. #time=6:22:05:04

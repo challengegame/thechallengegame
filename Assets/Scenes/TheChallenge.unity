@@ -20798,11 +20798,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "If you are affected by any of the issues raised in this game, <link=\"BBC\">click
-    here for details of organisations who may be able to help\r</link>.\n\r\nTo make
-    a suggestion, let us know about a bug, or otherwise send us a message, please
-    fill out this form [Link to an online form to send comment/suggestion/bug to developers]\r\n\r\n\r\nA
-    game by The Challenge"
+  m_text: "If you are affected by any of the issues raised in this game, <color=\"blue\"><link=\"BBC\">click
+    here for details of organisations who may be able to help\r</link></color>.\n\r\n<color=\"blue\"><link=\"Form\">To
+    make a suggestion, let us know about a bug, or otherwise send us a message, please
+    fill out this form.</link></color>\n\r\n\r\nA game by The Challenge"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9de8642bf7b98c647bf8945b7a6946bf, type: 2}
   m_sharedMaterial: {fileID: 21127517800135430, guid: 9de8642bf7b98c647bf8945b7a6946bf,
@@ -22335,10 +22334,10 @@ MonoBehaviour:
     the past week how important it is to really get to know and connect with the people
     around us. At The Challenge we bring people from different backgrounds together
     to create a more integrated society, helping them to understand and connect with
-    each other. <link=\"Challenge\">Click here to see a range of opportunities for
-    you to get involved</link>. \r\nTo find out more info about the next chapter of
-    On the Surface, sign up here for email updates: [link]\r\n\n\r\n\r\nA game by
-    The Challenge"
+    each other. <color=\"blue\"><link=\"Challenge\">Click here to see a range of opportunities
+    for you to get involved</link>. <link=\"Form\">To find out more info about the
+    next chapter of On the Surface, sign up here for email updates.</link></color>\n\n\r\n\r\nA
+    game by The Challenge"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9de8642bf7b98c647bf8945b7a6946bf, type: 2}
   m_sharedMaterial: {fileID: 21127517800135430, guid: 9de8642bf7b98c647bf8945b7a6946bf,

@@ -545,7 +545,7 @@ Anetta;yeah #time=2:06:44:16
 	Jessie;I KNEW IT #time=2:06:44:37
 	Jessie;FRIEAKING KNEW IT #time=2:06:44:39
 	Jessie;*FREAKING #time=2:06:44:42
-	Jessie;<sprite name="Shit"> #time=2:06:44:44
+	Jessie;<sprite name="Poop"> #time=2:06:44:44
 	Player;hahaha #time=2:06:44:46
 	Player;no no no #time=2:06:44:49
 	Player;I meant daddy in the BRITISH sense #time=2:06:44:51
@@ -572,7 +572,7 @@ Anetta;yeah #time=2:06:44:16
 	Jessie;That sounds absolutely ridiculous #time=2:06:46:04
 	Jessie;and yet #time=2:06:46:06
 	Jessie;*i want to believe you* #time=2:06:46:15
-	Hema;well SHIT #time=2:06:46:18
+	Hema;well <sprite  name="Poop"> #time=2:06:46:18
 	Jessie;Is this Hard Daddy stuff not true?? #time=2:06:46:20
 	Tanya;It's not Not Not Not True. #time=2:06:46:22
 	Jessie;what #time=2:06:46:24
@@ -1093,8 +1093,8 @@ Kalil;That....doesn't mean I didn't mean it #time=3:08:38:03
 	Kalil;Bollocks. #time=3:08:39:40
 	Kalil;He didn't know. #time=3:08:39:43
 	Jessie;I noticed things. #time=3:08:39:45
-	Kalil;bull #time=3:08:39:48
-	Kalil;shit #time=3:08:39:50
+	Kalil;bol #time=3:08:39:48
+	Kalil;locks #time=3:08:39:50
 	Tanya;{PlayerName()}? #time=3:08:39:52
 	Tanya; Did you? #time=3:08:39:55
 	Kalil;Why do you keep asking the others? What are you trying to find? #time=3:08:39:57
@@ -1125,7 +1125,7 @@ Kalil;That....doesn't mean I didn't mean it #time=3:08:38:03
 		* * * [I am so sorry.]
 		Player;... #time=3:08:40:00
 		Player;I am so sorry, Tanya. #time=3:08:40:05
-		Kalil;you hypocritical piece of shit #time=3:08:40:08
+		Kalil;you hypocritical piece of crap #time=3:08:40:08
 		Kalil;You knew! #time=3:08:40:12
 		Kalil;i swear to you Tanya #time=3:08:40:17
 		Kalil;{PlayerObjectivePronoun()} knew #time=3:08:40:19
@@ -1235,7 +1235,7 @@ Kalil;That....doesn't mean I didn't mean it #time=3:08:38:03
 		Anetta;its because shes a good person #time=3:16:16:44
 		Anetta;and you arent #time=3:16:16:46
 		Anetta;Youre the poor little rich boy who cares more about strangers stroking your ego and thinking youre authentic than having friends who know they can trust you. #time=3:16:16:49
-		Anetta;You mistreat the people who care about you most so you can worry about the people who couldnt give less of a shit about your crappy band or floppy hair or perfect bone structure. #time=3:16:16:51
+		Anetta;You mistreat the people who care about you most so you can worry about the people who couldnt give less of a crap about your crappy band or floppy hair or perfect bone structure. #time=3:16:16:51
 		Anetta;You think youre entitled to a date because you pretend to be someones friend. #time=3:16:16:56
 		Anetta;So youre right #time=3:16:17:01
 		Anetta;I wouldn't call us Friends #time=3:16:17:04
@@ -1245,7 +1245,7 @@ Kalil;That....doesn't mean I didn't mean it #time=3:08:38:03
 		Kalil;Let's see if you get invited to the party. #time=3:16:17:23
 		Anetta;You dont get the last word. #time=3:16:17:26
 		Kalil;yes i do #time=3:16:17:28
-		Anetta;Go fuck yourself. #time=3:16:17:30
+		Anetta;Screw you. #time=3:16:17:30
 		Anetta;Posh bellend. #time=3:16:17:33
 		Kalil;That #time=3:16:17:37
 		Kalil;Is a low blow #time=3:16:17:40
@@ -1853,7 +1853,7 @@ Hema;[offline] #time=5:56:40
 
 Jessie;I'm sorry about yesterday. #time=5:08:21:06
 Jessie;About hurting you Kalil, and for making you uncomfortable Anetta #time=5:08:21:12
-Jessie;I need to think before i shitpost #time=5:08:21:16
+Jessie;I need to think before i shtpost #time=5:08:21:16
 Kalil;That's something we could all learn to do. #time=5:08:21:20
 Anetta;i REFUSE to thnk before shtposting #time=5:08:21:23
 Anetta;one dy i am going to die #time=5:08:21:28
@@ -1867,7 +1867,7 @@ Anetta;only ting tht can kill me is space #time=5:08:21:55
 Kalil;Noted. #time=5:08:21:59
 Jessie;Well, now I feel better for my shtposting haha #time=5:08:22:02
 Anetta;no #time=5:08:22:06
-Anetta;you need to thnk before shitposting still #time=5:08:22:11
+Anetta;you need to thnk before shtposting still #time=5:08:22:11
 Hema;yeah #time=5:08:22:14
 Hema;until yOU GET ON HER LEVEL #time=5:08:22:17
 Jessie;...its a deal #time=5:08:22:21
@@ -2027,7 +2027,7 @@ Kalil;Lots of differences. #time=5:13:24:55
 	Kalil;She's watched us run around this entire week, making mistake after mistake #time=5:14:03:20
 	Kalil;looking like fools #time=5:14:03:23
 	Kalil;so I'm going to repeat my question #time=5:14:03:29
-	Kalil;why in the flying bullocks of saint shit did Tanya do this #time=5:14:03:34
+	Kalil;why in the flying bullocks of saint crap did Tanya do this #time=5:14:03:34
 	Tanya;Ignoring your language, Kalil--We are Dating. #time=5:14:03:37
 	Anetta;speaking of rich pricks... #time=5:14:03:40
 	Kalil;Ignoring that Anetta <sprite name=“Roll_Eyes”> #time=5:14:03:44
@@ -2060,7 +2060,7 @@ Kalil;Lots of differences. #time=5:13:24:55
 	Anetta;THT #time=5:14:05:23
 	Anetta;HURTS #time=5:14:05:25
 	Anetta;TOO #time=5:14:05:27
-	Kslil;...what are you saying? #time=5:14:05:32
+	Kalil;...what are you saying? #time=5:14:05:32
 	Tanya;She's saying that you're Oblivious. #time=5:14:05:35
 	Tanya;You are All Oblivious. #time=5:14:05:38
 	Tanya;Do you Really want to know about My Life? #time=5:14:05:43
@@ -2538,7 +2538,7 @@ Hema;might surpise you #time=6:19:07:27
         { bringAnetta:
 		Anetta;WHAT ARE YOU SAYING #time=6:19:08:07
 		- else:
-		Kalil;WHAT IS IT LASSIE? IS TIMMY IN THE WELL?! #time=6:19:08:07
+		Kalil;WHAT DO THESE CRYPTIC HIEROGLYPHICS MEAN? #time=6:19:08:07
 		}
     --
 -
@@ -2714,7 +2714,7 @@ Anetta;how could i forget #time=6:19:46:17
 Anetta;i cnt focus #time=6:19:46:20
 Kalil;This has happened to you before, right? #time=6:19:46:24
 Jessie;Why even show up if you're going to be fake? #time=6:19:46:28
-Kalil;I'm trying to *help* you little shit! #time=6:19:46:31
+Kalil;I'm trying to *help* you little prick! #time=6:19:46:31
 *[Is this a panic attack?]
     Player;Is this a panic attack? #time=6:19:46:36
     Anetta;[offline] #time=6:19:46:40
@@ -2877,8 +2877,8 @@ Jessie;[offline] #time=6:23:13:05
     Player;<sprite name="Skull"> <sprite name="Frown"> #time=6:23:13:10
 -
 
-Hema;SHIT #time=7:10:11:15
-Hema;SHIT SHIT SHIT #time=7:10:11:20
+Hema;CRAP #time=7:10:11:15
+Hema;<sprite name="Poop"> <sprite name="Poop"> <sprite name="Poop"> #time=7:10:11:20
 Hema;HOW MUCH DID I DRINK LAST NIGHT #time=7:10:11:24
 Kalil;a fun amount, clearly #time=7:10:11:28
 Hema;NOT THE TIME #time=7:10:11:31
@@ -2926,7 +2926,7 @@ Hema;Did anyone see Tanya last night? It's really really important #time=7:10:11
 	Anetta;you knw what #time=7:10:12:07
 	Anetta;I had a really bad night #time=7:10:12:11
 	Anetta;Jessie had to leave the prty and be with me #time=7:10:12:14
-	Anetta;i really dont wnt to hear shit frm you #time=7:10:12:18
+	Anetta;i really dont wnt to hear crap frm you #time=7:10:12:18
 	Kalil;so #time=7:10:12:22
 	Kalil;youre saying you had a terrible time with Jessie last night then #time=7:10:12:25
 	Anetta;tht isnt wht i meant #time=7:10:12:28

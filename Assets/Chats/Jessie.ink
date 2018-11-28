@@ -296,7 +296,7 @@ Jessie;Someone literally yelled at you on the bus today #time=2:15:21:20
 Player;jerks #time=2:15:21:24
 Player;pricks #time=2:15:21:27
 Player;take your pick of terms but the principle is still the same #time=2:15:21:30
-Player;sometimes shit happens #time=2:15:21:34
+Player;sometimes crap happens #time=2:15:21:34
 Player;can't really do anything but surround yourself with better people #time=2:15:21:37
 
 
@@ -395,7 +395,7 @@ Jessie;It feels like...a Lot? #time=2:15:23:00
 		Jessie;well #time=2:15:25:22
 		Jessie;him #time=2:15:25:28
 		Jessie;long story short, he ended up in a headlock #time=2:15:25:31
-		Player;<sprite name="Frown"> #time=2:15:25:34
+		Player;<sprite name="Angry"> #time=2:15:25:34
 		Jessie;I know right? #time=2:15:25:37
 			* * * * [That's messed up.]
 			Player;That's...really messed up. #time=2:15:25:40
@@ -584,7 +584,7 @@ Player;This isn't your fault Jessie. #time=3:22:45:42
 Player;what happened today was beyond you #time=3:22:45:45
 Player;but if you keep trying to contact her youll push her away #time=3:22:45:48
 Player;it WILL become your fault. #time=3:22:45:50
-Player;You'll become yet another burden in her life, stressing her out, making her life harder while she's already trying to navigate the shitstorm that kicked up today #time=3:22:45:53
+Player;You'll become yet another burden in her life, stressing her out, making her life harder while she's already trying to navigate the hellstorm that kicked up today #time=3:22:45:53
 Player;do you want that? #time=3:22:46:00
 Jessie;Of course not! #time=3:22:46:03
 Jessie;no #time=3:22:46:06

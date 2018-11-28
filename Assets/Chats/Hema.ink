@@ -35,7 +35,7 @@ Player;where/how did you hear this? #time=1:06:27:01
 -
 Hema;i hear everything from everywhere. #time=1:06:27:07
 Hema;you should absolutely know this by now #time=1:06:27:11
-Hema;<sprite name="Wink"> #time=1:06:27:14
+Hema;<sprite name="wink"> #time=1:06:27:14
 Player;...well, it is pretty nice having a clean slate for once #time=1:06:27:18
 Hema;that is the EXACT kind of excuse a clumsy person would make #time=1:06:27:23
 Hema;(i know because ive made it before) #time=1:06:27:27
@@ -285,7 +285,7 @@ Hema;aIm done drinking soyou dont have to worry abotu that #time=6:21:10:33
 Hema;may get more cheese puffs #time=6:21:10:38
 *[Let's go hunting.]
     Player;Let's go hunt for cheese puffs together #time=6:21:10:43
-    Hema;FUCKYE AH HCEESE PUFFS #time=6:21:10:47
+    Hema;YE AH HCEESE PUFFS #time=6:21:10:47
     Hema;[offline] #time=6:21:10:49
 *[Take it slowly...]
     Player;Okay, let's take it slowly... #time=6:21:10:43
