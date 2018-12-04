@@ -745,7 +745,7 @@ Kalil;You gotta admit I'm at least a *bit* funny <sprite name="Wink"> #time=2:14
 	Kalil;I WANT TO KNOW is all! #time=2:14:10:35
 	Kalil;Is it better for being aged? #time=2:14:10:39
 	Kalil;Worse? #time=2:14:10:41
-	Kalil;is there a hint of the *forbidden* <sprite name="Eggplant"><sprite name="eggplant"> #time=2:14:10:44
+	Kalil;is there a hint of the *forbidden* <sprite name="Eggplant"><sprite name="Eggplant"> #time=2:14:10:44
 	Tanya;I'm Done. #time=2:14:10:46
 	Tanya;[offline] #time=2:14:10:47
 	Kalil;Come on! #time=2:14:10:49
@@ -1614,7 +1614,7 @@ Anetta;undergrnd skate parks with complicatd structres featured in games that rh
 	Hema;tell me all the good bits! #time=4:22:26:03
 	Hema;I'll read them when I get back #time=4:22:26:06
 	Hema;[offline] #time=4:22:26:08
-	Anetta;good plan <sprite name="Thumb"> #time=4:22:26:10
+	Anetta;good plan <sprite name="Thumbs_Up"> #time=4:22:26:10
 	Anetta;fast-forwrd to the highlghts #time=4:22:26:13
 	Jessie;would love to <sprite name="Smile"> #time=4:22:26:17
 	Hema;Looking forward to it!! #time=4:22:26:21
@@ -2489,7 +2489,7 @@ Hema;If i were to describe the situation i would say... #time=6:19:07:06
 Hema;<sprite name="Cocktail"> = <sprite name="Explode"> <sprite name="Thumbs_Up"> #time=6:19:07:10
 Hema;right??? #time=6:19:07:16
 { bringAnetta:
-    Anetta;ths party = <sprite name="Poo"> #time=6:19:07:20
+    Anetta;ths party = <sprite name="Poop"> #time=6:19:07:20
 - else: 
     Kalil;This party = <sprite name ="Roll_Eyes"> #time=6:19:07:20
 }
@@ -2506,8 +2506,8 @@ Hema;might surpise you #time=6:19:07:27
     Kalil;are the drinks too strong for you? #time=6:19:07:39
     Kalil;loosen up a bit. We just got here! #time=6:19:07:42
 }
-*[<sprite name="Party_Popper"> <sprite name="Skull">]
-    Player;<sprite name="Party_Popper"> <sprite name="Skull"> #time=6:19:07:47
+*[<sprite name="Party"> <sprite name="Skull">]
+    Player;<sprite name="Party"> <sprite name="Skull"> #time=6:19:07:47
     Hema;but why #time=6:19:07:51
     **[<sprite name="Cocktail"> <sprite name="Sad">]
         Player;<sprite name="Wine"> <sprite name="Sad"> #time=6:19:07:56
@@ -2524,8 +2524,8 @@ Hema;might surpise you #time=6:19:07:27
 		}
 
     --
-*[<sprite name="Party_Popper"> <sprite name="Thumbs_Up">]
-    Player;<sprite name="Party_Popper"> <sprite name="Thumbs_Up"> #time=6:19:07:47
+*[<sprite name="Party"> <sprite name="Thumbs_Up">]
+    Player;<sprite name="Party"> <sprite name="Thumbs_Up"> #time=6:19:07:47
     Hema;but *what* is good about it? #time=6:19:07:51
     **[<sprite name="Cocktail"> <sprite name="Cocktail">]
         Player;<sprite name="Cocktail"> <sprite name="Cocktail"> #time=6:19:07:56

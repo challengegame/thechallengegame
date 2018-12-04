@@ -395,7 +395,7 @@ Jessie;It feels like...a Lot? #time=2:15:23:00
 		Jessie;well #time=2:15:25:22
 		Jessie;him #time=2:15:25:28
 		Jessie;long story short, he ended up in a headlock #time=2:15:25:31
-		Player;<sprite name="Angry"> #time=2:15:25:34
+		Player;<sprite name="Frown"> #time=2:15:25:34
 		Jessie;I know right? #time=2:15:25:37
 			* * * * [That's messed up.]
 			Player;That's...really messed up. #time=2:15:25:40

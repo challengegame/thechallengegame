@@ -17,11 +17,11 @@ Morgan;<sprite name="Tongue_Out"> What's going on? #time=6:22:03:53
 *[It's fine!]
     Player;It's fine! #time=6:22:03:56
     Player;I just wanted to ask if you could pick Hema up from the party. #time=6:22:03:59
-    Morgan;<sprite name="Thumbs Up"> Of course! Thank you for messaging me. She left me the address, so I'll be right over. #time=6:22:04:02
+    Morgan;<sprite name="Thumbs_Up"> Of course! Thank you for messaging me. She left me the address, so I'll be right over. #time=6:22:04:02
 *[No problem! Nuh-uh.]
     Player;No problem ms. morgan! nuh-uh. nothing going here. #time=6:22:03:56
     Player;Do you think you could pick Hema up from the party though? #time=6:22:03:59
-    Morgan;<sprite name="Thumbs Up"> Of course! Thank you for messaging me. She left me the address, so I'll be right over. #time=6:22:04:04
+    Morgan;<sprite name="Thumbs_Up"> Of course! Thank you for messaging me. She left me the address, so I'll be right over. #time=6:22:04:04
 -
 Morgan;One small question while I prepare to leave... #time=6:22:04:08
 Morgan;Why isn't Hema contacting me directly? #time=6:22:04:17

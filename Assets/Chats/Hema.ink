@@ -35,7 +35,7 @@ Player;where/how did you hear this? #time=1:06:27:01
 -
 Hema;i hear everything from everywhere. #time=1:06:27:07
 Hema;you should absolutely know this by now #time=1:06:27:11
-Hema;<sprite name="wink"> #time=1:06:27:14
+Hema;<sprite name="Wink"> #time=1:06:27:14
 Player;...well, it is pretty nice having a clean slate for once #time=1:06:27:18
 Hema;that is the EXACT kind of excuse a clumsy person would make #time=1:06:27:23
 Hema;(i know because ive made it before) #time=1:06:27:27
